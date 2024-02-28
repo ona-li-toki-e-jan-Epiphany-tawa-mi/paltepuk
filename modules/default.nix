@@ -14,7 +14,7 @@
 
 # The default nix module that includes all parts of my website and server.
 
-{ inputs, pkgs, ... }:
+{ hostName, pkgs, ... }:
 
 {
   imports = [ ./i2pd.nix
@@ -51,7 +51,7 @@
 
 
   # Enables networking.
-  networking.hostName              = inputs.hostName;
+  networking.hostName              = hostName;
   networking.networkmanager.enable = true;
 
   # Sets time zone. Totally correct bro, don't even think about it bro.

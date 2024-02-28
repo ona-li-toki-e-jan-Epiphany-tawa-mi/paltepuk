@@ -16,23 +16,25 @@
   description = "NixOS configuration flake for badass reproducable websites";
 
   inputs = {
-    # Hostname to be used for the server.
-    hostName = "paltepuk";
-
     # We like to live life on the wild side.
     nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
   };
 
-  outputs = { nixpkgs, ... } @ inputs: {
-    nixosConfigurations = {
-      "raspberryPiB3Plus" = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+  outputs = { nixpkgs, ... } @ inputs:
+    let extraSpecialArguments = {
+          # Hostname to be used for the server.
+          hostName = "paltepuk";
+        };
+    in {
+      nixosConfigurations = {
+        "raspberryPiB3Plus" = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; } // extraSpecialArguments;
 
-        system  = "aarch64-linux";
-        modules = [ ./hardware/raspberry-pi-b-3-plus.nix
-                    ./modules/default.nix
-                  ];
+          system  = "aarch64-linux";
+          modules = [ ./hardware/raspberry-pi-b-3-plus.nix
+                      ./modules/default.nix
+                    ];
+        };
       };
     };
-  };
 }
