@@ -14,7 +14,7 @@
 
 # The default nix module that includes all parts of my website and server.
 
-{ hostName, pkgs, ... }:
+{ inputs, hostName, pkgs, ... }:
 
 {
   imports = [ ./i2pd.nix
