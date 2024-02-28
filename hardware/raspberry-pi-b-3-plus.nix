@@ -29,6 +29,13 @@
     "BandwidthBurst" = "4 MBytes";
   };
 
+  # No IPv6 ;(
+  services.i2pd.enableIPv6       = lib.mkForce false;
+  services.tor.settings."ORPort" = {
+    port  = "auto";
+    flags = [ "IPv4Only" ];
+  };
+
 
 
   fileSystems."/" = {

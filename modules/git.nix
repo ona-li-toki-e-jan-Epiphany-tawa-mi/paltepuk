@@ -63,8 +63,7 @@ in
       shell        = "${pkgs.git}/bin/git-shell";
       group        = "git";
 
-      # TODO add pubkeys.
-      openssh.authorizedKeys.keys = [];
+      openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
     };
 
     groups."git" = {};
@@ -81,7 +80,7 @@ in
     in ''
       $DRY_RUN_CMD ${doasGit} mkdir -p ${gitDirectory}
 
-    '' + lib.foldl (a: b: a + b) "" (builtins.map (repository: ''
+    '' + lib.concatStrings (builtins.map (repository: ''
       if [ ! -d "${gitDirectory}/${repository}" ]; then
         $DRY_RUN_CMD ${doasGit} mkdir -p "${gitDirectory}/${repository}"
         $DRY_RUN_CMD ${doasGit} git -C "${gitDirectory}/${repository}" init --bare

@@ -23,7 +23,6 @@
     initialHashedPassword = "$y$j9T$tPqkwxEzz/qTTg4abhY08.$Zfus24pugl2Th/.EImtasVU51x39TgmSY86uKpTzv2D";
     extraGroups           = [ "networkmanager" "wheel" ];
 
-    # TODO add pubkeys.
-    openssh.authorizedKeys.keys = [ ];
+    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINsLu3obWEYcXp6xRSSeOstWH7LVl8mCz0diS4IJeqZh epiphany@godsthirdtemple" ];
   };
 }
