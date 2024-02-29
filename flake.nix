@@ -27,11 +27,11 @@
         };
     in {
       nixosConfigurations = {
-        "raspberryPiB3Plus" = nixpkgs.lib.nixosSystem {
+        "raspberryPi3BPlus" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; } // extraSpecialArguments;
 
           system  = "aarch64-linux";
-          modules = [ ./hardware/raspberry-pi-b-3-plus.nix
+          modules = [ ./hardware/raspberry-pi-3-b-plus.nix
                       ./modules/default.nix
                     ];
         };
