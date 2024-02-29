@@ -13,12 +13,12 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Installs and configures an I2P node for accessing the services via I2P.
-# NOTE: you will have to create a file called "i2pd-port" in the base of this
-# project with the port for i2pd to use.
+# NOTE: you will have to create a file called "i2pd-port.nix" in the base of
+# this project with the port for i2pd to use.
 
 { lib, ... }:
 
-let i2pdPort = import ../i2pd-port;
+let i2pdPort = (import ../i2pd-port.nix);
 in
 {
   networking.firewall.allowedUDPPorts = [ i2pdPort ];
