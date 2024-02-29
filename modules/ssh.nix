@@ -58,7 +58,7 @@
 
   services.i2pd.inTunnels."mosh" = {
     enable      = true;
-    port        = 60000;
+    port        = 60001;
     destination = "";
   };
 }
