@@ -47,18 +47,4 @@
     port        = 22;
     destination = "";
   };
-
-
-
-  # Mosh setup to make SSH over I2P bearable.
-  programs.mosh = {
-    enable       = true;
-    openFirewall = true;
-  };
-
-  services.i2pd.inTunnels."mosh" = {
-    enable      = true;
-    port        = 60001;
-    destination = "";
-  };
 }
