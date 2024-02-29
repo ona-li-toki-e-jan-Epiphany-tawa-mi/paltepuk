@@ -13,13 +13,21 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Installs and configures an I2P node for accessing the services via I2P.
+# NOTE: you will have to create a file called "i2pd-port" in the base of this
+# project with the port for i2pd to use.
 
 { lib, ... }:
 
+let i2pdPort = import ../i2pd-port;
+in
 {
+  networking.firewall.allowedUDPPorts = [ i2pdPort ];
+  networking.firewall.allowedTCPPorts = [ i2pdPort ];
+
   services.i2pd = {
     enable     = true;
     enableIPv6 = true;                            # Based.
+    port       = i2pdPort;
 
     # Normally this has a couple eepsites to pull domain names from, but we're
     # just using I2P for running the hidden service.
