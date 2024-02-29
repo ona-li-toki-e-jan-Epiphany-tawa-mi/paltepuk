@@ -21,8 +21,10 @@
 let i2pdPort = (import ../i2pd-port.nix);
 in
 {
-  networking.firewall.allowedUDPPorts = [ i2pdPort ];
-  networking.firewall.allowedTCPPorts = [ i2pdPort ];
+  networking.firewall = {
+    allowedUDPPorts = [ i2pdPort ];
+    allowedTCPPorts = [ i2pdPort ];
+  };
 
   services.i2pd = {
     enable     = true;

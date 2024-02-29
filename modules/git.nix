@@ -76,7 +76,7 @@ in
   # Creates the git directory and any specified repositories if they don't
   # already exist.
   system.activationScripts."activateGit" =
-    let doasGit = "sudo -u git";
+    let doasGit = "${lib.getExe pkgs.sudo} -u git";
     in ''
       $DRY_RUN_CMD ${doasGit} mkdir -p ${gitDirectory}
 
