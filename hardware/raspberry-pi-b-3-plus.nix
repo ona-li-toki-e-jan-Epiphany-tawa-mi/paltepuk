@@ -22,7 +22,7 @@
 
 
 
-  # Bandwidth limits for I2P router and Tor relay. CPU bound.
+  # Bandwidth limits for I2P router and Tor bridge. CPU bound.
   services.i2pd.bandwidth = 3000;                 # 3 MB/s
   services.tor.settings   = {
     "BandwidthRate"  = "3 MBytes";
@@ -31,10 +31,10 @@
 
   # No IPv6 ;(
   services.i2pd.enableIPv6       = lib.mkForce false;
-  services.tor.settings."ORPort" = {
+  services.tor.settings."ORPort" = [{
     port  = "auto";
     flags = [ "IPv4Only" ];
-  };
+  }];
 
 
 

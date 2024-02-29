@@ -25,4 +25,6 @@
 
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINsLu3obWEYcXp6xRSSeOstWH7LVl8mCz0diS4IJeqZh epiphany@godsthirdtemple" ];
   };
+
+  services.openssh.settings."AllowUsers" = [ "epiphany" ];
 }

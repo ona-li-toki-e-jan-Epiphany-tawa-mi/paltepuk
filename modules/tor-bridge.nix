@@ -12,12 +12,13 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Installs and configures an Tor relay (bridge) for accessing the services via
-# Tor.
+# Installs and configures an Tor bridge with Nyx to monitor it.
 
-{ ... }:
+{ pkgs, ... }:
 
 {
+  environment.systemPackages = [ pkgs.nyx ];
+
   services.tor = {
     enable       = true;
     openFirewall = true;
@@ -32,6 +33,9 @@
       "HardwareAccel" = 1;
       # Wuh-woh, self-doxxing???!?!?!?!?!??
       "ContactInfo" = "email:epiphany-tor[]protonmail.ch ciissversion:2 pgp:4AE98E88022C1C694B72516BFE18D6FDBB07BA3A";
+
+      # Sets up control port for tor to access with nyx.
+      "ControlPort" = 9051;
     };
   };
 }
