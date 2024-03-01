@@ -89,31 +89,15 @@ in
 
 
   # cgit for viewing my git repos via the web.
-  # TODO put cgit on virtual network and set different port.
-  containers."cgit" = {
-    autoStart = true;
-
-    config = {
-      services.cgit."git" = {
-        enable   = true;
-        scanPath = gitDirectory;
-      };
-
-      # Tor access for the cgit instance.
-      services.tor = {
-        enable = true;
-
-        relay = {
-          enable = true;
-          role   = "private-bridge";
-
-          onionServices."cgit".map = [ 80 ];
-        };
-      };
-
-      system.stateVersion = "23.11";
-    };
+  services.cgit."git" = {
+    enable   = true;
+    scanPath = gitDirectory;
   };
+
+  # Tor access for the cgit instance.
+  # Normally running the onion service on the same tor daemon as a relay is a
+  # no-no, but it's tied to my real identity anyways, so who cares.
+  services.tor.relay.onionServices."cgit".map = [ 80 ];
 
   # I2P access for the cgit instance.
   services.i2pd.inTunnels."cgit" = {
