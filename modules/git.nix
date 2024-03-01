@@ -14,7 +14,6 @@
 
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
-# TODO Add web interface.
 
 { pkgs, lib, ... }:
 
@@ -86,4 +85,40 @@ in
         $DRY_RUN_CMD ${doasGit} git -C "${gitDirectory}/${repository}" init --bare
       fi
     '') repositories);
+
+
+
+  # cgit for viewing my git repos via the web.
+  # TODO put cgit on virtual network and set different port.
+  containers."cgit" = {
+    autoStart = true;
+
+    config = {
+      services.cgit."git" = {
+        enable   = true;
+        scanPath = gitDirectory;
+      };
+
+      # Tor access for the cgit instance.
+      services.tor = {
+        enable = true;
+
+        relay = {
+          enable = true;
+          role   = "private-bridge";
+
+          onionServices."cgit".map = [ 80 ];
+        };
+      };
+
+      system.stateVersion = "23.11";
+    };
+  };
+
+  # I2P access for the cgit instance.
+  services.i2pd.inTunnels."cgit" = {
+    enable      = true;
+    port        = 80;
+    destination = "";
+  };
 }
