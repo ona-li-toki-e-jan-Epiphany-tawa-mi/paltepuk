@@ -13,6 +13,7 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Installs and configures an Tor bridge with Nyx to monitor it.
+# TODO fix Nyx
 
 { pkgs, ... }:
 

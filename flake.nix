@@ -31,7 +31,7 @@
           specialArgs = { inherit inputs; } // extraSpecialArguments;
 
           system  = "aarch64-linux";
-          modules = [ ./hardware/raspberry-pi-3-b-plus.nix
+          modules = [ ./hosts/raspberry-pi-3-b-plus.nix
                       ./modules/default.nix
                     ];
         };
