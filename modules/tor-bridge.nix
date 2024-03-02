@@ -14,9 +14,13 @@
 
 # Installs and configures an Tor bridge with Nyx to monitor it.
 # TODO fix Nyx
+# NOTE: you will have to create a file called "tor-port.nix" in the base of
+# this project with the OR port for Tor to use. This will have to be the same value as expected by services.tor.settings."ORPort".
 
 { pkgs, ... }:
 
+let torORPort = (import ../tor-port.nix);
+in
 {
   environment.systemPackages = [ pkgs.nyx ];
 
@@ -30,6 +34,8 @@
     };
 
     settings = {
+      "ORPort" = torORPort;
+
       # Tries to use hardware acceleration when possible.
       "HardwareAccel" = 1;
       # Wuh-woh, self-doxxing???!?!?!?!?!??

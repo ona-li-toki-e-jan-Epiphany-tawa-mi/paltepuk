@@ -17,7 +17,8 @@
 {
   # Enables OpenSSH and forces key-based authentication.
   services.openssh = {
-    enable = true;
+    enable       = true;
+    openFirewall = false;
 
     settings = {
       "PermitRootLogin"        = "no";

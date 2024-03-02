@@ -22,6 +22,9 @@
 
 
 
+  # Opening the firewall cuz it's on my LAN.
+  services.openssh.openFirewall = lib.mkForce true;
+
   # Bandwidth limits for I2P router and Tor bridge. CPU bound.
   services.i2pd.bandwidth = 3000;                 # 3 MB/s
   services.tor.settings   = {
@@ -31,10 +34,6 @@
 
   # No IPv6 ;(
   services.i2pd.enableIPv6       = lib.mkForce false;
-  services.tor.settings."ORPort" = [{
-    port  = 34867;
-    flags = [ "IPv4Only" ];
-  }];
 
 
 
