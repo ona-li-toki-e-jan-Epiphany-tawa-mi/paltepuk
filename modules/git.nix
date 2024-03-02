@@ -151,16 +151,24 @@ in
   # already exist.
   system.activationScripts."activateGit" =
     let doasGit = "${lib.getExe pkgs.sudo} -u git";
+
+        # This path prefix is neccesary for git and it's dependencies to be
+        # accessible by the script.
+        pathCommandPrefix = with pkgs; "PATH=\"${git}/bin:${openssh}/bin:$PATH\"";
     in ''
       $DRY_RUN_CMD ${doasGit} mkdir -p ${gitDirectory}
 
-    '' + lib.concatStrings (builtins.map ({path, description}: ''
-      if [ ! -d "${gitDirectory}/${path}" ]; then
-        $DRY_RUN_CMD ${doasGit} mkdir -p "${gitDirectory}/${path}"
-        $DRY_RUN_CMD ${doasGit} git -C "${gitDirectory}/${path}" init --bare
-        $DRY_RUN_CMD ${doasGit} echo '${description}' >> "${gitDirectory}/${path}/description"
-      fi
-    '') repositories);
+    '' + lib.concatStrings (builtins.map ({path, description}:
+      let repositoryPath = "${gitDirectory}/${path}";
+      in ''
+        if [ ! -d "${gitDirectory}/${path}" ]; then
+          $DRY_RUN_CMD ${doasGit} mkdir -p "${repositoryPath}"
+          ${pathCommandPrefix} $DRY_RUN_CMD ${doasGit} git -C "${repositoryPath}" init --bare
+          $DRY_RUN_CMD ${doasGit} echo ${lib.escapeShellArg description} > "${repositoryPath}/description"
+        fi
+      '')
+      repositories
+    );
 
 
 
