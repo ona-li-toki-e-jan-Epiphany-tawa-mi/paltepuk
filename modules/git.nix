@@ -156,7 +156,8 @@ in
         # accessible by the script.
         pathCommandPrefix = with pkgs; "PATH=\"${git}/bin:${openssh}/bin:$PATH\"";
     in ''
-      $DRY_RUN_CMD ${doasGit} mkdir -p ${gitDirectory}
+      $DRY_RUN_CMD mkdir -p ${gitDirectory}
+      $DRY_RUN_CMD chown git:git ${gitDirectory}
 
     '' + lib.concatStrings (builtins.map ({path, description}:
       let repositoryPath = "${gitDirectory}/${path}";
