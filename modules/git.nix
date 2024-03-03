@@ -179,6 +179,8 @@ in
     scanPath = gitDirectory;
 
     settings = {
+      # Converts the READMEs from Markdown to HTML for display.
+      "about-filter"        = "${lib.getExe' pkgs.python312Packages.markdown "markdown_py"}";
       # Cool commit graph.
       "enable-commit-graph" = 1;
       # Enables extra links in the index view to different parts of the repo.
@@ -191,9 +193,10 @@ in
       "noplainemail"        = 1;
       # Sets the README of the repos to the README.md of the default branch.
       "readme"              = ":README.md";
-      # TODO root-desc.
+      # Stuff that appears in the index page.
+      "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
       # TODO root-readme.
-      # TODO root-title.
+      "root-title"          = "jan Epiphany's Public Git Server";
       # I like side-by-side diffs.
       "side-by-side-diffs"  = 1;
     };
