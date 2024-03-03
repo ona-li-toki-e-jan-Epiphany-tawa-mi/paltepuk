@@ -177,6 +177,26 @@ in
   services.cgit."git" = {
     enable   = true;
     scanPath = gitDirectory;
+
+    settings = {
+      # Cool commit graph.
+      "enable-commit-graph" = 1;
+      # Enables extra links in the index view to different parts of the repo.
+      "enable-index-links"  = 1;
+      # Hides the "owner" of the repos since it's all just the git user.
+      "enable-index-owner"  = 0;
+      # Haha funny logo.
+      "logo" = ""; # TODO
+      # Hides email addresses, probably a good idea?
+      "noplainemail"        = 1;
+      # Sets the README of the repos to the README.md of the default branch.
+      "readme"              = ":README.md";
+      # TODO root-desc.
+      # TODO root-readme.
+      # TODO root-title.
+      # I like side-by-side diffs.
+      "side-by-side-diffs"  = 1;
+    };
   };
 
   # Tor access for the cgit instance.
