@@ -179,8 +179,13 @@ in
     scanPath = gitDirectory;
 
     settings = {
-      # Converts the READMEs from Markdown to HTML for display.
-      "about-filter"        = "${lib.getExe' pkgs.python312Packages.markdown "markdown_py"}";
+      # Converts the READMEs from Markdown to HTML for display. markdown_py
+      # needs to be encased in a script because cgit passes the text in STDIN
+      # and the name of the file as the first argument, but that name breaks
+      # markdown_py. Unfortuantely, the images and other relative links don't
+      # work, womp womp.
+      "about-filter"        = "${pkgs.writeShellScript "md2html.sh" "${lib.getExe' pkgs.python312Packages.markdown "markdown_py"}"}";
+      # TODO css.
       # Cool commit graph.
       "enable-commit-graph" = 1;
       # Enables extra links in the index view to different parts of the repo.
@@ -188,14 +193,14 @@ in
       # Hides the "owner" of the repos since it's all just the git user.
       "enable-index-owner"  = 0;
       # Haha funny logo.
-      "logo" = ""; # TODO
-      # Hides email addresses, probably a good idea?
+      #"logo" = ""; # TODO
+      # Hides email addresses, they can be annoying.
       "noplainemail"        = 1;
       # Sets the README of the repos to the README.md of the default branch.
       "readme"              = ":README.md";
       # Stuff that appears in the index page.
       "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      # TODO root-readme.
+      "root-readme"         = "${../data/cgit-root-README.md}";
       "root-title"          = "jan Epiphany's Public Git Server";
       # I like side-by-side diffs.
       "side-by-side-diffs"  = 1;
