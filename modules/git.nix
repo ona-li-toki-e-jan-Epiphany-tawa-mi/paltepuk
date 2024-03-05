@@ -212,7 +212,7 @@ in
 
   # Extra files for cgit to grab.
   services.nginx.virtualHosts."${cgitServiceName}".locations = {
-    "${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
+    "= ${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
   };
 
   # Tor access for the cgit instance.
