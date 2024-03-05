@@ -186,13 +186,14 @@ in
     settings = {
       # Converts the README files to HTML for display.
       "about-filter"        = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
-      # TODO css.
       # Cool commit graph.
       "enable-commit-graph" = 1;
       # Enables extra links in the index view to different parts of the repo.
       "enable-index-links"  = 1;
       # Hides the "owner" of the repos since it's all just the git user.
       "enable-index-owner"  = 0;
+      # Removes footer.
+      "footer"              = "";
       # Haha funny logo.
       "logo"                = cgitLogoLocation;
       # Hides email addresses, they can be annoying.
