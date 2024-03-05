@@ -4,11 +4,11 @@ Welcome to MY git server! Here you can peruse my various programming (and other)
 projects in style!
 
 Note that in the about sections for each repo, images and relative links are
-borked. This is because they are meant for GitHub, sorry in advance.
+borked. This is because they are meant for GitHub, sorry in advance!
 
 ## Cloning
 
-In the usual open source fashion, you are of course able to clone the
+In the usual open source fashion, you are, of course, able to clone the
 repositories listed here and do as you wish with them in accordance with their
 licenses.
 
@@ -37,19 +37,21 @@ If you would prefer the Clearnet, please visit my GitHub instead:
 https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 ```
 
-## Contacts
+## Contact
 
 Want to get in contact with me? Here's a few methods:
 
 - Briar
 
-Do you have [Briar?](https://code.briarproject.org/briar "Briar GitLab instance") Add me with my address:
+Do you have [(CLEARNET) Briar?](https://code.briarproject.org/briar "Briar GitLab instance")
+Add me with my address:
 
 ```
 briar://aafr55yjjtk65vqtmmxk6bloewweabxzi6lfkjnv7mlscekwf46uk
 ```
 
-Note that you will have to send me your Briar address through a different contact method as well before we can message each other.
+Note that you will have to send me your Briar address through a different
+contact method as well before we can message each other.
 
 - Email
 
@@ -77,4 +79,14 @@ FgoAKgWCZcPZ3wmQwbQhp/P+Kv0CmwwWIQTf8AA07Ej6cuqKAhLBtCGn8/4q
 0aIqznMVOt2PUZfM5bz1RXL7bgrUuGNeO9C5Bg==
 =Wqd7
 -----END PGP PUBLIC KEY BLOCK-----
+```
+
+## Source
+
+This website, and the NixOS configuration for it's server, is open sourced under
+the GNU Affero General Public License version 3 or Later. You can view it here
+in the `paltepuk.git` repository, or at the following link on GitHub:
+
+```
+https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk
 ```

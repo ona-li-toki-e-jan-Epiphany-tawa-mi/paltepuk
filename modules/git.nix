@@ -179,12 +179,8 @@ in
     scanPath = gitDirectory;
 
     settings = {
-      # Converts the READMEs from Markdown to HTML for display. markdown_py
-      # needs to be encased in a script because cgit passes the text in STDIN
-      # and the name of the file as the first argument, but that name breaks
-      # markdown_py. Unfortuantely, the images and other relative links don't
-      # work, womp womp.
-      "about-filter"        = "${pkgs.writeShellScript "md2html.sh" "${lib.getExe' pkgs.python312Packages.markdown "markdown_py"}"}";
+      # Converts the README files to HTML for display.
+      "about-filter"        = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
       # TODO css.
       # Cool commit graph.
       "enable-commit-graph" = 1;
@@ -204,6 +200,8 @@ in
       "root-title"          = "jan Epiphany's Public Git Server";
       # I like side-by-side diffs.
       "side-by-side-diffs"  = 1;
+      # Nice syntax highlighting.
+      "source-filter"       = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
     };
   };
 
