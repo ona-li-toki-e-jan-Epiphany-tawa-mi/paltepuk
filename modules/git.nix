@@ -19,6 +19,11 @@
 
 let gitDirectory = "/srv/git/";
 
+    # The name for cgit and it's related services to be under.
+    cgitServiceName  = "cgit";
+    # The location of the custom logo for cgit under nginx.
+    cgitLogoLocation = "/custom-cgit.png";
+
     # A set of bare repositories to create if they don't already exist.
     repositories = [
       {
@@ -174,7 +179,7 @@ in
 
 
   # cgit for viewing my git repos via the web.
-  services.cgit."git" = {
+  services.cgit."${cgitServiceName}" = {
     enable   = true;
     scanPath = gitDirectory;
 
@@ -189,14 +194,14 @@ in
       # Hides the "owner" of the repos since it's all just the git user.
       "enable-index-owner"  = 0;
       # Haha funny logo.
-      #"logo" = ""; # TODO
+      "logo"                = cgitLogoLocation;
       # Hides email addresses, they can be annoying.
       "noplainemail"        = 1;
       # Sets the README of the repos to the README.md of the default branch.
       "readme"              = ":README.md";
       # Stuff that appears in the index page.
       "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      "root-readme"         = "${../data/cgit-root-README.md}";
+      "root-readme"         = "${../data/cgit/root-README.md}";
       "root-title"          = "jan Epiphany's Public Git Server";
       # I like side-by-side diffs.
       "side-by-side-diffs"  = 1;
@@ -205,13 +210,18 @@ in
     };
   };
 
+  # Extra files for cgit to grab.
+  services.nginx.virtualHosts."${cgitServiceName}".locations = {
+    "${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
+  };
+
   # Tor access for the cgit instance.
   # Normally running the onion service on the same tor daemon as a relay is a
   # no-no, but it's tied to my real identity anyways, so who cares.
-  services.tor.relay.onionServices."cgit".map = [ 80 ];
+  services.tor.relay.onionServices."${cgitServiceName}".map = [ 80 ];
 
   # I2P access for the cgit instance.
-  services.i2pd.inTunnels."cgit" = {
+  services.i2pd.inTunnels."${cgitServiceName}" = {
     enable      = true;
     port        = 80;
     destination = "";
