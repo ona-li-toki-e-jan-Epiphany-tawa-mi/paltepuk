@@ -198,9 +198,9 @@ in
             # accessible by the script.
             pathCommandPrefix = with pkgs; "PATH=\"${git}/bin:${openssh}/bin:$PATH\"";
         in lib.concatStrings (builtins.map ({path, description}:
-          let repositoryPath = "${gitDirectory}/${path}";
+          let repositoryPath = "${gitContainerDirectory}/${path}";
           in ''
-            if [ ! -d "${gitDirectory}/${path}" ]; then
+            if [ ! -d "${repositoryPath}" ]; then
               $DRY_RUN_CMD ${doasGit} mkdir -p "${repositoryPath}"
               $DRY_RUN_CMD ${pathCommandPrefix} ${doasGit} git -C "${repositoryPath}" init --bare
               $DRY_RUN_CMD ${doasGit} echo ${lib.escapeShellArg description} > "${repositoryPath}/description"
