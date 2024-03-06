@@ -257,6 +257,9 @@ in
 
 
 
+  # Allows git SSH through firewall.
+  networking.firewall.allowedTCPPorts = [ gitServerPort ];
+
   # Tor access for the cgit instance.
   # Normally running the onion service on the same tor daemon as a relay is a
   # no-no, but it's tied to my real identity anyways, so who cares.
