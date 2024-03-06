@@ -52,7 +52,6 @@
 
   # Enables networking.
   networking.hostName              = hostName;
-  networking.networkmanager.enable = true;
 
   # Sets time zone. Totally correct bro, don't even think about it bro.
   time.timeZone = "Africa/Windhoek";
