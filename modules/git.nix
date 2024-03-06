@@ -15,9 +15,17 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ pkgs, lib, ... }:
+{ ... }:
 
-let gitDirectory = "/srv/git/";
+let # Where to put the files for git on the host and in the container.
+    gitHostDirectory      = "/mnt/git/";
+    gitContainerDirectory = "/srv/git/";
+
+    # The user and group to use for git.
+    gitUser = "git";
+
+    # The port to run the git SSH server on.
+    gitServerPort = 5000;
 
     # The name for cgit and it's related services to be under.
     cgitServiceName  = "cgit";
@@ -133,98 +141,140 @@ in
 
 
 
-  # We login as the "git" user via ssh when using git.
-  users = {
-    users."git" = {
-      isSystemUser = true;
-      description  = "git user";
-      home         = gitDirectory;
-      shell        = "${pkgs.git}/bin/git-shell";
-      group        = "git";
+  # Creates persistent directory for git if it doesn't already exist.
+  system.activationScripts."activateGit" = ''
+    mkdir -p ${gitHostDirectory}
+  '';
 
-      openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
+  # Isolated container for the git server and cgit to run in.
+  containers."${gitUser}" = {
+    ephemeral      = true;
+    autoStart      = true;
+
+    # Mounts persistent directory..
+    bindMounts."${gitContainerDirectory}" = {
+      hostPath   = gitHostDirectory;
+      isReadOnly = false;
     };
 
-    groups."git" = {};
-  };
-
-  services.openssh.settings."AllowUsers" = [ "git" ];
-
-
-
-  # Creates the git directory and any specified repositories if they don't
-  # already exist.
-  system.activationScripts."activateGit" =
-    let doasGit = "${lib.getExe pkgs.sudo} -u git";
-
-        # This path prefix is neccesary for git and it's dependencies to be
-        # accessible by the script.
-        pathCommandPrefix = with pkgs; "PATH=\"${git}/bin:${openssh}/bin:$PATH\"";
-    in ''
-      $DRY_RUN_CMD mkdir -p ${gitDirectory}
-      $DRY_RUN_CMD chown git:git ${gitDirectory}
-
-    '' + lib.concatStrings (builtins.map ({path, description}:
-      let repositoryPath = "${gitDirectory}/${path}";
-      in ''
-        if [ ! -d "${gitDirectory}/${path}" ]; then
-          $DRY_RUN_CMD ${doasGit} mkdir -p "${repositoryPath}"
-          ${pathCommandPrefix} $DRY_RUN_CMD ${doasGit} git -C "${repositoryPath}" init --bare
-          $DRY_RUN_CMD ${doasGit} echo ${lib.escapeShellArg description} > "${repositoryPath}/description"
-        fi
-      '')
-      repositories
-    );
+    config = { pkgs, lib, ... }: {
+      imports = [ ./lib/ssh-common.nix
+                ];
 
 
 
-  # cgit for viewing my git repos via the web.
-  services.cgit."${cgitServiceName}" = {
-    enable   = true;
-    scanPath = gitDirectory;
+      programs.git.enable = true;
 
-    settings = {
-      # Converts the README files to HTML for display.
-      "about-filter"        = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
-      # Cool commit graph.
-      "enable-commit-graph" = 1;
-      # Enables extra links in the index view to different parts of the repo.
-      "enable-index-links"  = 1;
-      # Hides the "owner" of the repos since it's all just the git user.
-      "enable-index-owner"  = 0;
-      # Removes footer.
-      "footer"              = "";
-      # Haha funny logo.
-      "logo"                = cgitLogoLocation;
-      # Hides email addresses, they can be annoying.
-      "noplainemail"        = 1;
-      # Sets the README of the repos to the README.md of the default branch.
-      "readme"              = ":README.md";
-      # Stuff that appears in the index page.
-      "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      "root-readme"         = "${../data/cgit/root-README.md}";
-      "root-title"          = "jan Epiphany's Public Git Server";
-      # I like side-by-side diffs.
-      "side-by-side-diffs"  = 1;
-      # Nice syntax highlighting.
-      "source-filter"       = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
+      # Sets permissions for bind mount.
+      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 0755 ${gitUser} ${gitUser}" ];
+
+
+
+      # We login as the "git" user via ssh when using git.
+      users = {
+        users."${gitUser}" = {
+          isSystemUser = true;
+          description  = "git user";
+          home         = gitContainerDirectory;
+          shell        = "${pkgs.git}/bin/git-shell";
+          group        = gitUser;
+
+          openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
+        };
+
+        groups."${gitUser}" = {};
+      };
+
+      services.openssh = {
+        ports                 = [ gitServerPort ];
+        settings."AllowUsers" = [ gitUser ];
+      };
+
+      # Creates any specified repositories if they don't already exist.
+      system.activationScripts."createRepositories" =
+        let doasGit = "${lib.getExe pkgs.sudo} -u ${gitUser}";
+
+            # This path prefix is neccesary for git and it's dependencies to be
+            # accessible by the script.
+            pathCommandPrefix = with pkgs; "PATH=\"${git}/bin:${openssh}/bin:$PATH\"";
+        in lib.concatStrings (builtins.map ({path, description}:
+          let repositoryPath = "${gitDirectory}/${path}";
+          in ''
+            if [ ! -d "${gitDirectory}/${path}" ]; then
+              $DRY_RUN_CMD ${doasGit} mkdir -p "${repositoryPath}"
+              $DRY_RUN_CMD ${pathCommandPrefix} ${doasGit} git -C "${repositoryPath}" init --bare
+              $DRY_RUN_CMD ${doasGit} echo ${lib.escapeShellArg description} > "${repositoryPath}/description"
+            fi
+          '')
+          repositories
+        );
+
+
+
+      # cgit for viewing my git repos via the web.
+      services.cgit."${cgitServiceName}" = {
+        enable   = true;
+        scanPath = gitContainerDirectory;
+
+        settings = {
+          # Converts the README files to HTML for display.
+          "about-filter"        = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
+          # Cool commit graph.
+          "enable-commit-graph" = 1;
+          # Enables extra links in the index view to different parts of the repo.
+          "enable-index-links"  = 1;
+          # Hides the "owner" of the repos since it's all just the git user.
+          "enable-index-owner"  = 0;
+          # Removes footer.
+          "footer"              = "";
+          # Haha funny logo.
+          "logo"                = cgitLogoLocation;
+          # Hides email addresses, they can be annoying.
+          "noplainemail"        = 1;
+          # Sets the README of the repos to the README.md of the default branch.
+          "readme"              = ":README.md";
+          # Stuff that appears in the index page.
+          "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
+          "root-readme"         = "${../data/cgit/root-README.md}";
+          "root-title"          = "jan Epiphany's Public Git Server";
+          # I like side-by-side diffs.
+          "side-by-side-diffs"  = 1;
+          # Nice syntax highlighting.
+          "source-filter"       = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
+        };
+      };
+
+      # Extra files for cgit to grab.
+      services.nginx.virtualHosts."${cgitServiceName}".locations = {
+        "= ${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
+      };
+
+
+
+      system.stateVersion = "23.11";
     };
   };
 
-  # Extra files for cgit to grab.
-  services.nginx.virtualHosts."${cgitServiceName}".locations = {
-    "= ${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
-  };
+
 
   # Tor access for the cgit instance.
   # Normally running the onion service on the same tor daemon as a relay is a
   # no-no, but it's tied to my real identity anyways, so who cares.
   services.tor.relay.onionServices."${cgitServiceName}".map = [ 80 ];
 
-  # I2P access for the cgit instance.
-  services.i2pd.inTunnels."${cgitServiceName}" = {
-    enable      = true;
-    port        = 80;
-    destination = "";
+  services.i2pd.inTunnels = {
+    # I2P access for the git SSH server.
+    "${gitUser}" = {
+      enable      = true;
+      port        = gitServerPort;
+      destination = "";
+    };
+
+    # I2P access for the cgit instance.
+    "${cgitServiceName}" = {
+      enable      = true;
+      port        = 80;
+      destination = "";
+    };
   };
 }

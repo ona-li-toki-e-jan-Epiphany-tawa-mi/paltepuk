@@ -12,18 +12,31 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Installs and configures an SSH server.
+# Common configuration for SSH.
 
 {
-  imports = [ ./lib/ssh-common.nix
-            ];
+  # Enables OpenSSH and forces key-based authentication.
+  services.openssh = {
+    enable       = true;
+    openFirewall = true;
 
+    settings = {
+      "PermitRootLogin"        = "no";
+      "PasswordAuthentication" = false;
+    };
 
+    extraConfig = ''
+      KbdInteractiveAuthentication no
+      UsePAM no
+      AuthenticationMethods publickey
+      PubkeyAuthentication yes
+    '';
+  };
 
-  # I2P in-tunnel for remote access. Adding a Tor service would be overkill.
-  services.i2pd.inTunnels."OpenSSH" = {
-    enable      = true;
-    port        = 22;
-    destination = "";
+  # Fail2ban to block out brute-force bots. Not super important with hidden
+  # services.
+  services.fail2ban = {
+    enable                   = true;
+    bantime-increment.enable = true;
   };
 }
