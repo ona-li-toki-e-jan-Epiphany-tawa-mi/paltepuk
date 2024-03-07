@@ -14,11 +14,11 @@
 
 # The default nix module that includes all parts of my website and server.
 
-{ inputs, hostName, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [ ./i2pd.nix
-              ./tor-bridge.nix
+              ./tor.nix
               ./ssh.nix
               ./git.nix
               ./epiphany.nix
@@ -51,7 +51,7 @@
 
 
   # Enables networking.
-  networking.hostName              = hostName;
+  networking.hostName = "paltepuk";
 
   # Sets time zone. Totally correct bro, don't even think about it bro.
   time.timeZone = "Africa/Windhoek";

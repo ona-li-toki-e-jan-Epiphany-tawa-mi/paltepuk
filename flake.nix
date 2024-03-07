@@ -15,15 +15,16 @@
 {
   description = "NixOS configuration flake for badass reproducable websites";
 
-  inputs = {
-    # We like to live life on the wild side.
-    nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-  };
+  inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-23.11;
 
   outputs = { nixpkgs, ... } @ inputs:
     let extraSpecialArguments = {
-          # Hostname to be used for the server.
-          hostName = "paltepuk";
+          # Common area for port numbers.
+          ports = {
+            gitSSHServer   = 5000;
+            i2pdWebConsole = 7070;
+            torControl     = 9050;
+          };
         };
     in {
       nixosConfigurations = {
