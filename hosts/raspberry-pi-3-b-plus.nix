@@ -22,7 +22,7 @@
 
 
 
-  # Bandwidth limits for I2P router and Tor bridge. CPU bound.
+  # Bandwidth limits. Bound mainly by the lack of memory (1 GB,)
   services.i2pd.bandwidth = 3000;                 # 3 MB/s
   services.tor.settings   = {
     "BandwidthRate"  = "3 MBytes";
@@ -58,8 +58,8 @@
   boot.loader.raspberryPi.firmwareConfig = [ "force_turbo=1" ];
 
   # Enables networking.
-  networking.useDHCP                 = false;
-  networking.interfaces.eno0.useDHCP = true;
+  networking.useDHCP                   = false;
+  networking.interfaces.enu1u1.useDHCP = true;
 
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }

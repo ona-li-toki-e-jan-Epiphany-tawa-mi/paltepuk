@@ -15,7 +15,7 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ ... }:
+{ ports, ... }:
 
 let # Where to put the files for git on the host and in the container.
     gitHostDirectory      = "/mnt/git/";
@@ -23,9 +23,6 @@ let # Where to put the files for git on the host and in the container.
 
     # The user and group to use for git.
     gitUser = "git";
-
-    # The port to run the git SSH server on.
-    gitServerPort = 5000;
 
     # The name for cgit and it's related services to be under.
     cgitServiceName  = "cgit";
@@ -186,28 +183,31 @@ in
       };
 
       services.openssh = {
-        ports                 = [ gitServerPort ];
+        ports                 = [ ports.gitSSHServer ];
         settings."AllowUsers" = [ gitUser ];
       };
 
       # Creates any specified repositories if they don't already exist.
-      system.activationScripts."createRepositories" =
-        let doasGit = "${lib.getExe pkgs.sudo} -u ${gitUser}";
+      systemd.services."create-repositories" = {
+        description = "git repository creation service";
+        wantedBy    = [ "multi-user.target" ];
+        path        = [ pkgs.git ];
 
-            # This path prefix is neccesary for git and it's dependencies to be
-            # accessible by the script.
-            pathCommandPrefix = with pkgs; "PATH=\"${git}/bin:${openssh}/bin:$PATH\"";
-        in lib.concatStrings (builtins.map ({path, description}:
-          let repositoryPath = "${gitContainerDirectory}/${path}";
-          in ''
-            if [ ! -d "${repositoryPath}" ]; then
-              $DRY_RUN_CMD ${doasGit} mkdir -p "${repositoryPath}"
-              $DRY_RUN_CMD ${pathCommandPrefix} ${doasGit} git -C "${repositoryPath}" init --bare
-              $DRY_RUN_CMD ${doasGit} echo ${lib.escapeShellArg description} > "${repositoryPath}/description"
+        script = lib.concatStrings (builtins.map ({path, description}: ''
+            if [ ! -d "${path}" ]; then
+              mkdir -p "${path}"
+              git -C "${path}" init --bare
+              echo ${lib.escapeShellArg description} > "${path}/description"
             fi
           '')
           repositories
         );
+
+        serviceConfig = {
+          "User"             = gitUser;
+          "WorkingDirectory" = gitContainerDirectory;
+        };
+      };
 
 
 
@@ -258,7 +258,7 @@ in
 
 
   # Allows git SSH through firewall.
-  networking.firewall.allowedTCPPorts = [ gitServerPort ];
+  networking.firewall.allowedTCPPorts = [ ports.gitSSHServer ];
 
   # Tor access for the cgit instance.
   # Normally running the onion service on the same tor daemon as a relay is a
@@ -269,7 +269,7 @@ in
     # I2P access for the git SSH server.
     "${gitUser}" = {
       enable      = true;
-      port        = gitServerPort;
+      port        = ports.gitSSHServer;
       destination = "";
     };
 

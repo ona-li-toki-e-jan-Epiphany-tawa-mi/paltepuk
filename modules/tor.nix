@@ -12,37 +12,23 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Installs and configures an Tor bridge with Nyx to monitor it.
-# TODO fix Nyx
-# NOTE: you will have to create a file called "tor-port.nix" in the base of
-# this project with the OR port for Tor to use. This will have to be the same value as expected by services.tor.settings."ORPort".
+# Installs and configures the Tor daemon for running onion services with Nyx to
+# monitor it.
+# NOTE: you will probably want to set services.tor.settings."BandwidthRate"
+# and services.tor.settings."BandwidthBurst" to what you can offer.
 
-{ pkgs, ... }:
+{ ports, pkgs, ... }:
 
-let torORPort = (import ../tor-port.nix);
-in
 {
   environment.systemPackages = [ pkgs.nyx ];
 
   services.tor = {
-    enable       = true;
-    openFirewall = true;
-
-    relay = {
-      enable = true;
-      role   = "bridge";
-    };
+    enable = true;
 
     settings = {
-      "ORPort" = torORPort;
-
-      # Tries to use hardware acceleration when possible.
+      "ControlPort"   = ports.torControl;
+      # Enables hardware acceleration.
       "HardwareAccel" = 1;
-      # Wuh-woh, self-doxxing???!?!?!?!?!??
-      "ContactInfo" = "email:epiphany-tor[]protonmail.ch ciissversion:2 pgp:4AE98E88022C1C694B72516BFE18D6FDBB07BA3A";
-
-      # Sets up control port for tor to access with nyx.
-      "ControlPort" = 9051;
     };
   };
 }

@@ -15,8 +15,10 @@
 # Installs and configures an I2P node for accessing the services via I2P.
 # NOTE: you will have to create a file called "i2pd-port.nix" in the base of
 # this project with the port for i2pd to use.
+# NOTE: you will probably want to set services.i2pd.bandwidth to what you can
+# offer.
 
-{ lib, ... }:
+{ lib, ports, ... }:
 
 let i2pdPort = (import ../i2pd-port.nix);
 in
@@ -35,7 +37,10 @@ in
     # just using I2P for running the hidden service.
     addressbook.subscriptions = lib.mkForce [];
 
-    # Web console, port 7070.
-    proto.http.enable = true;
+    # Web console.
+    proto.http = {
+      enable = true;
+      port   = ports.i2pdWebConsole;
+    };
   };
 }
