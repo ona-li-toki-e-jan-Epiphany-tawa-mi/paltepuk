@@ -19,11 +19,18 @@
 
   outputs = { nixpkgs, ... } @ inputs:
     let extraSpecialArguments = {
+          # IP addresses for container networking.
+          vlan = {
+            host = "192.168.100.1";
+            cgit = "192.168.100.3";
+          };
+
           # Common area for port numbers.
           ports = {
-            gitSSHServer   = 5000;
             i2pdWebConsole = 7070;
             torControl     = 9050;
+            # Ports to forward from host to containers.
+            gitSSHServer   = 5000;
           };
         };
     in {
