@@ -28,7 +28,7 @@
           # Common area for port numbers.
           ports = {
             i2pdWebConsole = 7070;
-            torControl     = 9050;
+            torControl     = 9051;
             # Ports to forward from host to containers.
             gitSSHServer   = 5000;
           };
