@@ -50,16 +50,22 @@
 
   boot.initrd.availableKernelModules = [ "usbhid" ];
 
-  # NixOS wants to enable GRUB by default.
-  boot.loader.grub.enable = false;
-  # Enables the generation of /boot/extlinux/extlinux.conf.
-  boot.loader.generic-extlinux-compatible.enable = true;
-  # Steps up the CPU frequency.
-  boot.loader.raspberryPi.firmwareConfig = [ "force_turbo=1" ];
+  boot.loader = {
+    # NixOS wants to enable GRUB by default.
+    grub.enable = false;
+    # Enables the generation of /boot/extlinux/extlinux.conf.
+    generic-extlinux-compatible.enable = true;
+    # Steps up the CPU frequency.
+    raspberryPi.firmwareConfig = [ "force_turbo=1" ];
+  };
 
-  # Enables networking.
-  networking.useDHCP                   = false;
-  networking.interfaces.enu1u1.useDHCP = true;
+  networking = {
+    # Enables networking.
+    useDHCP                   = false;
+    interfaces.enu1u1.useDHCP = true;
+    # Sets interface to use for NAT.
+    nat.externalInterface     = "enu1u1";
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }

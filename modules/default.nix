@@ -50,8 +50,10 @@
 
 
 
-  # Enables networking.
   networking.hostName = "paltepuk";
+
+  # Enables NAT for routing connections with the containers' private networks.
+  networking.nat.enable = true;
 
   # Sets time zone. Totally correct bro, don't even think about it bro.
   time.timeZone = "Africa/Windhoek";

@@ -20,8 +20,6 @@
 
 
 
-  services.openssh.openFirewall = true;
-
   # I2P in-tunnel for remote access. Adding a Tor service would be overkill.
   services.i2pd.inTunnels."OpenSSH" = {
     enable      = true;

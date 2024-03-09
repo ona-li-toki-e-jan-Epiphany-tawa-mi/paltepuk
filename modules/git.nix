@@ -15,14 +15,13 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ ports, ... }:
+{ ports, vlan, ... }:
 
 let # Where to put the files for git on the host and in the container.
     gitHostDirectory      = "/mnt/git/";
     gitContainerDirectory = "/srv/git/";
-
     # The user and group to use for git.
-    gitUser = "git";
+    gitUser               = "git";
 
     # The name for cgit and it's related services to be under.
     cgitServiceName  = "cgit";
@@ -154,18 +153,23 @@ in
       isReadOnly = false;
     };
 
+    # Creates isolated network.
+    privateNetwork = true;
+    hostAddress    = vlan.host;
+    localAddress   = vlan.cgit;
+
     config = { pkgs, lib, ... }: {
       imports = [ ./lib/ssh-common.nix
                 ];
 
 
 
-      programs.git.enable = true;
-
       # Sets permissions for bind mount.
       systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 0755 ${gitUser} ${gitUser}" ];
 
 
+
+      programs.git.enable = true;
 
       # We login as the "git" user via ssh when using git.
       users = {
@@ -182,10 +186,7 @@ in
         groups."${gitUser}" = {};
       };
 
-      services.openssh = {
-        ports                 = [ ports.gitSSHServer ];
-        settings."AllowUsers" = [ gitUser ];
-      };
+      services.openssh.settings."AllowUsers" = [ gitUser ];
 
       # Creates any specified repositories if they don't already exist.
       systemd.services."create-repositories" = {
@@ -210,6 +211,9 @@ in
       };
 
 
+
+      # Lets connections to cgit through the container firewall.
+      networking.firewall.allowedTCPPorts = [ 80 ];
 
       # cgit for viewing my git repos via the web.
       services.cgit."${cgitServiceName}" = {
@@ -257,25 +261,39 @@ in
 
 
 
-  # Allows git SSH through firewall.
-  networking.firewall.allowedTCPPorts = [ ports.gitSSHServer ];
+  # Forwards connections on port 5000 to the git SSH server.
+  networking.nat = {
+    internalInterfaces = [ "ve-${gitUser}" ];
+
+    forwardPorts = [{
+      destination = "${vlan.cgit}:22";
+      proto       = "tcp";
+      sourcePort  = 5000;
+    }];
+  };
 
   # Tor access for the cgit instance.
-  # Normally running the onion service on the same tor daemon as a relay is a
-  # no-no, but it's tied to my real identity anyways, so who cares.
-  services.tor.relay.onionServices."${cgitServiceName}".map = [ 80 ];
+  services.tor.relay.onionServices."${cgitServiceName}".map = [{
+    port  = 80;
+    target = {
+      addr = vlan.cgit;
+      port = 80;
+    };
+  }];
 
   services.i2pd.inTunnels = {
     # I2P access for the git SSH server.
     "${gitUser}" = {
       enable      = true;
-      port        = ports.gitSSHServer;
+      address     = vlan.cgit;
+      port        = 22;
       destination = "";
     };
 
     # I2P access for the cgit instance.
     "${cgitServiceName}" = {
       enable      = true;
+      address     = vlan.cgit;
       port        = 80;
       destination = "";
     };

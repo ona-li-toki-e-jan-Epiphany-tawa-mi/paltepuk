@@ -26,7 +26,6 @@ site validation out of the box.
 
 ## TODO List
 
-- Put cgit on private network.
 - Add dark mode for cgit.
 - Peertube or something else for my videos.
 - Add custom homepage.
