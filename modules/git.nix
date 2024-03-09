@@ -261,14 +261,14 @@ in
 
 
 
-  # Forwards connections on port 5000 to the git SSH server.
+  # Forwards connections on the git SSH port the SSH server.
   networking.nat = {
     internalInterfaces = [ "ve-${gitUser}" ];
 
     forwardPorts = [{
       destination = "${vlan.cgit}:22";
       proto       = "tcp";
-      sourcePort  = 5000;
+      sourcePort  = ports.gitSSHServer;
     }];
   };
 
