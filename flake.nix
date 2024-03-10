@@ -23,6 +23,7 @@
           vlan = {
             host = "192.168.100.1";
             cgit = "192.168.100.3";
+            tor  = "192.168.100.5";
           };
 
           # Common area for port numbers.

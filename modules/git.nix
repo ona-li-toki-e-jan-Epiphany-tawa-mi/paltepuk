@@ -145,6 +145,35 @@ in
     mkdir -p ${gitHostDirectory} ${sshHostDirectory}
   '';
 
+  # Forwards connections on the git SSH port the SSH server.
+  networking.nat = {
+    internalInterfaces = [ "ve-${gitUser}" ];
+
+    forwardPorts = [{
+      destination = "${vlan.cgit}:22";
+      proto       = "tcp";
+      sourcePort  = ports.gitSSHServer;
+    }];
+  };
+
+  services.i2pd.inTunnels = {
+    # I2P access for the git SSH server.
+    "${gitUser}" = {
+      enable      = true;
+      address     = vlan.cgit;
+      port        = 22;
+      destination = "";
+    };
+
+    # I2P access for the cgit instance.
+    "${cgitServiceName}" = {
+      enable      = true;
+      address     = vlan.cgit;
+      port        = 80;
+      destination = "";
+    };
+  };
+
   # Isolated container for the git server and cgit to run in.
   containers."${gitUser}" = {
     ephemeral      = true;
@@ -175,7 +204,7 @@ in
 
 
       # Sets permissions for bind mounts.
-      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 0755 ${gitUser} ${gitUser}" ];
+      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${gitUser} ${gitUser}" ];
 
 
 
@@ -266,46 +295,6 @@ in
 
 
       system.stateVersion = "23.11";
-    };
-  };
-
-
-
-  # Forwards connections on the git SSH port the SSH server.
-  networking.nat = {
-    internalInterfaces = [ "ve-${gitUser}" ];
-
-    forwardPorts = [{
-      destination = "${vlan.cgit}:22";
-      proto       = "tcp";
-      sourcePort  = ports.gitSSHServer;
-    }];
-  };
-
-  # Tor access for the cgit instance.
-  services.tor.relay.onionServices."${cgitServiceName}".map = [{
-    port  = 80;
-    target = {
-      addr = vlan.cgit;
-      port = 80;
-    };
-  }];
-
-  services.i2pd.inTunnels = {
-    # I2P access for the git SSH server.
-    "${gitUser}" = {
-      enable      = true;
-      address     = vlan.cgit;
-      port        = 22;
-      destination = "";
-    };
-
-    # I2P access for the cgit instance.
-    "${cgitServiceName}" = {
-      enable      = true;
-      address     = vlan.cgit;
-      port        = 80;
-      destination = "";
     };
   };
 }

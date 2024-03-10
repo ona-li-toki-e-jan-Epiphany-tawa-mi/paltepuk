@@ -14,21 +14,88 @@
 
 # Installs and configures the Tor daemon for running onion services with Nyx to
 # monitor it.
-# NOTE: you will probably want to set services.tor.settings."BandwidthRate"
-# and services.tor.settings."BandwidthBurst" to what you can offer.
 
-{ ports, pkgs, ... }:
+{ ports, vlan, config, lib, ... }:
 
+let cfg = config.services.torContainer;
+    # Where to put the files for Tor on the host and in the container.
+    torHostDirectory      = "/mnt/tor";
+    torContainerDirectory = "/var/lib/tor";
+
+    # Name for tor container and related facilities.
+    torContainer = "tor";
+
+    # The name for cgit and it's related services to be under.
+    cgitServiceName  = "cgit";
+in
 {
-  environment.systemPackages = [ pkgs.nyx ];
+  options.services.torContainer = with lib; with types; {
+    bandwidthRate = mkOption {
+      description = "Average maximum bandwidth for Tor. See BandwitdthRate in the man tor for details.";
+      type        = str;
+    };
 
-  services.tor = {
-    enable = true;
+    bandwidthBurst = mkOption {
+      description = "Absolute maximum bandwidth for Tor. See BandwitdthBurst in the man tor for details.";
+      type        = str;
+    };
+  };
 
-    settings = {
-      "ControlPort"   = ports.torControl;
-      # Enables hardware acceleration.
-      "HardwareAccel" = 1;
+
+
+  config = {
+    # Creates persistent directories for Tor if they don't already exist.
+    system.activationScripts."activateTor" = ''
+      mkdir -p ${torHostDirectory}
+    '';
+
+    # Gives the Tor container internet access.
+    networking.nat.internalInterfaces = [ "ve-${torContainer}" ];
+
+    # Isolated container for the Tor to run in.
+    containers."${torContainer}" = {
+      ephemeral      = true;
+      autoStart      = true;
+
+      # Mounts persistent directories.
+      bindMounts."${torContainerDirectory}" = {
+        hostPath   = torHostDirectory;
+        isReadOnly = false;
+      };
+
+      # Creates isolated network.
+      privateNetwork = true;
+      hostAddress    = vlan.host;
+      localAddress   = vlan.tor;
+
+      config = { pkgs, ... }: {
+        # Sets permissions for bind mounts.
+        systemd.tmpfiles.rules = [ "d ${torContainerDirectory} 700 tor tor" ];
+
+        environment.systemPackages = [ pkgs.nyx ];
+
+        services.tor = {
+          enable = true;
+
+          settings = {
+            "ControlPort"    = ports.torControl;
+            # Enables hardware acceleration.
+            "HardwareAccel"  = 1;
+            # Sets bandwidth limits.
+            "BandwidthRate"  = cfg.bandwidthRate;
+            "BandwidthBurst" = cfg.bandwidthBurst;
+          };
+
+          # Tor access for the cgit instance.
+          services.tor.relay.onionServices."${cgitServiceName}".map = [{
+            port  = 80;
+            target = {
+              addr = vlan.cgit;
+              port = 80;
+            };
+          }];
+        };
+      };
     };
   };
 }
