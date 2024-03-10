@@ -27,7 +27,6 @@ site validation out of the box.
 ## TODO List
 
 - Add dark mode for cgit.
-- Containerize i2pd and the Tor daemon because why not.
 - Peertube or something else for my videos.
 - Add custom homepage.
 - If moved to a VPS, add access from the regular Clearnet and Yggdrasil.

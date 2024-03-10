@@ -23,14 +23,14 @@
 
 
   # Bandwidth limits. Bound mainly by the lack of memory (1 GB,)
-  services.i2pd.bandwidth = 1024;                 # 1 MB/s
+  services.i2pdContainer.bandwidth = 1024;        # 1 MB/s
   services.torContainer   = {
     bandwidthRate  = "3 MBytes";
     bandwidthBurst = "4 MBytes";
   };
 
   # No IPv6 ;(
-  services.i2pd.enableIPv6 = lib.mkForce false;
+  services.i2pdContainer.enableIPv6 = lib.mkForce false;
 
 
 
