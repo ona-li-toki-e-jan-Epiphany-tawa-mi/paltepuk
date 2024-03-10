@@ -18,8 +18,11 @@
 { ports, vlan, ... }:
 
 let # Where to put the files for git on the host and in the container.
-    gitHostDirectory      = "/mnt/git/";
+    gitHostDirectory      = "/mnt/git/repositories";
     gitContainerDirectory = "/srv/git/";
+    # Where to put the files for the git SSH server on the host and in the container.
+    sshHostDirectory      = "/mnt/git/ssh";
+    sshContainerDirectory = "/etc/ssh";
     # The user and group to use for git.
     gitUser               = "git";
 
@@ -137,9 +140,9 @@ in
 
 
 
-  # Creates persistent directory for git if it doesn't already exist.
+  # Creates persistent directories for git if they don't already exist.
   system.activationScripts."activateGit" = ''
-    mkdir -p ${gitHostDirectory}
+    mkdir -p ${gitHostDirectory} ${sshHostDirectory}
   '';
 
   # Isolated container for the git server and cgit to run in.
@@ -147,10 +150,17 @@ in
     ephemeral      = true;
     autoStart      = true;
 
-    # Mounts persistent directory..
-    bindMounts."${gitContainerDirectory}" = {
-      hostPath   = gitHostDirectory;
-      isReadOnly = false;
+    # Mounts persistent directories.
+    bindMounts = {
+      "${gitContainerDirectory}" = {
+        hostPath   = gitHostDirectory;
+        isReadOnly = false;
+      };
+
+      "${sshContainerDirectory}" = {
+        hostPath   = sshHostDirectory;
+        isReadOnly = false;
+      };
     };
 
     # Creates isolated network.
@@ -164,7 +174,7 @@ in
 
 
 
-      # Sets permissions for bind mount.
+      # Sets permissions for bind mounts.
       systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 0755 ${gitUser} ${gitUser}" ];
 
 
