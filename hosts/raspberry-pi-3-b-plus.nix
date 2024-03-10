@@ -14,7 +14,7 @@
 
 # Hardware config for a Raspberry Pi 3B+
 
-{ lib, modulesPath, ... }:
+{ modulesPath, ... }:
 
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix")
@@ -30,7 +30,7 @@
   };
 
   # No IPv6 ;(
-  services.i2pdContainer.enableIPv6 = lib.mkForce false;
+  services.i2pdContainer.enableIPv6 = false;
 
 
 
@@ -67,5 +67,5 @@
     nat.externalInterface     = "enu1u1";
   };
 
-  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+  nixpkgs.hostPlatform = "aarch64-linux";
 }
