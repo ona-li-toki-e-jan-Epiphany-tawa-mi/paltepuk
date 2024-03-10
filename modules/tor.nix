@@ -25,8 +25,10 @@ let cfg = config.services.torContainer;
     # Name for tor container and related facilities.
     torContainer = "tor";
 
+    # The name for the main administrative SSH service.
+    sshServiceName  = "OpenSSH";
     # The name for cgit and it's related services to be under.
-    cgitServiceName  = "cgit";
+    cgitServiceName = "cgit";
 in
 {
   options.services.torContainer = with lib; with types; {
@@ -86,14 +88,26 @@ in
             "BandwidthBurst" = cfg.bandwidthBurst;
           };
 
-          # Tor access for the cgit instance.
-          relay.onionServices."${cgitServiceName}".map = [{
-            port  = 80;
-            target = {
-              addr = vlan.cgit;
-              port = 80;
-            };
-          }];
+
+          relay.onionServices = {
+            # Tor access for remote administration.
+            "${sshServiceName}".map = [{
+              port  = 22;
+              target = {
+                addr = vlan.host;
+                port = 22;
+              };
+            }];
+
+            # Tor access for the cgit instance.
+            "${cgitServiceName}".map = [{
+              port  = 80;
+              target = {
+                addr = vlan.cgit;
+                port = 80;
+              };
+            }];
+          };
         };
 
         system.stateVersion = "23.11";
