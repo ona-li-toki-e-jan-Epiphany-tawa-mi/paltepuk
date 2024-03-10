@@ -46,7 +46,7 @@ in
   config = {
     # Creates persistent directories for Tor if they don't already exist.
     system.activationScripts."activateTor" = ''
-      mkdir -p ${torHostDirectory}
+      mkdir -m 700 -p ${torHostDirectory}
     '';
 
     # Gives the Tor container internet access.
@@ -87,7 +87,7 @@ in
           };
 
           # Tor access for the cgit instance.
-          services.tor.relay.onionServices."${cgitServiceName}".map = [{
+          relay.onionServices."${cgitServiceName}".map = [{
             port  = 80;
             target = {
               addr = vlan.cgit;
@@ -95,6 +95,8 @@ in
             };
           }];
         };
+
+        system.stateVersion = "23.11";
       };
     };
   };
