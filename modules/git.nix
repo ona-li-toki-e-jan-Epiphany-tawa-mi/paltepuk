@@ -204,7 +204,9 @@ in
 
 
       # Sets permissions for bind mounts.
-      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${gitUser} ${gitUser}" ];
+      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${gitUser} ${gitUser}"
+                                 "d ${sshContainerDirectory} 755 root root"
+                               ];
 
 
 
