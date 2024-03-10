@@ -52,10 +52,10 @@ in
     # Gives the Tor container internet access.
     networking.nat.internalInterfaces = [ "ve-${torContainer}" ];
 
-    # Isolated container for the Tor to run in.
+    # Isolated container for Tor to run in.
     containers."${torContainer}" = {
-      ephemeral      = true;
-      autoStart      = true;
+      ephemeral = true;
+      autoStart = true;
 
       # Mounts persistent directories.
       bindMounts."${torContainerDirectory}" = {

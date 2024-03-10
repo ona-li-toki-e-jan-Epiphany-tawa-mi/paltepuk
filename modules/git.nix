@@ -156,24 +156,6 @@ in
     }];
   };
 
-  services.i2pd.inTunnels = {
-    # I2P access for the git SSH server.
-    "${gitUser}" = {
-      enable      = true;
-      address     = vlan.cgit;
-      port        = 22;
-      destination = "";
-    };
-
-    # I2P access for the cgit instance.
-    "${cgitServiceName}" = {
-      enable      = true;
-      address     = vlan.cgit;
-      port        = 80;
-      destination = "";
-    };
-  };
-
   # Isolated container for the git server and cgit to run in.
   containers."${gitUser}" = {
     ephemeral      = true;
@@ -198,7 +180,7 @@ in
     localAddress   = vlan.cgit;
 
     config = { pkgs, lib, ... }: {
-      imports = [ ./lib/ssh-common.nix
+      imports = [ ./ssh.nix
                 ];
 
 
