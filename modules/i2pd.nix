@@ -93,7 +93,7 @@ in
       hostAddress    = vlan.host;
       localAddress   = vlan.i2pd;
 
-      config = { ... }: {
+      config = { pkgs, ... }: {
         # Sets permissions for bind mounts.
         systemd.tmpfiles.rules = [ "d ${i2pdContainerDirectory} 700 i2pd i2pd" ];
 
@@ -102,6 +102,9 @@ in
           allowedUDPPorts = [ i2pdPort ];
           allowedTCPPorts = [ i2pdPort ];
         };
+
+        # For monitoring the web console.
+        environment.systemPackages = [ pkgs.lynx ];
 
         services.i2pd = {
           enable     = true;

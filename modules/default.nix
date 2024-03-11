@@ -83,7 +83,6 @@
   environment.systemPackages = with pkgs; [
     htop
     unixtools.netstat
-    lynx
   ];
 
   # Tells firewall not to respond to pings. This can help deter automated bots
