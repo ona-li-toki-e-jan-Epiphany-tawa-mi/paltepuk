@@ -80,10 +80,7 @@
   services.system76-scheduler.enable = true;
 
   # System management.
-  environment.systemPackages = with pkgs; [
-    htop
-    unixtools.netstat
-  ];
+  environment.systemPackages = [ pkgs.htop ];
 
   # Tells firewall not to respond to pings. This can help deter automated bots
   # from finding and port scanning the server. This doesn't paticularly matter
