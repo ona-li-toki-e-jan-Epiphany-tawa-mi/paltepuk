@@ -228,6 +228,7 @@ in
         );
 
         serviceConfig = {
+          "Type"             = "oneshot";
           "User"             = gitUser;
           "WorkingDirectory" = gitContainerDirectory;
         };
