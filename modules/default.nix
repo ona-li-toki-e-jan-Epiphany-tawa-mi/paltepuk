@@ -22,6 +22,7 @@
               ./ssh.nix
               ./git.nix
               ./epiphany.nix
+              ./netcatchat.nix
             ];
 
 

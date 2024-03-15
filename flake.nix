@@ -21,18 +21,21 @@
     let extraSpecialArguments = {
           # IP addresses for container networking.
           vlan = {
-            host = "192.168.100.1";
-            cgit = "192.168.100.3";
-            tor  = "192.168.100.5";
-            i2pd = "192.168.100.7";
+            host       = "192.168.100.1";
+            cgit       = "192.168.100.3";
+            tor        = "192.168.100.5";
+            i2pd       = "192.168.100.7";
+            netcatchat = "192.168.100.9";
           };
 
           # Common area for port numbers.
           ports = {
-            i2pdWebConsole = 7070;
-            torControl     = 9051;
-            # Ports to forward from host to containers.
-            gitSSHServer   = 5000;
+            i2pdWebConsole            = 7070;
+            torControl                = 9051;
+            gitSSHServer              = 5000;
+            netcatchatServer          = 2000;
+            netcatchatClientRangeFrom = 2001;
+            netcatchatClientRangeTo   = 2026;
           };
         };
     in {

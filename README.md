@@ -27,6 +27,12 @@ site validation out of the box.
 ## TODO List
 
 - Add dark mode for cgit.
-- Peertube or something else for my videos.
+- Peertube or something else for my videos (maybe tube.)
 - Add custom homepage.
-- If moved to a VPS, add access from the regular Clearnet and Yggdrasil.
+- Add Hydra continous integration server.
+- Add issue tracker for projects.
+- Consider adding access from Lokinet, Freenet, and GNUnet(?).
+- If moved to a VPS:
+  - Add access from the regular Clearnet and Yggdrasil.
+  - See about adding IPFS gateway.
+  - Add Tor non-exit relay.

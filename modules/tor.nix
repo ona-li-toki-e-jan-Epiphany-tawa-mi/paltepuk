@@ -26,9 +26,22 @@ let cfg = config.services.torContainer;
     torContainer = "tor";
 
     # The name for the main administrative SSH service.
-    sshServiceName  = "OpenSSH";
+    sshServiceName        = "OpenSSH";
     # The name for cgit and it's related services to be under.
-    cgitServiceName = "cgit";
+    cgitServiceName       = "cgit";
+    # The name for netcatchat and it's related services to be under.
+    netcatchatServiceName = "netcatchat";
+
+    # The netcatchat client ports for the onion service.
+    netcatchatClientPorts = builtins.map
+      (x: {
+        port   = x + ports.netcatchatClientRangeFrom;
+        target = {
+          addr = vlan.netcatchat;
+          port = x + ports.netcatchatClientRangeFrom;
+        };
+      })
+      (builtins.genList (x: x) (ports.netcatchatClientRangeTo - ports.netcatchatClientRangeFrom));
 in
 {
   options.services.torContainer = with lib; with types; {
@@ -107,6 +120,15 @@ in
                 port = 80;
               };
             }];
+
+            # Tor access for the netcatchat instance.
+            "${netcatchatServiceName}".map = [{
+              port  = ports.netcatchatServer;
+              target = {
+                addr = vlan.cgit;
+                port = ports.netcatchatServer;
+              };
+            }] ++ netcatchatClientPorts;
           };
         };
 
