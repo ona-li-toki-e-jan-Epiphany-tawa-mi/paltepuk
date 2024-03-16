@@ -24,8 +24,8 @@ git -c http.proxy=http://127.0.0.1:4444 clone <URL>
 ```
 
 If you're on Tor, you can use this command as a base for cloning each repo. This
-assumes the Tor client daemon is available via localhost on the default "slow"
-SOCKS port, 9050; modify for your setup.
+assumes the Tor client daemon is available via localhost port 9050; modify for
+your setup.
 
 ```
 git -c http.proxy=socks5h://127.0.0.1:9050 clone <URL>
@@ -37,21 +37,28 @@ If you would prefer the Clearnet, please visit my GitHub instead:
 https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 ```
 
+## Links
+
+This git server:
+
+- I2P: http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p
+- Tor: http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion
+
+netcatchat server (COMPLETELY UNMODERATED): 6ay2f2mmkogzz6mwcaxjttxl4jydnskavfaxgumeptwhhdjum3i6n3id.onion port 2000
+
+Third party platforms:
+
+- PyPI: https://pypi.org/user/ona_li_toki_e_jan_Epiphany_tawa_mi
+- npm: https://www.npmjs.com/~ona-li-toki-e-jan-epiphany-tawa-mi
+- Thingiverse: https://www.thingiverse.com/jan_epiphany/designs
+- Odysee: https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9408ca3670bd0ebb99addf196f1f9a72450bdcb1
+
+For information on what in tarnation a "netcatchat server" is, take a look at
+the `netcatchat.git` repository on this site.
+
 ## Contact
 
-Want to get in contact with me? Here's a few methods:
-
-- Briar
-
-Do you have [(CLEARNET) Briar?](https://code.briarproject.org/briar "Briar GitLab instance")
-Add me with my address:
-
-```
-briar://aafr55yjjtk65vqtmmxk6bloewweabxzi6lfkjnv7mlscekwf46uk
-```
-
-Note that you will have to send me your Briar address through a different
-contact method as well before we can message each other.
+Want to get in contact with me? Here's a few (lol) methods:
 
 - Email
 
