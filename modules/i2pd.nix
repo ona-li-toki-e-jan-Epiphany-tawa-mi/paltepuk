@@ -104,7 +104,7 @@ in
         };
 
         # For monitoring the web console.
-        environment.systemPackages = [ pkgs.lynx ];
+        environment.shellAliases."status" = "sudo -u i2pd ${lib.getExe pkgs.lynx} 127.0.0.1:${builtins.toString ports.i2pdWebConsole}";
 
         services.i2pd = {
           enable     = true;
