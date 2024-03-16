@@ -87,7 +87,7 @@ in
         # Sets permissions for bind mounts.
         systemd.tmpfiles.rules = [ "d ${torContainerDirectory} 700 tor tor" ];
 
-        environment.systemPackages = [ pkgs.nyx ];
+        environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
 
         services.tor = {
           enable = true;

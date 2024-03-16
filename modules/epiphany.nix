@@ -27,4 +27,7 @@
   };
 
   services.openssh.settings."AllowUsers" = [ "epiphany" ];
+
+  # Makes my user a trusted user for remote rebuilding.
+  nix.settings.trusted-users = [ "epiphany" ];
 }
