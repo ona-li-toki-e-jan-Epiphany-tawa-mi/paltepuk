@@ -101,7 +101,6 @@ in
             "BandwidthBurst" = cfg.bandwidthBurst;
           };
 
-
           relay.onionServices = {
             # Tor access for remote administration.
             "${sshServiceName}".map = [{
@@ -125,7 +124,7 @@ in
             "${netcatchatServiceName}".map = [{
               port  = ports.netcatchatServer;
               target = {
-                addr = vlan.cgit;
+                addr = vlan.netcatchat;
                 port = ports.netcatchatServer;
               };
             }] ++ netcatchatClientPorts;

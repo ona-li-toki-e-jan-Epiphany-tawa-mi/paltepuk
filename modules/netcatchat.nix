@@ -12,6 +12,8 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
+# Installs and configures a netcatchat server.
+
 { lib, pkgs, vlan, ports, ... }:
 
 let netcatchatPackage = pkgs.callPackage ../packages/netcatchat.nix {};
@@ -64,7 +66,12 @@ in
 
         script = "${lib.getExe' netcatchatPackage "netcatchat"} -s -p ${builtins.toString ports.netcatchatServer} -c \"${clientPorts}\"";
 
-        serviceConfig."User" = "${netcatchatName}";
+        serviceConfig = {
+          "User"          = "${netcatchatName}";
+          # Restarts every 4 hours.
+          "Restart"       = "always";
+          "RuntimeMaxSec" = "4h";
+        };
       };
 
       system.stateVersion = "23.11";
