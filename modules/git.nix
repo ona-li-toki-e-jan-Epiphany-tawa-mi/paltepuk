@@ -133,6 +133,10 @@ let # Where to put the files for git on the host and in the container.
         path        = "scripts-bucket.git";
         description = "A set of utility scripts and NixOS modules I have created to solve various odds and ends";
       }
+      {
+        path        = "epitaphpkgs.git";
+        description = "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
+      }
     ];
 in
 {
