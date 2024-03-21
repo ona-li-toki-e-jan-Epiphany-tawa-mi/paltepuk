@@ -119,7 +119,7 @@ let # Where to put the files for git on the host and in the container.
       }
       {
         path        = "ona-li-toki-e-jan-Epiphany-tawa-mi.git";
-        description = "poki pi nimi sona pi lipu KiApu mi";
+        description = "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi";
       }
       {
         path        = "paltepuk.git";
