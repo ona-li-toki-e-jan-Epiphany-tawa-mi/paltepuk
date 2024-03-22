@@ -48,6 +48,7 @@ netcatchat server (COMPLETELY UNMODERATED): 6ay2f2mmkogzz6mwcaxjttxl4jydnskavfax
 
 Third party platforms:
 
+- GitHub: https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 - PyPI: https://pypi.org/user/ona_li_toki_e_jan_Epiphany_tawa_mi
 - npm: https://www.npmjs.com/~ona-li-toki-e-jan-epiphany-tawa-mi
 - Thingiverse: https://www.thingiverse.com/jan_epiphany/designs
@@ -57,8 +58,6 @@ For information on what in tarnation a "netcatchat server" is, take a look at
 the `netcatchat.git` repository on this site.
 
 ## Contact
-
-Want to get in contact with me? Here's a few (lol) methods:
 
 - Email
 
