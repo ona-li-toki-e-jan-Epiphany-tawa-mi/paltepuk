@@ -14,11 +14,9 @@
 
 # Installs and configures a netcatchat server.
 
-{ lib, pkgs, vlan, ports, ... }:
+{ lib, pkgs, vlan, ports, config, ... }:
 
-let netcatchatPackage = pkgs.callPackage ../packages/netcatchat.nix {};
-
-    # Name for netcatchat and related services.
+let # Name for netcatchat and related services.
     netcatchatName = "netcatchat";
 
     # The ports clients can connect on, concatenated into a string for netcatchat.
@@ -64,7 +62,7 @@ in
         description = "netcatchat daemon";
         wantedBy    = [ "multi-user.target" ];
 
-        script = "${lib.getExe' netcatchatPackage "netcatchat"} -s -p ${builtins.toString ports.netcatchatServer} -c \"${clientPorts}\"";
+        script = "${lib.getExe config.nur.repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat} -s -p ${builtins.toString ports.netcatchatServer} -c \"${clientPorts}\"";
 
         serviceConfig = {
           "User"          = "${netcatchatName}";
