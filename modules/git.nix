@@ -36,106 +36,132 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "AkashicRecord.git";
         description = "The history of my universe, I guess";
+        section     = null;
       }
       {
         path        = "BASICfuck.git";
         description = "A brainfuck REPL for the Commodore 64";
+        section     = null;
       }
       {
         path        = "BitMasher.git";
         description = "A fast-paced text adventure game inside a ransomware-infected computer";
+        section     = null;
       }
       {
         path        = "COBOL-DVD-Thingy.git";
         description = "Terminal screensaver similar to that of DVD players";
+        section     = null;
       }
       {
         path        = "Conways-Ivory-Tower.git";
         description = "An infinitely-sized interactive implementation of Conway's Game of Life";
+        section     = null;
       }
       {
         path        = "Explosive-Utilities.git";
         description = "Nitroglycerinomancology Reborn";
+        section     = "Defunct";
       }
       {
         path        = "Explosive-Utilities.wiki.git";
         description = "Nitroglycerinomancology Reborn - Wiki";
+        section     = "Defunct";
       }
       {
         path        = "Glow-Chickens.git";
         description = "Luminescent Fetheared Bipeds";
+        section     = "Defunct";
       }
       {
         path        = "ISawedThisPlayerInHalf.git";
         description = "With the power of (brand goes here)!";
+        section     = "Defunct";
       }
       {
         path        = "Incendiary-Bees.git";
         description = "High Ordinance Apioforms";
+        section     = "Defunct";
       }
       {
         path        = "Modular-Backrooms.git";
         description = "Choose-your-experience-type Backrooms mod for Minecraft";
+        section     = "Defunct";
       }
       {
         path        = "Nitwit-Only-Mode.git";
         description = "Makes all Villagers Nitwits... because!";
+        section     = "Defunct";
       }
       {
         path        = "PigsThatGoBoomInTheNight.git";
         description = "\"Feed\" TNT to pigs to make them go BOOM!";
+        section     = "Defunct";
       }
       {
         path        = "PyMSWPR.git";
         description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
+        section     = null;
       }
       {
         path        = "Survival-Command-Blocks.git";
         description = "Command Blocks now made avalible and usable in a survival world near you!";
+        section     = "Defunct";
       }
       {
         path        = "VineBoomErrors-vscode.git";
         description = "Plays the Vine boom sound effect when your badly-written code generates errors";
+        section     = "Defunct";
       }
       {
         path        = "bungusmacs.git";
         description = "Mandatory personal emacs configuration to become a LVL 100 wizard of lightning and rocks that think";
+        section     = null;
       }
       {
         path        = "cad-vault.git";
         description = "A mirror of my Thingiverse projects";
+        section     = null;
       }
       {
         path        = "cowsAyPL.git";
         description = "Cowsay in GnuAPL";
+        section     = null;
       }
       {
         path        = "ilo-li-sina.git";
         description = "\"ilo li sina\" li toki pi lawa pi ilo nanpa. taso, sina lawa ala e ona. ona li lawa e sina a!";
+        section     = "Defunct";
       }
       {
         path        = "netcatchat.git";
         description = "A simple command-line chat server and client for Linux using netcat";
+        section     = null;
       }
       {
         path        = "ona-li-toki-e-jan-Epiphany-tawa-mi.git";
         description = "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi";
+        section     = "Personal Mirrors (may contain Clearnet resources)";
       }
       {
         path        = "paltepuk.git";
         description = "Personal website and server wombo-combo";
+        section     = null;
       }
       {
         path        = "player-sounder.git";
         description = "Player soundser byer shellinger outer toer oneer ofer theer availableer audioer playerser";
+        section     = null;
       }
       {
         path        = "scripts-bucket.git";
         description = "A set of utility scripts and NixOS modules I have created to solve various odds and ends";
+        section     = null;
       }
       {
         path        = "epitaphpkgs.git";
         description = "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
+        section     = "Personal Mirrors (may contain Clearnet resources)";
       }
     ];
 in
@@ -154,7 +180,7 @@ in
     internalInterfaces = [ "ve-${gitUser}" ];
 
     forwardPorts = [{
-      destination = "${vlan.cgit}:22";
+      destination = "${vlan.git}:22";
       proto       = "tcp";
       sourcePort  = ports.gitSSHServer;
     }];
@@ -181,7 +207,7 @@ in
     # Creates isolated network.
     privateNetwork = true;
     hostAddress    = vlan.host;
-    localAddress   = vlan.cgit;
+    localAddress   = vlan.git;
 
     config = { pkgs, lib, ... }: {
       imports = [ ./ssh.nix
@@ -221,11 +247,10 @@ in
         wantedBy    = [ "multi-user.target" ];
         path        = [ pkgs.git ];
 
-        script = lib.concatStrings (builtins.map ({path, description}: ''
+        script = lib.concatStrings (builtins.map ({path, ...}: ''
             if [ ! -d "${path}" ]; then
               mkdir -p "${path}"
               git -C "${path}" init --bare
-              echo ${lib.escapeShellArg description} > "${path}/description"
             fi
           '')
           repositories
@@ -246,7 +271,17 @@ in
       # cgit for viewing my git repos via the web.
       services.cgit."${cgitServiceName}" = {
         enable   = true;
-        scanPath = gitContainerDirectory;
+
+        repos = builtins.listToAttrs(builtins.map ({path, description, section, ...}: {
+            name  = path;
+            value = {
+              path    = "/srv/git/${path}";
+              desc    = description;
+              section = lib.mkIf (section != null) section;
+            };
+          })
+          repositories
+        );
 
         settings = {
           # Converts the README files to HTML for display.

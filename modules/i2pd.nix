@@ -134,7 +134,7 @@ in
             # I2P access for the git SSH server.
             "${gitServiceName}" = {
               enable      = true;
-              address     = vlan.cgit;
+              address     = vlan.git;
               port        = 22;
               destination = "";
             };
@@ -142,7 +142,7 @@ in
             # I2P access for the cgit instance.
             "${cgitServiceName}" = {
               enable      = true;
-              address     = vlan.cgit;
+              address     = vlan.git;
               port        = 80;
               destination = "";
             };
