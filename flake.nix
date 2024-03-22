@@ -15,10 +15,22 @@
 {
   description = "NixOS configuration flake for badass reproducable websites";
 
-  inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-23.11;
+  inputs = {
+    nixpkgs.url = github:NixOS/nixpkgs/nixos-23.11;
+    nur.url     = github:nix-community/NUR;
+  };
 
-  outputs = { nixpkgs, ... } @ inputs:
-    let extraSpecialArguments = {
+  outputs = { nixpkgs, nur, ... } @ inputs:
+    let # Modules to include in every configuration.
+        extraModules = [
+          nur.nixosModules.nur
+          ./modules/default.nix
+        ];
+
+        # Arguments to include in every configuration.
+        extraSpecialArguments = {
+          inherit inputs;
+
           # IP addresses for container networking.
           vlan = {
             host       = "192.168.100.1";
@@ -41,12 +53,11 @@
     in {
       nixosConfigurations = {
         "raspberryPi3BPlus" = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; } // extraSpecialArguments;
+          specialArgs = extraSpecialArguments;
 
           system  = "aarch64-linux";
           modules = [ ./hosts/raspberry-pi-3-b-plus.nix
-                      ./modules/default.nix
-                    ];
+                    ] ++ extraModules;
         };
       };
     };
