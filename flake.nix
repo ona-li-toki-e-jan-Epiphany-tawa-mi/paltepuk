@@ -34,7 +34,7 @@
           # IP addresses for container networking.
           vlan = {
             host       = "192.168.100.1";
-            cgit       = "192.168.100.3";
+            git        = "192.168.100.3";
             tor        = "192.168.100.5";
             i2pd       = "192.168.100.7";
             netcatchat = "192.168.100.9";

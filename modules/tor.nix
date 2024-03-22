@@ -115,7 +115,7 @@ in
             "${cgitServiceName}".map = [{
               port  = 80;
               target = {
-                addr = vlan.cgit;
+                addr = vlan.git;
                 port = 80;
               };
             }];
