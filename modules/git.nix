@@ -141,7 +141,7 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "ona-li-toki-e-jan-Epiphany-tawa-mi.git";
         description = "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi";
-        section     = "Personal Mirrors (may contain Clearnet resources)";
+        section     = "Personal mirrors (may contain Clearnet resources)";
       }
       {
         path        = "paltepuk.git";
@@ -161,7 +161,7 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "epitaphpkgs.git";
         description = "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
-        section     = "Personal Mirrors (may contain Clearnet resources)";
+        section     = "Personal mirrors (may contain Clearnet resources)";
       }
     ];
 in
