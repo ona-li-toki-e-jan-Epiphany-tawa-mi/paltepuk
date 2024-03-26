@@ -65,8 +65,8 @@ let # Where to put the files for git on the host and in the container.
       }
       {
         path        = "Explosive-Utilities.wiki.git";
-        description = "Nitroglycerinomancology Reborn - Wiki";
-        section     = "Defunct";
+        description = "Nitroglycerinomancology Reborn - Wiki | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/Explosive-Utilities.wiki.git";
+        section     = "Personal mirrors (may contain Clearnet resources)";
       }
       {
         path        = "Glow-Chickens.git";
