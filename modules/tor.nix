@@ -17,7 +17,7 @@
 # Installs and configures the Tor daemon for running onion services with Nyx to
 # monitor it.
 
-{ ports, vlan, config, lib, ... }:
+{ ports, vlan, config, lib, pkgs-unstable, ... }:
 
 let cfg = config.services.torContainer;
     # Where to put the files for Tor on the host and in the container.
@@ -92,7 +92,8 @@ in
         environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
 
         services.tor = {
-          enable = true;
+          package = pkgs-unstable.tor;
+          enable  = true;
 
           settings = {
             "ControlPort"    = ports.torControl;

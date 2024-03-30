@@ -43,7 +43,7 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "BASICfuck.git";
         description = "A brainfuck REPL for the Commodore 64";
-        section     = null;
+        section     = "Defunct";
       }
       {
         path        = "BitMasher.git";
@@ -58,7 +58,7 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "Conways-Ivory-Tower.git";
         description = "An infinitely-sized interactive implementation of Conway's Game of Life";
-        section     = null;
+        section     = "Defunct";
       }
       {
         path        = "Explosive-Utilities.git";
@@ -103,7 +103,7 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "PyMSWPR.git";
         description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
-        section     = null;
+        section     = "Defunct";
       }
       {
         path        = "Survival-Command-Blocks.git";
@@ -123,7 +123,7 @@ let # Where to put the files for git on the host and in the container.
       {
         path        = "cad-vault.git";
         description = "A mirror of my Thingiverse projects";
-        section     = null;
+        section     = "Personal mirrors (may contain Clearnet resources)";
       }
       {
         path        = "cowsAyPL.git";

@@ -18,15 +18,22 @@
   description = "NixOS configuration flake for badass reproducable websites";
 
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixos-23.11;
-    nur.url     = github:nix-community/NUR;
+    nixpkgs.url          = github:NixOS/nixpkgs/nixos-23.11;
+    nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
+    nur.url              = github:nix-community/NUR;
   };
 
-  outputs = { nixpkgs, nur, ... } @ inputs:
-    let # Modules to include in every configuration.
+  outputs = { nixpkgs, nur, nixpkgs-unstable, ... } @ inputs:
+    let # Extra nixpkgs channels to include.
+        extraChannels = { pkgs, ... }: {
+          _module.args.pkgs-unstable = import nixpkgs-unstable { inherit (pkgs.stdenv.targetPlatform) system; };
+        };
+
+        # Modules to include in every configuration.
         extraModules = [
+          extraChannels
           nur.nixosModules.nur
-          ./modules/default.nix
+          ./modules
         ];
 
         # Arguments to include in every configuration.
