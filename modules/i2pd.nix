@@ -18,7 +18,7 @@
 # NOTE: you will have to create a file called "i2pd-port.nix" in the base of
 # this project with the port for i2pd to use.
 
-{ lib, ports, config, vlan, ... }:
+{ lib, ports, config, vlan, pkgs-unstable, ... }:
 
 let cfg = config.services.i2pdContainer;
 
@@ -109,6 +109,7 @@ in
         environment.shellAliases."status" = "sudo -u i2pd ${lib.getExe pkgs.lynx} 127.0.0.1:${builtins.toString ports.i2pdWebConsole}";
 
         services.i2pd = {
+          package    = pkgs-unstable.i2pd;
           enable     = true;
           enableIPv6 = cfg.enableIPv6;
           port       = i2pdPort;
