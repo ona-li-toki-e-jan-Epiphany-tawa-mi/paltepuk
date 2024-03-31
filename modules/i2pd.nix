@@ -64,7 +64,6 @@ in
       groups.i2pd.gid = i2pdGID;
     };
 
-    # Creates persistent directories for i2pd if they don't already exist.
     system.activationScripts."create-i2pd-bind-mounts" = ''
       mkdir -p ${i2pdHostDirectory}
     '';
@@ -113,7 +112,6 @@ in
         # Sets permissions for bind mounts.
         systemd.tmpfiles.rules = [ "d ${i2pdContainerDirectory} 700 i2pd i2pd" ];
 
-        # Lets incoming connections to i2pd through the container firewall.
         networking.firewall = {
           allowedUDPPorts = [ i2pdPort ];
           allowedTCPPorts = [ i2pdPort ];

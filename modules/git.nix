@@ -231,7 +231,7 @@ in
 
       # Sets permissions for bind mounts.
       systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${serviceNames.git} ${serviceNames.git}"
-                                 "d ${sshContainerDirectory} 700 root root"
+                                 "d ${sshContainerDirectory} 755 root root"
                                ];
 
 

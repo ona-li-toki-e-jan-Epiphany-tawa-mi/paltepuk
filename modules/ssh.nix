@@ -25,13 +25,13 @@
     settings = {
       "PermitRootLogin"        = "no";
       "PasswordAuthentication" = false;
+      "X11Forwarding"          = false;
     };
 
     extraConfig = ''
       KbdInteractiveAuthentication no
-      UsePAM no
       AuthenticationMethods publickey
-      PubkeyAuthentication yes
+      StreamLocalBindUnlink no
     '';
 
     banner = ''
