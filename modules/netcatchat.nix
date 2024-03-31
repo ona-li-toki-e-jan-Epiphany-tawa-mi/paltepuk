@@ -16,12 +16,9 @@
 
 # Installs and configures a netcatchat server.
 
-{ lib, pkgs, vlan, ports, config, ... }:
+{ lib, pkgs, vlan, ports, config, serviceNames, ... }:
 
-let # Name for netcatchat and related services.
-    netcatchatName = "netcatchat";
-
-    # The ports clients can connect on, concatenated into a string for netcatchat.
+let # The ports clients can connect on, concatenated into a string for netcatchat.
     clientPorts = lib.concatMapStringsSep
       " "
       (x: builtins.toString (x + ports.netcatchatClientRangeFrom))
@@ -29,7 +26,7 @@ let # Name for netcatchat and related services.
 in
 {
   # Isolated container for netcatchat to run in.
-  containers."${netcatchatName}" = {
+  containers."${serviceNames.netcatchat}" = {
     ephemeral = true;
     autoStart = true;
 
@@ -50,24 +47,24 @@ in
 
       # Special user for operating netcatchat.
       users = {
-        users."${netcatchatName}" = {
+        users."${serviceNames.netcatchat}" = {
           isSystemUser = true;
           description  = "netcatchat user";
-          group        = netcatchatName;
+          group        = serviceNames.netcatchat;
         };
 
-        groups."${netcatchatName}" = {};
+        groups."${serviceNames.netcatchat}" = {};
       };
 
       # Service to run a netcatchat server.
-      systemd.services."${netcatchatName}" = {
-        description = "netcatchat daemon";
+      systemd.services."${serviceNames.netcatchat}-server" = {
+        description = "netcatchat server daemon";
         wantedBy    = [ "multi-user.target" ];
 
         script = "${lib.getExe config.nur.repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat} -s -p ${builtins.toString ports.netcatchatServer} -c \"${clientPorts}\"";
 
         serviceConfig = {
-          "User"          = "${netcatchatName}";
+          "User"          = "${serviceNames.netcatchat}";
           # Restarts every 4 hours.
           "Restart"       = "always";
           "RuntimeMaxSec" = "4h";

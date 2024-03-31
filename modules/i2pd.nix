@@ -18,7 +18,7 @@
 # NOTE: you will have to create a file called "i2pd-port.nix" in the base of
 # this project with the port for i2pd to use.
 
-{ lib, ports, config, vlan, pkgs-unstable, ... }:
+{ lib, ports, config, vlan, pkgs-unstable, serviceNames, ... }:
 
 let cfg = config.services.i2pdContainer;
 
@@ -33,13 +33,6 @@ let cfg = config.services.i2pdContainer;
     # The UID and GID to use for i2pd to ensure it owns the bind mounts.
     i2pdUID                = 150;
     i2pdGID                = 150;
-
-    # The name for the main administrative SSH service.
-    sshServiceName  = "OpenSSH";
-    # The name for git and it's related services to be under.
-    gitServiceName  = "git";
-    # The name for cgit and it's related services to be under.
-    cgitServiceName = "cgit";
 in
 {
   options.services.i2pdContainer = with lib; with types; {
@@ -148,7 +141,7 @@ in
 
           inTunnels = {
             # I2P access for remote administration.
-            "${sshServiceName}" = {
+            "${serviceNames.ssh}" = {
               enable      = true;
               address     = vlan.host;
               port        = 22;
@@ -156,7 +149,7 @@ in
             };
 
             # I2P access for the git SSH server.
-            "${gitServiceName}" = {
+            "${serviceNames.git}" = {
               enable      = true;
               address     = vlan.git;
               port        = 22;
@@ -164,7 +157,7 @@ in
             };
 
             # I2P access for the cgit instance.
-            "${cgitServiceName}" = {
+            "${serviceNames.cgit}" = {
               enable      = true;
               address     = vlan.git;
               port        = 80;

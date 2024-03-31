@@ -17,7 +17,7 @@
 # Installs and configures the Tor daemon for running onion services with Nyx to
 # monitor it.
 
-{ ports, vlan, config, lib, pkgs-unstable, ... }:
+{ ports, vlan, config, lib, pkgs-unstable, serviceNames, ... }:
 
 let cfg = config.services.torContainer;
     # Where to put the files for Tor on the host and in the container.
@@ -28,13 +28,6 @@ let cfg = config.services.torContainer;
     # The UID and GID to use for tor to ensure it owns the bind mounts.
     torUID                = 35;
     torGID                = 35;
-
-    # The name for the main administrative SSH service.
-    sshServiceName        = "OpenSSH";
-    # The name for cgit and it's related services to be under.
-    cgitServiceName       = "cgit";
-    # The name for netcatchat and it's related services to be under.
-    netcatchatServiceName = "netcatchat";
 
     # The netcatchat client ports for the onion service.
     netcatchatClientPorts = builtins.map
@@ -77,7 +70,7 @@ in
     };
 
     # Creates persistent directories for Tor if they don't already exist.
-    system.activationScripts."activateTor" = ''
+    system.activationScripts."create-tor-bind-mounts" = ''
       mkdir -p ${torHostDirectory}
     '';
 
@@ -126,7 +119,7 @@ in
 
           relay.onionServices = {
             # Tor access for remote administration.
-            "${sshServiceName}".map = [{
+            "${serviceNames.ssh}".map = [{
               port  = 22;
               target = {
                 addr = vlan.host;
@@ -135,7 +128,7 @@ in
             }];
 
             # Tor access for the cgit instance.
-            "${cgitServiceName}".map = [{
+            "${serviceNames.cgit}".map = [{
               port  = 80;
               target = {
                 addr = vlan.git;
@@ -144,7 +137,7 @@ in
             }];
 
             # Tor access for the netcatchat instance.
-            "${netcatchatServiceName}".map = [{
+            "${serviceNames.netcatchat}".map = [{
               port  = ports.netcatchatServer;
               target = {
                 addr = vlan.netcatchat;

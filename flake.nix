@@ -58,6 +58,15 @@
             netcatchatClientRangeFrom = 2001;
             netcatchatClientRangeTo   = 2026;
           };
+
+          # Common area for service names. These are used for container names,
+          # onion services and I2P tunnels.
+          serviceNames = {
+            ssh        = "OpenSSH";
+            cgit       = "cgit";
+            netcatchat = "netcatchat";
+            git        = "git";
+          };
         };
     in {
       nixosConfigurations = {
