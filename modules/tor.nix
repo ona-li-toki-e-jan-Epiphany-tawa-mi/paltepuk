@@ -23,9 +23,11 @@ let cfg = config.services.torContainer;
     # Where to put the files for Tor on the host and in the container.
     torHostDirectory      = "/mnt/tor";
     torContainerDirectory = "/var/lib/tor";
-
     # Name for tor container and related facilities.
-    torContainer = "tor";
+    torContainer          = "tor";
+    # The UID and GID to use for tor to ensure it owns the bind mounts.
+    torUID                = 35;
+    torGID                = 35;
 
     # The name for the main administrative SSH service.
     sshServiceName        = "OpenSSH";
@@ -61,9 +63,22 @@ in
 
 
   config = {
+    # Dummy user to ensure the tor user are the same inside and out of the
+    # container.
+    users = {
+      users.tor = {
+        isSystemUser = true;
+        description  = "Tor Daemon User";
+        group        = "tor";
+        uid          = torUID;
+      };
+
+      groups.tor.gid = torGID;
+    };
+
     # Creates persistent directories for Tor if they don't already exist.
     system.activationScripts."activateTor" = ''
-      mkdir -m 700 -p ${torHostDirectory}
+      mkdir -p ${torHostDirectory}
     '';
 
     # Gives the Tor container internet access.
@@ -86,6 +101,11 @@ in
       localAddress   = vlan.tor;
 
       config = { pkgs, ... }: {
+        users = {
+          users.tor.uid  = torUID;
+          groups.tor.gid = torGID;
+        };
+
         # Sets permissions for bind mounts.
         systemd.tmpfiles.rules = [ "d ${torContainerDirectory} 700 tor tor" ];
 

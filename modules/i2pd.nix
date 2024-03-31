@@ -25,11 +25,14 @@ let cfg = config.services.i2pdContainer;
     # Port to accept incoming connections from peers with.
     i2pdPort = (import ../i2pd-port.nix);
 
-    # Where to put the files for Tor on the host and in the container.
+    # Where to put the files for i2pd on the host and in the container.
     i2pdHostDirectory      = "/mnt/i2pd";
     i2pdContainerDirectory = "/var/lib/i2pd";
     # Name for i2pd container and related facilities.
-    i2pdContainer = "i2pd";
+    i2pdContainer          = "i2pd";
+    # The UID and GID to use for i2pd to ensure it owns the bind mounts.
+    i2pdUID                = 150;
+    i2pdGID                = 150;
 
     # The name for the main administrative SSH service.
     sshServiceName  = "OpenSSH";
@@ -55,9 +58,22 @@ in
 
 
   config = {
+    # Dummy user to ensure the i2pd user are the same inside and out of the
+    # container.
+    users = {
+      users.i2pd = {
+        isSystemUser = true;
+        description  = "I2Pd User";
+        group        = "i2pd";
+        uid          = i2pdUID;
+      };
+
+      groups.i2pd.gid = i2pdGID;
+    };
+
     # Creates persistent directories for i2pd if they don't already exist.
-    system.activationScripts."activateI2pd" = ''
-      mkdir -m 700 -p ${i2pdHostDirectory}
+    system.activationScripts."create-i2pd-bind-mounts" = ''
+      mkdir -p ${i2pdHostDirectory}
     '';
 
     networking.nat = {
@@ -96,6 +112,11 @@ in
       localAddress   = vlan.i2pd;
 
       config = { pkgs, ... }: {
+        users = {
+          users.i2pd.uid  = i2pdUID;
+          groups.i2pd.gid = i2pdGID;
+        };
+
         # Sets permissions for bind mounts.
         systemd.tmpfiles.rules = [ "d ${i2pdContainerDirectory} 700 i2pd i2pd" ];
 
