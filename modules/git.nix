@@ -27,6 +27,9 @@ let # Where to put the files for git on the host and in the container.
     sshContainerDirectory = "/etc/ssh";
     # The user and group to use for git.
     gitUser               = "git";
+    # The UID and GID to use for git to ensure it owns the bind mounts.
+    gitUID                = 1002;
+    gitGID                = 1002;
 
     # The name for cgit and it's related services to be under.
     cgitServiceName  = "cgit";
@@ -172,8 +175,21 @@ in
 
 
 
+  # Dummy user to ensure the git user are the same inside and out of the
+  # container.
+  users = {
+    users."${gitUser}" = {
+      isSystemUser = true;
+      description  = "git user";
+      group        = gitUser;
+      uid          = gitUID;
+    };
+
+    groups."${gitUser}".gid = gitGID;
+  };
+
   # Creates persistent directories for git if they don't already exist.
-  system.activationScripts."activateGit" = ''
+  system.activationScripts."create-git-bind-mounts" = ''
     mkdir -p ${gitHostDirectory} ${sshHostDirectory}
   '';
 
@@ -219,7 +235,7 @@ in
 
       # Sets permissions for bind mounts.
       systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${gitUser} ${gitUser}"
-                                 "d ${sshContainerDirectory} 755 root root"
+                                 "d ${sshContainerDirectory} 700 root root"
                                ];
 
 
@@ -234,11 +250,12 @@ in
           home         = gitContainerDirectory;
           shell        = "${pkgs.git}/bin/git-shell";
           group        = gitUser;
+          uid          = gitUID;
 
           openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
         };
 
-        groups."${gitUser}" = {};
+        groups."${gitUser}".gid = gitGID;
       };
 
       services.openssh.settings."AllowUsers" = [ gitUser ];
