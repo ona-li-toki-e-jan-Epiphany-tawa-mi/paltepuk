@@ -17,7 +17,7 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ ports, vlan, ... }:
+{ ports, vlan, serviceNames, ... }:
 
 let # Where to put the files for git on the host and in the container.
     gitHostDirectory      = "/mnt/git/repositories";
@@ -25,14 +25,10 @@ let # Where to put the files for git on the host and in the container.
     # Where to put the files for the git SSH server on the host and in the container.
     sshHostDirectory      = "/mnt/git/ssh";
     sshContainerDirectory = "/etc/ssh";
-    # The user and group to use for git.
-    gitUser               = "git";
     # The UID and GID to use for git to ensure it owns the bind mounts.
     gitUID                = 1002;
     gitGID                = 1002;
 
-    # The name for cgit and it's related services to be under.
-    cgitServiceName  = "cgit";
     # The location of the custom logo for cgit under nginx.
     cgitLogoLocation = "/custom-cgit.png";
 
@@ -178,14 +174,14 @@ in
   # Dummy user to ensure the git user are the same inside and out of the
   # container.
   users = {
-    users."${gitUser}" = {
+    users."${serviceNames.git}" = {
       isSystemUser = true;
       description  = "git user";
-      group        = gitUser;
+      group        = serviceNames.git;
       uid          = gitUID;
     };
 
-    groups."${gitUser}".gid = gitGID;
+    groups."${serviceNames.git}".gid = gitGID;
   };
 
   # Creates persistent directories for git if they don't already exist.
@@ -195,7 +191,7 @@ in
 
   # Forwards connections on the git SSH port the SSH server.
   networking.nat = {
-    internalInterfaces = [ "ve-${gitUser}" ];
+    internalInterfaces = [ "ve-${serviceNames.git}" ];
 
     forwardPorts = [{
       destination = "${vlan.git}:22";
@@ -205,7 +201,7 @@ in
   };
 
   # Isolated container for the git server and cgit to run in.
-  containers."${gitUser}" = {
+  containers."${serviceNames.git}" = {
     ephemeral      = true;
     autoStart      = true;
 
@@ -234,7 +230,7 @@ in
 
 
       # Sets permissions for bind mounts.
-      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${gitUser} ${gitUser}"
+      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${serviceNames.git} ${serviceNames.git}"
                                  "d ${sshContainerDirectory} 700 root root"
                                ];
 
@@ -244,21 +240,21 @@ in
 
       # We login as the "git" user via ssh when using git.
       users = {
-        users."${gitUser}" = {
+        users."${serviceNames.git}" = {
           isSystemUser = true;
           description  = "git user";
           home         = gitContainerDirectory;
           shell        = "${pkgs.git}/bin/git-shell";
-          group        = gitUser;
+          group        = serviceNames.git;
           uid          = gitUID;
 
           openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
         };
 
-        groups."${gitUser}".gid = gitGID;
+        groups."${serviceNames.git}".gid = gitGID;
       };
 
-      services.openssh.settings."AllowUsers" = [ gitUser ];
+      services.openssh.settings."AllowUsers" = [ serviceNames.git ];
 
       # Creates any specified repositories if they don't already exist.
       systemd.services."create-repositories" = {
@@ -277,7 +273,7 @@ in
 
         serviceConfig = {
           "Type"             = "oneshot";
-          "User"             = gitUser;
+          "User"             = serviceNames.git;
           "WorkingDirectory" = gitContainerDirectory;
         };
       };
@@ -288,7 +284,7 @@ in
       networking.firewall.allowedTCPPorts = [ 80 ];
 
       # cgit for viewing my git repos via the web.
-      services.cgit."${cgitServiceName}" = {
+      services.cgit."${serviceNames.cgit}" = {
         enable   = true;
 
         repos = builtins.listToAttrs(builtins.map ({path, description, section, ...}: {
@@ -331,7 +327,7 @@ in
       };
 
       # Extra files for cgit to grab.
-      services.nginx.virtualHosts."${cgitServiceName}".locations = {
+      services.nginx.virtualHosts."${serviceNames.cgit}".locations = {
         "= ${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
       };
 
