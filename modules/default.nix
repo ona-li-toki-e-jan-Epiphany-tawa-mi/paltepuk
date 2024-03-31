@@ -16,7 +16,7 @@
 
 # The default nix module that includes all parts of my website and server.
 
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, ... }:
 
 {
   imports = [ ./i2pd.nix
@@ -93,7 +93,10 @@
   services.system76-scheduler.enable = true;
 
   # System management.
-  environment.systemPackages = [ pkgs.htop ];
+  environment = {
+    defaultPackages = lib.mkForce [];
+    systemPackages  = [ pkgs.htop ];
+  };
 
 
 
