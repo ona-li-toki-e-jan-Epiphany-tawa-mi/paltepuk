@@ -18,7 +18,7 @@
 # NOTE: you will have to create a file called "i2pd-port.nix" in the base of
 # this project with the port for i2pd to use.
 
-{ lib, ports, config, vlan, pkgs-unstable, serviceNames, ... }:
+{ lib, ports, config, vlan, vlan6, pkgs-unstable, serviceNames, ... }:
 
 let cfg = config.services.i2pdContainer;
 
@@ -39,12 +39,6 @@ in
     bandwidth = mkOption {
       description = "The router bandwidth limit in KB/s.";
       type        = int;
-    };
-
-    enableIPv6 = mkOption {
-      default     = true;                         # Based.
-      description = "Whether to enable IPv6 connectivity.";
-      type        = bool;
     };
   };
 
@@ -69,6 +63,7 @@ in
     '';
 
     networking.nat = {
+      enableIPv6 = true;
       # Gives the i2pd container internet access.
       internalInterfaces = [ "ve-${i2pdContainer}" ];
 
@@ -81,6 +76,16 @@ in
         }
         {
           destination = "${vlan.i2pd}:${builtins.toString i2pdPort}";
+          proto       = "udp";
+          sourcePort  = i2pdPort;
+        }
+        {
+          destination = "[${vlan6.i2pd}]:${builtins.toString i2pdPort}";
+          proto       = "tcp";
+          sourcePort  = i2pdPort;
+        }
+        {
+          destination = "[${vlan6.i2pd}]:${builtins.toString i2pdPort}";
           proto       = "udp";
           sourcePort  = i2pdPort;
         }
@@ -102,6 +107,8 @@ in
       privateNetwork = true;
       hostAddress    = vlan.host;
       localAddress   = vlan.i2pd;
+      hostAddress6   = vlan6.host;
+      localAddress6  = vlan6.i2pd;
 
       config = { pkgs, ... }: {
         users = {
@@ -123,7 +130,7 @@ in
         services.i2pd = {
           package    = pkgs-unstable.i2pd;
           enable     = true;
-          enableIPv6 = cfg.enableIPv6;
+          enableIPv6 = true;                      # Based.
           port       = i2pdPort;
           bandwidth  = cfg.bandwidth;
 

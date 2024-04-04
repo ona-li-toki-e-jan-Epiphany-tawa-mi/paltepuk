@@ -40,13 +40,19 @@
         extraSpecialArguments = {
           inherit inputs;
 
-          # IP addresses for container networking.
+          # IPv4 addresses for container networking.
           vlan = {
             host       = "192.168.100.1";
             git        = "192.168.100.3";
             tor        = "192.168.100.5";
             i2pd       = "192.168.100.7";
             netcatchat = "192.168.100.9";
+          };
+
+          # IPv6 addresses for container networking.
+          vlan6 = {
+            host       = "fc00::1";
+            i2pd       = "fc00::3";
           };
 
           # Common area for port numbers.
