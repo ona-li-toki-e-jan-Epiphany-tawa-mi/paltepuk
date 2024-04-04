@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Hardware config for a Raspberry Pi 3B+
+# Hardware config for a Raspberry Pi 3B+.
 
 { modulesPath, ... }:
 
@@ -30,9 +30,6 @@
     bandwidthRate  = "3 MBytes";
     bandwidthBurst = "4 MBytes";
   };
-
-  # No IPv6 ;(
-  services.i2pdContainer.enableIPv6 = false;
 
 
 
