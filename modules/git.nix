@@ -167,10 +167,6 @@ let # Where to put the files for git on the host and in the container.
     ];
 in
 {
-  programs.git.enable = true;
-
-
-
   # Dummy user to ensure the git user are the same inside and out of the
   # container.
   users = {
@@ -202,7 +198,7 @@ in
 
   # Isolated container for the git server and cgit to run in.
   containers."${serviceNames.git}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
-    localAddress   = vlan.git;
+    localAddress = vlan.git;
 
     # Mounts persistent directories.
     bindMounts = {
@@ -231,7 +227,10 @@ in
 
 
 
-      programs.git.enable = true;
+      programs.git = {
+        enable                    = true;
+        config.init.defaultBranch = "master";
+      };
 
       # We login as the "git" user via ssh when using git.
       users = {

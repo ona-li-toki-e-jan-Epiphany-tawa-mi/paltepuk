@@ -79,7 +79,7 @@ in
 
     # Isolated container for Tor to run in.
     containers."${torContainer}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
-      localAddress   = vlan.tor;
+      localAddress = vlan.tor;
 
       # Mounts persistent directories.
       bindMounts."${torContainerDirectory}" = {
