@@ -17,7 +17,7 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ ports, vlan, serviceNames, ... }:
+{ ports, vlan, vlan6, serviceNames, ... }:
 
 let # Where to put the files for git on the host and in the container.
     gitHostDirectory      = "/mnt/git/repositories";
@@ -201,9 +201,8 @@ in
   };
 
   # Isolated container for the git server and cgit to run in.
-  containers."${serviceNames.git}" = {
-    ephemeral      = true;
-    autoStart      = true;
+  containers."${serviceNames.git}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
+    localAddress   = vlan.git;
 
     # Mounts persistent directories.
     bindMounts = {
@@ -218,13 +217,9 @@ in
       };
     };
 
-    # Creates isolated network.
-    privateNetwork = true;
-    hostAddress    = vlan.host;
-    localAddress   = vlan.git;
-
     config = { pkgs, lib, ... }: {
-      imports = [ ./ssh.nix
+      imports = [ ./lib/container-common.nix
+                  ./ssh.nix
                 ];
 
 
@@ -330,10 +325,6 @@ in
       services.nginx.virtualHosts."${serviceNames.cgit}".locations = {
         "= ${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
       };
-
-
-
-      system.stateVersion = "23.11";
     };
   };
 }

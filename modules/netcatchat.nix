@@ -16,7 +16,7 @@
 
 # Installs and configures a netcatchat server.
 
-{ lib, pkgs, vlan, ports, config, serviceNames, ... }:
+{ lib, pkgs, vlan, vlan6, ports, config, serviceNames, ... }:
 
 let # The ports clients can connect on, concatenated into a string for netcatchat.
     clientPorts = lib.concatMapStringsSep
@@ -26,16 +26,15 @@ let # The ports clients can connect on, concatenated into a string for netcatcha
 in
 {
   # Isolated container for netcatchat to run in.
-  containers."${serviceNames.netcatchat}" = {
-    ephemeral = true;
-    autoStart = true;
-
-    # Creates isolated network.
-    privateNetwork = true;
-    hostAddress    = vlan.host;
-    localAddress   = vlan.netcatchat;
+  containers."${serviceNames.netcatchat}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
+    localAddress = vlan.netcatchat;
 
     config = { ... }: {
+      imports = [ ./lib/container-common.nix
+                ];
+
+
+
       # Opens the server and client ports.
       networking.firewall = {
         allowedTCPPorts      = [ ports.netcatchatServer ];
@@ -70,8 +69,6 @@ in
           "RuntimeMaxSec" = "4h";
         };
       };
-
-      system.stateVersion = "23.11";
     };
   };
 }

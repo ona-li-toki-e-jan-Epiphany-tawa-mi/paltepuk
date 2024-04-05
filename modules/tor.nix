@@ -17,7 +17,7 @@
 # Installs and configures the Tor daemon for running onion services with Nyx to
 # monitor it.
 
-{ ports, vlan, config, lib, pkgs-unstable, serviceNames, ... }:
+{ ports, vlan, vlan6, config, lib, pkgs-unstable, serviceNames, ... }:
 
 let cfg = config.services.torContainer;
     # Where to put the files for Tor on the host and in the container.
@@ -78,9 +78,8 @@ in
     networking.nat.internalInterfaces = [ "ve-${torContainer}" ];
 
     # Isolated container for Tor to run in.
-    containers."${torContainer}" = {
-      ephemeral = true;
-      autoStart = true;
+    containers."${torContainer}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
+      localAddress   = vlan.tor;
 
       # Mounts persistent directories.
       bindMounts."${torContainerDirectory}" = {
@@ -88,12 +87,12 @@ in
         isReadOnly = false;
       };
 
-      # Creates isolated network.
-      privateNetwork = true;
-      hostAddress    = vlan.host;
-      localAddress   = vlan.tor;
-
       config = { pkgs, ... }: {
+        imports = [ ./lib/container-common.nix
+                  ];
+
+
+
         users = {
           users.tor.uid  = torUID;
           groups.tor.gid = torGID;
@@ -146,8 +145,6 @@ in
             }] ++ netcatchatClientPorts;
           };
         };
-
-        system.stateVersion = "23.11";
       };
     };
   };
