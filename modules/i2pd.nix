@@ -63,7 +63,6 @@ in
     '';
 
     networking.nat = {
-      enableIPv6 = true;
       # Gives the i2pd container internet access.
       internalInterfaces = [ "ve-${i2pdContainer}" ];
 
@@ -93,9 +92,9 @@ in
     };
 
     # Isolated container for i2pd to run in.
-    containers."${i2pdContainer}" = {
-      ephemeral = true;
-      autoStart = true;
+    containers."${i2pdContainer}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
+      localAddress  = vlan.i2pd;
+      localAddress6 = vlan6.i2pd;
 
       # Mounts persistent directories.
       bindMounts."${i2pdContainerDirectory}" = {
@@ -103,14 +102,12 @@ in
         isReadOnly = false;
       };
 
-      # Creates isolated network.
-      privateNetwork = true;
-      hostAddress    = vlan.host;
-      localAddress   = vlan.i2pd;
-      hostAddress6   = vlan6.host;
-      localAddress6  = vlan6.i2pd;
-
       config = { pkgs, ... }: {
+        imports = [ ./lib/container-common.nix
+                  ];
+
+
+
         users = {
           users.i2pd.uid  = i2pdUID;
           groups.i2pd.gid = i2pdGID;
@@ -170,8 +167,6 @@ in
             };
           };
         };
-
-        system.stateVersion = "23.11";
       };
     };
   };
