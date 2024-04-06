@@ -156,7 +156,7 @@ let # Where to put the files for git on the host and in the container.
       }
       {
         path        = "scripts-bucket.git";
-        description = "A set of utility scripts and NixOS modules I have created to solve various odds and ends";
+        description = "A set of utility scripts I have created to solve various odds and ends";
         section     = null;
       }
       {
