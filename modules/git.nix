@@ -164,6 +164,11 @@ let # Where to put the files for git on the host and in the container.
         description = "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
         section     = "Personal mirrors (may contain Clearnet resources)";
       }
+      {
+        path        = "Brainblast-Toolkit.git";
+        description = "A brainfuck/BASICfuck REPL for 6502 machines";
+        section     = null;
+      }
     ];
 in
 {
