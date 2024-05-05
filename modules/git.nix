@@ -40,11 +40,6 @@ let # Where to put the files for git on the host and in the container.
         section     = null;
       }
       {
-        path        = "BASICfuck.git";
-        description = "A brainfuck REPL for the Commodore 64";
-        section     = "Defunct";
-      }
-      {
         path        = "BitMasher.git";
         description = "A fast-paced text adventure game inside a ransomware-infected computer";
         section     = null;
