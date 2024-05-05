@@ -53,6 +53,7 @@
           vlan6 = {
             host       = "fc00::1";
             i2pd       = "fc00::3";
+            git        = "fc00::5";
           };
 
           # Common area for port numbers.

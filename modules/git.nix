@@ -185,20 +185,28 @@ in
     mkdir -p ${gitHostDirectory} ${sshHostDirectory}
   '';
 
-  # Forwards connections on the git SSH port the SSH server.
+  # Forwards HTTP connections to the cgit instance.
   networking.nat = {
     internalInterfaces = [ "ve-${serviceNames.git}" ];
 
-    forwardPorts = [{
-      destination = "${vlan.git}:22";
-      proto       = "tcp";
-      sourcePort  = ports.gitSSHServer;
-    }];
+    forwardPorts = [
+      {
+        destination = "${vlan.git}:80";
+        proto       = "tcp";
+        sourcePort  = 80;
+      }
+      {
+        destination = "[${vlan6.git}]:80";
+        proto       = "tcp";
+        sourcePort  = 80;
+      }
+    ];
   };
 
   # Isolated container for the git server and cgit to run in.
   containers."${serviceNames.git}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
-    localAddress = vlan.git;
+    localAddress  = vlan.git;
+    localAddress6 = vlan6.git;
 
     # Mounts persistent directories.
     bindMounts = {

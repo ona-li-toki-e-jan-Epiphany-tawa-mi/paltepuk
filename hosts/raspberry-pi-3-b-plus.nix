@@ -16,7 +16,7 @@
 
 # Hardware config for a Raspberry Pi 3B+.
 
-{ modulesPath, ... }:
+{ modulesPath, serviceNames, vlan, ports, ... }:
 
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix")
@@ -62,8 +62,19 @@
     # Enables networking.
     useDHCP                   = false;
     interfaces.enu1u1.useDHCP = true;
-    # Sets interface to use for NAT.
-    nat.externalInterface     = "enu1u1";
+
+    nat = {
+      # Sets interface to use for NAT.
+      externalInterface     = "enu1u1";
+
+      # Forwards connections on the git SSH port the SSH server.
+      internalInterfaces = [ "ve-${serviceNames.git}" ];
+      forwardPorts = [{
+        destination = "${vlan.git}:22";
+        proto       = "tcp";
+        sourcePort  = ports.gitSSHServer;
+      }];
+    };
   };
 
   nixpkgs.hostPlatform = "aarch64-linux";
