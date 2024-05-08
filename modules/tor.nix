@@ -126,11 +126,11 @@ in
               };
             }];
 
-            # Tor access for the cgit instance.
-            "${serviceNames.cgit}".map = [{
+            # Tor access for the reverse proxy.
+            "${serviceNames.reverseProxy}".map = [{
               port  = 80;
               target = {
-                addr = vlan.git;
+                addr = vlan.reverseProxy;
                 port = 80;
               };
             }];

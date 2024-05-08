@@ -30,7 +30,7 @@ let # Where to put the files for git on the host and in the container.
     gitGID                = 1002;
 
     # The location of the custom logo for cgit under nginx.
-    cgitLogoLocation = "/custom-cgit.png";
+    cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.png";
 
     # A set of bare repositories to create if they don't already exist.
     repositories = [
@@ -175,24 +175,6 @@ in
     mkdir -p ${gitHostDirectory} ${sshHostDirectory}
   '';
 
-  # Forwards HTTP connections to the cgit instance.
-  networking.nat = {
-    internalInterfaces = [ "ve-${serviceNames.git}" ];
-
-    forwardPorts = [
-      {
-        destination = "${vlan.git}:80";
-        proto       = "tcp";
-        sourcePort  = 80;
-      }
-      {
-        destination = "[${vlan6.git}]:80";
-        proto       = "tcp";
-        sourcePort  = 80;
-      }
-    ];
-  };
-
   # Isolated container for the git server and cgit to run in.
   containers."${serviceNames.git}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
     localAddress  = vlan.git;
@@ -277,22 +259,25 @@ in
 
       # cgit for viewing my git repos via the web.
       services.cgit."${serviceNames.cgit}" = {
-        enable   = true;
+        enable         = true;
+        nginx.location = "/${serviceNames.cgit}";
 
         repos = builtins.listToAttrs(builtins.map ({path, description, section, ...}: {
-            name  = path;
-            value = {
-              path    = "/srv/git/${path}";
-              desc    = description;
-              section = lib.mkIf (section != null) section;
-            };
-          })
+          name  = path;
+          value = {
+            path    = "/srv/git/${path}";
+            desc    = description;
+            section = lib.mkIf (section != null) section;
+          };
+        })
           repositories
         );
 
         settings = {
           # Converts the README files to HTML for display.
           "about-filter"        = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
+          # Fixes fetching of cgit CSS under virtual root.
+          "css"                 = "/${serviceNames.cgit}/cgit.css";
           # Cool commit graph.
           "enable-commit-graph" = 1;
           # Enables extra links in the index view to different parts of the repo.
