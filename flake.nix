@@ -42,18 +42,20 @@
 
           # IPv4 addresses for container networking.
           vlan = {
-            host       = "192.168.100.1";
-            git        = "192.168.100.3";
-            tor        = "192.168.100.5";
-            i2pd       = "192.168.100.7";
-            netcatchat = "192.168.100.9";
+            host         = "192.168.100.1";
+            git          = "192.168.100.3";
+            tor          = "192.168.100.5";
+            i2pd         = "192.168.100.7";
+            netcatchat   = "192.168.100.9";
+            reverseProxy = "192.168.100.11";
           };
 
           # IPv6 addresses for container networking.
           vlan6 = {
-            host       = "fc00::1";
-            i2pd       = "fc00::3";
-            git        = "fc00::5";
+            host         = "fc00::1";
+            i2pd         = "fc00::3";
+            git          = "fc00::5";
+            reverseProxy = "fc00::7";
           };
 
           # Common area for port numbers.
@@ -69,10 +71,11 @@
           # Common area for service names. These are used for container names,
           # onion services and I2P tunnels.
           serviceNames = {
-            ssh        = "OpenSSH";
-            cgit       = "cgit";
-            netcatchat = "netcatchat";
-            git        = "git";
+            ssh          = "ssh";
+            cgit         = "cgit";
+            netcatchat   = "netcatchat";
+            git          = "git";
+            reverseProxy = "rev-proxy";
           };
         };
     in {

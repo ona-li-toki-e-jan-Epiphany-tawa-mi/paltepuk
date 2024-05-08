@@ -158,10 +158,10 @@ in
               destination = "";
             };
 
-            # I2P access for the cgit instance.
-            "${serviceNames.cgit}" = {
+            # I2P access to the reverse proxy.
+            "${serviceNames.reverseProxy}" = {
               enable      = true;
-              address     = vlan.git;
+              address     = vlan.reverseProxy;
               port        = 80;
               destination = "";
             };

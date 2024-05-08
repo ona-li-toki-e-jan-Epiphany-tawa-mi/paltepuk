@@ -65,11 +65,11 @@
 
     nat = {
       # Sets interface to use for NAT.
-      externalInterface     = "enu1u1";
+      externalInterface = "enu1u1";
 
       # Forwards connections on the git SSH port the SSH server.
       internalInterfaces = [ "ve-${serviceNames.git}" ];
-      forwardPorts = [{
+      forwardPorts       = [{
         destination = "${vlan.git}:22";
         proto       = "tcp";
         sourcePort  = ports.gitSSHServer;

@@ -25,6 +25,7 @@
               ./git.nix
               ./epiphany.nix
               ./netcatchat.nix
+              ./reverse-proxy.nix
             ];
 
 
