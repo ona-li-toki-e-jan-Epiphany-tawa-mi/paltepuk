@@ -110,11 +110,6 @@ let # Where to put the files for git on the host and in the container.
         section     = "Defunct";
       }
       {
-        path        = "bungusmacs.git";
-        description = "Mandatory personal emacs configuration to become a LVL 100 wizard of lightning and rocks that think";
-        section     = null;
-      }
-      {
         path        = "cad-vault.git";
         description = "A mirror of my Thingiverse projects";
         section     = "Personal mirrors (may contain Clearnet resources)";
