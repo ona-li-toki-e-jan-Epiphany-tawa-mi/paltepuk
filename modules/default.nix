@@ -16,7 +16,7 @@
 
 # The default nix module that includes all parts of my website and server.
 
-{ inputs, pkgs, lib, ... }:
+{ inputs, pkgs, lib, system, ... }:
 
 {
   imports = [ ./i2pd.nix
@@ -39,6 +39,8 @@
   networking.firewall.allowPing = false;
 
 
+
+  nixpkgs.hostPlatform = system;
 
   # Enables flakes for truly reproduceable builds.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
