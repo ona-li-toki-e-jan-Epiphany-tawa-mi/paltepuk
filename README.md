@@ -11,6 +11,9 @@ This server hosts the following sites/services:
 - cgit git server web interface:
   - I2P: http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p/cgit
   - Tor: http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit
+- Hydra continuous integration server:
+  - I2P: http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p/hydra
+  - Tor: http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/hydra
 - netcatchat server (COMPLETELY UNMODERATED): 6ay2f2mmkogzz6mwcaxjttxl4jydnskavfaxgumeptwhhdjum3i6n3id.onion port 2000
 
 For information on what in tarnation a "netcatchat server" is, please visit one of the following links:
@@ -38,7 +41,6 @@ site validation out of the box.
 - Add dark mode for cgit.
 - Peertube or something else for my videos (maybe tube.)
 - Add custom homepage.
-- Add Hydra continous integration server.
 - Add issue tracker for projects.
 - Consider adding access from Lokinet, Freenet, and GNUnet(?).
 - If moved to a VPS:

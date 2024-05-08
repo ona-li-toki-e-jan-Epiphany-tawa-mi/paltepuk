@@ -17,7 +17,7 @@
 # Sets up a reverse proxy to route conneting browsers to the webservers present
 # on this system.
 
-{ serviceNames, vlan, vlan6, ... }:
+{ serviceNames, vlan, vlan6, ports, ... }:
 
 {
   # Forwards HTTP connections to the reverse proxy.
@@ -43,7 +43,7 @@
     localAddress  = vlan.reverseProxy;
     localAddress6 = vlan6.reverseProxy;
 
-    config = { ... }: {
+    config = { pkgs, ... }: {
       imports = [ ./lib/container-common.nix
                 ];
 
@@ -55,16 +55,36 @@
       services.nginx = {
         enable = true;
 
-        virtualHosts."paltepuk.xyz" = {           # Temporary fake domain.
-          # Simply redirects to the cgit instance for now.
-          locations."/" = {
-            return = "307 $scheme://$host/${serviceNames.cgit}";
-          };
+        recommendedProxySettings = true;
 
-          # cgit instance path.
-          locations."/${serviceNames.cgit}" = {
-            proxyPass       = "http://${vlan.git}/${serviceNames.cgit}";
-            proxyWebsockets = true;
+        virtualHosts."paltepuk.xyz" = {           # Temporary fake domain.
+          locations = {
+            # Simply redirects to the cgit instance for now.
+            "/" = {
+              return = "307 $scheme://$host/${serviceNames.cgit}/";
+            };
+
+            # cgit instance path.
+            "/${serviceNames.cgit}/" = {
+              proxyPass       = "http://${vlan.git}/${serviceNames.cgit}/";
+              proxyWebsockets = true;
+            };
+
+            # Hydra instance path.
+            "/${serviceNames.hydra}/" =
+              let hydraIP = "http://${vlan.hydra}:${builtins.toString ports.hydraWebGUI}";
+              in {
+                proxyPass       = "${hydraIP}/";
+                proxyWebsockets = true;
+                extraConfig     = ''
+                  proxy_redirect   ${hydraIP}        $scheme://$host/hydra;
+                  proxy_set_header Host              $host;
+                  proxy_set_header X-Real-IP         $remote_addr;
+                  proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto $scheme;
+                  proxy_set_header X-Request-Base    /${serviceNames.hydra};
+                '';
+              };
           };
         };
       };
