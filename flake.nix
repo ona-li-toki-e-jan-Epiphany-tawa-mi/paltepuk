@@ -48,6 +48,7 @@
             i2pd         = "192.168.100.7";
             netcatchat   = "192.168.100.9";
             reverseProxy = "192.168.100.11";
+            hydra        = "192.168.100.13";
           };
 
           # IPv6 addresses for container networking.
@@ -56,6 +57,7 @@
             i2pd         = "fc00::3";
             git          = "fc00::5";
             reverseProxy = "fc00::7";
+            hydra        = "fc00::9";
           };
 
           # Common area for port numbers.
@@ -66,6 +68,7 @@
             netcatchatServer          = 2000;
             netcatchatClientRangeFrom = 2001;
             netcatchatClientRangeTo   = 2026;
+            hydraWebGUI               = 3000;
           };
 
           # Common area for service names. These are used for container names,
@@ -76,6 +79,7 @@
             netcatchat   = "netcatchat";
             git          = "git";
             reverseProxy = "rev-proxy";
+            hydra        = "hydra";
           };
         };
     in {
