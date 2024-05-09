@@ -55,14 +55,13 @@
       services.nginx = {
         enable = true;
 
+        recommendedGzipSettings  = true;
+        recommendedOptimisation  = true;
         recommendedProxySettings = true;
 
         virtualHosts."paltepuk.xyz" = {           # Temporary fake domain.
           locations = {
-            # Simply redirects to the cgit instance for now.
-            "/" = {
-              return = "307 $scheme://$host/${serviceNames.cgit}/";
-            };
+            "/".root = ../data/webroot;
 
             # cgit instance path.
             "/${serviceNames.cgit}/" = {
