@@ -8,6 +8,9 @@ server.
 
 This server hosts the following sites/services:
 
+- Personal website:
+  - I2P: http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p
+  - Tor: http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion
 - cgit git server web interface:
   - I2P: http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p/cgit
   - Tor: http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit
@@ -40,7 +43,6 @@ site validation out of the box.
 
 - Add dark mode for cgit.
 - Peertube or something else for my videos (maybe tube.)
-- Add custom homepage.
 - Add issue tracker for projects.
 - Consider adding access from Lokinet, Freenet, and GNUnet(?).
 - If moved to a VPS:
