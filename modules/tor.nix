@@ -25,14 +25,12 @@
 , pkgs-unstable
 , serviceNames
 , directories
+, uids
+, gids
 , ...
 }:
 
 let cfg = config.services.torContainer;
-
-    # The UID and GID to use for tor to ensure it owns the bind mounts.
-    torUID                = 35;
-    torGID                = 35;
 
     # The netcatchat client ports for the onion service.
     netcatchatClientPorts = builtins.map
@@ -70,10 +68,10 @@ in
         isSystemUser = true;
         description  = "Tor Daemon User";
         group        = "tor";
-        uid          = torUID;
+        uid          = uids.tor;
       };
 
-      groups.tor.gid = torGID;
+      groups.tor.gid = gids.tor;
     };
 
     # Creates persistent directories for Tor if they don't already exist.
@@ -88,7 +86,7 @@ in
     containers."${serviceNames.tor}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
       localAddress = vlan.tor;
 
-      # Mounts persistent directories.
+      # Mounts persistent directory.
       bindMounts."/var/lib/tor" = {
         hostPath   = directories.tor;
         isReadOnly = false;
@@ -101,8 +99,8 @@ in
 
 
         users = {
-          users.tor.uid  = torUID;
-          groups.tor.gid = torGID;
+          users.tor.uid  = uids.tor;
+          groups.tor.gid = gids.tor;
         };
 
         # Sets permissions for bind mounts.
@@ -110,9 +108,21 @@ in
 
         environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
 
+        networking.firewall.allowedTCPPorts = [ ports.torSOCKS ];
+
         services.tor = {
           package = pkgs-unstable.tor;
           enable  = true;
+
+          # Allows applications to hop onto Tor.
+          client = {
+            enable             = true;
+            socksListenAddress = {
+              IsolateDestAddr = true;
+              addr            = "127.0.0.1";
+              port            = ports.torSOCKS;
+            };
+          };
 
           settings = {
             "ControlPort"    = ports.torControl;

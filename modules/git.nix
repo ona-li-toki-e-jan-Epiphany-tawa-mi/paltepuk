@@ -21,14 +21,13 @@
 , vlan6
 , serviceNames
 , directories
+, uids
+, gids
 , ...
 }:
 
 let # Where to mount the git repositories directory to in the container.
     gitDirectory = "/srv/git";
-    # The UID and GID to use for git to ensure it owns the bind mounts.
-    gitUID       = 1002;
-    gitGID       = 1002;
 
     # The location of the custom logo for cgit under nginx.
     cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.png";
@@ -165,10 +164,10 @@ in
       isSystemUser = true;
       description  = "git user";
       group        = serviceNames.git;
-      uid          = gitUID;
+      uid          = uids.git;
     };
 
-    groups."${serviceNames.git}".gid = gitGID;
+    groups."${serviceNames.git}".gid = gids.git;
   };
 
   # Creates persistent directories for git if they don't already exist.
@@ -221,12 +220,12 @@ in
           home         = gitDirectory;
           shell        = "${pkgs.git}/bin/git-shell";
           group        = serviceNames.git;
-          uid          = gitUID;
+          uid          = uids.git;
 
           openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
         };
 
-        groups."${serviceNames.git}".gid = gitGID;
+        groups."${serviceNames.git}".gid = gids.git;
       };
 
       services.openssh.settings."AllowUsers" = [ serviceNames.git ];

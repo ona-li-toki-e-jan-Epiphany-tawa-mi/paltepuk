@@ -26,6 +26,8 @@
 , pkgs-unstable
 , serviceNames
 , directories
+, uids
+, gids
 , ...
 }:
 
@@ -33,10 +35,6 @@ let cfg = config.services.i2pdContainer;
 
     # Port to accept incoming connections from peers with.
     i2pdPort = (import ../i2pd-port.nix);
-
-    # The UID and GID to use for i2pd to ensure it owns the bind mounts.
-    i2pdUID = 150;
-    i2pdGID = 150;
 in
 {
   options.services.i2pdContainer = with lib; with types; {
@@ -56,10 +54,10 @@ in
         isSystemUser = true;
         description  = "I2Pd User";
         group        = "i2pd";
-        uid          = i2pdUID;
+        uid          = uids.i2pd;
       };
 
-      groups.i2pd.gid = i2pdGID;
+      groups.i2pd.gid = gids.i2pd;
     };
 
     # Creates persistent directories for i2pd if they don't already exist.
@@ -114,8 +112,8 @@ in
 
 
         users = {
-          users.i2pd.uid  = i2pdUID;
-          groups.i2pd.gid = i2pdGID;
+          users.i2pd.uid  = uids.i2pd;
+          groups.i2pd.gid = gids.i2pd;
         };
 
         # Sets permissions for bind mounts.

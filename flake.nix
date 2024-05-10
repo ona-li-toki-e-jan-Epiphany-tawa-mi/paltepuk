@@ -70,6 +70,7 @@
               to   = 2026;
             };
             hydraGUI         = 3000;
+            torSOCKS         = 9050;
           };
 
           # These names are used for systemd services, containers, onion
@@ -91,6 +92,26 @@
             gitSSH          = "/mnt/git/ssh";
             i2pd            = "/mnt/i2pd";
             tor             = "/mnt/tor";
+            hydraState      = "/mnt/hydra/hydra";
+            hydraDatabase   = "/mnt/hydra/postgresql";
+          };
+
+          # User IDs.
+          uids = {
+            git      = 1002;
+            i2pd     = 150;
+            tor      = 35;
+            hydra    = 122;
+            postgres = 71;
+          };
+
+          # Group IDs.
+          gids = {
+            git      = 1002;
+            i2pd     = 150;
+            tor      = 35;
+            hydra    = 122;
+            postgres = 71;
           };
         };
     in {
