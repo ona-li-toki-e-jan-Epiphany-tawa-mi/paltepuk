@@ -15,6 +15,11 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Sets up the Hydra continuous build system.
+#
+# You'll need to add an admin user via command line before anything else, which
+# can be done by running the following command in the container:
+#     sudo -u hydra hydra-create-user <name> --full-name <full name> --email-address '<email address>' --password-prompt --role admin
+# Once you have the admin user you can use them in the GUI to make more users.
 
 { serviceNames
 , vlan
@@ -126,13 +131,23 @@ in
         # Forcefully set this to empty so it doesn't try to read from
         # /etc/nix/machines.
         buildMachinesFiles = [];
+
+        # Extends the timeout when fetching git repositories. The value is in
+        # seconds.
+        extraConfig = ''
+          <git-input>
+            timeout = 3600
+          </git-input>
+        '';
       };
 
-      # Make the Hydra daemon download stuff over Tor for funsies.
-      systemd.services."hydra-server".environment = {
-        "http_proxy"  = "socks5h://${vlan.tor}:${builtins.toString ports.torSOCKS}";
-        "https_proxy" = "socks5h://${vlan.tor}:${builtins.toString ports.torSOCKS}";
-      };
+      # Make the Hydra evaluator daemon download stuff over Tor for funsies.
+      systemd.services."hydra-evaluator".environment =
+        let proxy = "http://${vlan.tor}:${builtins.toString ports.privoxyTor}";
+        in {
+          "http_proxy"  = proxy;
+          "https_proxy" = proxy;
+        };
     };
   };
 }

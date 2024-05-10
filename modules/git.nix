@@ -208,8 +208,8 @@ in
 
 
       programs.git = {
-        enable                    = true;
-        config.init.defaultBranch = "master";
+        enable                        = true;
+        config."init"."defaultBranch" = "master";
       };
 
       # We login as the "git" user via ssh when using git.
