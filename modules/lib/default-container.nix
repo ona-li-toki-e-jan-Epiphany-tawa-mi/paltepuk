@@ -16,7 +16,10 @@
 
 # A default, common setup for all contianers.
 
-{ vlan, vlan6, ... }:
+{ vlan
+, vlan6
+, ...
+}:
 
 {
   ephemeral = true;

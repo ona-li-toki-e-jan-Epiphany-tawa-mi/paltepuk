@@ -16,7 +16,15 @@
 
 # Installs and configures a netcatchat server.
 
-{ lib, pkgs, vlan, vlan6, ports, config, serviceNames, ... }:
+{ lib
+, pkgs
+, vlan
+, vlan6
+, ports
+, config
+, serviceNames
+, ...
+}:
 
 let # The ports clients can connect on, concatenated into a string for netcatchat.
     clientPorts = lib.concatStringsSep " " (builtins.genList

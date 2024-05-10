@@ -17,7 +17,12 @@
 # Sets up a reverse proxy to route conneting browsers to the webservers present
 # on this system.
 
-{ serviceNames, vlan, vlan6, ports, ... }:
+{ serviceNames
+, vlan
+, vlan6
+, ports
+, ...
+}:
 
 {
   # Forwards HTTP connections to the reverse proxy.

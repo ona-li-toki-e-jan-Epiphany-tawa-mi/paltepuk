@@ -17,7 +17,13 @@
 # Sets up the Hydra continuous build system.
 # TODO Create bind mounts for Hydra persistent data.
 
-{ serviceNames, vlan, vlan6, ports, directories, ... }:
+{ serviceNames
+, vlan
+, vlan6
+, ports
+, directories
+, ...
+}:
 
 let # Where to mount the git repositories directory to in the container.
     gitDirectory = "/srv/git";
