@@ -17,17 +17,13 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ vlan, vlan6, serviceNames, ... }:
+{ vlan, vlan6, serviceNames, directories, ... }:
 
-let # Where to put the files for git on the host and in the container.
-    gitHostDirectory      = "/mnt/git/repositories";
-    gitContainerDirectory = "/srv/git/";
-    # Where to put the files for the git SSH server on the host and in the container.
-    sshHostDirectory      = "/mnt/git/ssh";
-    sshContainerDirectory = "/etc/ssh";
+let # Where to mount the git repositories directory to in the container.
+    gitDirectory = "/srv/git";
     # The UID and GID to use for git to ensure it owns the bind mounts.
-    gitUID                = 1002;
-    gitGID                = 1002;
+    gitUID       = 1002;
+    gitGID       = 1002;
 
     # The location of the custom logo for cgit under nginx.
     cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.png";
@@ -172,7 +168,7 @@ in
 
   # Creates persistent directories for git if they don't already exist.
   system.activationScripts."create-git-bind-mounts" = ''
-    mkdir -p ${gitHostDirectory} ${sshHostDirectory}
+    mkdir -p ${directories.gitRepositories} ${directories.gitSSH}
   '';
 
   # Isolated container for the git server and cgit to run in.
@@ -182,13 +178,13 @@ in
 
     # Mounts persistent directories.
     bindMounts = {
-      "${gitContainerDirectory}" = {
-        hostPath   = gitHostDirectory;
+      "${gitDirectory}" = {
+        hostPath   = directories.gitRepositories;
         isReadOnly = false;
       };
 
-      "${sshContainerDirectory}" = {
-        hostPath   = sshHostDirectory;
+      "/etc/ssh" = {
+        hostPath   = directories.gitSSH;
         isReadOnly = false;
       };
     };
@@ -201,8 +197,8 @@ in
 
 
       # Sets permissions for bind mounts.
-      systemd.tmpfiles.rules = [ "d ${gitContainerDirectory} 755 ${serviceNames.git} ${serviceNames.git}"
-                                 "d ${sshContainerDirectory} 755 root root"
+      systemd.tmpfiles.rules = [ "d ${gitDirectory} 755 ${serviceNames.git} ${serviceNames.git}"
+                                 "d /etc/ssh 755 root root"
                                ];
 
 
@@ -217,7 +213,7 @@ in
         users."${serviceNames.git}" = {
           isSystemUser = true;
           description  = "git user";
-          home         = gitContainerDirectory;
+          home         = gitDirectory;
           shell        = "${pkgs.git}/bin/git-shell";
           group        = serviceNames.git;
           uid          = gitUID;
@@ -248,7 +244,7 @@ in
         serviceConfig = {
           "Type"             = "oneshot";
           "User"             = serviceNames.git;
-          "WorkingDirectory" = gitContainerDirectory;
+          "WorkingDirectory" = gitDirectory;
         };
       };
 
@@ -265,7 +261,7 @@ in
         repos = builtins.listToAttrs(builtins.map ({path, description, section, ...}: {
           name  = path;
           value = {
-            path    = "/srv/git/${path}";
+            path    = "${gitDirectory}/${path}";
             desc    = description;
             section = lib.mkIf (section != null) section;
           };

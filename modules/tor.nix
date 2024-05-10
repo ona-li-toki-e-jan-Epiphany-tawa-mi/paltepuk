@@ -17,14 +17,10 @@
 # Installs and configures the Tor daemon for running onion services with Nyx to
 # monitor it.
 
-{ ports, vlan, vlan6, config, lib, pkgs-unstable, serviceNames, ... }:
+{ ports, vlan, vlan6, config, lib, pkgs-unstable, serviceNames, directories, ... }:
 
 let cfg = config.services.torContainer;
-    # Where to put the files for Tor on the host and in the container.
-    torHostDirectory      = "/mnt/tor";
-    torContainerDirectory = "/var/lib/tor";
-    # Name for tor container and related facilities.
-    torContainer          = "tor";
+
     # The UID and GID to use for tor to ensure it owns the bind mounts.
     torUID                = 35;
     torGID                = 35;
@@ -73,19 +69,19 @@ in
 
     # Creates persistent directories for Tor if they don't already exist.
     system.activationScripts."create-tor-bind-mounts" = ''
-      mkdir -p ${torHostDirectory}
+      mkdir -p ${directories.tor}
     '';
 
     # Gives the Tor container internet access.
-    networking.nat.internalInterfaces = [ "ve-${torContainer}" ];
+    networking.nat.internalInterfaces = [ "ve-${serviceNames.tor}" ];
 
     # Isolated container for Tor to run in.
-    containers."${torContainer}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
+    containers."${serviceNames.tor}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
       localAddress = vlan.tor;
 
       # Mounts persistent directories.
-      bindMounts."${torContainerDirectory}" = {
-        hostPath   = torHostDirectory;
+      bindMounts."/var/lib/tor" = {
+        hostPath   = directories.tor;
         isReadOnly = false;
       };
 
@@ -101,7 +97,7 @@ in
         };
 
         # Sets permissions for bind mounts.
-        systemd.tmpfiles.rules = [ "d ${torContainerDirectory} 700 tor tor" ];
+        systemd.tmpfiles.rules = [ "d /var/lib/tor 700 tor tor" ];
 
         environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
 
