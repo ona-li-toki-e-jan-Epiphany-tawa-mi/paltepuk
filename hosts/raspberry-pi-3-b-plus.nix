@@ -72,7 +72,7 @@
       forwardPorts       = [{
         destination = "${vlan.git}:22";
         proto       = "tcp";
-        sourcePort  = ports.gitSSHServer;
+        sourcePort  = 5000;
       }];
     };
   };

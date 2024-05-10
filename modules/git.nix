@@ -17,7 +17,7 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ ports, vlan, vlan6, serviceNames, ... }:
+{ vlan, vlan6, serviceNames, ... }:
 
 let # Where to put the files for git on the host and in the container.
     gitHostDirectory      = "/mnt/git/repositories";

@@ -62,13 +62,14 @@
 
           # Common area for port numbers.
           ports = {
-            i2pdWebConsole            = 7070;
-            torControl                = 9051;
-            gitSSHServer              = 5000;
-            netcatchatServer          = 2000;
-            netcatchatClientRangeFrom = 2001;
-            netcatchatClientRangeTo   = 2026;
-            hydraWebGUI               = 3000;
+            i2pdConsole      = 7070;
+            torControl       = 9051;
+            netcatchatServer = 2000;
+            netcatchatClient = {
+              from = 2001;
+              to   = 2026;
+            };
+            hydraGUI         = 3000;
           };
 
           # Common area for service names. These are used for container names,

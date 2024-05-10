@@ -71,7 +71,7 @@
 
             # Hydra instance path.
             "/${serviceNames.hydra}/" =
-              let hydraIP = "http://${vlan.hydra}:${builtins.toString ports.hydraWebGUI}";
+              let hydraIP = "http://${vlan.hydra}:${builtins.toString ports.hydraGUI}";
               in {
                 proxyPass       = "${hydraIP}/";
                 proxyWebsockets = true;

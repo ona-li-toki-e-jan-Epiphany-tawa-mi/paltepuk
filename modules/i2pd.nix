@@ -122,7 +122,7 @@ in
         };
 
         # For monitoring the web console.
-        environment.shellAliases."status" = "sudo -u i2pd ${lib.getExe pkgs.lynx} 127.0.0.1:${builtins.toString ports.i2pdWebConsole}";
+        environment.shellAliases."status" = "sudo -u i2pd ${lib.getExe pkgs.lynx} 127.0.0.1:${builtins.toString ports.i2pdConsole}";
 
         services.i2pd = {
           package    = pkgs-unstable.i2pd;
@@ -138,7 +138,7 @@ in
           # Web console.
           proto.http = {
             enable = true;
-            port   = ports.i2pdWebConsole;
+            port   = ports.i2pdConsole;
           };
 
           inTunnels = {

@@ -31,14 +31,16 @@ let cfg = config.services.torContainer;
 
     # The netcatchat client ports for the onion service.
     netcatchatClientPorts = builtins.map
-      (x: {
-        port   = x + ports.netcatchatClientRangeFrom;
+      (port: {
+        inherit port;
         target = {
           addr = vlan.netcatchat;
-          port = x + ports.netcatchatClientRangeFrom;
+          inherit port;
         };
       })
-      (builtins.genList (x: x) (ports.netcatchatClientRangeTo - ports.netcatchatClientRangeFrom));
+      (builtins.genList
+        (x: x + ports.netcatchatClient.from)
+        (ports.netcatchatClient.to - ports.netcatchatClient.from));
 in
 {
   options.services.torContainer = with lib; with types; {

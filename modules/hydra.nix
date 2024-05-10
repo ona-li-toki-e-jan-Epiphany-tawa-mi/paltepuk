@@ -32,11 +32,11 @@
 
 
       # Lets connections to the Hydra web GUI through the container firewall.
-      networking.firewall.allowedTCPPorts = [ ports.hydraWebGUI ];
+      networking.firewall.allowedTCPPorts = [ ports.hydraGUI ];
 
       services.hydra = {
         enable             = true;
-        hydraURL           = "http://127.0.0.1:${builtins.toString ports.hydraWebGUI}";
+        hydraURL           = "http://127.0.0.1:${builtins.toString ports.hydraGUI}";
         notificationSender = "hydra@localhost";
         # Allows leveraging binary cache, else we'd have to build everything
         # from scratch.
