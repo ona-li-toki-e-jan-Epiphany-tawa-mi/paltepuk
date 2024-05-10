@@ -108,21 +108,22 @@ in
 
         environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
 
-        networking.firewall.allowedTCPPorts = [ ports.torSOCKS ];
+
+        # Fast Tor HTTP proxy for applications to use.
+        networking.firewall.allowedTCPPorts = [ ports.privoxyTor ];
+        services.privoxy                    = {
+          enable    = true;
+          enableTor = true;
+
+          settings.listen-address = "0.0.0.0:${builtins.toString ports.privoxyTor}";
+        };
 
         services.tor = {
           package = pkgs-unstable.tor;
           enable  = true;
 
-          # Allows applications to hop onto Tor.
-          client = {
-            enable             = true;
-            socksListenAddress = {
-              IsolateDestAddr = true;
-              addr            = "127.0.0.1";
-              port            = ports.torSOCKS;
-            };
-          };
+          # Enables SOCKS proxy for Privoxy to use.
+          client.enable = true;
 
           settings = {
             "ControlPort"    = ports.torControl;
@@ -134,27 +135,24 @@ in
           };
 
           relay.onionServices = {
-            # Tor access for remote administration.
             "${serviceNames.ssh}".map = [{
-              port  = 22;
+              port   = 22;
               target = {
                 addr = vlan.host;
                 port = 22;
               };
             }];
 
-            # Tor access for the reverse proxy.
             "${serviceNames.reverseProxy}".map = [{
-              port  = 80;
+              port   = 80;
               target = {
                 addr = vlan.reverseProxy;
                 port = 80;
               };
             }];
 
-            # Tor access for the netcatchat instance.
             "${serviceNames.netcatchat}".map = [{
-              port  = ports.netcatchatServer;
+              port   = ports.netcatchatServer;
               target = {
                 addr = vlan.netcatchat;
                 port = ports.netcatchatServer;
