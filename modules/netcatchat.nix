@@ -19,10 +19,9 @@
 { lib, pkgs, vlan, vlan6, ports, config, serviceNames, ... }:
 
 let # The ports clients can connect on, concatenated into a string for netcatchat.
-    clientPorts = lib.concatMapStringsSep
-      " "
-      (x: builtins.toString (x + ports.netcatchatClientRangeFrom))
-      (builtins.genList (x: x) (ports.netcatchatClientRangeTo - ports.netcatchatClientRangeFrom));
+    clientPorts = lib.concatStringsSep " " (builtins.genList
+      (x: builtins.toString (x + ports.netcatchatClient.from))
+      (ports.netcatchatClient.to - ports.netcatchatClient.from));
 in
 {
   # Isolated container for netcatchat to run in.
@@ -39,8 +38,8 @@ in
       networking.firewall = {
         allowedTCPPorts      = [ ports.netcatchatServer ];
         allowedTCPPortRanges = [{
-          from = ports.netcatchatClientRangeFrom;
-          to   = ports.netcatchatClientRangeTo;
+          inherit (ports.netcatchatClient) from;
+          inherit (ports.netcatchatClient) to;
         }];
       };
 
@@ -56,7 +55,7 @@ in
       };
 
       # Service to run a netcatchat server.
-      systemd.services."${serviceNames.netcatchat}-server" = {
+      systemd.services."${serviceNames.netcatchat}" = {
         description = "netcatchat server daemon";
         wantedBy    = [ "multi-user.target" ];
 
