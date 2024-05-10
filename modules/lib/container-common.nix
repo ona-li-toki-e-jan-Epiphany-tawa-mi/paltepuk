@@ -16,7 +16,9 @@
 
 # A module to import into containers containing common configurations.
 
-{ lib, ... }:
+{ lib
+, ...
+}:
 
 {
   security.sudo.execWheelOnly = true;

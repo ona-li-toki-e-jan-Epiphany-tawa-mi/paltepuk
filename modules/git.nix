@@ -17,7 +17,12 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ vlan, vlan6, serviceNames, directories, ... }:
+{ vlan
+, vlan6
+, serviceNames
+, directories
+, ...
+}:
 
 let # Where to mount the git repositories directory to in the container.
     gitDirectory = "/srv/git";

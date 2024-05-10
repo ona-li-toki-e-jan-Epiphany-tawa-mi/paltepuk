@@ -18,7 +18,16 @@
 # NOTE: you will have to create a file called "i2pd-port.nix" in the base of
 # this project with the port for i2pd to use.
 
-{ lib, ports, config, vlan, vlan6, pkgs-unstable, serviceNames, directories, ... }:
+{ lib
+, ports
+, config
+, vlan
+, vlan6
+, pkgs-unstable
+, serviceNames
+, directories
+, ...
+}:
 
 let cfg = config.services.i2pdContainer;
 

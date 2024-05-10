@@ -16,6 +16,8 @@
 
 # Installs and configures an SSH server.
 
+{ ... }:
+
 {
   # Enables OpenSSH and forces key-based authentication.
   services.openssh = {

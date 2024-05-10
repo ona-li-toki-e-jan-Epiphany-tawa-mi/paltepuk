@@ -17,7 +17,16 @@
 # Installs and configures the Tor daemon for running onion services with Nyx to
 # monitor it.
 
-{ ports, vlan, vlan6, config, lib, pkgs-unstable, serviceNames, directories, ... }:
+{ ports
+, vlan
+, vlan6
+, config
+, lib
+, pkgs-unstable
+, serviceNames
+, directories
+, ...
+}:
 
 let cfg = config.services.torContainer;
 
