@@ -18,21 +18,16 @@
 # NOTE: you will have to create a file called "i2pd-port.nix" in the base of
 # this project with the port for i2pd to use.
 
-{ lib, ports, config, vlan, vlan6, pkgs-unstable, serviceNames, ... }:
+{ lib, ports, config, vlan, vlan6, pkgs-unstable, serviceNames, directories, ... }:
 
 let cfg = config.services.i2pdContainer;
 
     # Port to accept incoming connections from peers with.
     i2pdPort = (import ../i2pd-port.nix);
 
-    # Where to put the files for i2pd on the host and in the container.
-    i2pdHostDirectory      = "/mnt/i2pd";
-    i2pdContainerDirectory = "/var/lib/i2pd";
-    # Name for i2pd container and related facilities.
-    i2pdContainer          = "i2pd";
     # The UID and GID to use for i2pd to ensure it owns the bind mounts.
-    i2pdUID                = 150;
-    i2pdGID                = 150;
+    i2pdUID = 150;
+    i2pdGID = 150;
 in
 {
   options.services.i2pdContainer = with lib; with types; {
@@ -58,13 +53,14 @@ in
       groups.i2pd.gid = i2pdGID;
     };
 
+    # Creates persistent directories for i2pd if they don't already exist.
     system.activationScripts."create-i2pd-bind-mounts" = ''
-      mkdir -p ${i2pdHostDirectory}
+      mkdir -p ${directories.i2pd}
     '';
 
     networking.nat = {
       # Gives the i2pd container internet access.
-      internalInterfaces = [ "ve-${i2pdContainer}" ];
+      internalInterfaces = [ "ve-${serviceNames.i2pd}" ];
 
       # Forwards connections from peers to i2pd.
       forwardPorts = [
@@ -92,13 +88,13 @@ in
     };
 
     # Isolated container for i2pd to run in.
-    containers."${i2pdContainer}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
+    containers."${serviceNames.i2pd}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
       localAddress  = vlan.i2pd;
       localAddress6 = vlan6.i2pd;
 
       # Mounts persistent directories.
-      bindMounts."${i2pdContainerDirectory}" = {
-        hostPath   = i2pdHostDirectory;
+      bindMounts."/var/lib/i2pd" = {
+        hostPath   = directories.i2pd;
         isReadOnly = false;
       };
 
@@ -114,7 +110,7 @@ in
         };
 
         # Sets permissions for bind mounts.
-        systemd.tmpfiles.rules = [ "d ${i2pdContainerDirectory} 700 i2pd i2pd" ];
+        systemd.tmpfiles.rules = [ "d /var/lib/i2pd 700 i2pd i2pd" ];
 
         networking.firewall = {
           allowedUDPPorts = [ i2pdPort ];

@@ -15,15 +15,21 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Sets up the Hydra continuous build system.
-# TODO Create bind mounts.
+# TODO Create bind mounts for Hydra persistent data.
 
-{ serviceNames, vlan, vlan6, ports, ... }:
+{ serviceNames, vlan, vlan6, ports, directories, ... }:
 
+let # Where to mount the git repositories directory to in the container.
+    gitDirectory = "/srv/git";
+in
 {
   # Isolated container for Hydra to run in.
   containers."${serviceNames.hydra}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
     localAddress  = vlan.hydra;
     localAddress6 = vlan6.hydra;
+
+    # Bind mounts the git repositories so Hydra can fetch and build them.
+    bindMounts."${gitDirectory}".hostPath = directories.gitRepositories;
 
     config = { ... }: {
       imports = [ ./lib/container-common.nix

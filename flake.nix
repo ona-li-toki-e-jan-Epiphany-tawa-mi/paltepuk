@@ -40,7 +40,7 @@
         extraSpecialArguments = {
           inherit inputs;
 
-          # IPv4 addresses for container networking.
+          # Container network IPv4 addresses.
           vlan = {
             host         = "192.168.100.1";
             git          = "192.168.100.3";
@@ -51,7 +51,7 @@
             hydra        = "192.168.100.13";
           };
 
-          # IPv6 addresses for container networking.
+          # Container network IPv6 addresses.
           vlan6 = {
             host         = "fc00::1";
             i2pd         = "fc00::3";
@@ -60,7 +60,7 @@
             hydra        = "fc00::9";
           };
 
-          # Common area for port numbers.
+          # Port numbers for networked services.
           ports = {
             i2pdConsole      = 7070;
             torControl       = 9051;
@@ -72,8 +72,8 @@
             hydraGUI         = 3000;
           };
 
-          # Common area for service names. These are used for container names,
-          # onion services and I2P tunnels.
+          # These names are used for systemd services, containers, onion
+          # services, I2P tunnels, etc..
           serviceNames = {
             ssh          = "ssh";
             cgit         = "cgit";
@@ -81,6 +81,16 @@
             git          = "git";
             reverseProxy = "rev-proxy";
             hydra        = "hydra";
+            i2pd         = "i2pd";
+            tor          = "tor";
+          };
+
+          # Directory paths, typically for container bind mounts.
+          directories = {
+            gitRepositories = "/mnt/git/repositories";
+            gitSSH          = "/mnt/git/ssh";
+            i2pd            = "/mnt/i2pd";
+            tor             = "/mnt/tor";
           };
         };
     in {
