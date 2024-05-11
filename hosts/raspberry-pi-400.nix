@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Hardware config for a Raspberry Pi 3B+.
+# Hardware config for a Raspberry Pi 400.
 
 { modulesPath, serviceNames, vlan, ports, ... }:
 
@@ -38,8 +38,6 @@
     fsType = "ext4";
   };
 
-  # Need a big swapfile for rebuilding (if not done remotely.)
-  # Probably overkill.
   swapDevices = [{
     device = "/swapfile";
     size   = 8*1024;                              # 8 GB.
@@ -58,22 +56,25 @@
     raspberryPi.firmwareConfig = [ "force_turbo=1" ];
   };
 
-  networking = {
-    # Enables networking.
-    useDHCP                   = false;
-    interfaces.enu1u1.useDHCP = true;
+  networking =
+    let ethernetInterface = "end0";
+    in
+      {
+        # Enables networking.
+        useDHCP                                   = false;
+        interfaces."${ethernetInterface}".useDHCP = true;
 
-    nat = {
-      # Sets interface to use for NAT.
-      externalInterface = "enu1u1";
+        nat = {
+          # Sets interface to use for NAT.
+          externalInterface = ethernetInterface;
 
-      # Forwards connections on the git SSH port the SSH server.
-      internalInterfaces = [ "ve-${serviceNames.git}" ];
-      forwardPorts       = [{
-        destination = "${vlan.git}:22";
-        proto       = "tcp";
-        sourcePort  = 5000;
-      }];
-    };
-  };
+          # Forwards connections on the git SSH port the SSH server.
+          internalInterfaces = [ "ve-${serviceNames.git}" ];
+          forwardPorts       = [{
+            destination = "${vlan.git}:22";
+            proto       = "tcp";
+            sourcePort  = 5000;
+          }];
+        };
+      };
 }

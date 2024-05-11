@@ -116,13 +116,13 @@
         };
     in {
       nixosConfigurations = {
-        "raspberryPi3BPlus" = nixpkgs.lib.nixosSystem rec {
+        "raspberryPi400" = nixpkgs.lib.nixosSystem rec {
           specialArgs = extraSpecialArguments // {
             inherit system;
           };
 
           system  = "aarch64-linux";
-          modules = [ ./hosts/raspberry-pi-3-b-plus.nix
+          modules = [ ./hosts/raspberry-pi-400.nix
                     ] ++ extraModules;
         };
       };
