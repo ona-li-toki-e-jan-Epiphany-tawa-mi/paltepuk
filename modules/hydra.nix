@@ -28,6 +28,9 @@
 , directories
 , gids
 , uids
+, system
+, inputs
+, lib
 , ...
 }:
 
@@ -84,7 +87,7 @@ in
       };
     };
 
-    config = { ... }: {
+    config = { config, pkgs, ... }: {
       imports = [ ./lib/container-common.nix
                 ];
 
@@ -131,23 +134,30 @@ in
         # Forcefully set this to empty so it doesn't try to read from
         # /etc/nix/machines.
         buildMachinesFiles = [];
-
-        # Extends the timeout when fetching git repositories. The value is in
-        # seconds.
-        extraConfig = ''
-          <git-input>
-            timeout = 3600
-          </git-input>
-        '';
       };
 
-      # Make the Hydra evaluator daemon download stuff over Tor for funsies.
-      systemd.services."hydra-evaluator".environment =
+      # Allows cross-compilation to other architectures.
+      boot.binfmt.emulatedSystems  = builtins.filter (x: system != x) [
+        "i686-linux" "x86_64-linux"
+        "aarch64-linux"
+      ];
+      nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
+
+      # Make the Hydra fetch stuff over Tor for funsies.
+      systemd.services =
         let proxy = "http://${vlan.tor}:${builtins.toString ports.privoxyTor}";
-        in {
-          "http_proxy"  = proxy;
-          "https_proxy" = proxy;
-        };
+        in builtins.listToAttrs (builtins.map
+          (service: {
+            name  = service;
+            value = {
+              environment = {
+                "http_proxy"  = proxy;
+                "https_proxy" = proxy;
+              };
+            };
+          })
+          [ "hydra-evaluator" "nix-daemon" ]
+        );
     };
   };
 }
