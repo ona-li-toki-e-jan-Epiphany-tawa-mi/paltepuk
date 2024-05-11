@@ -32,127 +32,143 @@ let # Where to mount the git repositories directory to in the container.
     # The location of the custom logo for cgit under nginx.
     cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.png";
 
-    # A set of bare repositories to create if they don't already exist.
+    # Names for the sections displayed in cgit.
+    sections = {
+      none           = null;
+      # As-in no longer being worked on or supported.
+      defunct        = "Defunct";
+      # My projects that mainly live on other sites.
+      personalMirror = "Personal mirrors (may contain Clearnet resources)";
+      # Mirrors of others' projects.
+      mirror         = "Mirrors (may contain Clearnet resources)";
+    };
+
+    # Declarative repositories for git and cgit.
     repositories = [
       {
         path        = "AkashicRecord.git";
         description = "The history of my universe, I guess";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "BitMasher.git";
         description = "A fast-paced text adventure game inside a ransomware-infected computer";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "COBOL-DVD-Thingy.git";
         description = "Terminal screensaver similar to that of DVD players";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "Conways-Ivory-Tower.git";
         description = "An infinitely-sized interactive implementation of Conway's Game of Life";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "Explosive-Utilities.git";
         description = "Nitroglycerinomancology Reborn";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "Explosive-Utilities.wiki.git";
         description = "Nitroglycerinomancology Reborn - Wiki | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/Explosive-Utilities.wiki.git";
-        section     = "Personal mirrors (may contain Clearnet resources)";
+        section     = sections.personalMirror;
       }
       {
         path        = "Glow-Chickens.git";
         description = "Luminescent Fetheared Bipeds";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "ISawedThisPlayerInHalf.git";
         description = "With the power of (brand goes here)!";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "Incendiary-Bees.git";
         description = "High Ordinance Apioforms";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "Modular-Backrooms.git";
         description = "Choose-your-experience-type Backrooms mod for Minecraft";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "Nitwit-Only-Mode.git";
         description = "Makes all Villagers Nitwits... because!";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "PigsThatGoBoomInTheNight.git";
         description = "\"Feed\" TNT to pigs to make them go BOOM!";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "PyMSWPR.git";
         description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "Survival-Command-Blocks.git";
         description = "Command Blocks now made avalible and usable in a survival world near you!";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "VineBoomErrors-vscode.git";
         description = "Plays the Vine boom sound effect when your badly-written code generates errors";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "cad-vault.git";
         description = "A mirror of my Thingiverse projects";
-        section     = "Personal mirrors (may contain Clearnet resources)";
+        section     = sections.personalMirror;
       }
       {
         path        = "cowsAyPL.git";
         description = "Cowsay in GnuAPL";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "ilo-li-sina.git";
         description = "\"ilo li sina\" li toki pi lawa pi ilo nanpa. taso, sina lawa ala e ona. ona li lawa e sina a!";
-        section     = "Defunct";
+        section     = sections.defunct;
       }
       {
         path        = "netcatchat.git";
         description = "A simple command-line chat server and client for Linux using netcat";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "ona-li-toki-e-jan-Epiphany-tawa-mi.git";
         description = "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi";
-        section     = "Personal mirrors (may contain Clearnet resources)";
+        section     = sections.personalMirror;
       }
       {
         path        = "paltepuk.git";
         description = "Personal website and server wombo-combo";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "player-sounder.git";
         description = "Player soundser byer shellinger outer toer oneer ofer theer availableer audioer playerser";
-        section     = null;
+        section     = sections.none;
       }
       {
         path        = "epitaphpkgs.git";
         description = "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
-        section     = "Personal mirrors (may contain Clearnet resources)";
+        section     = sections.personalMirror;
       }
       {
         path        = "Brainblast-Toolkit.git";
         description = "A brainfuck/BASICfuck REPL for 6502 machines";
-        section     = null;
+        section     = sections.none;
+      }
+      {
+        path        = "nixpkgs.git";
+        description = "Nix Packages collection & NixOS";
+        section     = sections.mirror;
       }
     ];
 in
