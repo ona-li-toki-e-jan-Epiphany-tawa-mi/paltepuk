@@ -76,12 +76,12 @@
 
             # Hydra instance path.
             "/${serviceNames.hydra}/" =
-              let hydraIP = "http://${vlan.hydra}:${builtins.toString ports.hydraGUI}";
+              let hydraIP = "http://${vlan.host}:${builtins.toString ports.hydraGUI}";
               in {
                 proxyPass       = "${hydraIP}/";
                 proxyWebsockets = true;
                 extraConfig     = ''
-                  proxy_redirect   ${hydraIP}        $scheme://$host/hydra;
+                  proxy_redirect   ${hydraIP}        $scheme://$host/${serviceNames.hydra};
                   proxy_set_header Host              $host;
                   proxy_set_header X-Real-IP         $remote_addr;
                   proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
