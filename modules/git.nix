@@ -170,6 +170,11 @@ let # Where to mount the git repositories directory to in the container.
         description = "Nix Packages collection & NixOS";
         section     = sections.mirror;
       }
+      {
+        path        = "hydra-projects.git";
+        description = "Declarative Hydra project specifications";
+        section     = sections.none;
+      }
     ];
 in
 {
