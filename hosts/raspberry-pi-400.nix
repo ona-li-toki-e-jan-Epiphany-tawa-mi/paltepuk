@@ -24,7 +24,7 @@
 
 
 
-  # Bandwidth limits. Bound mainly by the lack of memory (1 GB,)
+  # Bandwidth limits.
   services.i2pdContainer.bandwidth = 1024;        # 1 MB/s
   services.torContainer   = {
     bandwidthRate  = "3 MBytes";

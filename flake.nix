@@ -48,7 +48,6 @@
             i2pd         = "192.168.100.7";
             netcatchat   = "192.168.100.9";
             reverseProxy = "192.168.100.11";
-            hydra        = "192.168.100.13";
           };
 
           # Container network IPv6 addresses.
@@ -57,7 +56,6 @@
             i2pd         = "fc00::3";
             git          = "fc00::5";
             reverseProxy = "fc00::7";
-            hydra        = "fc00::9";
           };
 
           # Port numbers for networked services.
@@ -92,8 +90,6 @@
             gitSSH          = "/mnt/git/ssh";
             i2pd            = "/mnt/i2pd";
             tor             = "/mnt/tor";
-            hydraState      = "/mnt/hydra/hydra";
-            hydraDatabase   = "/mnt/hydra/postgresql";
           };
 
           # User IDs.
@@ -101,8 +97,6 @@
             git      = 1002;
             i2pd     = 150;
             tor      = 35;
-            hydra    = 122;
-            postgres = 71;
           };
 
           # Group IDs.
@@ -110,8 +104,6 @@
             git      = 1002;
             i2pd     = 150;
             tor      = 35;
-            hydra    = 122;
-            postgres = 71;
           };
         };
     in {
