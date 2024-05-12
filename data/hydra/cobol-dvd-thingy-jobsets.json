@@ -1,0 +1,95 @@
+{
+    "master-i686-linux": {
+        "enabled":     1,
+        "hidden":      false,
+        "description": "Binary build for i686 Linux",
+
+        "nixexprinput":     "src",
+        "nixexprpath":      "release.nix",
+        "checkinterval":    86400,
+        "schedulingshares": 1,
+        "keepnr":           5,
+
+        "enableemail": false,
+        "emailoverride": "",
+
+        "inputs": {
+            "nixpkgs": {
+                "type":             "git",
+                "value":            "/mnt/git/repositories/nixpkgs.git nixpkgs-unstable",
+                "emailresponsible": false
+            },
+            "src": {
+                "type":             "git",
+                "value":            "/mnt/git/repositories/COBOL-DVD-Thingy.git master",
+                "emailresponsible": false
+            },
+            "system": {
+                "type":  "string",
+                "value": "i686-linux"
+            }
+        }
+    },
+    "master-x86_64-linux": {
+        "enabled":     1,
+        "hidden":      false,
+        "description": "Binary build for x86_64 Linux",
+
+        "nixexprinput":     "src",
+        "nixexprpath":      "release.nix",
+        "checkinterval":    86400,
+        "schedulingshares": 1,
+        "keepnr":           5,
+
+        "enableemail": false,
+        "emailoverride": "",
+
+        "inputs": {
+            "nixpkgs": {
+                "type":             "git",
+                "value":            "/mnt/git/repositories/nixpkgs.git nixpkgs-unstable",
+                "emailresponsible": false
+            },
+            "src": {
+                "type":             "git",
+                "value":            "/mnt/git/repositories/COBOL-DVD-Thingy.git master",
+                "emailresponsible": false
+            },
+            "system": {
+                "type":  "string",
+                "value": "x86_64-linux"
+            }
+        }
+    },
+    "master-aarch64-linux": {
+        "enabled":     1,
+        "hidden":      false,
+        "description": "Binary build for aarch64 Linux",
+
+        "nixexprinput":     "src",
+        "nixexprpath":      "release.nix",
+        "checkinterval":    86400,
+        "schedulingshares": 1,
+        "keepnr":           5,
+
+        "enableemail": false,
+        "emailoverride": "",
+
+        "inputs": {
+            "nixpkgs": {
+                "type":             "git",
+                "value":            "/mnt/git/repositories/nixpkgs.git nixpkgs-unstable",
+                "emailresponsible": false
+            },
+            "src": {
+                "type":             "git",
+                "value":            "/mnt/git/repositories/COBOL-DVD-Thingy.git master",
+                "emailresponsible": false
+            },
+            "system": {
+                "type":  "string",
+                "value": "aarch64-linux"
+            }
+        }
+    }
+}
