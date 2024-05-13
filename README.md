@@ -45,7 +45,7 @@ site validation out of the box.
 - Peertube or something else for my videos (maybe tube.)
 - Add issue tracker for projects.
 - Consider adding access from Lokinet, Freenet, and GNUnet(?).
-- Auto-mirror repositories I like (namely nixpkgs + for Hydra to fetch.)
+- Split git and cgit into separate containers.
 - If moved to a VPS:
   - Add access from the regular Clearnet and Yggdrasil.
   - See about adding IPFS gateway.
