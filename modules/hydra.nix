@@ -30,6 +30,11 @@
 , ...
 }:
 
+let supportedSystems = [
+      "i686-linux" "x86_64-linux"
+      "aarch64-linux"
+    ];
+in
 {
   # Needed to allow connections from reverse proxy to reach Hydra. This does
   # mean people can directly connect to Hydra from Clearnet, but that doesn't
@@ -44,10 +49,6 @@
     # from scratch.
     useSubstitutes     = true;
 
-    # Forcefully set this to empty so it doesn't try to read from
-    # /etc/nix/machines.
-    buildMachinesFiles = [];
-
     extraConfig = ''
       <git-input>
         timeout = 3600
@@ -56,9 +57,11 @@
   };
 
   # Allows cross-compilation to other architectures.
-  boot.binfmt.emulatedSystems  = builtins.filter (x: system != x) [
-    "i686-linux" "x86_64-linux"
-    "aarch64-linux"
-  ];
+  boot.binfmt.emulatedSystems  = builtins.filter (x: system != x) supportedSystems;
   nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
+
+  nix.buildMachines = [{
+    hostName = "localhost";
+    systems  = supportedSystems;
+  }];
 }
