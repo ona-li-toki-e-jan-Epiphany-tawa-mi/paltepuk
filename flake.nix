@@ -68,7 +68,6 @@
               to   = 2026;
             };
             hydraGUI         = 3000;
-            privoxyTor       = 8118;
           };
 
           # These names are used for systemd services, containers, onion

@@ -108,22 +108,9 @@ in
 
         environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
 
-
-        # Fast Tor HTTP proxy for applications to use.
-        networking.firewall.allowedTCPPorts = [ ports.privoxyTor ];
-        services.privoxy                    = {
-          enable    = true;
-          enableTor = true;
-
-          settings.listen-address = "0.0.0.0:${builtins.toString ports.privoxyTor}";
-        };
-
         services.tor = {
           package = pkgs-unstable.tor;
           enable  = true;
-
-          # Enables SOCKS proxy for Privoxy to use.
-          client.enable = true;
 
           settings = {
             "ControlPort"    = ports.torControl;

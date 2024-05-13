@@ -61,20 +61,4 @@
     "aarch64-linux"
   ];
   nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
-
-  # Make the Hydra fetch stuff over Tor for funsies.
-  systemd.services =
-    let proxy = "http://${vlan.tor}:${builtins.toString ports.privoxyTor}";
-    in builtins.listToAttrs (builtins.map
-      (service: {
-        name  = service;
-        value = {
-          environment = {
-            "http_proxy"  = proxy;
-            "https_proxy" = proxy;
-          };
-        };
-      })
-      [ "hydra-evaluator" "hydra-queue-runner" "nix-daemon" ]
-    );
 }
