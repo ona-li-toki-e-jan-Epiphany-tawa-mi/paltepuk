@@ -69,8 +69,7 @@
           externalInterface = ethernetInterface;
 
           # Forwards connections on the git SSH port the SSH server.
-          internalInterfaces = [ "ve-${serviceNames.git}" ];
-          forwardPorts       = [{
+          forwardPorts = [{
             destination = "${vlan.git}:22";
             proto       = "tcp";
             sourcePort  = 5000;

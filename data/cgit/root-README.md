@@ -3,6 +3,8 @@
 Welcome to MY git server! Here you can peruse my various programming (and other)
 projects in style!
 
+There's also a couple mirrors I host as well.
+
 Note that in the about sections for each repo, images and relative links are
 borked. This is because they are meant for GitHub, sorry in advance!
 
@@ -36,3 +38,8 @@ If you would prefer the Clearnet, please visit my GitHub instead:
 ```
 https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 ```
+
+If the clone fails half-way-through (looking at you nixpkgs,) tack `--depth=1`
+onto the git clone command. This will perform a shallow clone that just grabs
+the state of the most recent commit, which will be more reliable due to having
+less to clone. Blame HTTP.
