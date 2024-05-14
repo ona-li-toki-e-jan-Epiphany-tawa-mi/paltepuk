@@ -202,6 +202,12 @@ let # Where to mount the git repositories directory to in the container.
         section     = sections.none;
         autoMirror  = false;
       }
+      {
+        path        = "AHD.git";
+        description = "Hexdump utility";
+        section     = sections.none;
+        autoMirror  = false;
+      }
     ];
 in
 {
