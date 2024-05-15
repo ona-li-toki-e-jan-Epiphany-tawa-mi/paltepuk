@@ -30,10 +30,7 @@
 , ...
 }:
 
-let supportedSystems = [
-      "i686-linux" "x86_64-linux"
-      "aarch64-linux"
-    ];
+let supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 in
 {
   # Needed to allow connections from reverse proxy to reach Hydra. This does

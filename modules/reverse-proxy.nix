@@ -40,6 +40,16 @@
         proto       = "tcp";
         sourcePort  = 80;
       }
+      {
+        destination = "${vlan.reverseProxy}:443";
+        proto       = "tcp";
+        sourcePort  = 443;
+      }
+      {
+        destination = "[${vlan6.reverseProxy}]:443";
+        proto       = "tcp";
+        sourcePort  = 443;
+      }
     ];
   };
 
@@ -55,7 +65,7 @@
 
 
       # Lets connections to the reverse proxy through the container firewall.
-      networking.firewall.allowedTCPPorts = [ 80 ];
+      networking.firewall.allowedTCPPorts = [ 80 443 ];
 
       services.nginx = {
         enable = true;
