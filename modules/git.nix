@@ -70,62 +70,8 @@ let # Where to mount the git repositories directory to in the container.
         autoMirror  = false;
       }
       {
-        path        = "Explosive-Utilities.git";
-        description = "Nitroglycerinomancology Reborn";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "Explosive-Utilities.wiki.git";
-        description = "Nitroglycerinomancology Reborn - Wiki | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/Explosive-Utilities.wiki.git";
-        section     = sections.personalMirror;
-        autoMirror  = false;
-      }
-      {
-        path        = "Glow-Chickens.git";
-        description = "Luminescent Fetheared Bipeds";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "ISawedThisPlayerInHalf.git";
-        description = "With the power of (brand goes here)!";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "Incendiary-Bees.git";
-        description = "High Ordinance Apioforms";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "Modular-Backrooms.git";
-        description = "Choose-your-experience-type Backrooms mod for Minecraft";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "Nitwit-Only-Mode.git";
-        description = "Makes all Villagers Nitwits... because!";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "PigsThatGoBoomInTheNight.git";
-        description = "\"Feed\" TNT to pigs to make them go BOOM!";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
         path        = "PyMSWPR.git";
         description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
-        path        = "Survival-Command-Blocks.git";
-        description = "Command Blocks now made avalible and usable in a survival world near you!";
         section     = sections.defunct;
         autoMirror  = false;
       }
@@ -208,10 +154,16 @@ let # Where to mount the git repositories directory to in the container.
         section     = sections.none;
         autoMirror  = false;
       }
+      {
+        path        = "Minecraft-Projects-Monorepo.git";
+        description = "Monorepo for my old Minecraft projects";
+        section     = sections.defunct;
+        autoMirror  = false;
+      }
     ];
 in
 {
-  # Dummy user to ensure the git user are the same inside and out of the
+  # Dummy user to ensure the git user is the same inside and out of the
   # container.
   users = {
     users."${serviceNames.git}" = {
