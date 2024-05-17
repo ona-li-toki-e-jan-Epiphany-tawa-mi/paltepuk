@@ -66,11 +66,14 @@ in
       systemd.services."${serviceNames.netcatchat}" = {
         description = "netcatchat server daemon";
         wantedBy    = [ "multi-user.target" ];
+        path        = [ config.nur.repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
 
-        script = "${lib.getExe config.nur.repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat} -s -p ${builtins.toString ports.netcatchatServer} -c \"${clientPorts}\"";
+        script = ''
+          netcatchat -s -p ${builtins.toString ports.netcatchatServer} -c "${clientPorts}"
+        '';
 
         serviceConfig = {
-          "User"          = "${serviceNames.netcatchat}";
+          "User"          = serviceNames.netcatchat;
           # Restarts every 4 hours.
           "Restart"       = "always";
           "RuntimeMaxSec" = "4h";
