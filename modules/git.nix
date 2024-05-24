@@ -160,6 +160,12 @@ let # Where to mount the git repositories directory to in the container.
         section     = sections.defunct;
         autoMirror  = false;
       }
+      {
+        path        = "poltergeist.git";
+        description = "Bare-bones remote keyboard and mouse server";
+        section     = sections.none;
+        autoMirror  = false;
+      }
     ];
 in
 {
