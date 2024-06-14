@@ -161,8 +161,8 @@ let # Where to mount the git repositories directory to in the container.
         autoMirror  = false;
       }
       {
-        path        = "poltergeist.git";
-        description = "Bare-bones remote keyboard and mouse server";
+        path        = "ap.git";
+        description = "A simple NixOS configuration for making wireless access points";
         section     = sections.none;
         autoMirror  = false;
       }
