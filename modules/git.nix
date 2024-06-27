@@ -200,7 +200,10 @@ in
         wantedBy    = [ "multi-user.target" ];
         path        = [ pkgs.git ];
 
-        script = lib.concatStrings (builtins.map ({ path, ... }: ''
+        script = ''
+           # Shows executed commands.
+           set -x
+        '' + lib.concatStrings (builtins.map ({ path, ... }: ''
             if [ ! -d "${path}" ]; then
               mkdir -p "${path}"
               git -C "${path}" init --bare
@@ -216,14 +219,15 @@ in
         };
       };
 
-      # TODO Harden service.
       # Automatically mirrors and updates mirror repositories.
       "auto-mirror" = {
         description = "git repository automirroring service";
-        wantedBy    = [ "multi-user.target" ];
         path        = [ pkgs.git ];
 
-        script = lib.concatStrings (builtins.map ({ path, mirrorUrl, ... }: ''
+        script = ''
+           # Shows executed commands.
+           set -x
+        '' + lib.concatStrings (builtins.map ({ path, mirrorUrl, ... }: ''
             if [ ! -d "${path}" ]; then
               git clone --mirror "${mirrorUrl}" "${path}"
             else
