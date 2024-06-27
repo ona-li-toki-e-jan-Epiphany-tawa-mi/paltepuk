@@ -153,14 +153,6 @@ in
               destination = "";
             };
 
-            # I2P access for the git SSH server.
-            "${serviceNames.git}" = {
-              enable      = true;
-              address     = vlan.git;
-              port        = 22;
-              destination = "";
-            };
-
             # I2P access to the reverse proxy.
             "${serviceNames.reverseProxy}" = {
               enable      = true;

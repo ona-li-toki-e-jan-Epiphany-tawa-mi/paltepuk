@@ -43,7 +43,6 @@
           # Container network IPv4 addresses.
           vlan = {
             host         = "192.168.100.1";
-            git          = "192.168.100.3";
             tor          = "192.168.100.5";
             i2pd         = "192.168.100.7";
             netcatchat   = "192.168.100.9";
@@ -53,7 +52,6 @@
           vlan6 = {
             host         = "fc00::1";
             i2pd         = "fc00::3";
-            git          = "fc00::5";
           };
 
           # Port numbers for networked services.
@@ -66,6 +64,7 @@
               to   = 2026;
             };
             hydraGUI         = 3000;
+            cgit             = 5000;
           };
 
           # These names are used for systemd services, containers, onion
@@ -83,22 +82,18 @@
 
           # Directory paths, typically for container bind mounts.
           directories = {
-            gitRepositories = "/mnt/git/repositories";
-            gitSSH          = "/mnt/git/ssh";
-            i2pd            = "/mnt/i2pd";
-            tor             = "/mnt/tor";
+            i2pd = "/mnt/i2pd";
+            tor  = "/mnt/tor";
           };
 
           # User IDs.
           uids = {
-            git      = 1002;
             i2pd     = 150;
             tor      = 35;
           };
 
           # Group IDs.
           gids = {
-            git      = 1002;
             i2pd     = 150;
             tor      = 35;
           };
