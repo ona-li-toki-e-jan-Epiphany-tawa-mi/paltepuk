@@ -17,7 +17,6 @@
 # Installs and configures a netcatchat server.
 
 { lib
-, pkgs
 , vlan
 , vlan6
 , ports
