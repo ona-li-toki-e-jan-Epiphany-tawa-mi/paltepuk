@@ -16,7 +16,9 @@
 
 # Hardware config for a Raspberry Pi 400.
 
-{ modulesPath, serviceNames, vlan, ports, ... }:
+{ modulesPath
+, ...
+}:
 
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix")
@@ -64,16 +66,7 @@
         useDHCP                                   = false;
         interfaces."${ethernetInterface}".useDHCP = true;
 
-        nat = {
-          # Sets interface to use for NAT.
-          externalInterface = ethernetInterface;
-
-          # Forwards connections on the git SSH port the SSH server.
-          forwardPorts = [{
-            destination = "${vlan.git}:22";
-            proto       = "tcp";
-            sourcePort  = 5000;
-          }];
-        };
+        # Sets interface to use for NAT.
+        nat.externalInterface = ethernetInterface;
       };
 }

@@ -18,7 +18,6 @@
 # on this system.
 
 { serviceNames
-, vlan
 , ports
 , ...
 }:
@@ -40,7 +39,7 @@
 
         # cgit instance path.
         "/${serviceNames.cgit}/" = {
-          proxyPass       = "http://${vlan.git}/${serviceNames.cgit}/";
+          proxyPass       = "http://127.0.0.1:${builtins.toString ports.cgit}/${serviceNames.cgit}/";
           proxyWebsockets = true;
         };
 
