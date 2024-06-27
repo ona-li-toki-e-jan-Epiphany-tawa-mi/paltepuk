@@ -23,8 +23,7 @@
 #
 # I tried to put it in a container, but I couldn't get it to work like that.
 
-{ vlan
-, ports
+{ ports
 , system
 , config
 , ...
