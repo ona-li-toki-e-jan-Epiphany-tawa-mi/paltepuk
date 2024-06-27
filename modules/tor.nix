@@ -133,7 +133,7 @@ in
             "${serviceNames.reverseProxy}".map = [{
               port   = 80;
               target = {
-                addr = vlan.reverseProxy;
+                addr = vlan.host;
                 port = 80;
               };
             }];
