@@ -18,9 +18,9 @@
   description = "NixOS configuration flake for badass reproducable websites";
 
   inputs = {
-    nixpkgs.url          = "https://github.com/NixOS/nixpkgs/nixos-23.11";
-    nixpkgs-unstable.url = "https://github.com/NixOS/nixpkgs/nixos-unstable";
-    nur.url              = "https://github.com/nix-community/NUR";
+    nixpkgs.url          = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nur.url              = "github:nix-community/NUR";
   };
 
   outputs = { nixpkgs, nur, nixpkgs-unstable, ... } @ inputs:
