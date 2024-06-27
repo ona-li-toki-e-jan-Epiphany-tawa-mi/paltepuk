@@ -47,7 +47,6 @@
             tor          = "192.168.100.5";
             i2pd         = "192.168.100.7";
             netcatchat   = "192.168.100.9";
-            reverseProxy = "192.168.100.11";
           };
 
           # Container network IPv6 addresses.
@@ -55,7 +54,6 @@
             host         = "fc00::1";
             i2pd         = "fc00::3";
             git          = "fc00::5";
-            reverseProxy = "fc00::7";
           };
 
           # Port numbers for networked services.
@@ -77,10 +75,10 @@
             cgit         = "cgit";
             netcatchat   = "netcatchat";
             git          = "git";
-            reverseProxy = "rev-proxy";
             hydra        = "hydra";
             i2pd         = "i2pd";
             tor          = "tor";
+            reverseProxy = "rev-proxy";
           };
 
           # Directory paths, typically for container bind mounts.

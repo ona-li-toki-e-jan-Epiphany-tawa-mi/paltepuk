@@ -32,11 +32,6 @@
 let supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 in
 {
-  # Needed to allow connections from reverse proxy to reach Hydra. This does
-  # mean people can directly connect to Hydra from Clearnet, but that doesn't
-  # really matter.
-  networking.firewall.allowedTCPPorts = [ ports.hydraGUI ];
-
   services.hydra = {
     enable             = true;
     hydraURL           = "http://127.0.0.1:${builtins.toString ports.hydraGUI}";

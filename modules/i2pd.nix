@@ -164,7 +164,7 @@ in
             # I2P access to the reverse proxy.
             "${serviceNames.reverseProxy}" = {
               enable      = true;
-              address     = vlan.reverseProxy;
+              address     = vlan.host;
               port        = 80;
               destination = "";
             };
