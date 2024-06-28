@@ -163,6 +163,12 @@ let gitDirectory = "/srv/git";
         section     = sections.none;
         autoMirror  = false;
       }
+      {
+        path        = "TLPIN.git";
+        description = "toki lawa pi ilo nanpa sama toki APL";
+        section     = sections.none;
+        autoMirror  = false;
+      }
     ];
 in
 {
