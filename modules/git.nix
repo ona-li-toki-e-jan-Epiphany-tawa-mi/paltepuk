@@ -79,12 +79,6 @@ let gitDirectory = "/srv/git";
         autoMirror  = false;
       }
       {
-        path        = "cad-vault.git";
-        description = "A mirror of my Thingiverse projects";
-        section     = sections.personalMirror;
-        autoMirror  = false;
-      }
-      {
         path        = "cowsAyPL.git";
         description = "Cowsay in GnuAPL";
         section     = sections.none;
