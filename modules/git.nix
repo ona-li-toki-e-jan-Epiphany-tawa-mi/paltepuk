@@ -92,7 +92,7 @@ let gitDirectory = "/srv/git";
       }
       {
         path        = "netcatchat.git";
-        description = "A simple command-line chat server and client for Linux using netcat";
+        description = "A simple command-line chat server and client using netcat";
         section     = sections.none;
         autoMirror  = false;
       }
