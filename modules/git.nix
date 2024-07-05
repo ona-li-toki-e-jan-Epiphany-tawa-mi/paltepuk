@@ -69,7 +69,7 @@ let gitDirectory = "/srv/git";
       {
         path        = "PyMSWPR.git";
         description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
-        section     = sections.defunct;
+        section     = sections.none;
         autoMirror  = false;
       }
       {
