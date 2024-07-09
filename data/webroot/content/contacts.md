@@ -1,5 +1,6 @@
 +++
 title = 'Contacts'
+description = 'contact information'
 +++
 
 # Email
