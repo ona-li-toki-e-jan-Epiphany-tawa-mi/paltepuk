@@ -19,13 +19,5 @@ For information on what in tarnation a "netcatchat server" is, take a look at
 `netcatchat.git` repository on my cgit instance or the `netcatchat` repository
 on my GitHub account.
 
-## Source
-
-This website, and the NixOS configuration for it's server, is open sourced under
-the GNU Affero General Public License version 3 or Later. You can view it here
-in the `paltepuk.git` repository on my cgit instance or the `paltepuk`
-repository on my GitHub account.
-
-
 - [./cgit](cgit git server web interface)
 - [./hydra](Hydra continuous integration server)

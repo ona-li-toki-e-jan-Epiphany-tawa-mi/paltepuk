@@ -1,9 +1,8 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'paltepuk'
-
 theme = 'lugo'
 
 [params]
-    baseI2PURL = 'http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p'
-    baseTorURL = 'http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion'
+baseI2PURL = 'http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p'
+baseTorURL = 'http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion'
