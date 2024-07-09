@@ -39,7 +39,7 @@ If you would prefer the Clearnet, please visit my GitHub instead:
 https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 ```
 
-If the clone fails half-way-through (looking at you nixpkgs,) tack `--depth=1`
+If the clone fails half-way-through (looking at you nixpkgs,) tack `--depth 1`
 onto the git clone command. This will perform a shallow clone that just grabs
 the state of the most recent commit, which will be more reliable due to having
 less to clone. Blame HTTP.
