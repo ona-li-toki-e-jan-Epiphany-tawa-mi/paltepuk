@@ -12,4 +12,4 @@ You can view it here in the `paltepuk.git` repository on my cgit instance:
 
 You can also view it in the `paltepuk` repository on my GitHub account:
 
-[https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
+[https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk)
