@@ -19,5 +19,5 @@ For information on what in tarnation a "netcatchat server" is, take a look at
 `netcatchat.git` repository on my cgit instance or the `netcatchat` repository
 on my GitHub account.
 
-- [cgit]({{< relativeurl >}}cgit{{< /relativeurl >}}) - cgit git server web interface
-- [Hydra]({{< relativeurl >}}hydra{{< /relativeurl >}}) - Hydra continuous integration server
+- [cgit]({{< siteurl >}}cgit{{< /siteurl >}}) - cgit git server web interface
+- [Hydra]({{< siteurl >}}hydra{{< /siteurl >}}) - Hydra continuous integration server
