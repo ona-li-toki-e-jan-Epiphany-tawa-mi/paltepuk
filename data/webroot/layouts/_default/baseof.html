@@ -16,10 +16,7 @@
     {{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
     <main>
       <header>
-        <h1 id="tag_{{ .Title }}">
-          {{ block "title" . }}{{ end }}
-          <a href="/index.xml"><img src="/rss.svg" style="max-height:1em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
-        </h1>
+        <h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1>
         View page on:
         <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
         <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>
