@@ -10,6 +10,6 @@ You can view it here in the `paltepuk.git` repository on my cgit instance:
 
 [{{< relativeurl >}}cgit/paltepuk.git{{< /relativeurl >}}]({{< relativeurl >}}cgit/paltepuk.git{{< /relativeurl >}})
 
-You can view it in the `paltepuk` repository on my GitHub account:
+You can also view it in the `paltepuk` repository on my GitHub account:
 
 [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
