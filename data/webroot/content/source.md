@@ -8,7 +8,7 @@ the GNU Affero General Public License version 3 or Later.
 
 You can view it here in the `paltepuk.git` repository on my cgit instance:
 
-[{{< siteurl >}}cgit/paltepuk.git{{< /siteurl >}}]({{< siteurl >}}cgit/paltepuk.git{{< /siteurl >}})
+[/cgit/paltepuk.git](/cgit/paltepuk.git)
 
 You can also view it in the `paltepuk` repository on my GitHub account:
 

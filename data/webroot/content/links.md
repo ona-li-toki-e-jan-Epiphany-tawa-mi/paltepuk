@@ -30,7 +30,7 @@ description = 'external links to my other profiles/websites/servers/etc.'
 For information on what in tarnation a "netcatchat server" is, take a look at
 the `netcatchat.git` repository on my cgit instance:
 
-[{{< siteurl >}}cgit/netcatchat.git{{< /siteurl >}}]({{< siteurl >}}cgit/netcatchat.git{{< /siteurl >}})
+[/cgit/netcatchat.git](/cgit/netcatchat.git)
 
 Or the `netcatchat` repository on my GitHub account:
 

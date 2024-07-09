@@ -2,7 +2,7 @@
 <html lang="{{ .Site.Language }}">
   <head>
     <title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-    <link rel="canonical" href="{{ .Site.BaseURL }}">
+    <link rel="canonical" href="/">
     <link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
     <link rel='stylesheet' type='text/css' href='/style.css'>
     {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">{{ end -}}
@@ -21,7 +21,7 @@
         <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
         <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>
         {{ if not .IsHome}}
-          <br><br><a href="{{ .Site.BaseURL }}">Return to home page</a>
+          <br><br><a href="/">Return to home page</a>
         {{ end }}
     </footer>
       </header>

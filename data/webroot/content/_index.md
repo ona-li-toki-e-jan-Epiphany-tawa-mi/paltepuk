@@ -10,5 +10,5 @@ May you have a very baller time.
 
 ### Site Index
 
-- [cgit]({{< siteurl >}}cgit{{< /siteurl >}}) - cgit git server web interface
-- [Hydra]({{< siteurl >}}hydra{{< /siteurl >}}) - Hydra continuous integration server
+- [cgit](/cgit) - cgit git server web interface
+- [Hydra](/hydra) - Hydra continuous integration server
