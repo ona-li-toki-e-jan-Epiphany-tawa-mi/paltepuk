@@ -25,20 +25,6 @@ For information on what in tarnation a "netcatchat server" is, please visit one 
 - Tor: http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit/netcatchat.git/about
 - Clearnet: https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/netcatchat
 
----
-
-It's only accessible from I2P and Tor for now because it's running on my home
-internet; I don't want people reversing my location from the IP address or
-DDoS-ing my network.
-
-This could be solved by setting up a reverse proxy on a VPS and pointing it at my
-home server, but at that point I may as well shove the entire website on a VPS
-and call it a day.
-
-I will eventually move it to a VPS, but setting up a couple hidden services on a
-random spare computer is a million times easier and comes with domains, encryption, and
-site validation out of the box.
-
 ## TODO List
 
 - Add dark mode for cgit.
