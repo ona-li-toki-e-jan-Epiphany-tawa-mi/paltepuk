@@ -19,6 +19,7 @@
 
 { serviceNames
 , ports
+, pkgs
 , ...
 }:
 
@@ -35,7 +36,7 @@
 
     virtualHosts."paltepuk.xyz" = {           # Temporary fake domain.
       locations = {
-        "/".root = ../data/webroot;
+        "/".root = "${pkgs.callPackage ../data/webroot {}}";
 
         # cgit instance path.
         "/${serviceNames.cgit}/" = {
