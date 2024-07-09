@@ -20,8 +20,6 @@
 # can be done by running the following command in the container:
 #     sudo -u hydra hydra-create-user <name> --full-name <full name> --email-address '<email address>' --password-prompt --role admin
 # Once you have the admin user you can use them in the GUI to make more users.
-#
-# I tried to put it in a container, but I couldn't get it to work like that.
 
 { ports
 , system
@@ -50,8 +48,7 @@ in
   # Allows cross-compilation to other architectures.
   boot.binfmt.emulatedSystems  = builtins.filter (x: system != x) supportedSystems;
   nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
-
-  nix.buildMachines = [{
+  nix.buildMachines            = [{
     hostName = "localhost";
     systems  = supportedSystems;
   }];
