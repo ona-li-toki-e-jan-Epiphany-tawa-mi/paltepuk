@@ -111,3 +111,27 @@ make it a little nicer to use:
 (add-hook 'gnu-apl-mode-hook             #'gnu-apl-mode-setup)
 (add-hook 'gnu-apl-interactive-mode-hook #'gnu-apl-mode-setup)
 ```
+
+## C - cc65 - [https://cc65.github.io](https://cc65.github.io)
+
+Cross-compilation toolchain for 6502-based systems.
+
+- cc65 Function Reference - [https://cc65.github.io/doc/funcref.html](https://cc65.github.io/doc/funcref.html)
+
+A quick-reference for all of the functions made available with cc65. Also make
+sure to check the include files inside the cc65 installation directory, there's
+a lot of useful information there.
+
+- cc65 Users Guide - [https://cc65.github.io/doc/cc65.html](https://cc65.github.io/doc/cc65.html)
+
+cc65 C compiler documentation. This has a lot of useful information about things
+like the inline assembler, computed gotos, and other juicy extensions you might
+need.
+
+- cc65 Advanced Optimizations - [https://github.com/ilmenit/CC65-Advanced-Optimizations](https://github.com/ilmenit/CC65-Advanced-Optimizations)
+
+A very detailed article about how to write optimized C code with cc65. The cc65
+compiler isn't as "smart" as your usual C compilers, and there are a number of
+gotchas with the 6502 being an 8-bit processor, so you'll need to change the way
+you go about writing C to properly make use of the compartively-limited
+computational resources of the 1980s.
