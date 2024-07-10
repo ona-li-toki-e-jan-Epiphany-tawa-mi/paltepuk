@@ -112,7 +112,7 @@ make it a little nicer to use:
 (add-hook 'gnu-apl-interactive-mode-hook #'gnu-apl-mode-setup)
 ```
 
-## C - cc65 - [https://cc65.github.io](https://cc65.github.io)
+## cc65 - [https://cc65.github.io](https://cc65.github.io)
 
 Cross-compilation toolchain for 6502-based systems.
 
