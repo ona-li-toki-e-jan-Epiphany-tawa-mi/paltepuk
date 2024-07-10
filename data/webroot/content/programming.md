@@ -11,7 +11,7 @@ Finding documentation, though, can sometimes be a real pain (i.e. with
 Nix/NixOS,) so I've compiled a list of resources here that I've found and think
 would be good to share.
 
-## Nix/NixOS
+## Nix/NixOS - [https://nixos.org](https://nixos.org)
 
 - Nix Manual Built-in Functions Reference - [https://nixos.org/manual/nix/stable/language/builtins](https://nixos.org/manual/nix/stable/language/builtins)
 
@@ -56,7 +56,7 @@ disko ([https://github.com/nix-community/disko](https://github.com/nix-community
 which it uses a dependency, but once you do, installing NixOS and a
 configuration on new machines becomes a breeze.
 
-## GnuAPL
+## GnuAPL - [https://www.gnu.org/software/apl](https://www.gnu.org/software/apl)
 
 APL is a pretty old language, so there's a number of different implementations
 from different vendors with different extensions available. I recommend not
@@ -90,7 +90,9 @@ Some tips about how to write libraries for GnuAPL, and also APL in general.
 
 - gnu-apl-mode - [https://github.com/lokedhs/gnu-apl-mode](https://github.com/lokedhs/gnu-apl-mode)
 
-You'll need some way to type the symbols APL uses. I use this with Emacs, and it works pretty good. I do recommend adding the following to your configuration to make it a little nicer to use:
+You'll need some way to type the symbols APL uses. I use this with Emacs, and it
+works pretty good. I do recommend adding the following to your configuration to
+make it a little nicer to use:
 
 ```elisp
 ;; Makes the indentation more sensible IMO.
