@@ -34,6 +34,7 @@ in
     enable             = true;
     hydraURL           = "http://127.0.0.1:${builtins.toString ports.hydraGUI}";
     notificationSender = "hydra@localhost";
+    logo               = ../data/hydra-logo.jpg;
     # Allows leveraging binary cache, else we'd have to build everything
     # from scratch.
     useSubstitutes     = true;
