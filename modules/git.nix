@@ -297,7 +297,7 @@ in
       # Stuff that appears in the index page.
       "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
       "root-readme"         = "${../data/cgit/root-README.md}";
-      "root-title"          = "jan Epiphany's Public Git Server";
+      "root-title"          = "cgit | paltepuk";
       # I like side-by-side diffs.
       "side-by-side-diffs"  = 1;
       # Nice syntax highlighting.

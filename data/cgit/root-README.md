@@ -1,5 +1,3 @@
-# jan Epiphany's Public Git Server
-
 Welcome to MY git server! Here you can peruse my various programming (and other)
 projects in style!
 
