@@ -30,7 +30,7 @@ stdenv.mkDerivation {
   buildPhase = ''
     runHook preBuild
 
-    rm -r public/                                 # To remove any preexisting build artifacts.
+    rm -r public/ || true                         # To remove any preexisting build artifacts.
     hugo
 
     runHook postBuild
