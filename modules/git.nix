@@ -27,7 +27,7 @@
 let gitDirectory = "/srv/git";
 
     # The location of the custom logo for cgit under nginx.
-    cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.png";
+    cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.jpg";
 
     # Names for the sections displayed in cgit.
     sections = {
@@ -313,6 +313,6 @@ in
     }];
 
       # Extra files for cgit to grab.
-    locations."= ${cgitLogoLocation}".alias = "${../data/cgit/logo.png}";
+    locations."= ${cgitLogoLocation}".alias = "${../data/cgit/logo.jpg}";
   };
 }
