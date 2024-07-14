@@ -26,6 +26,10 @@ May you have a very baller time.
 [![](/buttons/nergen.net.gif)](https://nergen.net)
 [![](/buttons/getimiskon.xyz.gif)](https://getimiskon.xyz)
 
+Here's my web button if you want to link back to my site:
+
+![](/buttons/paltepuk.gif)
+
 ### Site Index
 
 - [cgit](/cgit) - cgit git server web interface
