@@ -33,15 +33,17 @@
 
 let cfg = config.services.i2pdContainer;
 
+    inherit (lib) mkOption mkForce getExe;
+    inherit (lib.types) int;
+    inherit (builtins) toString;
+
     # Port to accept incoming connections from peers with.
     i2pdPort = (import ../i2pd-port.nix);
 in
 {
-  options.services.i2pdContainer = with lib; with types; {
-    bandwidth = mkOption {
-      description = "The router bandwidth limit in KB/s.";
-      type        = int;
-    };
+  options.services.i2pdContainer.bandwidth = mkOption {
+    description = "The router bandwidth limit in KB/s.";
+    type        = int;
   };
 
 
@@ -72,22 +74,22 @@ in
       # Forwards connections from peers to i2pd.
       forwardPorts = [
         {
-          destination = "${vlan.i2pd}:${builtins.toString i2pdPort}";
+          destination = "${vlan.i2pd}:${toString i2pdPort}";
           proto       = "tcp";
           sourcePort  = i2pdPort;
         }
         {
-          destination = "${vlan.i2pd}:${builtins.toString i2pdPort}";
+          destination = "${vlan.i2pd}:${toString i2pdPort}";
           proto       = "udp";
           sourcePort  = i2pdPort;
         }
         {
-          destination = "[${vlan6.i2pd}]:${builtins.toString i2pdPort}";
+          destination = "[${vlan6.i2pd}]:${toString i2pdPort}";
           proto       = "tcp";
           sourcePort  = i2pdPort;
         }
         {
-          destination = "[${vlan6.i2pd}]:${builtins.toString i2pdPort}";
+          destination = "[${vlan6.i2pd}]:${toString i2pdPort}";
           proto       = "udp";
           sourcePort  = i2pdPort;
         }
@@ -125,7 +127,7 @@ in
         };
 
         # For monitoring the web console.
-        environment.shellAliases."status" = "sudo -u i2pd ${lib.getExe pkgs.lynx} 127.0.0.1:${builtins.toString ports.i2pdConsole}";
+        environment.shellAliases."status" = "sudo -u i2pd ${getExe pkgs.lynx} 127.0.0.1:${toString ports.i2pdConsole}";
 
         services.i2pd = {
           package    = pkgs-unstable.i2pd;
@@ -136,7 +138,7 @@ in
 
           # Normally this has a couple eepsites to pull domain names from, but we're
           # just using I2P for running "hidden" services.
-          addressbook.subscriptions = lib.mkForce [];
+          addressbook.subscriptions = mkForce [];
 
           # Web console.
           proto.http = {

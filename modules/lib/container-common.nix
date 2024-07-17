@@ -20,11 +20,13 @@
 , ...
 }:
 
+let inherit (lib) mkForce;
+in
 {
   security.sudo.execWheelOnly = true;
 
   # Removes default packages.
-  environment.defaultPackages = lib.mkForce [];
+  environment.defaultPackages = mkForce [];
 
   system.stateVersion = "23.11";
 }

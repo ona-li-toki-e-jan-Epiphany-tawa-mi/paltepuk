@@ -25,10 +25,15 @@
 , ...
 }:
 
-let # The ports clients can connect on, concatenated into a string for netcatchat.
-    clientPorts = lib.concatStringsSep " " (builtins.genList
-      (x: builtins.toString (x + ports.netcatchatClient.from))
-      (ports.netcatchatClient.to - ports.netcatchatClient.from));
+let inherit (lib) concatStringsSep;
+    inherit (builtins) genList toString;
+
+    inherit (config.nur) repos;
+
+    # The ports clients can connect on, concatenated into a string for netcatchat.
+    clientPorts = with ports.netcatchatClient; concatStringsSep " " (genList
+      (x: toString (x + from))
+      (to - from));
 in
 {
   # Isolated container for netcatchat to run in.
@@ -65,10 +70,10 @@ in
       systemd.services."${serviceNames.netcatchat}" = {
         description = "netcatchat server daemon";
         wantedBy    = [ "multi-user.target" ];
-        path        = [ config.nur.repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
+        path        = [ repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
 
         script = ''
-          netcatchat -s -p ${builtins.toString ports.netcatchatServer} -c "${clientPorts}"
+          netcatchat -s -p ${toString ports.netcatchatServer} -c "${clientPorts}"
         '';
 
         serviceConfig = {

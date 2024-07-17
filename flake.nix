@@ -101,13 +101,10 @@
     in {
       nixosConfigurations = {
         "raspberryPi400" = nixpkgs.lib.nixosSystem rec {
-          specialArgs = extraSpecialArguments // {
-            inherit system;
-          };
+          specialArgs = extraSpecialArguments // { inherit system; };
 
           system  = "aarch64-linux";
-          modules = [ ./hosts/raspberry-pi-400.nix
-                    ] ++ extraModules;
+          modules = [ ./hosts/raspberry-pi-400.nix ] ++ extraModules;
         };
       };
     };

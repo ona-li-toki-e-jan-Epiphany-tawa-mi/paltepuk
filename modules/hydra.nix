@@ -24,15 +24,21 @@
 { ports
 , system
 , config
+, lib
 , ...
 }:
 
-let supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
+let inherit (lib) remove;
+    inherit (builtins) toString;
+
+    inherit (config.boot) binfmt;
+
+    supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 in
 {
   services.hydra = {
     enable             = true;
-    hydraURL           = "http://127.0.0.1:${builtins.toString ports.hydraGUI}";
+    hydraURL           = "http://127.0.0.1:${toString ports.hydraGUI}";
     notificationSender = "hydra@localhost";
     logo               = ../data/hydra-logo.jpg;
     # Allows leveraging binary cache, else we'd have to build everything
@@ -47,8 +53,8 @@ in
   };
 
   # Allows cross-compilation to other architectures.
-  boot.binfmt.emulatedSystems  = builtins.filter (x: system != x) supportedSystems;
-  nix.settings.extra-platforms = config.boot.binfmt.emulatedSystems;
+  boot.binfmt.emulatedSystems  = remove system supportedSystems;
+  nix.settings.extra-platforms = binfmt.emulatedSystems;
   nix.buildMachines            = [{
     hostName = "localhost";
     systems  = supportedSystems;

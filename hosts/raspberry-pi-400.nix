@@ -60,13 +60,12 @@
 
   networking =
     let ethernetInterface = "end0";
-    in
-      {
-        # Enables networking.
-        useDHCP                                   = false;
-        interfaces."${ethernetInterface}".useDHCP = true;
+    in {
+      # Enables networking.
+      useDHCP                                   = false;
+      interfaces."${ethernetInterface}".useDHCP = true;
 
-        # Sets interface to use for NAT.
-        nat.externalInterface = ethernetInterface;
-      };
+      # Sets interface to use for NAT.
+      nat.externalInterface = ethernetInterface;
+    };
 }

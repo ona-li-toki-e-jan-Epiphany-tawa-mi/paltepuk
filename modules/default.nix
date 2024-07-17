@@ -23,6 +23,8 @@
 , ...
 }:
 
+let inherit (lib) mkForce;
+in
 {
   imports = [ ./i2pd.nix
               ./tor.nix
@@ -106,7 +108,7 @@
 
   # System management.
   environment = {
-    defaultPackages = lib.mkForce [];
+    defaultPackages = mkForce [];
     systemPackages  = [ pkgs.htop ];
   };
 

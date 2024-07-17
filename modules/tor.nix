@@ -30,23 +30,23 @@
 , ...
 }:
 
-let cfg = config.services.torContainer;
+let inherit (lib) mkOption getExe';
+    inherit (lib.types) str;
+    inherit (builtins) genList;
+
+    cfg = config.services.torContainer;
 
     # The netcatchat client ports for the onion service.
-    netcatchatClientPorts = builtins.map
-      (port: {
+    netcatchatClientPorts = with ports.netcatchatClient; builtins.map (port: {
+      inherit port;
+      target = {
+        addr = vlan.netcatchat;
         inherit port;
-        target = {
-          addr = vlan.netcatchat;
-          inherit port;
-        };
-      })
-      (builtins.genList
-        (x: x + ports.netcatchatClient.from)
-        (ports.netcatchatClient.to - ports.netcatchatClient.from));
+      };
+    }) (genList (x: x + from) (to - from));
 in
 {
-  options.services.torContainer = with lib; with types; {
+  options.services.torContainer = {
     bandwidthRate = mkOption {
       description = "Average maximum bandwidth for Tor. See BandwitdthRate in the man tor for details.";
       type        = str;
@@ -106,7 +106,7 @@ in
         # Sets permissions for bind mounts.
         systemd.tmpfiles.rules = [ "d /var/lib/tor 700 tor tor" ];
 
-        environment.shellAliases."status" = "sudo -u tor ${lib.getExe' pkgs.nyx "nyx"}";
+        environment.shellAliases."status" = "sudo -u tor ${getExe' pkgs.nyx "nyx"}";
 
         services.tor = {
           package = pkgs-unstable.tor;

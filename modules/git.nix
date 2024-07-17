@@ -24,7 +24,10 @@
 , ...
 }:
 
-let gitDirectory = "/srv/git";
+let inherit (lib) concatStrings mkIf;
+    inherit (builtins) filter listToAttrs;
+
+    gitDirectory = "/srv/git";
 
     # The location of the custom logo for cgit under nginx.
     cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.jpg";
@@ -198,18 +201,18 @@ in
       "create-repositories" = {
         description = "git repository creation service";
         wantedBy    = [ "multi-user.target" ];
-        path        = [ pkgs.git ];
+        path        = with pkgs; [ git ];
 
         script = ''
            # Shows executed commands.
            set -x
-        '' + lib.concatStrings (builtins.map ({ path, ... }: ''
+        '' + concatStrings (builtins.map ({ path, ... }: ''
             if [ ! -d "${path}" ]; then
               mkdir -p "${path}"
               git -C "${path}" init --bare
             fi
           '')
-          (builtins.filter ({ autoMirror, ... }: !autoMirror) repositories)
+          (filter ({ autoMirror, ... }: !autoMirror) repositories)
         );
 
         serviceConfig = {
@@ -222,19 +225,19 @@ in
       # Automatically mirrors and updates mirror repositories.
       "auto-mirror" = {
         description = "git repository automirroring service";
-        path        = [ pkgs.git ];
+        path        = with pkgs; [ git ];
 
         script = ''
            # Shows executed commands.
            set -x
-        '' + lib.concatStrings (builtins.map ({ path, mirrorUrl, ... }: ''
+        '' + concatStrings (builtins.map ({ path, mirrorUrl, ... }: ''
             if [ ! -d "${path}" ]; then
               git clone --mirror "${mirrorUrl}" "${path}"
             else
               git -C "${path}" remote update
             fi
           '')
-          (builtins.filter ({ autoMirror, ... }: autoMirror) repositories)
+          (filter ({ autoMirror, ... }: autoMirror) repositories)
         );
 
         serviceConfig = {
@@ -264,12 +267,12 @@ in
     enable         = true;
     nginx.location = "/${serviceNames.cgit}";
 
-    repos = builtins.listToAttrs(builtins.map ({path, description, section, ...}: {
+    repos = listToAttrs(builtins.map ({path, description, section, ...}: {
         name  = path;
         value = {
           path    = "${gitDirectory}/${path}";
           desc    = description;
-          section = lib.mkIf (section != null) section;
+          section = mkIf (null != section) section;
         };
       })
       repositories

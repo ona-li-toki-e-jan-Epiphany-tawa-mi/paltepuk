@@ -23,6 +23,9 @@
 , ...
 }:
 
+let inherit (builtins) toString;
+    inherit (pkgs) callPackage;
+in
 {
   # Lets connections to the reverse proxy through the firewall.
   networking.firewall.allowedTCPPorts = [ 80 443 ];
@@ -36,17 +39,17 @@
 
     virtualHosts."paltepuk.xyz" = {           # Temporary fake domain.
       locations = {
-        "/".root = "${pkgs.callPackage ../data/webroot {}}";
+        "/".root = "${callPackage ../data/webroot {}}";
 
         # cgit instance path.
         "/${serviceNames.cgit}/" = {
-          proxyPass       = "http://127.0.0.1:${builtins.toString ports.cgit}/${serviceNames.cgit}/";
+          proxyPass       = "http://127.0.0.1:${toString ports.cgit}/${serviceNames.cgit}/";
           proxyWebsockets = true;
         };
 
         # Hydra instance path.
         "/${serviceNames.hydra}/" =
-          let hydraIP = "http://127.0.0.1:${builtins.toString ports.hydraGUI}";
+          let hydraIP = "http://127.0.0.1:${toString ports.hydraGUI}";
           in {
             proxyPass       = "${hydraIP}/";
             proxyWebsockets = true;
