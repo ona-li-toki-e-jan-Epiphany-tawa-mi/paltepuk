@@ -35,7 +35,8 @@ let inherit (lib) concatStrings mkIf;
     # Names for the sections displayed in cgit.
     sections = {
       none           = null;
-      # As-in no longer being worked on or supported.
+      # As-in no longer being worked on or supported. Eventually will be merged
+      # into the AkashicRecord.
       defunct        = "Defunct";
       # My projects that mainly live on other sites.
       personalMirror = "Personal mirrors (may contain Clearnet resources)";
@@ -64,33 +65,15 @@ let inherit (lib) concatStrings mkIf;
         autoMirror  = false;
       }
       {
-        path        = "Conways-Ivory-Tower.git";
-        description = "An infinitely-sized interactive implementation of Conway's Game of Life";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
         path        = "PyMSWPR.git";
         description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
         section     = sections.none;
         autoMirror  = false;
       }
       {
-        path        = "VineBoomErrors-vscode.git";
-        description = "Plays the Vine boom sound effect when your badly-written code generates errors";
-        section     = sections.defunct;
-        autoMirror  = false;
-      }
-      {
         path        = "cowsAyPL.git";
         description = "Cowsay in GnuAPL";
         section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "ilo-li-sina.git";
-        description = "\"ilo li sina\" li toki pi lawa pi ilo nanpa. taso, sina lawa ala e ona. ona li lawa e sina a!";
-        section     = sections.defunct;
         autoMirror  = false;
       }
       {
@@ -146,12 +129,6 @@ let inherit (lib) concatStrings mkIf;
         path        = "AHD.git";
         description = "Hexdump utility";
         section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "Minecraft-Projects-Monorepo.git";
-        description = "Monorepo for my old Minecraft projects";
-        section     = sections.defunct;
         autoMirror  = false;
       }
       {
