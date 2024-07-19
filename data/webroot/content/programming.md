@@ -3,13 +3,9 @@ title = 'Programming'
 description = 'programming resources'
 +++
 
-I'm a big fan of programming as a recreational activity. It teaches a plethora
-of skills, sharpens the mind, and is really satisfying when you do something
-cool.
-
-Finding documentation, though, can sometimes be a real pain (i.e. with
-Nix/NixOS,) so I've compiled a list of resources here that I've found and think
-would be good to share.
+Finding documentation, can sometimes be a real pain (i.e. with Nix/NixOS,) so
+I've compiled a list of resources here that I've found and think would be good
+to share for things I found hard t of find.
 
 ## Nix/NixOS - [https://nixos.org](https://nixos.org)
 
@@ -113,8 +109,6 @@ make it a little nicer to use:
 ```
 
 ## cc65 - [https://cc65.github.io](https://cc65.github.io)
-
-Cross-compilation toolchain for 6502-based systems.
 
 - cc65 Function Reference - [https://cc65.github.io/doc/funcref.html](https://cc65.github.io/doc/funcref.html)
 
