@@ -5,7 +5,7 @@ description = 'programming resources'
 
 Finding documentation, can sometimes be a real pain (i.e. with Nix/NixOS,) so
 I've compiled a list of resources here that I've found and think would be good
-to share for things I found hard t of find.
+to share for things I found hard to find.
 
 ## Nix/NixOS - [https://nixos.org](https://nixos.org)
 
@@ -27,6 +27,12 @@ modules.
 
 You could use the websites that allow you to search for NixOS options, but it's
 all installed locally, assuming you're running NixOS, so don't bother with that
+JavaScript-infested garbage.
+
+- `nix search nixpkgs <package>`
+
+You could use the websites that allow you to search for Nix packages, but you
+can also just search for them in the terminal, so don't bother with that
 JavaScript-infested garbage.
 
 - `nixos-help`
