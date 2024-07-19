@@ -3,6 +3,19 @@ title = 'Featured Sites'
 description = 'some links to sites/other that I like'
 +++
 
+[![](/buttons/gnu.org-emacs.gif)](https://www.gnu.org/software/emacs)
+[![](/buttons/shmage.xyz.gif)](https://shmage.xyz)
+[![](/buttons/geti2p.net.gif)](https://geti2p.net)
+[![](/buttons/keepassxc.org.gif)](https://keepassxc.org)
+[![](/buttons/librewolf.net.gif)](https://librewolf.net)
+[![](/buttons/torproject.org.gif)](https://torproject.org)
+[![](/buttons/gnu.org.gif)](https://gnu.org)
+[![](/buttons/kde.org.gif)](https://kde.org)
+[![](/buttons/ublockorigin.com.gif)](https://ublockorigin.com)
+[![](/buttons/debian.org.gif)](https://debian.org)
+[![](/buttons/nergen.net.gif)](https://nergen.net)
+[![](/buttons/getimiskon.xyz.gif)](https://getimiskon.xyz)
+
 ### [![](/buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net](https://landchad.net)
 
 A site that teaches people how to make their own website, and run their own
