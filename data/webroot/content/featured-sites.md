@@ -16,7 +16,9 @@ Cooking recipe site that isn't bloated with ads and pointless JavaScript.
 
 A non-bloated search engine for non-bloated websites.
 
-### [![](/buttons/cozynet.org.gif)](https://cozynet.org) CozyNet - [https://cozynet.org](https://cozynet.org)
+### [![](/buttons/cozynet.org.gif)](https://cozynet.org) CozyNet - [https://cozynet.org](https://cozynet.org) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/index.html](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/index.html)
+
+Someone's personal website that feels cozy.
 
 ### 512KB Club - [https://512kb.club](https://512kb.club)
 
