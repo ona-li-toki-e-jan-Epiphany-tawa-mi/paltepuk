@@ -25,6 +25,7 @@ May you have a very baller time.
 [![](/buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net)
 [![](/buttons/nergen.net.gif)](https://nergen.net)
 [![](/buttons/getimiskon.xyz.gif)](https://getimiskon.xyz)
+[![](/buttons/wiby.me.gif)](https://wiby.me)
 
 Here's my web button if you want to link back to my site:
 

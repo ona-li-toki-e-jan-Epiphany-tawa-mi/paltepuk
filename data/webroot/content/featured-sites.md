@@ -12,6 +12,10 @@ services, on a server all of their own. Really cool.
 
 Cooking recipe site that isn't bloated with ads and pointless JavaScript.
 
+### [![](/buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me](https://wiby.me) | [https://wiby.org](https://wiby.org)
+
+A non-bloated search engine for non-bloated websites.
+
 ### [![](/buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play](https://gorescript.github.io/classic/play)
 
 Cool 2.5D first person shooter. The creator abandoned this "classic" version and
