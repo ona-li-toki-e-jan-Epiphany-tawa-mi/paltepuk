@@ -1,3 +1,5 @@
+# -*- nix -*-
+
 # This file is part of paltepuk.
 #
 # Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
@@ -14,25 +16,21 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Creates my user account for administration.
-
-{ epiphanyInitialHashedPassword
-, epiphanySSHKeys
-, ...
-}:
+# This file defines configuration options that should not be in the git repo but
+# can be in the Nix store. All values in this attrset are made avalible via the
+# imports in the NixOS modules.
 
 {
-  users.users."epiphany" = {
-    isNormalUser          = true;
-    description           = "jan Epiphany";
-    initialHashedPassword = epiphanyInitialHashedPassword;
-    extraGroups           = [ "wheel" ];
+  # Basic device configuration.
+  timeZone = "";
 
-    openssh.authorizedKeys.keys = epiphanySSHKeys;
-  };
+  # User account configuration.
+  epiphanySSHKeys = [];
+  gitSSHKeys      = [];
+  # The intial (or permanent, if you don't change it via passwd later) password
+  # for your user account. Use mkpasswd to generate a password hash.
+  epiphanyInitialHashedPassword = "";
 
-  services.openssh.settings."AllowUsers" = [ "epiphany" ];
-
-  # Makes my user a trusted user for remote rebuilding.
-  nix.settings.trusted-users = [ "epiphany" ];
+  # Ports.
+  extraPorts.i2pd = -1;
 }

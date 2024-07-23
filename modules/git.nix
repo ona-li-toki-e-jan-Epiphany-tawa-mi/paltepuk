@@ -21,6 +21,7 @@
 , pkgs
 , lib
 , ports
+, gitSSHKeys
 , ...
 }:
 
@@ -162,7 +163,7 @@ in
       shell        = "${pkgs.git}/bin/git-shell";
       group        = serviceNames.git;
 
-      openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJkLeoiwWFBmLu6j7hIrgPD7csbrWRYYinG2YNFYZx7 epiphany@godsthirdtemple" ];
+      openssh.authorizedKeys.keys = gitSSHKeys;
     };
 
     groups."${serviceNames.git}" = {};

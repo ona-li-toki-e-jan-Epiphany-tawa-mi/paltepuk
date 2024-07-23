@@ -97,7 +97,7 @@
             i2pd     = 150;
             tor      = 35;
           };
-        };
+        } // (import ./config.nix);
     in {
       nixosConfigurations = {
         "raspberryPi400" = nixpkgs.lib.nixosSystem rec {

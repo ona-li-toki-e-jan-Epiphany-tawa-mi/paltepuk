@@ -15,8 +15,6 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Installs and configures an I2P node for accessing the services via I2P.
-# NOTE: you will have to create a file called "i2pd-port.nix" in the base of
-# this project with the port for i2pd to use.
 
 { lib
 , ports
@@ -28,6 +26,7 @@
 , directories
 , uids
 , gids
+, extraPorts
 , ...
 }:
 
@@ -36,9 +35,6 @@ let cfg = config.services.i2pdContainer;
     inherit (lib) mkOption mkForce getExe;
     inherit (lib.types) int;
     inherit (builtins) toString;
-
-    # Port to accept incoming connections from peers with.
-    i2pdPort = (import ../i2pd-port.nix);
 in
 {
   options.services.i2pdContainer.bandwidth = mkOption {
@@ -74,24 +70,24 @@ in
       # Forwards connections from peers to i2pd.
       forwardPorts = [
         {
-          destination = "${vlan.i2pd}:${toString i2pdPort}";
+          destination = "${vlan.i2pd}:${toString extraPorts.i2pd}";
           proto       = "tcp";
-          sourcePort  = i2pdPort;
+          sourcePort  = extraPorts.i2pd;
         }
         {
-          destination = "${vlan.i2pd}:${toString i2pdPort}";
+          destination = "${vlan.i2pd}:${toString extraPorts.i2pd}";
           proto       = "udp";
-          sourcePort  = i2pdPort;
+          sourcePort  = extraPorts.i2pd;
         }
         {
-          destination = "[${vlan6.i2pd}]:${toString i2pdPort}";
+          destination = "[${vlan6.i2pd}]:${toString extraPorts.i2pd}";
           proto       = "tcp";
-          sourcePort  = i2pdPort;
+          sourcePort  = extraPorts.i2pd;
         }
         {
-          destination = "[${vlan6.i2pd}]:${toString i2pdPort}";
+          destination = "[${vlan6.i2pd}]:${toString extraPorts.i2pd}";
           proto       = "udp";
-          sourcePort  = i2pdPort;
+          sourcePort  = extraPorts.i2pd;
         }
       ];
     };
@@ -122,8 +118,8 @@ in
         systemd.tmpfiles.rules = [ "d /var/lib/i2pd 700 i2pd i2pd" ];
 
         networking.firewall = {
-          allowedUDPPorts = [ i2pdPort ];
-          allowedTCPPorts = [ i2pdPort ];
+          allowedUDPPorts = [ extraPorts.i2pd ];
+          allowedTCPPorts = [ extraPorts.i2pd ];
         };
 
         # For monitoring the web console.
@@ -133,7 +129,7 @@ in
           package    = pkgs-unstable.i2pd;
           enable     = true;
           enableIPv6 = true;                      # Based.
-          port       = i2pdPort;
+          port       = extraPorts.i2pd;
           bandwidth  = cfg.bandwidth;
 
           # Normally this has a couple eepsites to pull domain names from, but we're
