@@ -1,9 +1,7 @@
 Add dark mode for cgit.
-Add issue tracker for projects.
-
-Consider adding access from Lokinet, Freenet, and GNUnet(?).
+Add issue tracker for projects?
 
 If moved to a VPS:
 - Add access from the regular Clearnet and Yggdrasil.
-- See about adding IPFS gateway.
+- Add IPFS gateway and access?
 - Add Tor non-exit relay.
