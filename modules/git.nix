@@ -46,105 +46,64 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
     };
 
     # Declarative repositories for git and cgit.
-    repositories = [
-      {
-        path        = "AkashicRecord.git";
-        description = "The history of my universe, I guess";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "BitMasher.git";
-        description = "A fast-paced text adventure game inside a ransomware-infected computer";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "COBOL-DVD-Thingy.git";
-        description = "Terminal screensaver similar to that of DVD players";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "PyMSWPR.git";
-        description = "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "cowsAyPL.git";
-        description = "Cowsay in GnuAPL";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "netcatchat.git";
-        description = "A simple command-line chat server and client using netcat";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "ona-li-toki-e-jan-Epiphany-tawa-mi.git";
-        description = "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi";
-        section     = sections.personalMirror;
-        autoMirror  = false;
-      }
-      {
-        path        = "paltepuk.git";
-        description = "Personal website and server wombo-combo";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "player-sounder.git";
-        description = "Player soundser byer shellinger outer toer oneer ofer theer availableer audioer playerser";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "epitaphpkgs.git";
-        description = "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
-        section     = sections.personalMirror;
-        autoMirror  = false;
-      }
-      {
-        path        = "Brainblast-Toolkit.git";
-        description = "A brainfuck/BASICfuck REPL for 6502 machines";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "nixpkgs.git";
-        description = "Nix Packages collection & NixOS | Mirror of https://github.com/nixos/nixpkgs";
-        section     = sections.mirror;
-        autoMirror  = true;
-        mirrorUrl   = "https://github.com/nixos/nixpkgs";
-      }
-      {
-        path        = "hydra-projects.git";
-        description = "Declarative Hydra project specifications";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "AHD.git";
-        description = "Hexdump utility";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "ap.git";
-        description = "A simple NixOS configuration for making wireless access points";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-      {
-        path        = "TLPIN.git";
-        description = "toki lawa pi ilo nanpa sama toki APL";
-        section     = sections.none;
-        autoMirror  = false;
-      }
-    ];
+    repositories =
+      let standard = path: description: {
+            inherit path;
+            inherit description;
+            section    = sections.none;
+            autoMirror = false;
+          };
+
+          personalMirror = path: description: {
+            inherit path;
+            inherit description;
+            section    = sections.personalMirror;
+            autoMirror = false;
+          };
+
+          mirror = path: mirrorUrl: description: {
+            inherit path;
+            inherit description;
+            section    = sections.mirror;
+            autoMirror = true;
+            inherit mirrorUrl;
+          };
+      in [
+        (standard "AkashicRecord.git"
+          "The history of my universe, I guess")
+        (standard "BitMasher.git"
+          "A fast-paced text adventure game inside a ransomware-infected computer")
+        (standard "COBOL-DVD-Thingy.git"
+          "Terminal screensaver similar to that of DVD players")
+        (standard "PyMSWPR.git"
+          "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
+        (standard "cowsAyPL.git"
+          "Cowsay in GnuAPL")
+        (standard "netcatchat.git"
+          "A simple command-line chat server and client using netcat")
+        (standard "paltepuk.git"
+          "Personal website and server wombo-combo")
+        (standard "player-sounder.git"
+          "Player soundser byer shellinger outer toer oneer ofer theer availableer audioer playerser")
+        (standard "Brainblast-Toolkit.git"
+          "A brainfuck/BASICfuck REPL for 6502 machines")
+        (standard "hydra-projects.git"
+          "Declarative Hydra project specifications")
+        (standard "AHD.git"
+          "Hexdump utility")
+        (standard "ap.git"
+          "A simple NixOS configuration for making wireless access points")
+        (standard "TLPIN.git"
+          "toki lawa pi ilo nanpa sama toki APL")
+
+        (personalMirror "epitaphpkgs.git"
+          "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
+        (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi.git"
+          "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
+
+        (mirror "nixpkgs.git" "https://github.com/nixos/nixpkgs"
+         "Nix Packages collection & NixOS | Mirror of https://github.com/nixos/nixpkgs")
+      ];
 in
 {
   programs.git = {
