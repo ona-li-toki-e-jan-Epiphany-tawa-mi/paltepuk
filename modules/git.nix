@@ -173,6 +173,12 @@ in
 
 
 
+  system.activationScripts."create-git-directory" = ''
+    mkdir -p ${escapeShellArg gitDirectory}
+    chown ${escapeShellArg serviceNames.git}:${escapeShellArg serviceNames.git} \
+          ${escapeShellArg gitDirectory}
+  '';
+
   systemd = {
     services = {
       # Creates any specified repositories if they don't already exist.
@@ -195,6 +201,36 @@ in
           "Type"             = "oneshot";
           "User"             = serviceNames.git;
           "WorkingDirectory" = gitDirectory;
+
+          # systemd-analyze security recommendations.
+          "PrivateDevices"          = true;
+          "ProtectClock"            = true;
+          "ProtectKernelLogs"       = true;
+          "RemoveIPC"               = true;
+          "NoNewPrivileges"         = true;
+          "ProtectControlGroups"    = true;
+          "ProtectKernelModules"    = true;
+          "MemoryDenyWriteExecute"  = true;
+          "SystemCallArchitectures" = [ "native" ];
+          "ProtectHostname"         = true;
+          "ProtectSystem"           = "strict";
+          "ReadWritePaths"          = [ gitDirectory ];
+          "ProtectProc"             = "invisible";
+          "LockPersonality"         = true;
+          "RestrictRealtime"        = true;
+          "ProcSubset"              = "pid";
+          "ProtectHome"             = true;
+          "PrivateNetwork"          = true;
+          "PrivateUsers"            = true;
+          "PrivateTmp"              = true;
+          "SystemCallFilter"        = [ "@system-service" "~@resources" "~@privileged" ];
+          "SystemCallErrorNumber"   = "EPERM";
+          "RestrictAddressFamilies" = "none";
+          "ProtectKernelTunables"   = true;
+          "RestrictNamespaces"      = true;
+          "RestrictSUIDSGID"        = true;
+          "IPAddressDeny"           = "any";
+          "CapabilityBoundingSet"   = "";
         };
       };
 
@@ -219,6 +255,34 @@ in
           "Type"             = "oneshot";
           "User"             = serviceNames.git;
           "WorkingDirectory" = gitDirectory;
+
+          # systemd-analyze security recommendations.
+          "PrivateDevices"          = true;
+          "ProtectClock"            = true;
+          "ProtectKernelLogs"       = true;
+          "RemoveIPC"               = true;
+          "NoNewPrivileges"         = true;
+          "ProtectControlGroups"    = true;
+          "ProtectKernelModules"    = true;
+          "MemoryDenyWriteExecute"  = true;
+          "SystemCallArchitectures" = [ "native" ];
+          "ProtectHostname"         = true;
+          "ProtectSystem"           = "strict";
+          "ReadWritePaths"          = [ gitDirectory ];
+          "ProtectProc"             = "invisible";
+          "LockPersonality"         = true;
+          "RestrictRealtime"        = true;
+          "ProcSubset"              = "pid";
+          "ProtectHome"             = true;
+          "PrivateUsers"            = true;
+          "PrivateTmp"              = true;
+          "SystemCallFilter"        = [ "@system-service" "~@resources" "~@privileged" ];
+          "SystemCallErrorNumber"   = "EPERM";
+          "RestrictAddressFamilies" = [ "AF_INET" "AF_INET6" ];
+          "ProtectKernelTunables"   = true;
+          "RestrictNamespaces"      = true;
+          "RestrictSUIDSGID"        = true;
+          "CapabilityBoundingSet"   = "";
         };
       };
     };
@@ -242,44 +306,42 @@ in
     enable         = true;
     nginx.location = "/${serviceNames.cgit}";
 
-    repos = listToAttrs(builtins.map ({path, description, section, ...}: {
-        name  = path;
-        value = {
-          path    = "${gitDirectory}/${path}";
-          desc    = description;
-          section = mkIf (null != section) section;
-        };
-      })
-      repositories
-    );
+    repos = listToAttrs (builtins.map ({path, description, section, ...}: {
+      name  = path;
+      value = {
+        path    = "${gitDirectory}/${path}";
+        desc    = description;
+        section = mkIf (null != section) section;
+      };
+    }) repositories);
 
     settings = {
       # Converts the README files to HTML for display.
-      "about-filter"        = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
+      "about-filter" = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
       # Fixes fetching of cgit CSS under virtual root.
-      "css"                 = "/${serviceNames.cgit}/cgit.css";
+      "css" = "/${serviceNames.cgit}/cgit.css";
       # Cool commit graph.
       "enable-commit-graph" = 1;
       # Enables extra links in the index view to different parts of the repo.
-      "enable-index-links"  = 1;
+      "enable-index-links" = 1;
       # Hides the "owner" of the repos since it's all just the git user.
-      "enable-index-owner"  = 0;
+      "enable-index-owner" = 0;
       # Removes footer.
-      "footer"              = "";
+      "footer" = "";
       # Haha funny logo.
-      "logo"                = cgitLogoLocation;
+      "logo" = cgitLogoLocation;
       # Hides email addresses, they can be annoying.
-      "noplainemail"        = 1;
+      "noplainemail" = 1;
       # Sets the README of the repos to the README.md of the default branch.
-      "readme"              = ":README.md";
+      "readme" = ":README.md";
       # Stuff that appears in the index page.
-      "root-desc"           = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      "root-readme"         = "${../data/cgit/root-README.md}";
-      "root-title"          = "cgit | paltepuk";
+      "root-desc"   = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
+      "root-readme" = "${../data/cgit/root-README.md}";
+      "root-title"  = "cgit | paltepuk";
       # I like side-by-side diffs.
-      "side-by-side-diffs"  = 1;
+      "side-by-side-diffs" = 1;
       # Nice syntax highlighting.
-      "source-filter"       = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
+      "source-filter" = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
     };
   };
 
