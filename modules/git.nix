@@ -30,9 +30,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
 
     gitDirectory = "/srv/git";
 
-    # The location of the custom logo for cgit under nginx.
-    cgitLogoLocation = "/${serviceNames.cgit}/custom-cgit.jpg";
-
     # Names for the sections displayed in cgit.
     sections = {
       none           = null;
@@ -288,7 +285,7 @@ in
       # Removes footer.
       "footer" = "";
       # Haha funny logo.
-      "logo" = cgitLogoLocation;
+      "logo" = "/${serviceNames.cgit}/cgit.jpg";
       # Hides email addresses, they can be annoying.
       "noplainemail" = 1;
       # Sets the README of the repos to the README.md of the default branch.
@@ -312,6 +309,6 @@ in
     }];
 
     # Extra files for cgit to grab.
-    locations."= ${cgitLogoLocation}".alias = "${../data/cgit/logo.jpg}";
+    locations."= /${serviceNames.cgit}/cgit.jpg".alias = "${../data/cgit/logo.jpg}";
   };
 }
