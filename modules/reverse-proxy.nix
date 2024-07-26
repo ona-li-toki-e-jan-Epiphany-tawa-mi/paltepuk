@@ -37,9 +37,9 @@ in
     recommendedOptimisation  = true;
     recommendedProxySettings = true;
 
-    virtualHosts."paltepuk.xyz" = {           # Temporary fake domain.
+    virtualHosts."paltepuk.xyz" = {
       locations = {
-        "/".root = "${callPackage ../data/webroot {}}";
+        "/".root = "${callPackage ../site {}}";
 
         # cgit instance path.
         "/${serviceNames.cgit}/" = {
