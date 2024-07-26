@@ -25,7 +25,7 @@
 , ...
 }:
 
-let inherit (lib) concatStrings mkIf;
+let inherit (lib) concatStrings mkIf escapeShellArg;
     inherit (builtins) filter listToAttrs;
 
     gitDirectory = "/srv/git";
@@ -182,16 +182,14 @@ in
         path        = with pkgs; [ git ];
 
         script = ''
-           # Shows executed commands.
-           set -x
+          # Shows executed commands.
+          set -x
         '' + concatStrings (builtins.map ({ path, ... }: ''
-            if [ ! -d "${path}" ]; then
-              mkdir -p "${path}"
-              git -C "${path}" init --bare
-            fi
-          '')
-          (filter ({ autoMirror, ... }: !autoMirror) repositories)
-        );
+          if [ ! -d ${escapeShellArg path} ]; then
+            mkdir -p ${escapeShellArg path}
+            git -C ${escapeShellArg path} init --bare
+          fi
+        '') (filter ({ autoMirror, ... }: !autoMirror) repositories));
 
         serviceConfig = {
           "Type"             = "oneshot";
@@ -203,20 +201,19 @@ in
       # Automatically mirrors and updates mirror repositories.
       "auto-mirror" = {
         description = "git repository automirroring service";
+        wantedBy    = [];
         path        = with pkgs; [ git ];
 
         script = ''
-           # Shows executed commands.
-           set -x
+          # Shows executed commands.
+          set -x
         '' + concatStrings (builtins.map ({ path, mirrorUrl, ... }: ''
-            if [ ! -d "${path}" ]; then
-              git clone --mirror "${mirrorUrl}" "${path}"
-            else
-              git -C "${path}" remote update
-            fi
-          '')
-          (filter ({ autoMirror, ... }: autoMirror) repositories)
-        );
+          if [ ! -d ${escapeShellArg path} ]; then
+            git clone --mirror ${escapeShellArg mirrorUrl} ${escapeShellArg path}
+          else
+            git -C ${escapeShellArg path} remote update
+          fi
+        '') (filter ({ autoMirror, ... }: autoMirror) repositories));
 
         serviceConfig = {
           "Type"             = "oneshot";
@@ -293,7 +290,7 @@ in
       port = ports.cgit;
     }];
 
-      # Extra files for cgit to grab.
+    # Extra files for cgit to grab.
     locations."= ${cgitLogoLocation}".alias = "${../data/cgit/logo.jpg}";
   };
 }
