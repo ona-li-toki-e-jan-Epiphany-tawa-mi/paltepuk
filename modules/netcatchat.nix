@@ -17,15 +17,13 @@
 # Installs and configures a netcatchat server.
 
 { lib
-, vlan
-, vlan6
 , ports
 , config
 , serviceNames
 , ...
 }:
 
-let inherit (lib) concatStringsSep;
+let inherit (lib) concatStringsSep escapeShellArg;
     inherit (builtins) genList toString;
 
     inherit (config.nur) repos;
@@ -33,56 +31,51 @@ let inherit (lib) concatStringsSep;
     # The ports clients can connect on, concatenated into a string for netcatchat.
     clientPorts = with ports.netcatchatClient; concatStringsSep " " (genList
       (x: toString (x + from))
-      (to - from));
+      (to - from + 1));
 in
 {
-  # Isolated container for netcatchat to run in.
-  containers."${serviceNames.netcatchat}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
-    localAddress = vlan.netcatchat;
+  # Service to run a netcatchat server.
+  systemd.services."${serviceNames.netcatchat}" = {
+    description = "netcatchat server daemon";
+    wantedBy    = [ "multi-user.target" ];
+    path        = [ repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
 
-    config = { ... }: {
-      imports = [ ./lib/container-common.nix
-                ];
+    script = ''
+      netcatchat -s -p ${toString ports.netcatchatServer} -c ${escapeShellArg clientPorts}
+    '';
 
+    serviceConfig = {
+      "User"        = serviceNames.netcatchat;
+      "Group"       = serviceNames.netcatchat;
+      "DynamicUser" = true;
 
+      # Restarts every 4 hours.
+      "Restart"       = "always";
+      "RuntimeMaxSec" = "4h";
 
-      # Opens the server and client ports.
-      networking.firewall = {
-        allowedTCPPorts      = [ ports.netcatchatServer ];
-        allowedTCPPortRanges = [{
-          inherit (ports.netcatchatClient) from;
-          inherit (ports.netcatchatClient) to;
-        }];
-      };
-
-      # Special user for operating netcatchat.
-      users = {
-        users."${serviceNames.netcatchat}" = {
-          isSystemUser = true;
-          description  = "netcatchat user";
-          group        = serviceNames.netcatchat;
-        };
-
-        groups."${serviceNames.netcatchat}" = {};
-      };
-
-      # Service to run a netcatchat server.
-      systemd.services."${serviceNames.netcatchat}" = {
-        description = "netcatchat server daemon";
-        wantedBy    = [ "multi-user.target" ];
-        path        = [ repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
-
-        script = ''
-          netcatchat -s -p ${toString ports.netcatchatServer} -c "${clientPorts}"
-        '';
-
-        serviceConfig = {
-          "User"          = serviceNames.netcatchat;
-          # Restarts every 4 hours.
-          "Restart"       = "always";
-          "RuntimeMaxSec" = "4h";
-        };
-      };
+      # systemd-analyze security recommendations.
+      "PrivateDevices"          = true;
+      "ProtectClock"            = true;
+      "ProtectKernelLogs"       = true;
+      "ProtectControlGroups"    = true;
+      "ProtectKernelModules"    = true;
+      "MemoryDenyWriteExecute"  = true;
+      "SystemCallArchitectures" = [ "native" ];
+      "ProtectHostname"         = true;
+      "ProtectProc"             = "invisible";
+      "LockPersonality"         = true;
+      "RestrictRealtime"        = true;
+      "ProcSubset"              = "pid";
+      "ProtectHome"             = true;
+      "PrivateUsers"            = true;
+      "SystemCallFilter"        = [ "@system-service" "~@resources" "~@privileged" ];
+      "SystemCallErrorNumber"   = "EPERM";
+      "RestrictAddressFamilies" = [ "AF_INET" "AF_INET6" ];
+      "ProtectKernelTunables"   = true;
+      "RestrictNamespaces"      = true;
+      "IPAddressDeny"           = "any";
+      "IPAddressAllow"          = [ "localhost" ];
+      "CapabilityBoundingSet"   = "";
     };
   };
 }

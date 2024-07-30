@@ -40,24 +40,13 @@
         extraSpecialArguments = {
           inherit inputs;
 
-          # Container network IPv4 addresses.
-          vlan = {
-            host       = "192.168.100.1";
-            netcatchat = "192.168.100.9";
-          };
-
-          # Container network IPv6 addresses.
-          vlan6 = {
-            host = "fc00::1";
-          };
-
           # Port numbers for networked services.
           ports = {
             i2pdConsole      = 7070;
             netcatchatServer = 2000;
             netcatchatClient = {
               from = 2001;
-              to   = 2026;
+              to   = 2025;
             };
             hydraGUI         = 3000;
             cgit             = 5000;

@@ -20,7 +20,6 @@
 # services.tor.settings.{"BandwidthRate","BandwidthBurst"}.
 
 { ports
-, vlan
 , pkgs-unstable
 , serviceNames
 , ...
@@ -29,36 +28,24 @@
 let inherit (builtins) genList;
 
     # The netcatchat client ports for the onion service.
-    netcatchatClientPorts = with ports.netcatchatClient; builtins.map (port: {
-      inherit port;
-      target = {
-        addr = vlan.netcatchat;
-        inherit port;
-      };
-    }) (genList (x: x + from) (to - from));
+    netcatchatClientPorts = with ports.netcatchatClient; (genList
+      (x: x + from)
+      (to - from + 1));
 in
 {
   services.tor = {
     package = pkgs-unstable.tor;
     enable  = true;
 
-    settings = {
-      # Enables hardware acceleration.
-      "HardwareAccel"  = 1;
-    };
+    # Enables hardware acceleration.
+    settings."HardwareAccel" = 1;
 
     relay.onionServices = {
       "${serviceNames.ssh}".map = [ 22 ];
 
       "${serviceNames.reverseProxy}".map = [ 80 ];
 
-      "${serviceNames.netcatchat}".map = [{
-        port   = ports.netcatchatServer;
-        target = {
-          addr = vlan.netcatchat;
-          port = ports.netcatchatServer;
-        };
-      }] ++ netcatchatClientPorts;
+      "${serviceNames.netcatchat}".map = [ ports.netcatchatServer ] ++ netcatchatClientPorts;
     };
   };
 }
