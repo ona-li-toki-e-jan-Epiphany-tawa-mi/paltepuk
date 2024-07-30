@@ -14,27 +14,19 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Installs and configures the Tor daemon for running onion services with Nyx to
-# monitor it.
+# Installs and configures the Tor daemon for running onion services.
+
+# NOTE: Make sure to set
+# services.tor.settings.{"BandwidthRate","BandwidthBurst"}.
 
 { ports
 , vlan
-, vlan6
-, config
-, lib
 , pkgs-unstable
 , serviceNames
-, directories
-, uids
-, gids
 , ...
 }:
 
-let inherit (lib) mkOption getExe';
-    inherit (lib.types) str;
-    inherit (builtins) genList;
-
-    cfg = config.services.torContainer;
+let inherit (builtins) genList;
 
     # The netcatchat client ports for the onion service.
     netcatchatClientPorts = with ports.netcatchatClient; builtins.map (port: {
@@ -46,108 +38,27 @@ let inherit (lib) mkOption getExe';
     }) (genList (x: x + from) (to - from));
 in
 {
-  options.services.torContainer = {
-    bandwidthRate = mkOption {
-      description = "Average maximum bandwidth for Tor. See BandwitdthRate in the man tor for details.";
-      type        = str;
+  services.tor = {
+    package = pkgs-unstable.tor;
+    enable  = true;
+
+    settings = {
+      # Enables hardware acceleration.
+      "HardwareAccel"  = 1;
     };
 
-    bandwidthBurst = mkOption {
-      description = "Absolute maximum bandwidth for Tor. See BandwitdthBurst in the man tor for details.";
-      type        = str;
-    };
-  };
+    relay.onionServices = {
+      "${serviceNames.ssh}".map = [ 22 ];
 
+      "${serviceNames.reverseProxy}".map = [ 80 ];
 
-
-  config = {
-    # Dummy user to ensure the tor user are the same inside and out of the
-    # container.
-    users = {
-      users.tor = {
-        isSystemUser = true;
-        description  = "Tor Daemon User";
-        group        = "tor";
-        uid          = uids.tor;
-      };
-
-      groups.tor.gid = gids.tor;
-    };
-
-    # Creates persistent directories for Tor if they don't already exist.
-    system.activationScripts."create-tor-bind-mounts" = ''
-      mkdir -p ${directories.tor}
-    '';
-
-    # Gives the Tor container internet access.
-    networking.nat.internalInterfaces = [ "ve-${serviceNames.tor}" ];
-
-    # Isolated container for Tor to run in.
-    containers."${serviceNames.tor}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
-      localAddress = vlan.tor;
-
-      # Mounts persistent directory.
-      bindMounts."/var/lib/tor" = {
-        hostPath   = directories.tor;
-        isReadOnly = false;
-      };
-
-      config = { pkgs, ... }: {
-        imports = [ ./lib/container-common.nix
-                  ];
-
-
-
-        users = {
-          users.tor.uid  = uids.tor;
-          groups.tor.gid = gids.tor;
+      "${serviceNames.netcatchat}".map = [{
+        port   = ports.netcatchatServer;
+        target = {
+          addr = vlan.netcatchat;
+          port = ports.netcatchatServer;
         };
-
-        # Sets permissions for bind mounts.
-        systemd.tmpfiles.rules = [ "d /var/lib/tor 700 tor tor" ];
-
-        environment.shellAliases."status" = "sudo -u tor ${getExe' pkgs.nyx "nyx"}";
-
-        services.tor = {
-          package = pkgs-unstable.tor;
-          enable  = true;
-
-          settings = {
-            "ControlPort"    = ports.torControl;
-            # Enables hardware acceleration.
-            "HardwareAccel"  = 1;
-            # Sets bandwidth limits.
-            "BandwidthRate"  = cfg.bandwidthRate;
-            "BandwidthBurst" = cfg.bandwidthBurst;
-          };
-
-          relay.onionServices = {
-            "${serviceNames.ssh}".map = [{
-              port   = 22;
-              target = {
-                addr = vlan.host;
-                port = 22;
-              };
-            }];
-
-            "${serviceNames.reverseProxy}".map = [{
-              port   = 80;
-              target = {
-                addr = vlan.host;
-                port = 80;
-              };
-            }];
-
-            "${serviceNames.netcatchat}".map = [{
-              port   = ports.netcatchatServer;
-              target = {
-                addr = vlan.netcatchat;
-                port = ports.netcatchatServer;
-              };
-            }] ++ netcatchatClientPorts;
-          };
-        };
-      };
+      }] ++ netcatchatClientPorts;
     };
   };
 }

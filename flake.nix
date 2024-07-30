@@ -43,7 +43,6 @@
           # Container network IPv4 addresses.
           vlan = {
             host         = "192.168.100.1";
-            tor          = "192.168.100.5";
             i2pd         = "192.168.100.7";
             netcatchat   = "192.168.100.9";
           };
@@ -57,7 +56,6 @@
           # Port numbers for networked services.
           ports = {
             i2pdConsole      = 7070;
-            torControl       = 9051;
             netcatchatServer = 2000;
             netcatchatClient = {
               from = 2001;
@@ -83,19 +81,16 @@
           # Directory paths, typically for container bind mounts.
           directories = {
             i2pd = "/mnt/i2pd";
-            tor  = "/mnt/tor";
           };
 
           # User IDs.
           uids = {
-            i2pd     = 150;
-            tor      = 35;
+            i2pd = 150;
           };
 
           # Group IDs.
           gids = {
-            i2pd     = 150;
-            tor      = 35;
+            i2pd = 150;
           };
         } // (import ./config.nix);
     in {
