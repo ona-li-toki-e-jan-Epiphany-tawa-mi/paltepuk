@@ -42,15 +42,13 @@
 
           # Container network IPv4 addresses.
           vlan = {
-            host         = "192.168.100.1";
-            i2pd         = "192.168.100.7";
-            netcatchat   = "192.168.100.9";
+            host       = "192.168.100.1";
+            netcatchat = "192.168.100.9";
           };
 
           # Container network IPv6 addresses.
           vlan6 = {
-            host         = "fc00::1";
-            i2pd         = "fc00::3";
+            host = "fc00::1";
           };
 
           # Port numbers for networked services.
@@ -76,21 +74,6 @@
             i2pd         = "i2pd";
             tor          = "tor";
             reverseProxy = "rev-proxy";
-          };
-
-          # Directory paths, typically for container bind mounts.
-          directories = {
-            i2pd = "/mnt/i2pd";
-          };
-
-          # User IDs.
-          uids = {
-            i2pd = 150;
-          };
-
-          # Group IDs.
-          gids = {
-            i2pd = 150;
           };
         } // (import ./config.nix);
     in {

@@ -33,4 +33,12 @@
 
   # Ports.
   extraPorts.i2pd = -1;
+
+  # Adds authentication to the i2pd web console. Password is in the Nix store,
+  # but it's there just to stop random programs from accessing the console,
+  # nothing that needs to be too secure.
+  auth.i2pd = {
+    username = "";
+    password = "";
+  };
 }

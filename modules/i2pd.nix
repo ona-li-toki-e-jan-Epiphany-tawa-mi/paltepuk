@@ -16,150 +16,64 @@
 
 # Installs and configures an I2P node for accessing the services via I2P.
 
+# NOTE: Make sure to set services.i2pd.bandwidth.
+
 { lib
 , ports
-, config
-, vlan
-, vlan6
 , pkgs-unstable
 , serviceNames
-, directories
-, uids
-, gids
+, pkgs
 , extraPorts
+, auth
 , ...
 }:
 
-let cfg = config.services.i2pdContainer;
-
-    inherit (lib) mkOption mkForce getExe;
-    inherit (lib.types) int;
+let inherit (lib) mkForce getExe;
     inherit (builtins) toString;
 in
 {
-  options.services.i2pdContainer.bandwidth = mkOption {
-    description = "The router bandwidth limit in KB/s.";
-    type        = int;
+  # Allows conenctions from peers
+  networking.firewall = with extraPorts; {
+    allowedUDPPorts = [ i2pd ];
+    allowedTCPPorts = [ i2pd ];
   };
 
+  # For monitoring the web console.
+  environment.shellAliases."i2pd-status" =
+    "sudo -u i2pd ${getExe pkgs.lynx} 127.0.0.1:${toString ports.i2pdConsole}";
 
+  services.i2pd = {
+    package    = pkgs-unstable.i2pd;
+    enable     = true;
+    enableIPv6 = true;                            # Based.
+    port       = extraPorts.i2pd;
 
-  config = {
-    # Dummy user to ensure the i2pd user are the same inside and out of the
-    # container.
-    users = {
-      users.i2pd = {
-        isSystemUser = true;
-        description  = "I2Pd User";
-        group        = "i2pd";
-        uid          = uids.i2pd;
-      };
+    # Normally this has a couple eepsites to pull domain names from, but we're
+    # just using I2P for running "hidden" services.
+    addressbook.subscriptions = mkForce [];
 
-      groups.i2pd.gid = gids.i2pd;
+    # Web console.
+    proto.http = with auth.i2pd; {
+      enable = true;
+      port   = ports.i2pdConsole;
+      auth   = true;
+      user   = username;
+      pass   = password;
     };
 
-    # Creates persistent directories for i2pd if they don't already exist.
-    system.activationScripts."create-i2pd-bind-mounts" = ''
-      mkdir -p ${directories.i2pd}
-    '';
-
-    networking.nat = {
-      # Gives the i2pd container internet access.
-      internalInterfaces = [ "ve-${serviceNames.i2pd}" ];
-
-      # Forwards connections from peers to i2pd.
-      forwardPorts = [
-        {
-          destination = "${vlan.i2pd}:${toString extraPorts.i2pd}";
-          proto       = "tcp";
-          sourcePort  = extraPorts.i2pd;
-        }
-        {
-          destination = "${vlan.i2pd}:${toString extraPorts.i2pd}";
-          proto       = "udp";
-          sourcePort  = extraPorts.i2pd;
-        }
-        {
-          destination = "[${vlan6.i2pd}]:${toString extraPorts.i2pd}";
-          proto       = "tcp";
-          sourcePort  = extraPorts.i2pd;
-        }
-        {
-          destination = "[${vlan6.i2pd}]:${toString extraPorts.i2pd}";
-          proto       = "udp";
-          sourcePort  = extraPorts.i2pd;
-        }
-      ];
-    };
-
-    # Isolated container for i2pd to run in.
-    containers."${serviceNames.i2pd}" = (import ./lib/default-container.nix {inherit vlan; inherit vlan6;}) // {
-      localAddress  = vlan.i2pd;
-      localAddress6 = vlan6.i2pd;
-
-      # Mounts persistent directories.
-      bindMounts."/var/lib/i2pd" = {
-        hostPath   = directories.i2pd;
-        isReadOnly = false;
+    inTunnels = {
+      # I2P access for remote administration.
+      "${serviceNames.ssh}" = {
+        enable      = true;
+        port        = 22;
+        destination = "";
       };
 
-      config = { pkgs, ... }: {
-        imports = [ ./lib/container-common.nix
-                  ];
-
-
-
-        users = {
-          users.i2pd.uid  = uids.i2pd;
-          groups.i2pd.gid = gids.i2pd;
-        };
-
-        # Sets permissions for bind mounts.
-        systemd.tmpfiles.rules = [ "d /var/lib/i2pd 700 i2pd i2pd" ];
-
-        networking.firewall = {
-          allowedUDPPorts = [ extraPorts.i2pd ];
-          allowedTCPPorts = [ extraPorts.i2pd ];
-        };
-
-        # For monitoring the web console.
-        environment.shellAliases."status" = "sudo -u i2pd ${getExe pkgs.lynx} 127.0.0.1:${toString ports.i2pdConsole}";
-
-        services.i2pd = {
-          package    = pkgs-unstable.i2pd;
-          enable     = true;
-          enableIPv6 = true;                      # Based.
-          port       = extraPorts.i2pd;
-          bandwidth  = cfg.bandwidth;
-
-          # Normally this has a couple eepsites to pull domain names from, but we're
-          # just using I2P for running "hidden" services.
-          addressbook.subscriptions = mkForce [];
-
-          # Web console.
-          proto.http = {
-            enable = true;
-            port   = ports.i2pdConsole;
-          };
-
-          inTunnels = {
-            # I2P access for remote administration.
-            "${serviceNames.ssh}" = {
-              enable      = true;
-              address     = vlan.host;
-              port        = 22;
-              destination = "";
-            };
-
-            # I2P access to the reverse proxy.
-            "${serviceNames.reverseProxy}" = {
-              enable      = true;
-              address     = vlan.host;
-              port        = 80;
-              destination = "";
-            };
-          };
-        };
+      # I2P access to the reverse proxy.
+      "${serviceNames.reverseProxy}" = {
+        enable      = true;
+        port        = 80;
+        destination = "";
       };
     };
   };
