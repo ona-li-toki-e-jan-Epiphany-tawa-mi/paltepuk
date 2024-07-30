@@ -274,8 +274,9 @@ in
     settings = {
       # Converts the README files to HTML for display.
       "about-filter" = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
-      # Fixes fetching of cgit CSS under virtual root.
-      "css" = "/${serviceNames.cgit}/cgit.css";
+      # Fixes fetching of files under virtual root.
+      "css"  = "/${serviceNames.cgit}/cgit.css";
+      "logo" = "/${serviceNames.cgit}/cgit.jpg";
       # Cool commit graph.
       "enable-commit-graph" = 1;
       # Enables extra links in the index view to different parts of the repo.
@@ -284,15 +285,13 @@ in
       "enable-index-owner" = 0;
       # Removes footer.
       "footer" = "";
-      # Haha funny logo.
-      "logo" = "/${serviceNames.cgit}/cgit.jpg";
       # Hides email addresses, they can be annoying.
       "noplainemail" = 1;
       # Sets the README of the repos to the README.md of the default branch.
       "readme" = ":README.md";
       # Stuff that appears in the index page.
       "root-desc"   = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      "root-readme" = "${../data/cgit/root-README.md}";
+      "root-readme" = "${./cgit-README.md}";
       "root-title"  = "cgit | paltepuk";
       # I like side-by-side diffs.
       "side-by-side-diffs" = 1;
@@ -308,7 +307,7 @@ in
       port = ports.cgit;
     }];
 
-    # Extra files for cgit to grab.
-    locations."= /${serviceNames.cgit}/cgit.jpg".alias = "${../data/cgit/logo.jpg}";
+    # Sets logo.
+    locations."= /${serviceNames.cgit}/cgit.jpg".alias = ./cgit-logo.jpg;
   };
 }

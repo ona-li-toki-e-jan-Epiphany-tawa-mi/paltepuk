@@ -30,11 +30,11 @@ in
   imports = [ ./i2pd.nix
               ./tor.nix
               ./ssh.nix
-              ./git.nix
+              ./git
               ./epiphany.nix
               ./netcatchat.nix
               ./reverse-proxy.nix
-              ./hydra.nix
+              ./hydra
             ];
 
 

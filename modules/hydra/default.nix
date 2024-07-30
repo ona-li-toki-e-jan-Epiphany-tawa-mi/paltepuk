@@ -14,10 +14,10 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Sets up the Hydra continuous build system.
-#
-# You'll need to add an admin user via command line before anything else, which
-# can be done by running the following command in the container:
+# Sets up the Hydra continuous integration system.
+
+# NOTE: You'll need to add an admin user via command line before anything else,
+# which can be done by running the following command:
 #     sudo -u hydra hydra-create-user <name> --full-name <full name> --email-address '<email address>' --password-prompt --role admin
 # Once you have the admin user you can use them in the GUI to make more users.
 
@@ -40,10 +40,11 @@ in
     enable             = true;
     hydraURL           = "http://127.0.0.1:${toString ports.hydraGUI}";
     notificationSender = "hydra@localhost";
-    logo               = ../data/hydra-logo.jpg;
+    logo               = ./logo.jpg;
+
     # Allows leveraging binary cache, else we'd have to build everything
     # from scratch.
-    useSubstitutes     = true;
+    useSubstitutes = true;
 
     extraConfig = ''
       <git-input>
