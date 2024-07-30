@@ -58,14 +58,9 @@
     raspberryPi.firmwareConfig = [ "force_turbo=1" ];
   };
 
-  networking =
-    let ethernetInterface = "end0";
-    in {
-      # Enables networking.
-      useDHCP                                   = false;
-      interfaces."${ethernetInterface}".useDHCP = true;
-
-      # Sets interface to use for NAT.
-      nat.externalInterface = ethernetInterface;
-    };
+  # Enables networking.
+  networking = {
+    useDHCP                 = false;
+    interfaces.end0.useDHCP = true;
+  };
 }
