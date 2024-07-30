@@ -27,8 +27,8 @@
 
 
   # Bandwidth limits.
-  services.i2pdContainer.bandwidth = 1000;        # 1 MB/s
-  services.tor.settings            = {
+  services.i2pd.bandwidth = 1000;                 # 1 MB/s
+  services.tor.settings   = {
     "BandwidthRate"  = "3 MBytes";
     "BandwidthBurst" = "4 MBytes";
   };
