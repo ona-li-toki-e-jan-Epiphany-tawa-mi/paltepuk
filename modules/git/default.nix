@@ -104,8 +104,16 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
 in
 {
   programs.git = {
-    enable                        = true;
-    config."init"."defaultBranch" = "master";
+    enable = true;
+
+    config = {
+      "init"."defaultBranch" = "master";
+
+      # Globally removes "dubious ownership" check from the git repositories.
+      "safe"."directory" = [ "." ] ++ builtins.map ({ path, ... }:
+        gitDirectory + "/" + path
+      ) repositories;
+    };
   };
 
 
