@@ -46,22 +46,6 @@ in
           proxyPass       = "http://127.0.0.1:${toString ports.cgit}/${serviceNames.cgit}/";
           proxyWebsockets = true;
         };
-
-        # Hydra instance path.
-        "/${serviceNames.hydra}/" =
-          let hydraIP = "http://127.0.0.1:${toString ports.hydraGUI}";
-          in {
-            proxyPass       = "${hydraIP}/";
-            proxyWebsockets = true;
-            extraConfig     = ''
-              proxy_redirect   ${hydraIP}        $scheme://$host/${serviceNames.hydra};
-              proxy_set_header Host              $host;
-              proxy_set_header X-Real-IP         $remote_addr;
-              proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
-              proxy_set_header X-Forwarded-Proto $scheme;
-              proxy_set_header X-Request-Base    /${serviceNames.hydra};
-            '';
-          };
       };
     };
   };

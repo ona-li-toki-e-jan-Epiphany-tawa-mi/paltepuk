@@ -34,7 +34,6 @@ in
               ./epiphany.nix
               ./netcatchat.nix
               ./reverse-proxy.nix
-              ./hydra
             ];
 
 

@@ -15,4 +15,3 @@ Here's my web button if you want to link back to my site:
 ### Site Index
 
 - [cgit](/cgit) - cgit git server web interface
-- [Hydra](/hydra) - Hydra continuous integration server
