@@ -84,8 +84,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "Player soundser byer shellinger outer toer oneer ofer theer availableer audioer playerser")
         (standard "Brainblast-Toolkit.git"
           "A brainfuck/BASICfuck REPL for 6502 machines")
-        (standard "hydra-projects.git"
-          "Declarative Hydra project specifications")
         (standard "AHD.git"
           "Hexdump utility")
         (standard "ap.git"
