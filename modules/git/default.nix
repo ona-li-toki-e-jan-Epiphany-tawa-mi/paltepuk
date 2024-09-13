@@ -92,6 +92,8 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "toki lawa pi ilo nanpa sama toki APL")
         (standard "elephant_veins.git"
           "A mod for Minetest that replaces small sporadic ore pockets with sparse, gigantic ore veins")
+        (standard "gnu-apl-libraries.git"
+          "A collection of single-file libraries for GnuAPL")
 
         (personalMirror "epitaphpkgs.git"
           "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
