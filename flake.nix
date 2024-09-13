@@ -43,13 +43,12 @@
           # Port numbers for networked services.
           ports = {
             i2pdConsole      = 7070;
+            cgit             = 5000;
             netcatchatServer = 2000;
             netcatchatClient = {
               from = 2001;
               to   = 2025;
             };
-            hydraGUI         = 3000;
-            cgit             = 5000;
           };
 
           # These names are used for systemd services, containers, onion
@@ -59,7 +58,6 @@
             cgit         = "cgit";
             netcatchat   = "netcatchat";
             git          = "git";
-            hydra        = "hydra";
             i2pd         = "i2pd";
             tor          = "tor";
             reverseProxy = "rev-proxy";
