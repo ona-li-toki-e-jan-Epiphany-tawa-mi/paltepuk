@@ -272,7 +272,11 @@ in
     enable         = true;
     nginx.location = "/${serviceNames.cgit}";
 
-    repos = listToAttrs (builtins.map ({path, description, section, ...}: {
+    # See https://discourse.nixos.org/t/security-advisory-local-privilege-escalation-in-the-fcgiwrap-nixos-module-also-affecting-the-cgit-smokeping-and-zoneminder-modules/51419
+    user  = serviceNames.cgit;
+    group = serviceNames.cgit;
+
+    repos = listToAttrs (builtins.map ({ path, description, section, ... }: {
       name  = path;
       value = {
         path    = "${gitDirectory}/${path}";
