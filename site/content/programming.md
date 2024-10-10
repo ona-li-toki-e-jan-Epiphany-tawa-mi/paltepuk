@@ -3,7 +3,7 @@ title = 'Programming'
 description = 'programming resources'
 +++
 
-Finding documentation, can sometimes be a real pain (i.e. with Nix/NixOS,) so
+Finding documentation can sometimes be a real pain (i.e. with Nix/NixOS,) so
 I've compiled a list of resources here that I've found and think would be good
 to share for things I found hard to find.
 
