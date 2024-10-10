@@ -25,7 +25,7 @@ description = 'external links to my other profiles/websites/servers/etc.'
 
 ## Minetest ContentDB
 
-[https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9](https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9)
+[https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi](https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi)
 
 ## netcatchat Server (COMPLETELY UNMODERATED)
 
