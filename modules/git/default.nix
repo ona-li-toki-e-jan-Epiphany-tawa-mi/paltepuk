@@ -108,10 +108,10 @@ in
     enable = true;
 
     config = {
-      "init"."defaultBranch" = "master";
+      init.defaultBranch = "master";
 
       # Globally removes "dubious ownership" check from the git repositories.
-      "safe"."directory" = [ "." ] ++ builtins.map ({ path, ... }:
+      safe.directory = [ "." ] ++ builtins.map ({ path, ... }:
         gitDirectory + "/" + path
       ) repositories;
     };
@@ -134,7 +134,7 @@ in
     groups."git" = {};
   };
 
-  services.openssh.settings."AllowUsers" = [ "git" ];
+  services.openssh.settings.AllowUsers = [ "git" ];
 
 
 
@@ -162,39 +162,39 @@ in
         '') (filter ({ autoMirror, ... }: !autoMirror) repositories));
 
         serviceConfig = {
-          "Type"             = "oneshot";
-          "User"             = "git";
-          "WorkingDirectory" = gitDirectory;
+          Type             = "oneshot";
+          User             = "git";
+          WorkingDirectory = gitDirectory;
 
           # systemd-analyze security recommendations.
-          "PrivateDevices"          = true;
-          "ProtectClock"            = true;
-          "ProtectKernelLogs"       = true;
-          "RemoveIPC"               = true;
-          "NoNewPrivileges"         = true;
-          "ProtectControlGroups"    = true;
-          "ProtectKernelModules"    = true;
-          "MemoryDenyWriteExecute"  = true;
-          "SystemCallArchitectures" = [ "native" ];
-          "ProtectHostname"         = true;
-          "ProtectSystem"           = "strict";
-          "ReadWritePaths"          = [ gitDirectory ];
-          "ProtectProc"             = "invisible";
-          "LockPersonality"         = true;
-          "RestrictRealtime"        = true;
-          "ProcSubset"              = "pid";
-          "ProtectHome"             = true;
-          "PrivateNetwork"          = true;
-          "PrivateUsers"            = true;
-          "PrivateTmp"              = true;
-          "SystemCallFilter"        = [ "@system-service" "~@resources" "~@privileged" ];
-          "SystemCallErrorNumber"   = "EPERM";
-          "RestrictAddressFamilies" = "none";
-          "ProtectKernelTunables"   = true;
-          "RestrictNamespaces"      = true;
-          "RestrictSUIDSGID"        = true;
-          "IPAddressDeny"           = "any";
-          "CapabilityBoundingSet"   = "";
+          PrivateDevices          = true;
+          ProtectClock            = true;
+          ProtectKernelLogs       = true;
+          RemoveIPC               = true;
+          NoNewPrivileges         = true;
+          ProtectControlGroups    = true;
+          ProtectKernelModules    = true;
+          MemoryDenyWriteExecute  = true;
+          SystemCallArchitectures = [ "native" ];
+          ProtectHostname         = true;
+          ProtectSystem           = "strict";
+          ReadWritePaths          = [ gitDirectory ];
+          ProtectProc             = "invisible";
+          LockPersonality         = true;
+          RestrictRealtime        = true;
+          ProcSubset              = "pid";
+          ProtectHome             = true;
+          PrivateNetwork          = true;
+          PrivateUsers            = true;
+          PrivateTmp              = true;
+          SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
+          SystemCallErrorNumber   = "EPERM";
+          RestrictAddressFamilies = "none";
+          ProtectKernelTunables   = true;
+          RestrictNamespaces      = true;
+          RestrictSUIDSGID        = true;
+          IPAddressDeny           = "any";
+          CapabilityBoundingSet   = "";
         };
       };
 
@@ -216,49 +216,48 @@ in
         '') (filter ({ autoMirror, ... }: autoMirror) repositories));
 
         serviceConfig = {
-          "Type"             = "oneshot";
-          "User"             = "git";
-          "WorkingDirectory" = gitDirectory;
+          Type             = "oneshot";
+          User             = "git";
+          WorkingDirectory = gitDirectory;
 
           # systemd-analyze security recommendations.
-          "PrivateDevices"          = true;
-          "ProtectClock"            = true;
-          "ProtectKernelLogs"       = true;
-          "RemoveIPC"               = true;
-          "NoNewPrivileges"         = true;
-          "ProtectControlGroups"    = true;
-          "ProtectKernelModules"    = true;
-          "MemoryDenyWriteExecute"  = true;
-          "SystemCallArchitectures" = [ "native" ];
-          "ProtectHostname"         = true;
-          "ProtectSystem"           = "strict";
-          "ReadWritePaths"          = [ gitDirectory ];
-          "ProtectProc"             = "invisible";
-          "LockPersonality"         = true;
-          "RestrictRealtime"        = true;
-          "ProcSubset"              = "pid";
-          "ProtectHome"             = true;
-          "PrivateUsers"            = true;
-          "PrivateTmp"              = true;
-          "SystemCallFilter"        = [ "@system-service" "~@resources" "~@privileged" ];
-          "SystemCallErrorNumber"   = "EPERM";
-          "RestrictAddressFamilies" = [ "AF_INET" "AF_INET6" ];
-          "ProtectKernelTunables"   = true;
-          "RestrictNamespaces"      = true;
-          "RestrictSUIDSGID"        = true;
-          "CapabilityBoundingSet"   = "";
+          PrivateDevices          = true;
+          ProtectClock            = true;
+          ProtectKernelLogs       = true;
+          RemoveIPC               = true;
+          NoNewPrivileges         = true;
+          ProtectControlGroups    = true;
+          ProtectKernelModules    = true;
+          MemoryDenyWriteExecute  = true;
+          SystemCallArchitectures = [ "native" ];
+          ProtectHostname         = true;
+          ProtectSystem           = "strict";
+          ReadWritePaths          = [ gitDirectory ];
+          ProtectProc             = "invisible";
+          LockPersonality         = true;
+          RestrictRealtime        = true;
+          ProcSubset              = "pid";
+          ProtectHome             = true;
+          PrivateUsers            = true;
+          PrivateTmp              = true;
+          SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
+          SystemCallErrorNumber   = "EPERM";
+          RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
+          ProtectKernelTunables   = true;
+          RestrictNamespaces      = true;
+          RestrictSUIDSGID        = true;
+          CapabilityBoundingSet   = "";
         };
       };
     };
 
     # Runs the auto-mirror service once a week.
     timers."auto-mirror" = {
-      description = "git repository automirroring service";
-      wantedBy    = [ "timers.target" ];
+      wantedBy = [ "timers.target" ];
 
       timerConfig = {
-        "OnCalendar" = "weekly";
-        "Persistent" = true;
+        OnCalendar = "weekly";
+        Persistent = true;
       };
     };
   };
@@ -285,30 +284,30 @@ in
 
     settings = {
       # Converts the README files to HTML for display.
-      "about-filter" = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
+      about-filter = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
       # Fixes fetching of files under virtual root.
-      "css"  = "/cgit/cgit.css";
-      "logo" = "/cgit/cgit.jpg";
+      css  = "/cgit/cgit.css";
+      logo = "/cgit/cgit.jpg";
       # Cool commit graph.
-      "enable-commit-graph" = 1;
+      enable-commit-graph = 1;
       # Enables extra links in the index view to different parts of the repo.
-      "enable-index-links" = 1;
+      enable-index-links = 1;
       # Hides the "owner" of the repos since it's all just the git user.
-      "enable-index-owner" = 0;
+      enable-index-owner = 0;
       # Removes footer.
-      "footer" = "";
+      footer = "";
       # Hides email addresses, they can be annoying.
-      "noplainemail" = 1;
+      noplainemail = 1;
       # Sets the README of the repos to the README.md of the default branch.
-      "readme" = ":README.md";
+      readme = ":README.md";
       # Stuff that appears in the index page.
-      "root-desc"   = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      "root-readme" = "${./cgit-README.md}";
-      "root-title"  = "cgit | paltepuk";
+      root-desc   = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
+      root-readme = "${./cgit-README.md}";
+      root-title  = "cgit | paltepuk";
       # I like side-by-side diffs.
-      "side-by-side-diffs" = 1;
+      side-by-side-diffs = 1;
       # Nice syntax highlighting.
-      "source-filter" = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
+      source-filter = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
     };
   };
 

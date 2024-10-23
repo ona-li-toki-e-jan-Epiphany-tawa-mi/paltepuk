@@ -44,37 +44,37 @@ in
     '';
 
     serviceConfig = {
-      "User"        = "netcatchat";
-      "Group"       = "netcatchat";
-      "DynamicUser" = true;
+      User        = "netcatchat";
+      Group       = "netcatchat";
+      DynamicUser = true;
 
       # Restarts every 4 hours.
-      "Restart"       = "always";
-      "RuntimeMaxSec" = "4h";
+      Restart       = "always";
+      RuntimeMaxSec = "4h";
 
       # systemd-analyze security recommendations.
-      "PrivateDevices"          = true;
-      "ProtectClock"            = true;
-      "ProtectKernelLogs"       = true;
-      "ProtectControlGroups"    = true;
-      "ProtectKernelModules"    = true;
-      "MemoryDenyWriteExecute"  = true;
-      "SystemCallArchitectures" = [ "native" ];
-      "ProtectHostname"         = true;
-      "ProtectProc"             = "invisible";
-      "LockPersonality"         = true;
-      "RestrictRealtime"        = true;
-      "ProcSubset"              = "pid";
-      "ProtectHome"             = true;
-      "PrivateUsers"            = true;
-      "SystemCallFilter"        = [ "@system-service" "~@resources" "~@privileged" ];
-      "SystemCallErrorNumber"   = "EPERM";
-      "RestrictAddressFamilies" = [ "AF_INET" "AF_INET6" ];
-      "ProtectKernelTunables"   = true;
-      "RestrictNamespaces"      = true;
-      "IPAddressDeny"           = "any";
-      "IPAddressAllow"          = [ "localhost" ];
-      "CapabilityBoundingSet"   = "";
+      PrivateDevices          = true;
+      ProtectClock            = true;
+      ProtectKernelLogs       = true;
+      ProtectControlGroups    = true;
+      ProtectKernelModules    = true;
+      MemoryDenyWriteExecute  = true;
+      SystemCallArchitectures = [ "native" ];
+      ProtectHostname         = true;
+      ProtectProc             = "invisible";
+      LockPersonality         = true;
+      RestrictRealtime        = true;
+      ProcSubset              = "pid";
+      ProtectHome             = true;
+      PrivateUsers            = true;
+      SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
+      SystemCallErrorNumber   = "EPERM";
+      RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
+      ProtectKernelTunables   = true;
+      RestrictNamespaces      = true;
+      IPAddressDeny           = "any";
+      IPAddressAllow          = [ "localhost" ];
+      CapabilityBoundingSet   = "";
     };
   };
 }

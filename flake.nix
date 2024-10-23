@@ -53,7 +53,7 @@
         } // (import ./config.nix);
     in {
       nixosConfigurations = {
-        "raspberryPi400" = nixpkgs.lib.nixosSystem rec {
+        raspberryPi400 = nixpkgs.lib.nixosSystem rec {
           specialArgs = extraSpecialArguments // { inherit system; };
 
           system  = "aarch64-linux";

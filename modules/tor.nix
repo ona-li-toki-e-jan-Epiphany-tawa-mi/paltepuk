@@ -37,7 +37,7 @@ in
     enable  = true;
 
     # Enables hardware acceleration.
-    settings."HardwareAccel" = 1;
+    settings.HardwareAccel = 1;
 
     relay.onionServices = {
       "ssh".map = [ 22 ];

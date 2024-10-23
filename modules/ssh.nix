@@ -25,9 +25,9 @@
     openFirewall = true;
 
     settings = {
-      "PermitRootLogin"        = "no";
-      "PasswordAuthentication" = false;
-      "X11Forwarding"          = false;
+      PermitRootLogin        = "no";
+      PasswordAuthentication = false;
+      X11Forwarding          = false;
     };
 
     extraConfig = ''
