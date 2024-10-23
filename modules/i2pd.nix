@@ -21,7 +21,6 @@
 { lib
 , ports
 , pkgs-unstable
-, serviceNames
 , pkgs
 , extraPorts
 , auth
@@ -63,14 +62,14 @@ in
 
     inTunnels = {
       # I2P access for remote administration.
-      "${serviceNames.ssh}" = {
+      "ssh" = {
         enable      = true;
         port        = 22;
         destination = "";
       };
 
       # I2P access to the reverse proxy.
-      "${serviceNames.reverseProxy}" = {
+      "rev-proxy" = {
         enable      = true;
         port        = 80;
         destination = "";

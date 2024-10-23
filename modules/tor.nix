@@ -21,7 +21,6 @@
 
 { ports
 , pkgs-unstable
-, serviceNames
 , ...
 }:
 
@@ -41,11 +40,11 @@ in
     settings."HardwareAccel" = 1;
 
     relay.onionServices = {
-      "${serviceNames.ssh}".map = [ 22 ];
+      "ssh".map = [ 22 ];
 
-      "${serviceNames.reverseProxy}".map = [ 80 ];
+      "rev-proxy".map = [ 80 ];
 
-      "${serviceNames.netcatchat}".map = [ ports.netcatchatServer ] ++ netcatchatClientPorts;
+      "netcatchat".map = [ ports.netcatchatServer ] ++ netcatchatClientPorts;
     };
   };
 }

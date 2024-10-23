@@ -50,18 +50,6 @@
               to   = 2025;
             };
           };
-
-          # These names are used for systemd services, containers, onion
-          # services, I2P tunnels, etc..
-          serviceNames = {
-            ssh          = "ssh";
-            cgit         = "cgit";
-            netcatchat   = "netcatchat";
-            git          = "git";
-            i2pd         = "i2pd";
-            tor          = "tor";
-            reverseProxy = "rev-proxy";
-          };
         } // (import ./config.nix);
     in {
       nixosConfigurations = {

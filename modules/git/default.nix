@@ -17,8 +17,7 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ serviceNames
-, pkgs
+{ pkgs
 , lib
 , ports
 , gitSSHKeys
@@ -122,27 +121,26 @@ in
 
   # We login as the "git" user via ssh when using git.
   users = {
-    users."${serviceNames.git}" = {
+    users."git" = {
       isSystemUser = true;
       description  = "git user";
       home         = gitDirectory;
       shell        = "${pkgs.git}/bin/git-shell";
-      group        = serviceNames.git;
+      group        = "git";
 
       openssh.authorizedKeys.keys = gitSSHKeys;
     };
 
-    groups."${serviceNames.git}" = {};
+    groups."git" = {};
   };
 
-  services.openssh.settings."AllowUsers" = [ serviceNames.git ];
+  services.openssh.settings."AllowUsers" = [ "git" ];
 
 
 
   system.activationScripts."create-git-directory" = ''
     mkdir -p ${escapeShellArg gitDirectory}
-    chown ${escapeShellArg serviceNames.git}:${escapeShellArg serviceNames.git} \
-          ${escapeShellArg gitDirectory}
+    chown git:git ${escapeShellArg gitDirectory}
   '';
 
   systemd = {
@@ -165,7 +163,7 @@ in
 
         serviceConfig = {
           "Type"             = "oneshot";
-          "User"             = serviceNames.git;
+          "User"             = "git";
           "WorkingDirectory" = gitDirectory;
 
           # systemd-analyze security recommendations.
@@ -219,7 +217,7 @@ in
 
         serviceConfig = {
           "Type"             = "oneshot";
-          "User"             = serviceNames.git;
+          "User"             = "git";
           "WorkingDirectory" = gitDirectory;
 
           # systemd-analyze security recommendations.
@@ -268,13 +266,13 @@ in
 
 
   # cgit for viewing my git repos via the web.
-  services.cgit."${serviceNames.cgit}" = {
+  services.cgit."cgit" = {
     enable         = true;
-    nginx.location = "/${serviceNames.cgit}";
+    nginx.location = "/cgit";
 
     # See https://discourse.nixos.org/t/security-advisory-local-privilege-escalation-in-the-fcgiwrap-nixos-module-also-affecting-the-cgit-smokeping-and-zoneminder-modules/51419
-    user  = serviceNames.cgit;
-    group = serviceNames.cgit;
+    user  = "cgit";
+    group = "cgit";
 
     repos = listToAttrs (builtins.map ({ path, description, section, ... }: {
       name  = path;
@@ -289,8 +287,8 @@ in
       # Converts the README files to HTML for display.
       "about-filter" = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
       # Fixes fetching of files under virtual root.
-      "css"  = "/${serviceNames.cgit}/cgit.css";
-      "logo" = "/${serviceNames.cgit}/cgit.jpg";
+      "css"  = "/cgit/cgit.css";
+      "logo" = "/cgit/cgit.jpg";
       # Cool commit graph.
       "enable-commit-graph" = 1;
       # Enables extra links in the index view to different parts of the repo.
@@ -314,7 +312,7 @@ in
     };
   };
 
-  services.nginx.virtualHosts."${serviceNames.cgit}" = {
+  services.nginx.virtualHosts."cgit" = {
     # Changes port of cgit instance.
     listen = [{
       addr = "127.0.0.1";
@@ -322,6 +320,6 @@ in
     }];
 
     # Sets logo.
-    locations."= /${serviceNames.cgit}/cgit.jpg".alias = ./cgit-logo.jpg;
+    locations."= /cgit/cgit.jpg".alias = ./cgit-logo.jpg;
   };
 }

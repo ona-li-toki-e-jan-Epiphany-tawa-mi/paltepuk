@@ -19,7 +19,6 @@
 { lib
 , ports
 , config
-, serviceNames
 , ...
 }:
 
@@ -35,7 +34,7 @@ let inherit (lib) concatStringsSep escapeShellArg;
 in
 {
   # Service to run a netcatchat server.
-  systemd.services."${serviceNames.netcatchat}" = {
+  systemd.services."netcatchat" = {
     description = "netcatchat server daemon";
     wantedBy    = [ "multi-user.target" ];
     path        = [ repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
@@ -45,8 +44,8 @@ in
     '';
 
     serviceConfig = {
-      "User"        = serviceNames.netcatchat;
-      "Group"       = serviceNames.netcatchat;
+      "User"        = "netcatchat";
+      "Group"       = "netcatchat";
       "DynamicUser" = true;
 
       # Restarts every 4 hours.

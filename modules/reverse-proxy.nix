@@ -17,8 +17,7 @@
 # Sets up a reverse proxy to route conneting browsers to the webservers present
 # on this system.
 
-{ serviceNames
-, ports
+{ ports
 , pkgs
 , ...
 }:
@@ -42,8 +41,8 @@ in
         "/".root = "${callPackage ../site {}}";
 
         # cgit instance path.
-        "/${serviceNames.cgit}/" = {
-          proxyPass       = "http://127.0.0.1:${toString ports.cgit}/${serviceNames.cgit}/";
+        "/cgit/" = {
+          proxyPass       = "http://127.0.0.1:${toString ports.cgit}/cgit/";
           proxyWebsockets = true;
         };
       };
