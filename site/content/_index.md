@@ -14,4 +14,4 @@ Here's my web button if you want to link back to my site:
 
 ### Site Index
 
-- [cgit](/cgit) - cgit git server web interface
+- [cgit](/cgit/) - cgit git server web interface
