@@ -18,6 +18,7 @@
 
 { epiphanyInitialHashedPassword
 , epiphanySSHKeys
+, pkgs
 , ...
 }:
 
@@ -27,6 +28,8 @@
     description           = "jan Epiphany";
     initialHashedPassword = epiphanyInitialHashedPassword;
     extraGroups           = [ "wheel" ];
+
+    packages = with pkgs; [ htop ];
 
     openssh.authorizedKeys.keys = epiphanySSHKeys;
   };

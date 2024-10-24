@@ -17,7 +17,6 @@
 # The default nix module that includes all parts of my website and server.
 
 { inputs
-, pkgs
 , lib
 , system
 , timeZone
@@ -99,11 +98,8 @@ in
   # Baller CPU scheduler.
   services.system76-scheduler.enable = true;
 
-  # System management.
-  environment = {
-    defaultPackages = mkForce [];
-    systemPackages  = [ pkgs.htop ];
-  };
+  # Removes default packages.
+  environment.defaultPackages = mkForce [];
 
 
 
