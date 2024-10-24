@@ -21,21 +21,27 @@ onto the git clone command. This will perform a shallow clone that just grabs
 the state of the most recent commit, which will be more reliable due to having
 less to clone. Blame HTTP.
 
+### I2P
+
 If you're on I2P, you can use this command as a base for cloning each repo. This
-assumes the HTTP proxy of your router is available via localhost on the default
-port, 4444; modify for your setup.
+assumes the HTTP proxy of your router is available via localhost port 4444;
+modify for your setup.
 
 ```
-git -c http.proxy=http://127.0.0.1:4444 clone <URL>
+git -c http.proxy=http://127.0.0.1:4444 clone http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p/cgit/<repository>
 ```
+
+### Tor
 
 If you're on Tor, you can use this command as a base for cloning each repo. This
-assumes the Tor client daemon is available via localhost port 9050; modify for
-your setup.
+assumes the Tor client daemon's SOCKSv5 proxy is available via localhost port
+9050; modify for your setup.
 
 ```
-git -c http.proxy=socks5h://127.0.0.1:9050 clone <URL>
+git -c http.proxy=socks5h://127.0.0.1:9050 clone http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit/<repository>
 ```
+
+### Clearnet
 
 If you would prefer the Clearnet, please visit my GitHub instead:
 
