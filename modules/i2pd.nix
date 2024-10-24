@@ -61,17 +61,21 @@ in
     };
 
     inTunnels = {
-      # I2P access for remote administration.
       "ssh" = {
         enable      = true;
         port        = 22;
         destination = "";
       };
 
-      # I2P access to the reverse proxy.
       "rev-proxy" = {
         enable      = true;
         port        = 80;
+        destination = "";
+      };
+
+      "rsync" = {
+        enable      = true;
+        port        = ports.rsyncd;
         destination = "";
       };
     };

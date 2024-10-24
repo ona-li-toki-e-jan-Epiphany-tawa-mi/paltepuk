@@ -44,6 +44,7 @@
           ports = {
             i2pdConsole      = 7070;
             cgit             = 5000;
+            rsyncd           = 873;
             netcatchatServer = 2000;
             netcatchatClient = {
               from = 2001;
