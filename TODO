@@ -1,4 +1,6 @@
 Add dark mode for cgit.
+Create a secrets installation script.
+Rework website to a more personalize style.
 
 If moved to a VPS:
 - Add access from the regular Clearnet and Yggdrasil.
