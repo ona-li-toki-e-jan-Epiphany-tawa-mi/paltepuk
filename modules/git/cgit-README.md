@@ -67,9 +67,9 @@ Rsync options used:
 ### I2P
 
 If you're on I2P, you can use this command to mirror all repos. This assumes the
-HTTP proxy of your router is available via localhost on the default port, 4444;
-modify for your setup.
+HTTP proxy of your router is available via localhost on port 4444; modify for
+your setup.
 
 ```
-RSYNC_PROXY=127.0.0.1:4444 rsync -ruP --del rsync://qr7jxluq5g3nn5tvf7jmiz5rhm7eimc7vlcmzcjhrtynusymjibq.b32.i2p/git/<destination path>
+RSYNC_PROXY=127.0.0.1:4444 rsync -ruP --del rsync://qr7jxluq5g3nn5tvf7jmiz5rhm7eimc7vlcmzcjhrtynusymjibq.b32.i2p/git/ <destination path>
 ```
