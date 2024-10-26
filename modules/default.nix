@@ -34,6 +34,7 @@ in
               ./netcatchat.nix
               ./reverse-proxy.nix
               ./rsyncd.nix
+              ./secrets
             ];
 
 
