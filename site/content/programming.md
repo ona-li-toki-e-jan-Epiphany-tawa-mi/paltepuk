@@ -30,13 +30,13 @@ modules.
 
 You could use the websites that allow you to search for NixOS options, but it's
 all installed locally, assuming you're running NixOS, so don't bother with that
-JavaScript-infested garbage.
+JavaScript-infested garbage, just run `man configuration.nix`.
 
 - `nix search nixpkgs <package>`
 
 You could use the websites that allow you to search for Nix packages, but you
 can also just search for them in the terminal, so don't bother with that
-JavaScript-infested garbage.
+JavaScript-infested garbage, just run `nix search nixpkgs <package>`.
 
 - `nixos-help`
 
