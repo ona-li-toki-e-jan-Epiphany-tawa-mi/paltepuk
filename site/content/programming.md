@@ -3,22 +3,25 @@ title = 'Programming'
 description = 'programming resources'
 +++
 
+*Note: links may point to different content than what they did when I added
+them. Please note the time that the link was added/updated.*
+
 Finding documentation can sometimes be a real pain (i.e. with Nix/NixOS,) so
 I've compiled a list of resources here that I've found and think would be good
 to share for things I found hard to find.
 
-## Nix/NixOS - [https://nixos.org](https://nixos.org)
+## Nix/NixOS - [https://nixos.org *(July 26, 2024)*](https://nixos.org)
 
-- Nix Manual Built-in Functions Reference - [https://nixos.org/manual/nix/stable/language/builtins](https://nixos.org/manual/nix/stable/language/builtins)
+- Nix Manual Built-in Functions Reference - [https://nixos.org/manual/nix/stable/language/builtins *(July 26, 2024)*](https://nixos.org/manual/nix/stable/language/builtins)
 
 A reference for all of the built-in functions, as-in everything builtins.\*.
 
-- nixpkgs Manual - [https://ryantm.github.io/nixpkgs/#preface](https://ryantm.github.io/nixpkgs/#preface)
+- nixpkgs Manual - [https://ryantm.github.io/nixpkgs/#preface *(July 26, 2024)*](https://ryantm.github.io/nixpkgs/#preface)
 
 A reference for a lot of the stuff in lib.* and pkgs.* (not counting actual
 packaged software.)
 
-- NixOS Option Types Manual - [https://nlewo.github.io/nixos-manual-sphinx/development/option-types.xml.html](https://nlewo.github.io/nixos-manual-sphinx/development/option-types.xml.html)
+- NixOS Option Types Manual - [https://nlewo.github.io/nixos-manual-sphinx/development/option-types.xml.html *(July 26, 2024)*](https://nlewo.github.io/nixos-manual-sphinx/development/option-types.xml.html)
 
 A reference for NixOS options and option types for making configurable NixOS
 modules.
@@ -40,7 +43,7 @@ JavaScript-infested garbage.
 Assuming you're running NixOS, the NixOS manual is installed locally, just run
 `nixos-help`.
 
-- nixos-hardware - [https://github.com/NixOS/nixos-hardware/tree/master](https://github.com/NixOS/nixos-hardware/tree/master)
+- nixos-hardware - [https://github.com/NixOS/nixos-hardware/tree/master *(July 26, 2024)*](https://github.com/NixOS/nixos-hardware/tree/master)
 
 Repository of hardware-specific NixOS configurations to optimize/bug fix NixOS
 for specfic hardware configurations.
@@ -50,15 +53,15 @@ but, personally, I prefer to avoid extra depedencies, even if they are
 reproducable, so I just copy the relevant portions of nixos-hardware into my
 configurations.
 
-- nixos-anywhere - [https://github.com/nix-community/nixos-anywhere](https://github.com/nix-community/nixos-anywhere)
+- nixos-anywhere - [https://github.com/nix-community/nixos-anywhere *(July 26, 2024)*](https://github.com/nix-community/nixos-anywhere)
 
 The godlike power of installing a NixOS configuration remotely via SSH is
 something that cannot be understated. It will take a little time to figure out
-disko ([https://github.com/nix-community/disko](https://github.com/nix-community/disko)),
+disko ([https://github.com/nix-community/disko *(July 26, 2024)*](https://github.com/nix-community/disko)),
 which it uses a dependency, but once you do, installing NixOS and a
 configuration on new machines becomes a breeze.
 
-## GnuAPL - [https://www.gnu.org/software/apl](https://www.gnu.org/software/apl)
+## GnuAPL - [https://www.gnu.org/software/apl *(July 26, 2024)*](https://www.gnu.org/software/apl)
 
 APL is a pretty old language, so there's a number of different implementations
 from different vendors with different extensions available. I recommend not
@@ -75,22 +78,22 @@ reference:
 
 >> cowsAyPL, cowsay clone - [/cgit/cowsAyPL.git](/cgit/cowsAyPL.git) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/cowsAyPL](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/cowsAyPL)
 
-- GnuAPL Intro - [https://www.gnu.org/software/apl/apl-intro.html](https://www.gnu.org/software/apl/apl-intro.html)
+- GnuAPL Intro - [https://www.gnu.org/software/apl/apl-intro.html *(July 26, 2024)*](https://www.gnu.org/software/apl/apl-intro.html)
 
 This intro page is less about GnuAPL and more about APL in general. It will walk
 you through how APL works step-by-step, so it should be enough for you to get
 the hang of things.
 
-- GnuAPL Special Features- [https://www.gnu.org/software/apl/apl.html](https://www.gnu.org/software/apl/apl.html)
+- GnuAPL Special Features- [https://www.gnu.org/software/apl/apl.html *(July 26, 2024)*](https://www.gnu.org/software/apl/apl.html)
 
 This page gets into the GnuAPL-specfic features, so don't expect anything from
 here to work with other APL implemenetations.
 
-- GnuAPL Library Guidelines - [https://www.gnu.org/software/apl/Library-Guidelines-GNU-APL.html](https://www.gnu.org/software/apl/Library-Guidelines-GNU-APL.html)
+- GnuAPL Library Guidelines - [https://www.gnu.org/software/apl/Library-Guidelines-GNU-APL.html *(July 26, 2024)*](https://www.gnu.org/software/apl/Library-Guidelines-GNU-APL.html)
 
 Some tips about how to write libraries for GnuAPL, and also APL in general.
 
-- gnu-apl-mode - [https://github.com/lokedhs/gnu-apl-mode](https://github.com/lokedhs/gnu-apl-mode)
+- gnu-apl-mode - [https://github.com/lokedhs/gnu-apl-mode *(July 26, 2024)*](https://github.com/lokedhs/gnu-apl-mode)
 
 You'll need some way to type the symbols APL uses. I use this with Emacs, and it
 works pretty good. I do recommend adding the following to your configuration to
@@ -114,21 +117,21 @@ make it a little nicer to use:
 (add-hook 'gnu-apl-interactive-mode-hook #'gnu-apl-mode-setup)
 ```
 
-## cc65 - [https://cc65.github.io](https://cc65.github.io)
+## cc65 - [https://cc65.github.io *(July 26, 2024)*](https://cc65.github.io)
 
-- cc65 Function Reference - [https://cc65.github.io/doc/funcref.html](https://cc65.github.io/doc/funcref.html)
+- cc65 Function Reference - [https://cc65.github.io/doc/funcref.html *(July 26, 2024)*](https://cc65.github.io/doc/funcref.html)
 
 A quick-reference for all of the functions made available with cc65. Also make
 sure to check the include files inside the cc65 installation directory, there's
 a lot of useful information there.
 
-- cc65 Users Guide - [https://cc65.github.io/doc/cc65.html](https://cc65.github.io/doc/cc65.html)
+- cc65 Users Guide - [https://cc65.github.io/doc/cc65.html *(July 26, 2024)*](https://cc65.github.io/doc/cc65.html)
 
 cc65 C compiler documentation. This has a lot of useful information about things
 like the inline assembler, computed gotos, and other juicy extensions you might
 need.
 
-- cc65 Advanced Optimizations - [https://github.com/ilmenit/CC65-Advanced-Optimizations](https://github.com/ilmenit/CC65-Advanced-Optimizations)
+- cc65 Advanced Optimizations - [https://github.com/ilmenit/CC65-Advanced-Optimizations *(July 26, 2024)*](https://github.com/ilmenit/CC65-Advanced-Optimizations)
 
 A very detailed article about how to write optimized C code with cc65. The cc65
 compiler isn't as "smart" as your usual C compilers, and there are a number of
