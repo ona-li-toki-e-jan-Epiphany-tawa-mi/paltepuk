@@ -5,15 +5,37 @@ scrollingTitleCount = 5
 [[extraLinks]]
 name        = 'cgit'
 path        = '/cgit/'
-description = 'cgit git server web interface'
+description = 'git server web interface'
 +++
 
-# jan Epiphany's Personal Website
+{{< command-line  >}}whoami{{< /command-line >}}
 
-Welcome to my (ona li toki e jan Epiphany tawa mi's) personal website!
+Name: ona li toki e jan Epiphany tawa mi
 
-May you have a very baller time.
+Short name: jan Epiphany
 
-Here's my web button if you want to link back to my site:
+Web button: ![](/buttons/paltepuk.gif) (feel free to use)
 
-![](/buttons/paltepuk.gif)
+{{< command-line  >}}whatisthis{{< /command-line >}}
+
+My baller personal website
+
+{{< command-line  >}}cowsaypl -- +p Welcome, esteemed guests{{< /command-line >}}
+
+```
+^CATTENTION
+      ⊣⍎')COPY_ONCE /nix/store/bqyd88bp9caxqnv1wfna6rng
+      ^
+/¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
+| Welcome, esteemed guests |
+\__________________________/
+                        \
+                         \
+                           ^__^
+                           (@@)\_______
+                           (__)\       )\/\
+                               ||----w |
+                               ||     ||
+```
+
+{{< command-line />}}
