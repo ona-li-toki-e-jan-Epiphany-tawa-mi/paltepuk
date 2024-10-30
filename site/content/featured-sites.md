@@ -19,6 +19,7 @@ them. Please note the time that the link was added/updated.*
 [![](/buttons/debian.org.gif)](https://debian.org "Updated July 26, 2024")
 [![](/buttons/nergen.net.gif)](https://nergen.net "Updated July 26, 2024")
 [![](/buttons/getimiskon.xyz.gif)](https://getimiskon.xyz "Updated July 26, 2024")
+[![](/buttons/voidlinux.org.gif)](https://voidlinux.org/ "Updated October 30, 2024")
 
 ### [![](/buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net *(July 26, 2024)*](https://landchad.net)
 
