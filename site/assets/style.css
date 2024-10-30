@@ -73,6 +73,27 @@ main {
 
 
 
+/* Makes element blink in and out instantly once every second. */
+.blink {
+    animation: blink 1s  infinite;
+}
+@keyframes blink {
+    0% {
+        opacity:                   1;
+        animation-timing-function: steps(1, end);
+    };
+    50% {
+        opacity:                   0;
+        animation-timing-function: steps(1, end);
+    }
+    100% {
+        opacity:                   1;
+        animation-timing-function: steps(1, end);
+    };
+}
+
+
+
 /* Cool CRT effects from https://aleclownes.com/2017/02/01/crt-display.html */
 
 /* Adds color seperation effect to text. */
