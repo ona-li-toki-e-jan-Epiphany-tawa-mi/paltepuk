@@ -98,9 +98,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
         (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi.git"
           "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
-
-        (mirror "nixpkgs.git" "https://github.com/nixos/nixpkgs"
-         "Nix Packages collection & NixOS | Mirror of https://github.com/nixos/nixpkgs")
       ];
 in
 {
