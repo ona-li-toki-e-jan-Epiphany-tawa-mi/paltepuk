@@ -1,1 +1,7 @@
-{{ define "header" -}}{{- end }}
+{{ define "main" -}}
+<p>[epiphany@paltepuk:~]$ cat '{{ .Path }}'</p>
+<br>
+{{ .Content }}
+<br>
+<p>[epiphany@paltepuk:~]$ <span class="blink">■</span></p>
+{{- end }}

@@ -23,7 +23,7 @@
     <p class="splitter splitter-first">{{ range seq .Params.scrollingTitleCount }}{{ $.Title }} {{ end }}</p>
     <p class="splitter">{{ range seq .Params.scrollingTitleCount }}{{ $.Title }} {{ end }}</p>
     <main>
-      {{ .Content }}
+      {{ block "main" . }}{{ .Content }}{{ end }}
     </main>
   </body>
 </html>
