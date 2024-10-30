@@ -1,9 +1,10 @@
 +++
-title = 'paltepuk'
+title               = 'paltepuk'
+scrollingTitleCount = 5
 
 [[extraLinks]]
-name = 'cgit'
-path = '/cgit/'
+name        = 'cgit'
+path        = '/cgit/'
 description = 'cgit git server web interface'
 +++
 

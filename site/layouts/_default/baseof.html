@@ -18,6 +18,8 @@
       {{ if not .IsHome}}<br><br><a href="/">Return to home page</a>{{ end }}
       {{ block "header" . }}{{ end }}
     </header>
+    <p class="splitter splitter-first">{{ range seq .Params.scrollingTitleCount }}{{ $.Title }} {{ end }}</p>
+    <p class="splitter">{{ range seq .Params.scrollingTitleCount }}{{ $.Title }} {{ end }}</p>
     <main>
       {{ .Content }}
     </main>

@@ -1,6 +1,7 @@
 +++
-title = 'Source'
-description = 'site source code'
+title               = 'Source'
+scrollingTitleCount = 6
+description         = 'site source code'
 +++
 
 This website, and the NixOS configuration for it's server, is open sourced under

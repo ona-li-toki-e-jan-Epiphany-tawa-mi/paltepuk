@@ -21,26 +21,54 @@ a:active {
 
 
 
-/* Makes header and content appear side-by-side. */
+/* Sets up general content layout. */
+
+:root {
+    --header-width:              25vw;
+    --layout-horizontal-padding: 2vw;
+}
 
 header {
-    position: fixed;
     /* Positions to left of viewport. */
-    left:  2vw;
-    width: 25vw;
+    position: fixed;
+    left:     var(--layout-horizontal-padding);
+    width:    var(--header-width);
 }
 
 main {
-    position: fixed;
     /* Positions to right of viewport */
-    margin-left:   30vw;
-    margin-right:  4vw;
-    padding-right: 2vw;
+    position:      fixed;
+    margin-left:   calc(var(--header-width) + 2 * var(--layout-horizontal-padding));
+    margin-right:  calc(2 * var(--layout-horizontal-padding));
+    padding-right: var(--layout-horizontal-padding);
     left:          0;
     right:         0;
     /* Sizes to top/bottom of viewport */
     height:     100vh;
     overflow-y: scroll;
+}
+
+/* Splits up header and main with a vertical wall of characters.              */
+/* Intended to use with <p>.                                                  */
+/* Create a duplicate and add splitter-first to it to make it continuous.     */
+.splitter {
+    /* Makes text vertical */
+    writing-mode:     vertical-rl;
+    text-orientation: upright;
+    white-space:      nowrap;
+    /* Positions in-between main and header. */
+    position:    fixed;
+    margin-left: calc(var(--header-width) + 0.5 * var(--layout-horizontal-padding));
+    top: 0;
+    /* Scrolling. */
+    animation: slideSplitter 9s linear infinite;
+}
+.splitter-first {
+    animation-delay: -4.5s;
+}
+@keyframes slideSplitter {
+    0%   { transform: translateY(-100vh) };
+    100% { transform: translateY(100vh) };
 }
 
 

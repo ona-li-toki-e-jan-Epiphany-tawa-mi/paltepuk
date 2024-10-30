@@ -1,6 +1,7 @@
 +++
-title = 'Programming'
-description = 'programming resources'
+title               = 'Programming'
+scrollingTitleCount = 4
+description         = 'programming resources'
 +++
 
 *Note: links may point to different content than what they did when I added

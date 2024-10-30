@@ -1,6 +1,7 @@
 +++
-title = 'Links'
-description = 'external links to my other profiles/websites/servers/etc.'
+title               = 'Links'
+scrollingTitleCount = 7
+description         = 'external links to my other profiles/websites/servers/etc.'
 +++
 
 ## GitHub
