@@ -1,14 +1,14 @@
+body {
+    font-family: sans-serif;
+    background:  black;
+    color:       greenyellow;
+}
 
 
 /* Cool CRT effects from https://aleclownes.com/2017/02/01/crt-display.html */
 
 /* Adds color seperation effect to text. */
 body {
-    font-family: sans-serif;
-    background: #110000;
-    color: #ccc;
-
-    /* Adds color seperation effect to text. */
     animation: textShadow 1.6s infinite;
 }
 @keyframes textShadow {
