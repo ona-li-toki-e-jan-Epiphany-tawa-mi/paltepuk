@@ -28,20 +28,11 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ hugo ];
 
   buildPhase = ''
-    runHook preBuild
-
-    rm -r public/ || true                         # To remove any preexisting build artifacts.
-    hugo
-
-    runHook postBuild
+    hugo --minify --cleanDestinationDir
   '';
 
   installPhase = ''
-    runHook preInstall
-
     mkdir -p $out/
     cp -r public/* $out/
-
-    runHook postInstall
   '';
 }
