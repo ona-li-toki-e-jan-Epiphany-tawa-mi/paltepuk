@@ -15,7 +15,6 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Installs and configures the rsync daemon.
-# TODO if put on VPS add rate limits.
 # TODO if put on VPS add rsync link to website index and update cgit readme.
 
 { ports
@@ -33,8 +32,9 @@
     settings = {
       # Makes it so users must be set explicitly.
       global = {
-        gid = "nobody";
-        uid = "nobody";
+        gid               = "nobody";
+        uid               = "nobody";
+        "max connections" = 1;
       };
 
       "git" = {
