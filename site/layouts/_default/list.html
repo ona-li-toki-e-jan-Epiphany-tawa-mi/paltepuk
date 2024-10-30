@@ -5,5 +5,10 @@
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .Param "description" }} - {{ .Params.description }}{{ end }}
   </li>
   {{- end }}
+  {{ if .Param "extraLinks" }}{{range .Params.extraLinks }}
+  <li>
+    <a href="{{ .path }}">{{ .name }}</a> - {{ .description }}
+  </li>
+  {{ end }}{{ end }}
 </ul>
 {{- end }}

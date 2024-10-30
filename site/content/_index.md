@@ -1,5 +1,10 @@
 +++
 title = 'paltepuk'
+
+[[extraLinks]]
+name = 'cgit'
+path = '/cgit/'
+description = 'cgit git server web interface'
 +++
 
 # jan Epiphany's Personal Website
@@ -11,7 +16,3 @@ May you have a very baller time.
 Here's my web button if you want to link back to my site:
 
 ![](/buttons/paltepuk.gif)
-
-### Site Index
-
-- [cgit](/cgit/) - cgit git server web interface
