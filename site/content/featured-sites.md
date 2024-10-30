@@ -53,4 +53,4 @@ started selling a new version on Steam, but the classic version is still online,
 and it's FOSS!
 ([https://github.com/gorescript/gorescript *(July 26, 2024)*](https://github.com/gorescript/gorescript)).
 
-### [![](/buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(July 26, 2024)*](http://lain.angelic-trust.net)
+### [![](/buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(July 26, 2024)*](https://lain.angelic-trust.net)
