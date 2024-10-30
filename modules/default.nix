@@ -41,12 +41,6 @@ in
 
   security.sudo.execWheelOnly = true;
 
-  # Tells firewall not to respond to pings. This can help deter automated bots
-  # from finding and port scanning the server. This doesn't paticularly matter
-  # since we just use hidden services, but will be important if ever put on the
-  # Clearnet.
-  networking.firewall.allowPing = false;
-
 
 
   nixpkgs.hostPlatform = system;
