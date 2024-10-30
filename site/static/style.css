@@ -25,18 +25,20 @@ a:active {
 
 header {
     position: fixed;
-    left:     2vw;
-    width:    25vw;
+    /* Positions to left of viewport. */
+    left:  2vw;
+    width: 25vw;
 }
 
 main {
-    position:      fixed;
+    position: fixed;
+    /* Positions to right of viewport */
     margin-left:   30vw;
     margin-right:  4vw;
     padding-right: 2vw;
     left:          0;
     right:         0;
-
+    /* Sizes to top/bottom of viewport */
     height:     100vh;
     overflow-y: scroll;
 }

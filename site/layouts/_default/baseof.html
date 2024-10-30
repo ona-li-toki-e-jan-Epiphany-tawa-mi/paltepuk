@@ -11,15 +11,15 @@
   </head>
   <body>
     <header>
-      <h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1>
+      <h1>{{ .Title }}</h1>
       View page on:
       <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
       <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>
       {{ if not .IsHome}}<br><br><a href="/">Return to home page</a>{{ end }}
-      <br><br>
+      {{ block "header" . }}{{ end }}
     </header>
     <main>
-      {{ block "main" . }}{{ .Content }}{{ end }}
+      {{ .Content }}
     </main>
   </body>
 </html>
