@@ -1,3 +1,5 @@
+/* Color scheme. */
+
 body {
     font-family: sans-serif;
     background:  black;
@@ -15,6 +17,28 @@ a:visited {
 }
 a:active {
     color: purple;
+}
+
+
+
+/* Makes header and content appear side-by-side. */
+
+header {
+    position: fixed;
+    left:     2vw;
+    width:    25vw;
+}
+
+main {
+    position:      fixed;
+    margin-left:   30vw;
+    margin-right:  4vw;
+    padding-right: 2vw;
+    left:          0;
+    right:         0;
+
+    height:     100vh;
+    overflow-y: scroll;
 }
 
 
@@ -109,19 +133,4 @@ body::after {
   90%  { opacity: 0.7003;  }
   95%  { opacity: 0.36108; }
   100% { opacity: 0.24387; }
-}
-
-
-
-main {
-    max-width: 800px;
-    margin: auto;
-}
-
-img {
-    max-width: 100%;
-}
-
-header {
-    text-align: center;
 }

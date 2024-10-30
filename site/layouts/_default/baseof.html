@@ -10,20 +10,16 @@
     <meta charset="utf-8">
   </head>
   <body>
+    <header>
+      <h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1>
+      View page on:
+      <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
+      <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>
+      {{ if not .IsHome}}<br><br><a href="/">Return to home page</a>{{ end }}
+      <br><br>
+    </header>
     <main>
-      <header>
-        <h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1>
-        View page on:
-        <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
-        <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>
-        {{ if not .IsHome}}
-          <br><br><a href="/">Return to home page</a>
-        {{ end }}
-      </header>
-      <article>
-        <br><hr>
-        {{ block "main" . }}{{ .Content }}{{ end }}
-      </article>
+      {{ block "main" . }}{{ .Content }}{{ end }}
     </main>
   </body>
 </html>
