@@ -4,6 +4,20 @@ body {
     color:       greenyellow;
 }
 
+a:link {
+    color: cyan;
+}
+a:hover {
+    color: darkcyan;
+}
+a:visited {
+    color: hotpink;
+}
+a:active {
+    color: purple;
+}
+
+
 
 /* Cool CRT effects from https://aleclownes.com/2017/02/01/crt-display.html */
 
