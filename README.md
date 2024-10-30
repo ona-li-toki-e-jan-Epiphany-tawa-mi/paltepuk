@@ -2,6 +2,10 @@
 
 `pal` - building, `tep` - person, `uk` - my.
 
+`paltep` - person building, house.
+
+`paltepuk` - my house, home.
+
 Paltepuk is my personal website, and also the server that runs it. This
 repository contains the website itself and the NixOS configuration for the
 server.

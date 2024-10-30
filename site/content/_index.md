@@ -10,15 +10,18 @@ description = 'git server web interface'
 
 {{< command-line  >}}whoami{{< /command-line >}}
 
-Name: ona li toki e jan Epiphany tawa mi
-
-Short name: jan Epiphany
-
-Web button: ![](/buttons/paltepuk.gif) (feel free to use)
+Name: ona li toki e jan Epiphany tawa mi{{< br >}}
+Short name: jan Epiphany{{< br >}}
+Web button: ![](/buttons/paltepuk.gif) (feel free to use){{< br >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
 My baller personal website
+{{< command-line  >}}etemology -v paltepuk{{< /command-line >}}
+
+pal - building, tep - person, uk - my.{{< br >}}
+paltep - person building, house.{{< br >}}
+paltepuk - my house, home.
 
 {{< command-line  >}}cowsaypl -- +p Welcome, esteemed guests{{< /command-line >}}
 
