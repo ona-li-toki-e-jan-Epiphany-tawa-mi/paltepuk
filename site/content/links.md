@@ -24,9 +24,9 @@ description         = 'external links to my other profiles/websites/servers/etc.
 
 [https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9408ca3670bd0ebb99addf196f1f9a72450bdcb1](https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9408ca3670bd0ebb99addf196f1f9a72450bdcb1)
 
-## Minetest ContentDB
+## Luanti ContentDB
 
-[https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi](https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi)
+[https://content.luanti.org/users/ona-li-toki-e-jan-Epiphany-tawa-mi](https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi)
 
 ## netcatchat Server (COMPLETELY UNMODERATED)
 
