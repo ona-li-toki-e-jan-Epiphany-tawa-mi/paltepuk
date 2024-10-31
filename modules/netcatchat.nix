@@ -37,10 +37,11 @@ in
   systemd.services."netcatchat" = {
     description = "netcatchat server daemon";
     wantedBy    = [ "multi-user.target" ];
-    path        = [ repos.ona-li-toki-e-jan-Epiphany-tawa-mi.netcatchat ];
+    path        = with repos.ona-li-toki-e-jan-Epiphany-tawa-mi; [ netcatchat cowsaypl ];
 
     script = ''
-      netcatchat -s -p ${toString ports.netcatchatServer} -c ${escapeShellArg clientPorts}
+      netcatchat -s -p ${toString ports.netcatchatServer} -c ${escapeShellArg clientPorts} \
+                 -m "\n$(cowsaypl -- +p 'Welcome %d, to netcatchat@paltepuk')\n"
     '';
 
     serviceConfig = {
