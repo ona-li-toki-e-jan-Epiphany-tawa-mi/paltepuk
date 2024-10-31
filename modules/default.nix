@@ -35,6 +35,7 @@ in
               ./reverse-proxy.nix
               ./rsyncd.nix
               ./secrets
+              ./cloudflared.nix
             ];
 
 

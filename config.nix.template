@@ -41,4 +41,7 @@
     username = "";
     password = "";
   };
+
+  # The UUID of the cloudflared tunnel to use. Leave empty to disable.
+  cloudflaredTunnelUUID = "";
 }
