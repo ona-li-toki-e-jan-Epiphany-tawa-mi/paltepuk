@@ -15,7 +15,8 @@
       <h1>{{ .Title }}</h1>
       View page on:
       <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
-      <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>
+      <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>,
+      <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}">Clearnet (Cloudflare!)</a>
       {{ if not .IsHome}}<br><br><a href="/">Return to home page</a>{{ end }}
       {{ block "header" . }}{{ end }}
     </header>

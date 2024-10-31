@@ -1,5 +1,6 @@
 languageCode = 'en-us'
 title        = 'paltepuk'
+baseURL      = 'https://paltepuk.xyz'
 
 [params]
 baseI2PURL = 'http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p'
