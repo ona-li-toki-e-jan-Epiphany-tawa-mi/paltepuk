@@ -40,9 +40,9 @@ in
     settings.HardwareAccel = 1;
 
     relay.onionServices = {
-      "rev-proxy".map = [ 80 ];
-
-      "netcatchat".map = [ ports.netcatchatServer ] ++ netcatchatClientPorts;
+      "rev-proxy".map = [ 80
+                          ports.netcatchatServer
+                        ] ++ netcatchatClientPorts;
     };
   };
 }

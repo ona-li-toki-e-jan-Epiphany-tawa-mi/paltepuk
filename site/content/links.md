@@ -30,7 +30,7 @@ description         = 'external links to my other profiles/websites/servers/etc.
 
 ## netcatchat Server (COMPLETELY UNMODERATED)
 
-*6ay2f2mmkogzz6mwcaxjttxl4jydnskavfaxgumeptwhhdjum3i6n3id.onion port 2000*
+*4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion port 2000*
 
 For information on what in tarnation a "netcatchat server" is, take a look at
 the `netcatchat.git` repository on my cgit instance:
