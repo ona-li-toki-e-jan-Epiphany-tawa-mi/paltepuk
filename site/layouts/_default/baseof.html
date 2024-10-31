@@ -6,7 +6,6 @@
     {{ $style := $css | resources.Minify   }}
     <link rel='stylesheet' type='text/css' href='{{ $style.Permalink }}'>
     <link rel="icon" href="/favicon.ico">
-    <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="none">
     <meta charset="utf-8">
