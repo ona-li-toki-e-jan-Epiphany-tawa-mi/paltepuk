@@ -62,6 +62,7 @@ main {
     top: 0;
     /* Scrolling. */
     animation: slideSplitter 9s linear infinite;
+    overflow:  hidden;
 }
 .splitter-first {
     animation-delay: -4.5s;
@@ -184,4 +185,31 @@ body::after {
   90%  { opacity: 0.7003;  }
   95%  { opacity: 0.36108; }
   100% { opacity: 0.24387; }
+}
+
+
+
+/* Makes scrollbar appear in Chromium-based broswers as it does in */
+/* Firefox-based ones.                                             */
+
+/* Sets width and overall appearance of scrollbar. */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Enlarges scrollbar on hover. */
+*::-webkit-scrollbar:hover {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+    /* Scrollbar color. */
+    background-color: #888;
+    /* Adds a fillet to the corners of the scrollbar. */
+    border-radius: 10px;
+}
+
+/* Slight change in color on hover. */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
