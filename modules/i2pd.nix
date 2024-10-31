@@ -61,12 +61,6 @@ in
     };
 
     inTunnels = {
-      "ssh" = {
-        enable      = true;
-        port        = 22;
-        destination = "";
-      };
-
       "rev-proxy" = {
         enable      = true;
         port        = 80;
