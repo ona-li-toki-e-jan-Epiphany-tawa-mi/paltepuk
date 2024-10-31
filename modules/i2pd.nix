@@ -61,7 +61,7 @@ in
     };
 
     inTunnels = {
-      "rev-proxy" = {
+      "nginx" = {
         enable      = true;
         port        = 80;
         destination = "";

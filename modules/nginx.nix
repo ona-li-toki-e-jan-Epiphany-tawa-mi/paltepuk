@@ -14,8 +14,7 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Sets up a reverse proxy to route conneting browsers to the webservers present
-# on this system.
+# Sets up nginx to serve the main site and also route to other webservers.
 
 { ports
 , pkgs
@@ -36,7 +35,7 @@ in
     recommendedOptimisation  = true;
     recommendedProxySettings = true;
 
-    virtualHosts."paltepuk.xyz" = {
+    virtualHosts."paltepuk" = {
       locations = {
         "/".root = "${callPackage ../site {}}";
 

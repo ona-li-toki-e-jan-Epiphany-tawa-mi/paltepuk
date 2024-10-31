@@ -32,7 +32,7 @@ in
               ./git
               ./epiphany.nix
               ./netcatchat.nix
-              ./reverse-proxy.nix
+              ./nginx.nix
               ./rsyncd.nix
               ./secrets
               ./cloudflared.nix
