@@ -9,7 +9,7 @@ the GNU Affero General Public License version 3 or Later.
 
 You can view it here in the `paltepuk.git` repository on my cgit instance:
 
-[/cgit/paltepuk.git](/cgit/paltepuk.git)
+[/cgit/paltepuk.git/about](/cgit/paltepuk.git/about)
 
 You can also view it in the `paltepuk` repository on my GitHub account:
 
