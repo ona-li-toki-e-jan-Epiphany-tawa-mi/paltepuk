@@ -285,6 +285,8 @@ in
       # Fixes fetching of files under virtual root.
       css  = "/cgit/cgit.css";
       logo = "/cgit/cgit.jpg";
+      # Makes logo point to site homepage.
+      logo-link = "/";
       # Cool commit graph.
       enable-commit-graph = 1;
       # Enables extra links in the index view to different parts of the repo.
