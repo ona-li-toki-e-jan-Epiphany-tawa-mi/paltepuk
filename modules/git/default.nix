@@ -307,6 +307,8 @@ in
       side-by-side-diffs = 1;
       # Nice syntax highlighting.
       source-filter = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
+      # No bots!
+      robots = "none";
     };
   };
 
