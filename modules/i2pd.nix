@@ -27,8 +27,9 @@
 , ...
 }:
 
-let inherit (lib) mkForce getExe;
+let inherit (lib) mkForce;
     inherit (builtins) toString;
+    inherit (pkgs) writeShellApplication;
 in
 {
   # Allows conenctions from peers
@@ -38,8 +39,15 @@ in
   };
 
   # For monitoring the web console.
-  environment.shellAliases."i2pd-status" =
-    "sudo -u i2pd ${getExe pkgs.lynx} 127.0.0.1:${toString ports.i2pdConsole}";
+  users.users."epiphany".packages = [ (writeShellApplication {
+    name = "i2pd-status";
+
+    runtimeInputs = with pkgs; [ lynx ];
+
+    text = ''
+      lynx 127.0.0.1:${toString ports.i2pdConsole}
+    '';
+  }) ];
 
   services.i2pd = {
     package    = pkgs-unstable.i2pd;
