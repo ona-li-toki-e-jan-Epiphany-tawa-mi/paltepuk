@@ -1,0 +1,950 @@
+/* Custom cgit CSS. */
+
+
+
+/* Global link color scheme. */
+
+a:link {
+    color: blue;
+}
+a:hover {
+    color: purple;
+}
+a:visited {
+    color: darkblue;
+}
+
+
+
+/* Modified from cgit's default CSS. */
+
+:root {
+    --background-color: black;
+    --main-color:       greenyellow;
+}
+
+div#cgit {
+    padding: 0em;
+    margin:  0em;
+    padding: 4px;
+
+    font-family: monospace;
+    font-size:   12pt;
+
+    color: var(--main-color);
+}
+body {
+    background: var(--background-color);
+}
+
+div#cgit table {
+    border-collapse: collapse;
+}
+
+div#cgit table#header {
+    width:         100%;
+    margin-bottom: 1em;
+}
+div#cgit table#header td.logo {
+    width:          96px;
+    vertical-align: top;
+}
+div#cgit table#header td.main {
+    font-size:    250%;
+    padding-left: 10px;
+    white-space:  nowrap;
+}
+div#cgit table#header td.main a {
+    color: var(--main-color);
+}
+div#cgit table#header td.main a:hover {
+    color: purple;
+}
+div#cgit table#header td.form {
+    text-align:     right;
+    vertical-align: bottom;
+    padding-right:  1em;
+    padding-bottom: 2px;
+    white-space:    nowrap;
+}
+div#cgit table#header td.form form,
+div#cgit table#header td.form input,
+div#cgit table#header td.form select {
+    font-size: 90%;
+}
+div#cgit table#header td.sub {
+    color:        var(--main-color);
+    border-top:   solid 1px var(--main-color);
+    padding-left: 10px;
+}
+
+div#cgit table.tabs {
+    border-bottom:   solid 3px var(--main-color);
+    border-collapse: collapse;
+    margin-top:      2em;
+    margin-bottom:   0px;
+    width:           100%;
+}
+div#cgit table.tabs td {
+    padding:        0px 1em;
+    vertical-align: bottom;
+}
+div#cgit table.tabs td a {
+    padding:   2px 0.75em;
+    color:     var(--main-color);
+    font-size: 110%;
+}
+div#cgit table.tabs td a:hover {
+    color: purple;
+}
+div#cgit table.tabs td a.active {
+    color:            var(--background-color);
+    background-color: var(--main-color);
+}
+div#cgit table.tabs td a.active:hover {
+    color: purple;
+}
+div#cgit table.tabs a[href^="http://"]:after, div#cgit table.tabs a[href^="https://"]:after {}
+div#cgit table.tabs td.form {
+    text-align: right;
+}
+div#cgit table.tabs td.form form {
+    padding-bottom: 2px;
+    font-size:      90%;
+    white-space:    nowrap;
+}
+div#cgit table.tabs td.form input,
+div#cgit table.tabs td.form select {
+    font-size: 90%;
+}
+
+div#cgit div.path {
+    margin:           0px;
+    padding:          5px 2em 2px 2em;
+    color:            var(--background-color);
+    background-color: yellowgreen;
+}
+
+div#cgit div.content {
+    margin:  0px;
+    padding: 2em;
+}
+
+div#cgit table.list {
+    width:           100%;
+    border:          none;
+    border-collapse: collapse;
+}
+
+div#cgit table.list tr           {}
+div#cgit table.list tr.logheader {}
+div#cgit table.list tr:nth-child(even) {
+    background: yellowgreen;
+}
+div#cgit table.list tr:nth-child(odd) {
+    background: var(--main-color);
+}
+div#cgit table.list tr:hover {
+    background: cyan;
+}
+div#cgit table.list tr.nohover {
+    background: green;
+}
+div#cgit table.list tr.nohover a {
+    color: var(--main-color);
+}
+div#cgit table.list tr.nohover a:hover {
+    color: purple;
+}
+div#cgit table.list tr.nohover:hover                           {}
+div#cgit table.list tr.nohover-highlight:hover:nth-child(even) {}
+div#cgit table.list tr.nohover-highlight:hover:nth-child(odd)  {}
+div#cgit table.list th {
+    font-weight:    bold;
+    padding:        0.1em 0.5em 0.05em 0.5em;
+    vertical-align: baseline;
+}
+div#cgit table.list td {
+    border:  none;
+    padding: 0.1em 0.5em 0.1em 0.5em;
+}
+div#cgit table.list td.reposection {
+    font-style: italic;
+    color:      red;
+}
+div#cgit table.list td.sublevel-repo {
+    padding-left: 1.5em;
+}
+
+div#cgit table.list td.commitgraph {
+    white-space: pre;
+}
+/* TODO */
+div#cgit table.list td.commitgraph .column1 {
+    color: #a00;
+}
+/* TODO */
+div#cgit table.list td.commitgraph .column2 {
+    color: #0a0;
+}
+/* TODO */
+div#cgit table.list td.commitgraph .column3 {
+    color: #aa0;
+}
+/* TODO */
+div#cgit table.list td.commitgraph .column4 {
+    color: #00a;
+}
+/* TODO */
+div#cgit table.list td.commitgraph .column5 {
+    color: #a0a;
+}
+/* TODO */
+div#cgit table.list td.commitgraph .column6 {
+    color: #0aa;
+}
+
+div#cgit table.list td.logsubject {
+    font-weight: bold;
+}
+div#cgit table.list td.logmsg {
+    white-space: pre;
+    padding:     0 0.5em;
+}
+
+div#cgit table.list td a {
+    color: var(--background-color);
+}
+div#cgit table.list td a.ls-dir {
+    font-weight: bold;
+    color:       blue;
+}
+div#cgit table.list td a:hover {
+    color: purple;
+}
+
+div#cgit img {
+    border: none;
+}
+
+div#cgit input#switch-btn {
+    margin: 2px 0px 0px 0px;
+}
+
+div#cgit td#sidebar input.txt {
+    width:  100%;
+    margin: 2px 0px 0px 0px;
+}
+
+div#cgit table#grid {
+    margin: 0px;
+}
+
+div#cgit td#content {
+    vertical-align: top;
+    padding:        1em 2em 1em 1em;
+    border:         none;
+}
+div#cgit div#summary {
+    vertical-align: top;
+    margin-bottom:  1em;
+}
+
+/* Unused */
+/*div#cgit table#downloads {}
+div#cgit table#downloads th {}*/
+
+/* TODO */
+div#cgit div#blob {
+    border: solid 10px red;
+}
+
+div#cgit div.error {
+    color:       red;
+    font-weight: bold;
+    margin:      1em 2em;
+}
+
+div#cgit a.ls-blob, div#cgit a.ls-dir, div#cgit .ls-mod {}
+div#cgit td.ls-size {
+    text-align: right;
+    width:      10em;
+}
+div#cgit td.ls-mode {
+    width: 10em;
+}
+
+div#cgit table.blob {
+    margin-top: 0.5em;
+    border-top: solid 1px var(--main-color);
+}
+div#cgit table.blob td.hashes,
+div#cgit table.blob td.lines {
+    margin:         0;
+    padding:        0 0 0 0.5em;
+    vertical-align: top;
+    color:          var(--main-color);
+}
+div#cgit table.blob td.linenumbers {
+    margin:         0;
+    padding:        0 0.5em 0 0.5em;
+    vertical-align: top;
+    text-align:     right;
+    border-right:   1px solid var(--main-color);
+}
+div#cgit table.blob pre {
+    padding: 0;
+    margin:  0;
+}
+div#cgit table.blob td.linenumbers a,
+div#cgit table.ssdiff td.lineno a {
+    color:           var(--main-color);
+    text-align:      right;
+    text-decoration: none;
+}
+div#cgit table.blob td.linenumbers a:hover,
+div#cgit table.ssdiff td.lineno a:hover {
+    color: purple;
+}
+
+/* Unused */
+/*div#cgit table.blame td.hashes,
+div#cgit table.blame td.lines,
+div#cgit table.blame td.linenumbers {
+    padding: 0;
+}
+div#cgit table.blame td.hashes div.alt,
+div#cgit table.blame td.lines div.alt {
+    padding: 0 0.5em 0 0.5em;
+}
+div#cgit table.blame td.linenumbers div.alt {
+    padding: 0 0.5em 0 0;
+}
+div#cgit table.blame div.alt:nth-child(even) {
+    background: #eee;
+}
+div#cgit table.blame div.alt:nth-child(odd) {
+    background: white;
+}
+div#cgit table.blame td.lines > div {
+    position: relative;
+}
+div#cgit table.blame td.lines > div > pre {
+    padding:  0 0 0 0.5em;
+    position: absolute;
+    top:      0;
+}*/
+
+div#cgit table.bin-blob {
+    margin-top: 0.5em;
+    border:     solid 1px var(--main-color);
+}
+div#cgit table.bin-blob th {
+    white-space: pre;
+    border:      solid 1px var(--main-color);
+    padding:     0.5em 1em;
+}
+div#cgit table.bin-blob td {
+    white-space: pre;
+    border-left: solid 1px var(--main-color);
+    padding:     0em 1em;
+}
+
+div#cgit table.nowrap td {
+    white-space: nowrap;
+}
+
+div#cgit div.cgit-panel {
+    float:      right;
+    margin-top: 1.5em;
+}
+div#cgit div.cgit-panel table {
+    color:            var(--background-color);
+    background-color: var(--main-color);
+}
+div#cgit div.cgit-panel th {
+    text-align: center;
+}
+div#cgit div.cgit-panel td {
+    padding: 0.25em 0.5em;
+}
+div#cgit div.cgit-panel td.label {
+    padding-right: 0.5em;
+}
+div#cgit div.cgit-panel td.ctrl {
+    padding-left: 0.5em;
+}
+
+div#cgit table.commit-info {
+    border-collapse: collapse;
+    margin-top:      1.5em;
+}
+div#cgit table.commit-info th {
+    text-align:     left;
+    font-weight:    normal;
+    padding:        0.1em 1em 0.1em 0.1em;
+    vertical-align: top;
+}
+div#cgit table.commit-info td {
+    font-weight: normal;
+    padding:     0.1em 1em 0.1em 0.1em;
+}
+div#cgit div.commit-subject {
+    font-weight: bold;
+    font-size:   125%;
+    margin:      1.5em 0em 0.5em 0em;
+    padding:     0em;
+}
+div#cgit div.commit-msg {
+    white-space: pre;
+}
+
+/* TODO */
+div#cgit div.notes-header {
+    font-weight: bold;
+    padding-top: 1.5em;
+}
+/* TODO */
+div#cgit div.notes {
+    white-space: pre;
+    font-family: monospace;
+    border: solid 1px #EE9;
+    background-color: #FFd;
+    padding: 0.3em 2em 0.3em 1em;
+    float: left;
+}
+/* TODO */
+div#cgit div.notes-footer {
+    clear: left;
+}
+
+div#cgit div.diffstat-header {
+    font-weight: bold;
+    padding-top: 1.5em;
+    color:       var(--main-color);
+}
+div#cgit table.diffstat {
+    background-color: var(--main-color);
+    color:            var(--background-color);
+}
+div#cgit table.diffstat th {
+    font-weight:     normal;
+    text-align:      left;
+    text-decoration: underline;
+    padding:         0.1em 1em 0.1em 0.1em;
+    font-size:       100%;
+}
+div#cgit table.diffstat td {
+    padding:   0.2em 0.2em 0.1em 0.1em;
+    font-size: 100%;
+}
+div#cgit table.diffstat td.mode {
+    white-space: nowrap;
+}
+div#cgit table.diffstat td span.modechange {
+    padding-left: 1em;
+    color:        blue;
+}
+div#cgit table.diffstat td.add a {
+    color: green;
+}
+div#cgit table.diffstat td.del a {
+    color: red;
+}
+div#cgit table.diffstat td.upd a {
+    color: blue;
+}
+
+div#cgit table.diffstat td.graph {
+    width:          500px;
+    vertical-align: middle;
+}
+div#cgit table.diffstat td.graph table {
+    border: none;
+}
+div#cgit table.diffstat td.graph td {
+    padding: 0px;
+    border:  0px;
+    height:  7pt;
+}
+div#cgit table.diffstat td.graph td.add {
+    background-color: #5C5;
+}
+div#cgit table.diffstat td.graph td.rem {
+    background-color: #C55;
+}
+
+div#cgit div.diffstat-summary {
+    color:       var(--main-color);
+    padding-top: 0.5em;
+}
+
+/* TODO */
+div#cgit table.diff {
+    width: 100%;
+}
+div#cgit table.diff td {
+    white-space: pre;
+}
+div#cgit table.diff td div.head {
+    font-weight: bold;
+    margin-top:  1em;
+    color:       greenyellow;
+}
+div#cgit table.diff td div.hunk {
+    color: #009;
+}
+div#cgit table.diff td div.add {
+    color: green;
+}
+div#cgit table.diff td div.del {
+    color: red;
+}
+
+div#cgit .sha1 {
+    font-size: 90%;
+}
+
+div#cgit .left {
+    text-align: left;
+}
+div#cgit .right {
+    text-align: right;
+}
+
+
+div#cgit a.button {
+    font-size: 80%;
+    padding:   0em 0.5em;
+}
+div#cgit a.primary {
+    font-size: 100%;
+}
+div#cgit a.secondary {
+    font-size: 90%;
+}
+
+div#cgit td.toplevel-repo {}
+
+
+div#cgit ul.pager {
+    list-style-type: none;
+    text-align:      center;
+    margin:          1em 0em 0em 0em;
+    padding:         0;
+}
+div#cgit ul.pager li {
+    display: inline-block;
+    margin:  0.25em 0.5em;
+}
+div#cgit ul.pager a {
+    color: blue;
+}
+div#cgit ul.pager a:hover {
+    color: purple;
+}
+div#cgit ul.pager .current {
+    font-weight: bold;
+}
+
+div#cgit span.age-mins {
+    font-weight: bold;
+    color: #F00;
+}
+div#cgit span.age-hours {
+    color: #C03;
+}
+div#cgit span.age-days {
+    color: #906;
+}
+div#cgit span.age-weeks {
+    color: #609;
+}
+div#cgit span.age-months {
+    color: #30C;
+}
+div#cgit span.age-years {
+    color: #00F;
+}
+
+div#cgit span.insertions {
+    color: #080;
+}
+div#cgit span.deletions {
+    color: #800;
+}
+
+/* TODO */
+div#cgit div.footer {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 80%;
+    color: #ccc;
+}
+
+/* TODO */
+div#cgit div.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* TODO */
+div#cgit div.footer a:hover {
+    text-decoration: underline;
+}
+
+/* TODO */
+div#cgit a.branch-deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #88ff88;
+    border: solid 1px #007700;
+}
+
+/* TODO */
+div#cgit a.tag-deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #ffff88;
+    border: solid 1px #777700;
+}
+
+/* TODO */
+div#cgit a.tag-annotated-deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #ffcc88;
+    border: solid 1px #777700;
+}
+
+/* TODO */
+div#cgit a.remote-deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #ccccff;
+    border: solid 1px #000077;
+}
+
+/* TODO */
+div#cgit a.deco {
+    color: #000;
+    margin: 0px 0.5em;
+    padding: 0px 0.25em;
+    background-color: #ff8888;
+    border: solid 1px #770000;
+}
+
+/* TODO */
+div#cgit div.commit-subject a.branch-deco,
+div#cgit div.commit-subject a.tag-deco,
+div#cgit div.commit-subject a.tag-annotated-deco,
+div#cgit div.commit-subject a.remote-deco,
+div#cgit div.commit-subject a.deco {
+    margin-left: 1em;
+    font-size: 75%;
+}
+
+/* TODO */
+div#cgit table.stats {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+/* TODO */
+div#cgit table.stats th {
+    text-align: left;
+    padding: 1px 0.5em;
+    background-color: #eee;
+    border: solid 1px black;
+}
+
+/* TODO */
+div#cgit table.stats td {
+    text-align: right;
+    padding: 1px 0.5em;
+    border: solid 1px black;
+}
+
+/* TODO */
+div#cgit table.stats td.total {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* TODO */
+div#cgit table.stats td.sum {
+    color: #c00;
+    font-weight: bold;
+/*	background-color: #eee; */
+}
+
+/* TODO */
+div#cgit table.stats td.left {
+    text-align: left;
+}
+
+/* TODO */
+div#cgit table.vgraph {
+    border-collapse: separate;
+    border: solid 1px black;
+    height: 200px;
+}
+
+/* TODO */
+div#cgit table.vgraph th {
+    background-color: #eee;
+    font-weight: bold;
+    border: solid 1px white;
+    padding: 1px 0.5em;
+}
+
+/* TODO */
+div#cgit table.vgraph td {
+    vertical-align: bottom;
+    padding: 0px 10px;
+}
+
+/* TODO */
+div#cgit table.vgraph div.bar {
+    background-color: #eee;
+}
+
+/* TODO */
+div#cgit table.hgraph {
+    border: solid 1px black;
+    width: 800px;
+}
+
+/* TODO */
+div#cgit table.hgraph th {
+    background-color: #eee;
+    font-weight: bold;
+    border: solid 1px black;
+    padding: 1px 0.5em;
+}
+
+/* TODO */
+div#cgit table.hgraph td {
+    vertical-align: middle;
+    padding: 2px 2px;
+}
+
+/* TODO */
+div#cgit table.hgraph div.bar {
+    background-color: #eee;
+    height: 1em;
+}
+
+/* TODO */
+div#cgit table.ssdiff {
+    width: 100%;
+}
+
+/* TODO */
+div#cgit table.ssdiff td {
+    font-size: 75%;
+    font-family: monospace;
+    white-space: pre;
+    padding: 1px 4px 1px 4px;
+    border-left: solid 1px #aaa;
+    border-right: solid 1px #aaa;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.add {
+    color: black;
+    background: #cfc;
+    min-width: 50%;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.add_dark {
+    color: black;
+    background: #aca;
+    min-width: 50%;
+}
+
+/* TODO */
+div#cgit table.ssdiff span.add {
+    background: #cfc;
+    font-weight: bold;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.del {
+    color: black;
+    background: #fcc;
+    min-width: 50%;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.del_dark {
+    color: black;
+    background: #caa;
+    min-width: 50%;
+}
+
+/* TODO */
+div#cgit table.ssdiff span.del {
+    background: #fcc;
+    font-weight: bold;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.changed {
+    color: black;
+    background: #ffc;
+    min-width: 50%;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.changed_dark {
+    color: black;
+    background: #cca;
+    min-width: 50%;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.lineno {
+    color: black;
+    background: #eee;
+    text-align: right;
+    width: 3em;
+    min-width: 3em;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.hunk {
+    color: black;
+    background: #ccf;
+    border-top: solid 1px #aaa;
+    border-bottom: solid 1px #aaa;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.head {
+    border-top: solid 1px #aaa;
+    border-bottom: solid 1px #aaa;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.head div.head {
+    font-weight: bold;
+    color: black;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.foot {
+    border-top: solid 1px #aaa;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.space {
+    border: none;
+}
+
+/* TODO */
+div#cgit table.ssdiff td.space div {
+    min-height: 3em;
+}
+
+
+
+/* Cool CRT effects from https://aleclownes.com/2017/02/01/crt-display.html */
+
+/* Adds color seperation effect to text. */
+body {
+    animation: textShadow 1.6s infinite;
+}
+@keyframes textShadow {
+  0%   { text-shadow: 0.215px 0 1px rgba(0,30,255,0.5), -0.215px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  5%   { text-shadow: 1.395px 0 1px rgba(0,30,255,0.5), -1.395px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  10%  { text-shadow: 0.015px 0 1px rgba(0,30,255,0.5), -0.015px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  15%  { text-shadow: 0.2px   0 1px rgba(0,30,255,0.5), -0.2px   0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  20%  { text-shadow: 1.74px  0 1px rgba(0,30,255,0.5), -1.74px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  25%  { text-shadow: 0.805px 0 1px rgba(0,30,255,0.5), -0.805px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  30%  { text-shadow: 0.35px  0 1px rgba(0,30,255,0.5), -0.35px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  35%  { text-shadow: 1.945px 0 1px rgba(0,30,255,0.5), -1.945px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  40%  { text-shadow: 1.935px 0 1px rgba(0,30,255,0.5), -1.935px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  45%  { text-shadow: 1.115px 0 1px rgba(0,30,255,0.5), -1.115px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  50%  { text-shadow: 0.04px  0 1px rgba(0,30,255,0.5), -0.04px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  55%  { text-shadow: 1.19px  0 1px rgba(0,30,255,0.5), -1.19px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  60%  { text-shadow: 1.1px   0 1px rgba(0,30,255,0.5), -1.1px   0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  65%  { text-shadow: 1.43px  0 1px rgba(0,30,255,0.5), -1.43px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  70%  { text-shadow: 0.24px  0 1px rgba(0,30,255,0.5), -0.24px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  75%  { text-shadow: 0.945px 0 1px rgba(0,30,255,0.5), -0.945px 0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  80%  { text-shadow: 0.04px  0 1px rgba(0,30,255,0.5), -0.04px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  85%  { text-shadow: 0.05px  0 1px rgba(0,30,255,0.5), -0.05px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  90%  { text-shadow: 1.72px  0 1px rgba(0,30,255,0.5), -1.72px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  95%  { text-shadow: 1.09px  0 1px rgba(0,30,255,0.5), -1.09px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+  100% { text-shadow: 1.31px  0 1px rgba(0,30,255,0.5), -1.31px  0 1px rgba(255,0,80,0.3), 0 0 3px; }
+}
+
+/* Applies "Screen-Door" effect for scanlines and big pixels. */
+body::before {
+  content:  " ";
+  display:  block;
+  position: fixed;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+
+  background:      linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%)
+                 , linear-gradient( 90deg
+                                  , rgba(255,0,0,0.06)
+                                  , rgba(0,255,0,0.02)
+                                  , rgba(0,0,255,0.06));
+  background-size: 100% 2px, 3px 100%;
+  z-index:         2;
+
+  pointer-events: none;
+}
+
+/* Makes screen flicker. */
+body::after {
+  content:  " ";
+  display:  block;
+  position: fixed;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+
+  background: rgba(18, 16, 16, 0.1);
+  opacity:    0;
+  animation:  flicker 0.3s infinite;
+  z-index:    2;
+
+  pointer-events: none;
+}
+@keyframes flicker {
+  0%   { opacity: 0.27861; }
+  5%   { opacity: 0.34769; }
+  10%  { opacity: 0.23604; }
+  15%  { opacity: 0.90626; }
+  20%  { opacity: 0.18128; }
+  25%  { opacity: 0.83891; }
+  30%  { opacity: 0.65583; }
+  35%  { opacity: 0.67807; }
+  40%  { opacity: 0.26559; }
+  45%  { opacity: 0.84693; }
+  50%  { opacity: 0.96019; }
+  55%  { opacity: 0.08594; }
+  60%  { opacity: 0.20313; }
+  65%  { opacity: 0.71988; }
+  70%  { opacity: 0.53455; }
+  75%  { opacity: 0.37288; }
+  80%  { opacity: 0.71428; }
+  85%  { opacity: 0.70419; }
+  90%  { opacity: 0.7003;  }
+  95%  { opacity: 0.36108; }
+  100% { opacity: 0.24387; }
+}

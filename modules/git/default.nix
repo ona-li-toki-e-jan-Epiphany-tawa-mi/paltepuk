@@ -283,7 +283,7 @@ in
       # Converts the README files to HTML for display.
       about-filter = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
       # Fixes fetching of files under virtual root.
-      css  = "/cgit/cgit.css";
+      css  = "/cgit/cgit-custom.css";
       logo = "/cgit/cgit.jpg";
       # Makes logo point to site homepage.
       logo-link = "/";
@@ -319,7 +319,11 @@ in
       port = ports.cgit;
     }];
 
-    # Sets logo.
-    locations."= /cgit/cgit.jpg".alias = ./cgit-logo.jpg;
+    locations = {
+      # Sets custom logo.
+      "= /cgit/cgit.jpg".alias = ./cgit-logo.jpg;
+      # Sets custom CSS.
+      "= /cgit/cgit-custom.css".alias = ./cgit.css;
+    };
   };
 }
