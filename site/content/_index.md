@@ -17,7 +17,7 @@ Web button: ![](/buttons/paltepuk.gif) (feel free to use){{< br >}}
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
 My baller personal website
-{{< command-line  >}}etemology -v paltepuk{{< /command-line >}}
+{{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
 pal - building, tep - person, uk - my.{{< br >}}
 paltep - person building, house.{{< br >}}
