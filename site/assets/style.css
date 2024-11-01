@@ -1,9 +1,9 @@
-/* Color scheme. */
-
 body {
-    font-family: sans-serif;
-    background:  black;
-    color:       greenyellow;
+    font-family: monospace;
+    font-size:   12pt;
+
+    background: black;
+    color:      greenyellow;
 }
 
 a:link {
