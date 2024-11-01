@@ -35,7 +35,7 @@ description         = 'external links to my other profiles/websites/servers/etc.
 For information on what in tarnation a "netcatchat server" is, take a look at
 the `netcatchat.git` repository on my cgit instance:
 
-[/cgit/netcatchat.git](/cgit/netcatchat.git)
+[/cgit/netcatchat.git/about](/cgit/netcatchat.git/about)
 
 Or the `netcatchat` repository on my GitHub account:
 
