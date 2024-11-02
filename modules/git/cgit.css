@@ -2,25 +2,28 @@
 
 
 
-/* Global link color scheme. */
-
-a:link {
-    color: blue;
-}
-a:hover {
-    color: purple;
-}
-a:visited {
-    color: darkblue;
-}
-
-
-
 /* Modified from cgit's default CSS. */
 
 :root {
     --background-color: black;
     --main-color:       greenyellow;
+    --link-color:       blue;
+    --link-hover-color: purple;
+}
+
+a:link {
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--link-hover-color);
+}
+
+input,
+select {
+    color:            var(--background-color);
+    background-color: var(--main-color);
+    border-radius:    0;
+    border:           none;
 }
 
 div#cgit {
@@ -58,7 +61,7 @@ div#cgit table#header td.main a {
     color: var(--main-color);
 }
 div#cgit table#header td.main a:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
 div#cgit table#header td.form {
     text-align:     right;
@@ -70,7 +73,7 @@ div#cgit table#header td.form {
 div#cgit table#header td.form form,
 div#cgit table#header td.form input,
 div#cgit table#header td.form select {
-    font-size: 90%;
+    font-size:        90%;
 }
 div#cgit table#header td.sub {
     color:        var(--main-color);
@@ -95,16 +98,15 @@ div#cgit table.tabs td a {
     font-size: 110%;
 }
 div#cgit table.tabs td a:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
 div#cgit table.tabs td a.active {
     color:            var(--background-color);
     background-color: var(--main-color);
 }
 div#cgit table.tabs td a.active:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
-div#cgit table.tabs a[href^="http://"]:after, div#cgit table.tabs a[href^="https://"]:after {}
 div#cgit table.tabs td.form {
     text-align: right;
 }
@@ -136,8 +138,6 @@ div#cgit table.list {
     border-collapse: collapse;
 }
 
-div#cgit table.list tr           {}
-div#cgit table.list tr.logheader {}
 div#cgit table.list tr:nth-child(even) {
     background: yellowgreen;
 }
@@ -154,11 +154,8 @@ div#cgit table.list tr.nohover a {
     color: var(--main-color);
 }
 div#cgit table.list tr.nohover a:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
-div#cgit table.list tr.nohover:hover                           {}
-div#cgit table.list tr.nohover-highlight:hover:nth-child(even) {}
-div#cgit table.list tr.nohover-highlight:hover:nth-child(odd)  {}
 div#cgit table.list th {
     font-weight:    bold;
     padding:        0.1em 0.5em 0.05em 0.5em;
@@ -175,33 +172,34 @@ div#cgit table.list td.reposection {
 div#cgit table.list td.sublevel-repo {
     padding-left: 1.5em;
 }
+div#cgit table.list td span {
+    color: var(--background-color);
+}
+div#cgit table.nowrap td {
+    color: var(--background-color);
+}
 
 div#cgit table.list td.commitgraph {
     white-space: pre;
+    color:       var(--background-color);
 }
-/* TODO */
 div#cgit table.list td.commitgraph .column1 {
-    color: #a00;
+    color: #0000FF;
 }
-/* TODO */
 div#cgit table.list td.commitgraph .column2 {
-    color: #0a0;
+    color: #3300CC;
 }
-/* TODO */
 div#cgit table.list td.commitgraph .column3 {
-    color: #aa0;
+    color: #660099;
 }
-/* TODO */
 div#cgit table.list td.commitgraph .column4 {
-    color: #00a;
+    color: #990066;
 }
-/* TODO */
 div#cgit table.list td.commitgraph .column5 {
-    color: #a0a;
+    color: #CC0033;
 }
-/* TODO */
 div#cgit table.list td.commitgraph .column6 {
-    color: #0aa;
+    color: #FF0000;
 }
 
 div#cgit table.list td.logsubject {
@@ -215,12 +213,12 @@ div#cgit table.list td.logmsg {
 div#cgit table.list td a {
     color: var(--background-color);
 }
+div#cgit table.list td a:hover {
+    color: var(--link-hover-color);
+}
 div#cgit table.list td a.ls-dir {
     font-weight: bold;
-    color:       blue;
-}
-div#cgit table.list td a:hover {
-    color: purple;
+    color:       var(--link-color);
 }
 
 div#cgit img {
@@ -250,28 +248,19 @@ div#cgit div#summary {
     margin-bottom:  1em;
 }
 
-/* Unused */
-/*div#cgit table#downloads {}
-div#cgit table#downloads th {}*/
-
-/* TODO */
-div#cgit div#blob {
-    border: solid 10px red;
-}
-
 div#cgit div.error {
     color:       red;
     font-weight: bold;
     margin:      1em 2em;
 }
 
-div#cgit a.ls-blob, div#cgit a.ls-dir, div#cgit .ls-mod {}
 div#cgit td.ls-size {
     text-align: right;
-    width:      10em;
 }
-div#cgit td.ls-mode {
+div#cgit td.ls-mode,
+div#cgit td.ls-size {
     width: 10em;
+    color: var(--background-color);
 }
 
 div#cgit table.blob {
@@ -304,36 +293,8 @@ div#cgit table.ssdiff td.lineno a {
 }
 div#cgit table.blob td.linenumbers a:hover,
 div#cgit table.ssdiff td.lineno a:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
-
-/* Unused */
-/*div#cgit table.blame td.hashes,
-div#cgit table.blame td.lines,
-div#cgit table.blame td.linenumbers {
-    padding: 0;
-}
-div#cgit table.blame td.hashes div.alt,
-div#cgit table.blame td.lines div.alt {
-    padding: 0 0.5em 0 0.5em;
-}
-div#cgit table.blame td.linenumbers div.alt {
-    padding: 0 0.5em 0 0;
-}
-div#cgit table.blame div.alt:nth-child(even) {
-    background: #eee;
-}
-div#cgit table.blame div.alt:nth-child(odd) {
-    background: white;
-}
-div#cgit table.blame td.lines > div {
-    position: relative;
-}
-div#cgit table.blame td.lines > div > pre {
-    padding:  0 0 0 0.5em;
-    position: absolute;
-    top:      0;
-}*/
 
 div#cgit table.bin-blob {
     margin-top: 0.5em;
@@ -374,6 +335,11 @@ div#cgit div.cgit-panel td.label {
 div#cgit div.cgit-panel td.ctrl {
     padding-left: 0.5em;
 }
+div#cgit div.cgit-panel input,
+div#cgit div.cgit-panel select {
+    color:            var(--main-color);
+    background-color: var(--background-color);
+}
 
 div#cgit table.commit-info {
     border-collapse: collapse;
@@ -399,29 +365,15 @@ div#cgit div.commit-msg {
     white-space: pre;
 }
 
-/* TODO */
-div#cgit div.notes-header {
-    font-weight: bold;
-    padding-top: 1.5em;
-}
-/* TODO */
-div#cgit div.notes {
-    white-space: pre;
-    font-family: monospace;
-    border: solid 1px #EE9;
-    background-color: #FFd;
-    padding: 0.3em 2em 0.3em 1em;
-    float: left;
-}
-/* TODO */
-div#cgit div.notes-footer {
-    clear: left;
-}
-
 div#cgit div.diffstat-header {
     font-weight: bold;
     padding-top: 1.5em;
-    color:       var(--main-color);
+}
+div#cgit div.diffstat-header a {
+    color: var(--main-color);
+}
+div#cgit div.diffstat-header a:hover {
+    color: var(--link-hover-color);
 }
 div#cgit table.diffstat {
     background-color: var(--main-color);
@@ -479,7 +431,6 @@ div#cgit div.diffstat-summary {
     padding-top: 0.5em;
 }
 
-/* TODO */
 div#cgit table.diff {
     width: 100%;
 }
@@ -489,7 +440,7 @@ div#cgit table.diff td {
 div#cgit table.diff td div.head {
     font-weight: bold;
     margin-top:  1em;
-    color:       greenyellow;
+    color:       var(--main-color);
 }
 div#cgit table.diff td div.hunk {
     color: #009;
@@ -512,7 +463,6 @@ div#cgit .right {
     text-align: right;
 }
 
-
 div#cgit a.button {
     font-size: 80%;
     padding:   0em 0.5em;
@@ -523,9 +473,6 @@ div#cgit a.primary {
 div#cgit a.secondary {
     font-size: 90%;
 }
-
-div#cgit td.toplevel-repo {}
-
 
 div#cgit ul.pager {
     list-style-type: none;
@@ -538,33 +485,13 @@ div#cgit ul.pager li {
     margin:  0.25em 0.5em;
 }
 div#cgit ul.pager a {
-    color: blue;
+    color: var(--link-color);
 }
 div#cgit ul.pager a:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
 div#cgit ul.pager .current {
     font-weight: bold;
-}
-
-div#cgit span.age-mins {
-    font-weight: bold;
-    color: #F00;
-}
-div#cgit span.age-hours {
-    color: #C03;
-}
-div#cgit span.age-days {
-    color: #906;
-}
-div#cgit span.age-weeks {
-    color: #609;
-}
-div#cgit span.age-months {
-    color: #30C;
-}
-div#cgit span.age-years {
-    color: #00F;
 }
 
 div#cgit span.insertions {
@@ -581,280 +508,208 @@ div#cgit div.footer {
     font-size: 80%;
     color: #ccc;
 }
-
 /* TODO */
 div#cgit div.footer a {
     color: #ccc;
     text-decoration: none;
 }
-
 /* TODO */
 div#cgit div.footer a:hover {
     text-decoration: underline;
 }
 
-/* TODO */
 div#cgit a.branch-deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #88ff88;
-    border: solid 1px #007700;
+    color:            #000;
+    margin:           0px 0.5em;
+    padding:          0px 0.25em;
+    background-color: #88FF88;
+    border:           solid 1px #007700;
 }
-
-/* TODO */
 div#cgit a.tag-deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #ffff88;
-    border: solid 1px #777700;
+    color:            #000;
+    margin:           0px 0.5em;
+    padding:          0px 0.25em;
+    background-color: #FFFF88;
+    border:           solid 1px #777700;
 }
-
-/* TODO */
 div#cgit a.tag-annotated-deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #ffcc88;
-    border: solid 1px #777700;
+    color:            #000;
+    margin:           0px 0.5em;
+    padding:          0px 0.25em;
+    background-color: #FFCC88;
+    border:           solid 1px #777700;
 }
-
-/* TODO */
 div#cgit a.remote-deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #ccccff;
-    border: solid 1px #000077;
+    color:            #000;
+    margin:           0px 0.5em;
+    padding:          0px 0.25em;
+    background-color: #CCCCFF;
+    border:           solid 1px #000077;
 }
-
-/* TODO */
 div#cgit a.deco {
-    color: #000;
-    margin: 0px 0.5em;
-    padding: 0px 0.25em;
-    background-color: #ff8888;
-    border: solid 1px #770000;
+    color:            #000;
+    margin:           0px 0.5em;
+    padding:          0px 0.25em;
+    background-color: #FF8888;
+    border:           solid 1px #770000;
 }
-
-/* TODO */
 div#cgit div.commit-subject a.branch-deco,
 div#cgit div.commit-subject a.tag-deco,
 div#cgit div.commit-subject a.tag-annotated-deco,
 div#cgit div.commit-subject a.remote-deco,
 div#cgit div.commit-subject a.deco {
     margin-left: 1em;
-    font-size: 75%;
+    font-size:   75%;
 }
 
-/* TODO */
-div#cgit table.stats {
-    border: solid 1px black;
-    border-collapse: collapse;
-}
-
-/* TODO */
-div#cgit table.stats th {
-    text-align: left;
-    padding: 1px 0.5em;
-    background-color: #eee;
-    border: solid 1px black;
-}
-
-/* TODO */
-div#cgit table.stats td {
-    text-align: right;
-    padding: 1px 0.5em;
-    border: solid 1px black;
-}
-
-/* TODO */
-div#cgit table.stats td.total {
-    font-weight: bold;
-    text-align: left;
-}
-
-/* TODO */
-div#cgit table.stats td.sum {
-    color: #c00;
-    font-weight: bold;
-/*	background-color: #eee; */
-}
-
-/* TODO */
-div#cgit table.stats td.left {
-    text-align: left;
-}
-
-/* TODO */
-div#cgit table.vgraph {
-    border-collapse: separate;
-    border: solid 1px black;
-    height: 200px;
-}
-
-/* TODO */
-div#cgit table.vgraph th {
-    background-color: #eee;
-    font-weight: bold;
-    border: solid 1px white;
-    padding: 1px 0.5em;
-}
-
-/* TODO */
-div#cgit table.vgraph td {
-    vertical-align: bottom;
-    padding: 0px 10px;
-}
-
-/* TODO */
-div#cgit table.vgraph div.bar {
-    background-color: #eee;
-}
-
-/* TODO */
-div#cgit table.hgraph {
-    border: solid 1px black;
-    width: 800px;
-}
-
-/* TODO */
-div#cgit table.hgraph th {
-    background-color: #eee;
-    font-weight: bold;
-    border: solid 1px black;
-    padding: 1px 0.5em;
-}
-
-/* TODO */
-div#cgit table.hgraph td {
-    vertical-align: middle;
-    padding: 2px 2px;
-}
-
-/* TODO */
-div#cgit table.hgraph div.bar {
-    background-color: #eee;
-    height: 1em;
-}
-
-/* TODO */
 div#cgit table.ssdiff {
     width: 100%;
 }
-
-/* TODO */
 div#cgit table.ssdiff td {
-    font-size: 75%;
-    font-family: monospace;
-    white-space: pre;
-    padding: 1px 4px 1px 4px;
-    border-left: solid 1px #aaa;
-    border-right: solid 1px #aaa;
+    font-size:    75%;
+    white-space:  pre;
+    padding:      1px 4px 1px 4px;
+    border-left:  solid 1px var(--main-color);
+    border-right: solid 1px var(--main-color);
 }
-
-/* TODO */
 div#cgit table.ssdiff td.add {
-    color: black;
-    background: #cfc;
-    min-width: 50%;
+    color:      var(--background-color);
+    background: #5C5;
+    min-width:  50%;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.add_dark {
-    color: black;
-    background: #aca;
-    min-width: 50%;
+    color:      var(--background-color);
+    background: #4B4;
+    min-width:  50%;
 }
-
-/* TODO */
 div#cgit table.ssdiff span.add {
-    background: #cfc;
+    background:  #5C5;
     font-weight: bold;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.del {
-    color: black;
-    background: #fcc;
-    min-width: 50%;
+    color:      var(--background-color);
+    background: #C55;
+    min-width:  50%;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.del_dark {
-    color: black;
-    background: #caa;
-    min-width: 50%;
+    color:      var(--background-color);
+    background: #B44;
+    min-width:  50%;
 }
-
-/* TODO */
 div#cgit table.ssdiff span.del {
-    background: #fcc;
+    background:  #C55;
     font-weight: bold;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.changed {
-    color: black;
-    background: #ffc;
-    min-width: 50%;
+    color:      var(--background-color);
+    background: #5D5;
+    min-width:  50%;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.changed_dark {
-    color: black;
-    background: #cca;
-    min-width: 50%;
+    color:      var(--background-color);
+    background: #4C4;
+    min-width:  50%;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.lineno {
-    color: black;
-    background: #eee;
+    background: var(--background-color);
     text-align: right;
-    width: 3em;
-    min-width: 3em;
+    width:      3em;
+    min-width:  3em;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.hunk {
-    color: black;
-    background: #ccf;
-    border-top: solid 1px #aaa;
-    border-bottom: solid 1px #aaa;
+    color:         var(--background-color);
+    background:    lightgreen;
+    border-top:    solid 1px var(--main-color);
+    border-bottom: solid 1px var(--main-color);
 }
-
-/* TODO */
 div#cgit table.ssdiff td.head {
-    border-top: solid 1px #aaa;
-    border-bottom: solid 1px #aaa;
+    border-top:    solid 1px var(--main-color);
+    border-bottom: solid 1px var(--main-color);
 }
-
-/* TODO */
 div#cgit table.ssdiff td.head div.head {
-    font-weight: bold;
-    color: black;
+    font-weight:      bold;
+    background-color: var(--main-color);
+    color:            var(--background-color);
 }
-
-/* TODO */
 div#cgit table.ssdiff td.foot {
-    border-top: solid 1px #aaa;
-    border-left: none;
-    border-right: none;
+    border-top:    solid 1px var(--main-color);
+    border-left:   none;
+    border-right:  none;
     border-bottom: none;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.space {
     border: none;
 }
-
-/* TODO */
 div#cgit table.ssdiff td.space div {
     min-height: 3em;
 }
 
+
+
+/* md2html customization */
+
+/* Header colors.. */
+div#cgit .markdown-body h1 a.toclink,
+div#cgit .markdown-body h2 a.toclink,
+div#cgit .markdown-body h3 a.toclink,
+div#cgit .markdown-body h4 a.toclink,
+div#cgit .markdown-body h5 a.toclink,
+div#cgit .markdown-body h6 a.toclink {
+    color: var(--main-color) !important;
+}
+div#cgit .markdown-body h1 a.toclink:hover,
+div#cgit .markdown-body h2 a.toclink:hover,
+div#cgit .markdown-body h3 a.toclink:hover,
+div#cgit .markdown-body h4 a.toclink:hover,
+div#cgit .markdown-body h5 a.toclink:hover,
+div#cgit .markdown-body h6 a.toclink:hover {
+    color: var(--link-hover-color) !important;
+}
+
+/* Color of text in backticks and code blocks. */
+div#cgit .markdown-body code {
+    color:            var(--background-color);
+    background-color: var(--main-color);
+    border:           none;
+}
+
+/* Code block colors. */
+div#cgit .markdown-body .highlight pre, .markdown-body pre {
+    color:            var(--background-color);
+    background-color: var(--main-color);
+    border:           none;
+}
+
+
+
+/* syntax-highlighting.py customization. */
+
+/* String colors. */
+.highlight .s,
+.highlight .sc,
+.highlight .se,
+.highlight .si,
+.highlight .s1,
+.highlight .sb,
+.highlight .s2 {
+    background-color: var(--main-color) !important;
+}
+.highlight .s,
+.highlight .sc,
+.highlight .s1,
+.highlight .sb,
+.highlight .s2 {
+    color: var(--background-color) !important;
+}
+.highlight .se {
+    color: red !important;
+}
+.highlight .si {
+    color: blue !important;
+}
+.highlight .ss {
+    background-color: var(--background-color) !important;
+}
 
 
 /* Cool CRT effects from https://aleclownes.com/2017/02/01/crt-display.html */
@@ -947,4 +802,31 @@ body::after {
   90%  { opacity: 0.7003;  }
   95%  { opacity: 0.36108; }
   100% { opacity: 0.24387; }
+}
+
+
+
+/* Makes scrollbar appear in Chromium-based broswers as it does in */
+/* Firefox-based ones.                                             */
+
+/* Sets width and overall appearance of scrollbar. */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Enlarges scrollbar on hover. */
+*::-webkit-scrollbar:hover {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+    /* Scrollbar color. */
+    background-color: #888;
+    /* Adds a fillet to the corners of the scrollbar. */
+    border-radius: 10px;
+}
+
+/* Slight change in color on hover. */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
