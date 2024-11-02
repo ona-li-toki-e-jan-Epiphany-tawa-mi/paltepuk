@@ -1,8 +1,6 @@
 Welcome to MY git server! Here you can peruse my various programming (and other)
 projects in style!
 
-There's also a couple mirrors I host as well.
-
 Note that in the about sections for each repo, images and relative links are
 borked. This is because they are meant for GitHub (and don't work in cgit,)
 sorry in advance!
@@ -13,13 +11,22 @@ In the usual open source fashion, you are, of course, able to clone the
 repositories listed here and do as you wish with them in accordance with their
 licenses.
 
-However, since they are made available over Tor and I2P instead of the Clearnet,
-cloning them isn't as simple as running `git clone <URL>`.
+However, if you're on Tor or I2P instead of the Clearnet, cloning them isn't as
+simple as running `git clone <URL>`.
 
-If the clone fails half-way-through (looking at you nixpkgs,) tack `--depth 1`
-onto the git clone command. This will perform a shallow clone that just grabs
-the state of the most recent commit, which will be more reliable due to having
-less to clone. Blame HTTP.
+If the clone fails half-way-through, tack `--depth 1` onto the git clone
+command. This will perform a shallow clone that just grabs the state of the most
+recent commit, which will be more reliable due to having less to clone. Blame
+HTTP.
+
+### Clearnet
+
+If you're on the Clearnet, you can clone as usual. Or, if you'd prefer, you can
+visit my GitHub account instead:
+
+```
+https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
+```
 
 ### I2P
 
@@ -39,14 +46,6 @@ assumes the Tor client daemon's SOCKSv5 proxy is available via localhost port
 
 ```
 git -c http.proxy=socks5h://127.0.0.1:9050 clone http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit/<repository>
-```
-
-### Clearnet
-
-If you would prefer the Clearnet, please visit my GitHub instead:
-
-```
-https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 ```
 
 ## Mirroring (with rsync)
