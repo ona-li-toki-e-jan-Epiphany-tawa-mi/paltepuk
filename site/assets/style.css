@@ -7,17 +7,12 @@ body {
 }
 
 a:link {
-    color: cyan;
+    color: blue;
 }
 a:hover {
-    color: darkcyan;
-}
-a:visited {
-    color: hotpink;
-}
-a:active {
     color: purple;
 }
+
 
 
 
