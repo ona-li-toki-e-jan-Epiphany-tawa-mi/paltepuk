@@ -294,8 +294,18 @@ in
       enable-index-links = 1;
       # Hides the "owner" of the repos since it's all just the git user.
       enable-index-owner = 0;
-      # Removes footer.
-      footer = "";
+      # Marquees!!!
+      footer = "${mkDerivation {
+        name = "cgit-footer.html";
+
+        src = ./.;
+
+        nativeBuildInputs = with pkgs; [ minify ];
+
+        buildPhase = ''
+          minify cgit-footer.html > $out
+        '';
+      }}";
       # Hides email addresses, they can be annoying.
       noplainemail = 1;
       # Sets the README of the repos to the README.md of the default branch.

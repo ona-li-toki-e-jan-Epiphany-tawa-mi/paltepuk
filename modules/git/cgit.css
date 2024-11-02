@@ -501,21 +501,28 @@ div#cgit span.deletions {
     color: #800;
 }
 
-/* TODO */
 div#cgit div.footer {
     margin-top: 0.5em;
     text-align: center;
-    font-size: 80%;
-    color: #ccc;
+    font-size:  80%;
+    /* For line overlapping */
+    position: relative;
 }
-/* TODO */
-div#cgit div.footer a {
-    color: #ccc;
-    text-decoration: none;
+div#cgit div.footer p.line-one,
+div#cgit div.footer p.line-two {
+    /* Makes lines overlap. */
+    position: absolute;
+    top:      0;
+    left:     0;
+    /* Marquee. */
+    animation: footerMarquee 9s linear infinite;
 }
-/* TODO */
-div#cgit div.footer a:hover {
-    text-decoration: underline;
+div#cgit div.footer p.line-one {
+    animation-delay: -4.5s;
+}
+@keyframes footerMarquee {
+    0%   { transform: translateX(100vw);  }
+    100% { transform: translateX(-100vw); }
 }
 
 div#cgit a.branch-deco {
