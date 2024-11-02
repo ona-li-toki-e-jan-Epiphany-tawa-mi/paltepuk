@@ -655,14 +655,15 @@ div#cgit table.ssdiff td.space div {
 
 /* md2html customization */
 
-/* Header colors.. */
+/* Headers. */
 div#cgit .markdown-body h1 a.toclink,
 div#cgit .markdown-body h2 a.toclink,
 div#cgit .markdown-body h3 a.toclink,
 div#cgit .markdown-body h4 a.toclink,
 div#cgit .markdown-body h5 a.toclink,
 div#cgit .markdown-body h6 a.toclink {
-    color: var(--main-color) !important;
+    color:           var(--main-color) !important;
+    text-decoration: none;
 }
 div#cgit .markdown-body h1 a.toclink:hover,
 div#cgit .markdown-body h2 a.toclink:hover,
