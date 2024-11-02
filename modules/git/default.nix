@@ -26,6 +26,7 @@
 
 let inherit (lib) concatStrings mkIf escapeShellArg;
     inherit (builtins) filter listToAttrs;
+    inherit (pkgs.stdenv) mkDerivation;
 
     gitDirectory = "/srv/git";
 
@@ -322,8 +323,19 @@ in
     locations = {
       # Sets custom logo.
       "= /cgit/cgit.jpg".alias = ./cgit-logo.jpg;
-      # Sets custom CSS.
-      "= /cgit/cgit-custom.css".alias = ./cgit.css;
+
+      # Minifies and sets custom CSS.
+      "= /cgit/cgit-custom.css".alias = "${mkDerivation {
+        name = "cgit-custom.css";
+
+        src = ./.;
+
+        nativeBuildInputs = with pkgs; [ minify ];
+
+        buildPhase = ''
+          minify cgit.css > $out
+        '';
+      }}";
     };
   };
 }
