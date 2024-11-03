@@ -2,8 +2,7 @@
 <html lang="{{ .Site.Language }}">
   <head>
     <title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-    {{ $css   := resources.Get "style.css" }}
-    {{ $style := $css | resources.Minify   }}
+    {{ $style := resources.Get "style.css" | resources.Minify   }}
     <link rel='stylesheet' type='text/css' href='{{ $style.RelPermalink }}'>
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
