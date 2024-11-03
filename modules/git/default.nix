@@ -294,7 +294,7 @@ in
       enable-index-links = 1;
       # Hides the "owner" of the repos since it's all just the git user.
       enable-index-owner = 0;
-      # Marquees!!!
+      # Custom footer.
       footer = "${mkDerivation {
         name = "cgit-footer.html";
 
