@@ -16,6 +16,17 @@ You should have received a copy of the GNU Affero General Public License along
 with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 */}}
 
+{{/*
+Params:
+- extraLinks: extra links to add below the page index. List of objects with the
+  following parameters:
+  - name: text to display as link.
+  - path: relative path to link to.
+  - description: description to show beside link.
+Single params:
+- description: description to show in index. No description if unset.
+*/}}
+
 {{ define "header" -}}
 <ul>
   {{- range.Pages }}
