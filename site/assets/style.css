@@ -41,52 +41,54 @@ a:hover {
 /* Sets up general content layout. */
 
 :root {
-    --header-width:              25vw;
-    --layout-horizontal-padding: 2vw;
+    --body-horizontal-margin: 2vw;
+    --header-main-gap:        2vw;
+    --width-reduction:        calc(var(--body-horizontal-margin) + var(--header-main-gap));
+
+    --header-base-width: 25vw;
 }
 
+/* Makes header immobile and take up left portion of viewport. */
 header {
-    /* Positions to left of viewport. */
     position: fixed;
-    left:     var(--layout-horizontal-padding);
-    width:    var(--header-width);
+    left:     var(--body-horizontal-margin);
+    top:      0;
+    width:    calc(var(--header-base-width) - var(--width-reduction));
 }
 
-main {
-    /* Positions to right of viewport */
-    position:      fixed;
-    margin-left:   calc(var(--header-width) + 2 * var(--layout-horizontal-padding));
-    margin-right:  calc(2 * var(--layout-horizontal-padding));
-    padding-right: var(--layout-horizontal-padding);
-    left:          0;
-    right:         0;
-    /* Sizes to top/bottom of viewport */
-    height:     100vh;
-    overflow-y: scroll;
+/* Splits up header and main with a text marquee.                   */
+/* .divider should be a <div> containing .line-one and .line-two.   */
+/* .line-one and .line-two should be <p>s containing the same text. */
+.divider {
+    position: fixed;
+    left:     calc(var(--header-base-width) - var(--header-main-gap));
 }
-
-/* Splits up header and main with a vertical wall of characters.              */
-/* Intended to use with <p>.                                                  */
-/* Create a duplicate and add splitter-first to it to make it continuous.     */
-.splitter {
+.divider .line-one,
+.divider .line-two {
     /* Makes text vertical */
     writing-mode:     vertical-rl;
     text-orientation: upright;
     white-space:      nowrap;
-    /* Positions in-between main and header. */
-    position:    fixed;
-    margin-left: calc(var(--header-width) + 0.5 * var(--layout-horizontal-padding));
-    top: 0;
     /* Scrolling. */
-    animation: slideSplitter 9s linear infinite;
+    position:  absolute;
+    animation: dividerMarquee 9s linear infinite;
     overflow:  hidden;
 }
-.splitter-first {
+.divider .line-one {
+    /* One line is moved into the future to make marquee look continuous. */
     animation-delay: -4.5s;
 }
-@keyframes slideSplitter {
+@keyframes dividerMarquee {
     0%   { transform: translateY(-100vh); }
     100% { transform: translateY(100vh);  }
+}
+
+/* Makes main take up right portion of viewport. */
+main {
+    position: absolute;
+    right:    var(--body-horizontal-margin);
+    top:      0;
+    width:    calc(75vw - var(--width-reduction));
 }
 
 
