@@ -88,8 +88,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "Hexdump utility")
         (standard "ap.git"
           "A simple NixOS configuration for making wireless access points")
-        (standard "TLPIN.git"
-          "toki lawa pi ilo nanpa sama toki APL")
         (standard "elephant_veins.git"
           "A mod for Minetest that replaces small sporadic ore pockets with sparse, gigantic ore veins")
         (standard "gnu-apl-libraries.git"
