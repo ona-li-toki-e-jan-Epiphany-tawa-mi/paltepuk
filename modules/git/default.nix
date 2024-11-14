@@ -90,8 +90,8 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "A simple NixOS configuration for making wireless access points")
         (standard "elephant_veins.git"
           "A mod for Minetest that replaces small sporadic ore pockets with sparse, gigantic ore veins")
-        (standard "gnu-apl-libraries.git"
-          "A collection of single-file libraries for GnuAPL")
+        (standard "fio.apl.git"
+          "GnuAPL ⎕FIO abstraction library")
         (standard "love-you-mom.git"
           "Tells your mom (or dad) that you love them")
 
