@@ -20,10 +20,6 @@ description         = 'external links to my other profiles/websites/servers/etc.
 
 [https://www.thingiverse.com/jan_epiphany/designs](https://www.thingiverse.com/jan_epiphany/designs)
 
-## Odysee
-
-[https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9408ca3670bd0ebb99addf196f1f9a72450bdcb1](https://odysee.com/@ona-li-toki-e-jan-Epiphany-tawa-mi:9408ca3670bd0ebb99addf196f1f9a72450bdcb1)
-
 ## Luanti ContentDB
 
 [https://content.luanti.org/users/ona-li-toki-e-jan-Epiphany-tawa-mi](https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi)
