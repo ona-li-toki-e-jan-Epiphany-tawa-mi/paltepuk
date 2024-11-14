@@ -18,7 +18,7 @@ with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 {{ define "main" }}
 {{ $section := .CurrentSection.Path }}{{ if eq "/" $section }}{{ $section = "" }}{{ end }}
-<p>[epiphany@paltepuk:~{{ $section }}]$ cat '{{ index (split .Path "/" | last 1) 0 }}'</p>
+<p>[epiphany@paltepuk:~{{ $section }}]$ cat '{{ partial "partials/filename.html" . }}'</p>
 <br>
 {{ .Content }}
 <br>
