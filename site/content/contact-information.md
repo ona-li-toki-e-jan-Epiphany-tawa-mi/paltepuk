@@ -1,7 +1,6 @@
 +++
-title               = 'Contacts'
-scrollingTitleCount = 5
-description         = 'contact information'
+title               = 'Contact Information'
+scrollingTitleCount = 3
 +++
 
 # Email

@@ -1,7 +1,6 @@
 +++
 title               = 'Featured Sites'
 scrollingTitleCount = 3
-description         = 'some links to sites/other that I like'
 +++
 
 *Note: links may point to different content than what they did when I added
