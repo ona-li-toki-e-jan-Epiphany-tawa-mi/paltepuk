@@ -16,28 +16,20 @@ You should have received a copy of the GNU Affero General Public License along
 with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 */}}
 
-{{/*
-Params:
-- extraLinks: extra links to add below the page index. List of objects with the
-  following parameters:
-  - name: text to display as link.
-  - path: relative path to link to.
-  - description: description to show beside link.
-Single params:
-- description: description to show in index. No description if unset.
-*/}}
+{{ define "header" }}
+{{ .Content }}
+{{ end }}
 
-{{ define "header" -}}
-<ul>
-  {{ range.Pages }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .Param "description" }} - {{ .Params.description }}{{ end }}
-  </li>
-  {{- end }}
-  {{ if .Param "extraLinks" }}{{range .Params.extraLinks }}
-  <li>
-    <a href="{{ .path }}">{{ .name }}</a> - {{ .description }}
-  </li>
-  {{ end }}{{ end }}
-</ul>
+{{ define "main" }}
+<p>[epiphany@paltepuk:~{{ .Path }}]$ first='true'; for file in "{{ .Path }}"/*; do [ 'true' != "$first" ] && echo; echo "$file:"; head -c 100 "$file" | awk '{print "&ensp;&ensp;&ensp;&ensp;"$0}'; first='false'; done</p>
+<br>
+{{ range.Pages }}
+<p><a href="{{ .RelPermalink }}">{{ index (split .Path "/" | last 1) 0 }}</a>:</p>
+<p>&ensp;&ensp;&ensp;&ensp;{{ .Summary | truncate 100 }}</p>
+<br>
+{{ else }}
+<p>head: cannot open '*' for reading: No such file or directory</p>
+<br>
+{{ end }}
+<p>[epiphany@paltepuk:~{{ .Path }}]$ <span class="blink">■</span></p>
 {{ end }}

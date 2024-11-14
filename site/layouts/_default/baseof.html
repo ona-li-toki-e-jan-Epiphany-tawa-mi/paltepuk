@@ -43,7 +43,13 @@ Params:
       <a href="{{ .Site.Params.baseI2PURL }}{{ .RelPermalink }}">I2P</a>,
       <a href="{{ .Site.Params.baseTorURL }}{{ .RelPermalink }}">Tor</a>,
       <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}">Clearnet (Cloudflare!)</a>
-      {{ if not .IsHome}}<br><br><a href="/">Return to home page</a>{{ end }}
+      {{ if not .IsHome}}
+      <br>
+      <p><a href="/">Return to home page</a></p>
+      {{ if and (gt (len .Section) 0) (index (split .Path "/" | last 1) 0 | ne .Section) }}
+      <p><a href="../">Return to {{ .CurrentSection.Title }}</a></p>
+      {{ end }}
+      {{ end }}
       {{ block "header" . }}{{ end }}
     </header>
     <div class="divider">
