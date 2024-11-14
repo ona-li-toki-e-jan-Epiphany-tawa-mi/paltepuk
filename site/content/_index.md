@@ -5,7 +5,7 @@ scrollingTitleCount = 5
 [[extraLinks]]
 name        = 'cgit'
 path        = '/cgit/'
-description = 'git server web interface'
+description = 'my software projects'
 +++
 
 {{< command-line  >}}whoami{{< /command-line >}}
