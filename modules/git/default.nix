@@ -26,9 +26,10 @@
 
 let inherit (lib) concatStrings mkIf escapeShellArg;
     inherit (builtins) filter listToAttrs;
-    inherit (pkgs.stdenv) mkDerivation;
+    inherit (pkgs) callPackage;
 
-    gitDirectory = "/srv/git";
+    gitDirectory  = "/srv/git";
+    cgitResources = callPackage ./cgit {};
 
     # Names for the sections displayed in cgit.
     sections = {
@@ -295,24 +296,14 @@ in
       # Hides the "owner" of the repos since it's all just the git user.
       enable-index-owner = 0;
       # Custom footer.
-      footer = "${mkDerivation {
-        name = "cgit-footer.html";
-
-        src = ./.;
-
-        nativeBuildInputs = with pkgs; [ minify ];
-
-        buildPhase = ''
-          minify cgit-footer.html > $out
-        '';
-      }}";
+      footer = "${cgitResources}/footer.html";
       # Hides email addresses, they can be annoying.
       noplainemail = 1;
       # Sets the README of the repos to the README.md of the default branch.
       readme = ":README.md";
       # Stuff that appears in the index page.
       root-desc   = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
-      root-readme = "${./cgit-README.md}";
+      root-readme = "${cgitResources}/README.md";
       root-title  = "cgit | paltepuk";
       # I like side-by-side diffs.
       side-by-side-diffs = 1;
@@ -330,22 +321,10 @@ in
       port = ports.cgit;
     }];
 
+    # Custom resources.
     locations = {
-      # Sets custom logo.
-      "= /cgit/cgit.jpg".alias = ./cgit-logo.jpg;
-
-      # Minifies and sets custom CSS.
-      "= /cgit/cgit-custom.css".alias = "${mkDerivation {
-        name = "cgit-custom.css";
-
-        src = ./.;
-
-        nativeBuildInputs = with pkgs; [ minify ];
-
-        buildPhase = ''
-          minify cgit.css > $out
-        '';
-      }}";
+      "= /cgit/cgit.jpg".alias        = "${cgitResources}/logo.jpg";
+      "= /cgit/cgit-custom.css".alias = "${cgitResources}/style.css";
     };
   };
 }
