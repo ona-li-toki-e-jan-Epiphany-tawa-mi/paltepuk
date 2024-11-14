@@ -21,7 +21,7 @@ with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 {{ end }}
 
 {{ define "main" }}
-<p>[epiphany@paltepuk:~{{ .Path }}]$ first='true'; for file in "{{ .Path }}"/*; do [ 'true' != "$first" ] && echo; echo "$file:"; head -c 100 "$file" | awk '{print "&ensp;&ensp;&ensp;&ensp;"$0}'; first='false'; done</p>
+<p>[epiphany@paltepuk:~{{ .Path }}]$ first='true'; for file in *; do [ 'true' != "$first" ] && echo; echo "$file:"; head -c 100 "$file" | awk '{print "&ensp;&ensp;&ensp;&ensp;"$0}'; first='false'; done</p>
 <br>
 {{ range.Pages }}
 <p><a href="{{ .RelPermalink }}">{{ index (split .Path "/" | last 1) 0 }}</a>:</p>
