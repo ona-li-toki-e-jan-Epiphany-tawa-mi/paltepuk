@@ -1,7 +1,10 @@
 +++
 title               = 'This Site and Its Future'
 scrollingTitleCount = 2
+date                = '2024/11/14'
 +++
+
+*Written: November 14, 2024.*
 
 ## First Iteration
 
