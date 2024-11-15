@@ -3,9 +3,6 @@ title               = 'Featured Sites'
 scrollingTitleCount = 3
 +++
 
-*Note: links may point to different content than what they did when I added
-them. Please note the time that the link was added/updated.*
-
 [![](/buttons/gnu.org-emacs.gif)](https://www.gnu.org/software/emacs "Updated July 26, 2024")
 [![](/buttons/shmage.xyz.gif)](https://shmage.xyz "Updated July 26, 2024")
 [![](/buttons/geti2p.net.gif)](https://geti2p.net "Updated July 26, 2024")
