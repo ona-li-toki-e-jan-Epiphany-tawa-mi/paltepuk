@@ -32,7 +32,7 @@ options declared in the NixOS modules from nixpkgs.
 Rather than using some JavaScript-infested soysite to search for Nix packages,
 just run **"nix search nixpkgs \<package\>"**! This will search through the
 packages from the environment-available channel just like **"apt search
-\<package\>"** or **"xbps-query -Rs \<package\>"**
+\<package\>"** or **"xbps-query -Rs \<package\>"**.
 
 ## `nixos-help`
 
