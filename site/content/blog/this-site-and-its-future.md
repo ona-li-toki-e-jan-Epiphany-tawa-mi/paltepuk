@@ -6,6 +6,10 @@ date                = '2024/11/14'
 
 *Written: November 14, 2024.*
 
+This blog post, being my very first blog post to this blog that I made so I
+could blog - which makes me a blogger - details the progression of my website
+from it's inception to the current day.
+
 ## First Iteration
 
 *Made around May, 2024.*
@@ -24,7 +28,7 @@ computers. Although, I kept getting into *altercations* with Hydra, and decided
 to file for divorce. But, more importantly, with the addition of two web
 services, I needed a homepage!
 
-So I raw-dogged some HTML together to set up a basic homepage, and it looked
+So, I raw-dogged some HTML together to set up a basic homepage, and it looked
 something like this:
 
 ![Image of original homepage](/blog/this-site-and-its-future/first-iteration-homepage.jpeg)
