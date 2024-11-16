@@ -22,7 +22,7 @@ scrollingTitleCount = 3
 
 Penger.
 
-### [![](/buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net)
+### [![](/web-buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net)
 
 A site that teaches people how to make their own website, and run their own
 services, on a server all of their own.
@@ -33,7 +33,7 @@ Learn to make your own website ***NOW!*** Stop being a social media serf!
 
 A badass website about DIY audio synthesizers.
 
-### [![](/buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking)
+### [![](/web-buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking)
 
 Cooking recipe site that isn't bloated with ads and pointless
 JavaScript.
@@ -42,7 +42,7 @@ Unfortuantely, it seems that the PRs with new recipes aren't being merged, but
 there's still a pretty sizeable amount of recipes on there. Maybe the unaboomer
 decided to cut the cord again.
 
-### [![](/buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
+### [![](/web-buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
 
 Cool search engine for proper websites (simple and not overloaded with JavaScript.)
 
@@ -61,7 +61,7 @@ The website for SuperTuxKart, a free as-in freedom racing game. It's one of my
 favorite games. If you havent tried it yet, you should! It's probably available
 in your package manager.
 
-### [![](/buttons/cozynet.org.gif)](https://cozynet.org/homepage/) CozyNet - [https://cozynet.org/homepage *(November 16, 2024)*](https://cozynet.org/homepage) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(November 16, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage/)
+### [![](/web-buttons/cozynet.org.gif)](https://cozynet.org/homepage/) CozyNet - [https://cozynet.org/homepage *(November 16, 2024)*](https://cozynet.org/homepage) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(November 16, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage/)
 
 Some rando's personal website that feels cozy. Love the style.
 
@@ -80,7 +80,7 @@ DNSSEC. I've found it rather useful.
 
 A console window manager. Really cool.
 
-### [![](/buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
+### [![](/web-buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
 
 *Note: requires JavaScript and WebGL.*
 
@@ -89,6 +89,6 @@ started selling a new version on Steam, but the classic version is still online,
 and it's open source!
 [https://github.com/gorescript/gorescript *(November 16, 2024)*](https://github.com/gorescript/gorescript).
 
-### [![](/buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
+### [![](/web-buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
 
 *Note: requires JavaScript.*

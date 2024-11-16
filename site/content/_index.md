@@ -12,11 +12,12 @@ description = 'my software projects'
 
 Name: ona li toki e jan Epiphany tawa mi{{< br >}}
 Short name: jan Epiphany{{< br >}}
-Web button: ![](/buttons/paltepuk.gif) (feel free to use){{< br >}}
+Web button: ![](/web-buttons/paltepuk.gif) (feel free to use){{< br >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
 My baller personal website
+
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
 pal - building, tep - person, uk - my.{{< br >}}
