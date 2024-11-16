@@ -17,40 +17,47 @@ scrollingTitleCount = 3
 [![](/buttons/getimiskon.xyz.gif)](https://getimiskon.xyz "Updated July 26, 2024")
 [![](/buttons/voidlinux.org.gif)](https://voidlinux.org/ "Updated October 30, 2024")
 
-### Penger City - [https://penger.city *(November 10, 2024)*](https://penger.city)
+### Penger City - [https://penger.city *(November 16, 2024)*](https://penger.city)
 
 Penger.
 
-### [![](/buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net *(July 26, 2024)*](https://landchad.net)
+### [![](/buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net)
 
 A site that teaches people how to make their own website, and run their own
 services, on a server all of their own.
 
-### [![](/buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(July 26, 2024)*](https://based.cooking)
+Learn to make your own website ***NOW!*** Stop being an serf! Become a lord! )))
 
-Cooking recipe site that isn't bloated with ads and pointless JavaScript.
+### [![](/buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking)
 
-### [![](/buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me *(July 26, 2024)*](https://wiby.me) | [https://wiby.org *(July 26, 2024)*](https://wiby.org)
+Cooking recipe site that isn't bloated with ads and pointless
+JavaScript.
 
-A non-bloated search engine for non-bloated websites.
+Unfortuantely, it seems that the PRs with new recipes aren't being merged, but
+there's still a pretty sizeable amount of recipes on there. Maybe the unaboomer
+decided to cut the cord again.
 
-### [![](/buttons/cozynet.org.gif)](https://cozynet.org) CozyNet - [https://cozynet.org *(July 26, 2024)*](https://cozynet.org) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/index.html *(July 26, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/index.html)
+### [![](/buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
 
-Someone's personal website that feels cozy.
+Cool search engine for proper websites (simple and not overloaded with JavaScript.)
 
-### 512KB Club - [https://512kb.club *(July 26, 2024)*](https://512kb.club)
+### [![](/buttons/cozynet.org.gif)](https://cozynet.org/homepage/) CozyNet - [https://cozynet.org/homepage *(November 16, 2024)*](https://cozynet.org/homepage) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(November 16, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage/)
+
+Some rando's personal website that feels cozy. Love the style.
+
+### 512KB Club - [https://512kb.club *(November 16, 2024)*](https://512kb.club)
 
 A showcase of websites with an uncompressed size of <= 512 KB.
 
-### The XTerm Window Manager - [https://xtermwm.sourceforge.io *(July 26, 2024)*](https://xtermwm.sourceforge.io)
+### The XTerm Window Manager - [https://xtermwm.sourceforge.io *(November 16, 2024)*](https://xtermwm.sourceforge.io)
 
-A console window manager. Insane, and really cool.
+A console window manager. Really cool.
 
-### [![](/buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play *(July 26, 2024)*](https://gorescript.github.io/classic/play)
+### [![](/buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
 
 Cool 2.5D first person shooter. The creator abandoned this "classic" version and
 started selling a new version on Steam, but the classic version is still online,
-and it's FOSS!
-([https://github.com/gorescript/gorescript *(July 26, 2024)*](https://github.com/gorescript/gorescript)).
+and it's open source!
+[https://github.com/gorescript/gorescript *(November 16, 2024)*](https://github.com/gorescript/gorescript).
 
-### [![](/buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(July 26, 2024)*](https://lain.angelic-trust.net)
+### [![](/buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
