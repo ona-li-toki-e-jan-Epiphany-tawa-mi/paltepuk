@@ -26,7 +26,7 @@ Penger.
 A site that teaches people how to make their own website, and run their own
 services, on a server all of their own.
 
-Learn to make your own website ***NOW!*** Stop being an serf! Become a lord! )))
+Learn to make your own website ***NOW!*** Stop being a social media serf!
 
 ### [![](/buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking)
 
@@ -40,6 +40,12 @@ decided to cut the cord again.
 ### [![](/buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
 
 Cool search engine for proper websites (simple and not overloaded with JavaScript.)
+
+### SupertTuxKart - [https://supertuxkart.net *(November 16, 2024)*](https://supertuxkart.net)
+
+The website for SuperTuxKart, a free as-in freedom racing game. It's one of my
+favorite games. If you havent tried it yet, you should! It's probably available
+in your package manager.
 
 ### [![](/buttons/cozynet.org.gif)](https://cozynet.org/homepage/) CozyNet - [https://cozynet.org/homepage *(November 16, 2024)*](https://cozynet.org/homepage) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(November 16, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage/)
 
