@@ -55,6 +55,11 @@ Some rando's personal website that feels cozy. Love the style.
 
 A showcase of websites with an uncompressed size of <= 512 KB.
 
+### dnscheck.tools - [https://www.dnscheck.tools *(November 16, 2024)*](https://www.dnscheck.tools/)
+
+A DNS tool that shows which DNS severs you're using and whether you're using
+DNSSEC. I've found it rather useful.
+
 ### The XTerm Window Manager - [https://xtermwm.sourceforge.io *(November 16, 2024)*](https://xtermwm.sourceforge.io)
 
 A console window manager. Really cool.
