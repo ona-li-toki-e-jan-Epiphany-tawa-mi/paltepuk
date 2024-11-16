@@ -50,6 +50,11 @@ Cool search engine for proper websites (simple and not overloaded with JavaScrip
 
 God tier site. Nice car. Love the hate emails at the bottom of the page.
 
+### Nathan's Toasty Technology page - [http://toastytech.com *(November 16, 2024)*](http://toastytech.com)
+
+Really cool personal website. Highly recommend checking the page on Internet
+Explorer.
+
 ### SupertTuxKart - [https://supertuxkart.net *(November 16, 2024)*](https://supertuxkart.net)
 
 The website for SuperTuxKart, a free as-in freedom racing game. It's one of my
