@@ -28,6 +28,10 @@ services, on a server all of their own.
 
 Learn to make your own website ***NOW!*** Stop being a social media serf!
 
+### Yusynth - [https://yusynth.net *(November 16, 2024)*](https://yusynth.net)
+
+A badass website about DIY audio synthesizers.
+
 ### [![](/buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking)
 
 Cooking recipe site that isn't bloated with ads and pointless
