@@ -46,6 +46,11 @@ decided to cut the cord again.
 
 Cool search engine for proper websites (simple and not overloaded with JavaScript.)
 
+### lipu tenpo - [https://liputenpo.org *(November 17, 2024)*](https://liputenpo.org/)
+
+lipu tenpo li lipu pona li lon toki pona li toki e ijo mute pi ma ali. sina toki
+e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
+
 ### jgeoff.com/homepage - [http://jgeoff.com/homepage *(November 16, 2024)*](http://jgeoff.com/homepage/)
 
 God tier site. Nice car. Love the hate emails at the bottom of the page.
