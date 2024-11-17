@@ -38,6 +38,11 @@ packages from the environment-available channel just like **"apt search
 
 NixOS machines install the NixOS manual locally, just run **"nixos-help"**!
 
+## Arch Wiki - [https://wiki.archlinux.org/title/Main_page *(November 17, 2024)*](https://wiki.archlinux.org/title/Main_page)
+
+The almighty Arch Wiki is a indespensible resource for Linux, irregardless of
+which distribution you happen to be using.
+
 ## nixos-hardware - [https://github.com/NixOS/nixos-hardware/tree/master *(November 15, 2024)*](https://github.com/NixOS/nixos-hardware/tree/master)
 
 Repository of hardware-specific NixOS configurations to optimize/bug fix NixOS
