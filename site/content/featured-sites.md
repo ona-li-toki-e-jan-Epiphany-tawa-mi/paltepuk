@@ -71,7 +71,7 @@ A showcase of websites with an uncompressed size of <= 512 KB.
 
 ### dnscheck.tools - [https://www.dnscheck.tools *(November 16, 2024)*](https://www.dnscheck.tools/)
 
-*Note: requires JavaScript.*
+*Requires JavaScript.*
 
 A DNS tool that shows which DNS severs you're using and whether you're using
 DNSSEC. I've found it rather useful.
@@ -82,7 +82,7 @@ A console window manager. Really cool.
 
 ### [![](/web-buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
 
-*Note: requires JavaScript and WebGL.*
+*Requires JavaScript and WebGL.*
 
 Cool 2.5D first person shooter. The creator abandoned this "classic" version and
 started selling a new version on Steam, but the classic version is still online,
@@ -91,4 +91,4 @@ and it's open source!
 
 ### [![](/web-buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
 
-*Note: requires JavaScript.*
+*Requires JavaScript.*
