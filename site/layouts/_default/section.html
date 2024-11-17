@@ -28,7 +28,7 @@ Single params:
 {{ define "main" }}
 <p>[epiphany@paltepuk:~{{ .Path }}]$ first='true'; for file in *; do [ 'true' != "$first" ] && echo; echo "$file:"; head -c 100 "$file" | awk '{print "&ensp;&ensp;&ensp;&ensp;"$0}'; first='false'; done</p>
 <br>
-{{ range.Pages.ByDate }}
+{{ range.Pages.ByDate.Reverse }}
 <p><a href="{{ .RelPermalink }}">{{ partial "partials/filename.html" . }}</a>:</p>
 <p>&ensp;&ensp;&ensp;&ensp;{{ .Summary | truncate 100 }}</p>
 <br>

@@ -1,7 +1,7 @@
 +++
 title               = 'The Musings of AI Slop'
 scrollingTitleCount = 2
-date                = '2024/11/17'
+date                = '2024-11-17'
 +++
 
 *Written: November 17, 2024.*
