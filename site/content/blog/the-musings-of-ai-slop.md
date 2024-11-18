@@ -157,9 +157,9 @@ print_loop_end:
 
     ;; Wait for keypress.
 input_loop:
-    jsr $FFE4          ; Read keyboard buffer with GETIN.
+    jsr $FFE4      ; Read keyboard buffer with GETIN.
     cmp #$00
-    beq input_loop_end ; Exit loop if there was a key pressed.
+    beq input_loop ; Exit loop if there was a key pressed.
 
     rts ; Exit program.
 
