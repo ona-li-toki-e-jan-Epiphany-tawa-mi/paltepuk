@@ -1,0 +1,1 @@
+{{ partial "partials/rss.xml" (dict "context" . "url" .Site.Params.baseI2PURL ) }}

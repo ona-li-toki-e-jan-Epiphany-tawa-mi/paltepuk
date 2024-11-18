@@ -2,6 +2,22 @@ languageCode = 'en-us'
 title        = 'paltepuk'
 baseURL      = 'https://paltepuk.xyz'
 
+# Disables RSS by default.
+disableKinds = [ 'rss' ]
+
 [params]
 baseI2PURL = 'http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p'
 baseTorURL = 'http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion'
+
+# Extra RSS feeds output types for Tor and I2P, since the URLs need to be
+# different.
+[outputFormats.i2p-rss]
+baseName    = "index.i2p"
+mediaType   = "application/rss+xml"
+isHTML      = false
+isPlainText = true
+[outputFormats.tor-rss]
+baseName    = "index.tor"
+mediaType   = "application/rss+xml"
+isHTML      = false
+isPlainText = true
