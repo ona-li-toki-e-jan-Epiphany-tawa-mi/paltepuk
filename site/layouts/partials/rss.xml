@@ -1,17 +1,16 @@
 {{- $context := .context }}
 {{- $url := .url }}
+{{- $fileName := .rssFileName }}
 
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ .Title }} on {{ .Site.Title }}</title>
+    <title>{{ $context.Title }} on {{ $context.Site.Title }}</title>
     <link>{{ urls.JoinPath $url $context.RelPermalink }}</link>
     <description>Recent content in {{ $context.Title }} on {{ $context.Site.Title }}</description>
     <generator>Hugo</generator>
     <language>{{ site.Language.LanguageCode }}</language>
-    {{- with $context.OutputFormats.Get "RSS" }}
-    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" (urls.JoinPath $url .RelPermalink) .MediaType | safeHTML }}
-    {{- end }}
+    {{- urls.JoinPath $url $context.RelPermalink $fileName | printf "<atom:link href=%q rel=\"self\" type=\"application/rss+xml\" />" | safeHTML }}
     {{- range $context.RegularPages }}
     {{- $itemURL := urls.JoinPath $url .RelPermalink }}
     <item>

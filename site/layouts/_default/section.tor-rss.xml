@@ -1,1 +1,1 @@
-{{ partial "partials/rss.xml" (dict "context" . "url" .Site.Params.baseTorURL ) }}
+{{ partial "partials/rss.xml" (dict "context" . "url" .Site.Params.baseTorURL "rssFileName" "index.tor.xml" ) }}

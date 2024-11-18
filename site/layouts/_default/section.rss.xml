@@ -1,1 +1,1 @@
-{{ partial "partials/rss.xml" (dict "context" . "url" .Site.BaseURL ) }}
+{{ partial "partials/rss.xml" (dict "context" . "url" .Site.BaseURL "rssFileName" "index.xml" ) }}
