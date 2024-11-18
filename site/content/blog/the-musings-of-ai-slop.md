@@ -129,7 +129,7 @@ The assembly it provides (temporarily) in-leau of BASIC has serveral problems:
 
 4. At the label **loop2**, where it waits for a key press, it pointlessly writes to **$C000**, overwriting the first instruction of this program in the process.
 
-5. At the label **loop2**, where it waits for a key press, it calls to a subroutine at **$FFCE**, but that is not an address of any of the Kernal subroutnes provided by the Commodore 64. It probably meant **$FFCF**, **CHRIN**, which reads a byte from the current channel (usually the keyboard) into the A register. Additionally, with the keyboard, **GETIN** waits until the user presses RETURN to give back control, so you'd probably want **$FFE4**, **GETIN**, instead, which reads a byte from the keyboard buffer, and then loop while GETIN returns 0 to wait for a keypress.
+5. At the label **loop2**, where it waits for a key press, it calls to a subroutine at **$FFCE**, but that is not an address of any of the Kernal subroutines provided by the Commodore 64. It probably meant **$FFCF**, **CHRIN**, which reads a byte from the current channel (usually the keyboard) into the A register. Additionally, with the keyboard, **CHRIN** waits until the user presses RETURN to give back control, so you'd probably want **$FFE4**, **GETIN**, instead, which reads a byte from the keyboard buffer, and then loop while GETIN returns 0 to wait for a keypress.
 
 6. There isn't an instruction to stop the processor. If you want to halt it, you should create an infinite loop.
 
