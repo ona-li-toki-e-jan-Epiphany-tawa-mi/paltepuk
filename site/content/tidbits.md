@@ -1,12 +1,10 @@
 +++
-title               = 'kon li lon'
+title               = 'Tidbits'
 scrollingTitleCount = 4
-date                = '2024-11-15'
+description         = 'haikus and poems and such'
 +++
 
 *Written: November 15, 2024.*
-
-## kon li lon
 
 kon li lon
 
