@@ -1,6 +1,6 @@
 +++
 title               = 'Tidbits'
-scrollingTitleCount = 4
+scrollingTitleCount = 6
 description         = 'haikus and poems and such'
 +++
 
