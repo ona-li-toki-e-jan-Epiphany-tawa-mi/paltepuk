@@ -26,10 +26,18 @@ This intro page is less about GnuAPL and more about APL in general. It will walk
 you through how APL works step-by-step, so it should be enough for you to get
 the hang of things.
 
+This site hosts an *almost-verbatim* copy of this part of the GnuAPL version 1.9
+documentation at
+[/programming-resources-directory/gnuapl/intro](/programming-resources-directory/gnuapl/intro/).
+
 ## GnuAPL Special Features- [https://www.gnu.org/software/apl/apl.html *(November 15, 2024)*](https://www.gnu.org/software/apl/apl.html)
 
 This page gets into the GnuAPL-specfic features, so don't expect anything from
 here to work with other APL implemenetations.
+
+This site hosts an *almost-verbatim* copy of this part of the GnuAPL version 1.9
+documentation at
+[/programming-resources-directory/gnuapl/special-features](/programming-resources-directory/gnuapl/special-features/).
 
 ## GnuAPL Library Guidelines - [https://www.gnu.org/software/apl/Library-Guidelines-GNU-APL.html *(November 15, 2024)*](https://www.gnu.org/software/apl/Library-Guidelines-GNU-APL.html)
 
@@ -58,3 +66,10 @@ make it a little nicer to use:
 (add-hook 'gnu-apl-mode-hook             #'gnu-apl-mode-setup)
 (add-hook 'gnu-apl-interactive-mode-hook #'gnu-apl-mode-setup)
 ```
+
+## *almost-verbatim?*
+
+By almost-verbatim, I mean that I have not modified the content of the
+documentation, but just the source. It is minified to work better over a slow
+connection, and the relative links to CSS and images, local resources, have been
+modified to work on my website.
