@@ -19,7 +19,7 @@ Llama3.1's output since the triple backticks are special in Markdown, the
 
 ## APL Code Generation
 
-First, I thought I'd make it generate some GnuAPL code. I figured it would fail
+First, I thought I'd make it generate some GNU APL code. I figured it would fail
 miserably since APL isn't all too common a language on the interwebs.
 
 ```console
@@ -49,11 +49,11 @@ So, so many problems.
 
 1. Although Niklaus Wirth was involved in the design of a number of programming languages [https://en.wikipedia.org/wiki/Niklaus_Wirth#Programming_languages *(November 17, 2024)*](https://en.wikipedia.org/wiki/Niklaus_Wirth#Programming_languages), APL was not one of them. The actual developer was Kenneth E. Iverson [https://en.wikipedia.org/wiki/APL_(programming_language) *(November 17, 2024)*](https://en.wikipedia.org/wiki/APL_(programming_language)).
 
-2. Wirth did not develop GnuAPL specifically either, it is part of the GNU project [https://www.gnu.org/software/apl *(November 17, 2024)*](https://www.gnu.org/software/apl/).
+2. Wirth did not develop GNU APL specifically either, it is part of the GNU project [https://www.gnu.org/software/apl *(November 17, 2024)*](https://www.gnu.org/software/apl/).
 
 3. **"aplescript"** is probably supposed to be **"dyalogscript,"** referring to an executable provided by Dyalog APL [https://www.dyalog.com *(November 17, 2024)*](https://www.dyalog.com/) to run APL programs as scripts.
 
-4. **"appl"** is not the executable that GnuAPL provides; the actual name is **"apl."**
+4. **"appl"** is not the executable that GNU APL provides; the actual name is **"apl."**
 
 As for the code itself, it is wildly incorrect. **⍎** is a function that takes a
 character vector (what APL calls strings) and executes it as APL code. A nasty

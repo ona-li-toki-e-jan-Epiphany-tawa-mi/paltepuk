@@ -13,7 +13,7 @@ practice the cognitive dissonance that it stands for Array Programming Language,
 but it's actually A Programming Language, lol.
 
 I've recently been working on a complete redo of my library fio.apl, which
-provides an abstraction layer to the GnuAPL ⎕FIO system function.
+provides an abstraction layer to the GNU APL ⎕FIO system function.
 
 > Here: [/cgit/fio.apl.git/about](/cgit/fio.apl.git/about/)
 >
