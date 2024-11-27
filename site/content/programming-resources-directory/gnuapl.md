@@ -43,6 +43,18 @@ This site hosts an *almost-verbatim* copy of this part of the GNU APL version
 
 Some tips about how to write libraries for GNU APL, and also APL in general.
 
+## fio.apl - [/cgit/fio.apl.git/about](/cgit/fio.apl.git/about/) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/fio.apl](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/fio.apl)
+
+The ⎕FIO system function is used to interact with the operating system. However,
+in my opinion, it is far too low-level for a language like APL. I created the
+fio.apl library to provide a much better interface. If you find ⎕FIO is a pain
+in the ass, please take a look at this.
+
+## aplwiz - [/cgit/aplwiz.git/about](/cgit/aplwiz.git/about/) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/aplwiz](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/aplwiz)
+
+A collection of automated testing script templates I've made to add unit testing
+and similar to your GNU APL projects.
+
 ## gnu-apl-mode - [https://github.com/lokedhs/gnu-apl-mode *(November 15, 2024)*](https://github.com/lokedhs/gnu-apl-mode)
 
 You'll need some way to type the symbols APL uses. I use this with Emacs, and it
