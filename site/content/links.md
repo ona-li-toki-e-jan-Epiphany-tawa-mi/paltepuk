@@ -8,10 +8,6 @@ description         = 'external links to my other profiles/websites/servers/etc.
 
 [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
 
-## PyPI
-
-[https://pypi.org/user/ona_li_toki_e_jan_Epiphany_tawa_mi](https://pypi.org/user/ona_li_toki_e_jan_Epiphany_tawa_mi)
-
 ## npm
 
 [https://www.npmjs.com/~ona-li-toki-e-jan-epiphany-tawa-mi](https://www.npmjs.com/~ona-li-toki-e-jan-epiphany-tawa-mi)
