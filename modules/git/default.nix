@@ -76,7 +76,7 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
         (standard "PyMSWPR.git"
           "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
         (standard "cowsAyPL.git"
-          "Cowsay in GnuAPL")
+          "Cowsay in GNU APL")
         (standard "netcatchat.git"
           "A simple command-line chat server and client using netcat")
         (standard "paltepuk.git"
@@ -92,9 +92,11 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
         (standard "elephant_veins.git"
           "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
         (standard "fio.apl.git"
-          "GnuAPL ⎕FIO abstraction library")
+          "GNU APL ⎕FIO abstraction library")
         (standard "love-you-mom.git"
           "Tells your mom (or dad) that you love them")
+        (standard "aplwiz.git"
+          "GNU APL automated testing script templates")
 
         (personalMirror "epitaphpkgs.git"
           "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
