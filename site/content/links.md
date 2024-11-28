@@ -8,10 +8,6 @@ description         = 'external links to my other profiles/websites/servers/etc.
 
 [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
 
-## npm
-
-[https://www.npmjs.com/~ona-li-toki-e-jan-epiphany-tawa-mi](https://www.npmjs.com/~ona-li-toki-e-jan-epiphany-tawa-mi)
-
 ## Thingiverse
 
 [https://www.thingiverse.com/jan_epiphany/designs](https://www.thingiverse.com/jan_epiphany/designs)
