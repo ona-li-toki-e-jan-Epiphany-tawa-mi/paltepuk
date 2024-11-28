@@ -81,8 +81,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "A simple command-line chat server and client using netcat")
         (standard "paltepuk.git"
           "Personal website and server wombo-combo")
-        (standard "player-sounder.git"
-          "Player soundser byer shellinger outer toer oneer ofer theer availableer audioer playerser")
         (standard "Brainblast-Toolkit.git"
           "A brainfuck/BASICfuck REPL for 6502 machines")
         (standard "AHD.git"
