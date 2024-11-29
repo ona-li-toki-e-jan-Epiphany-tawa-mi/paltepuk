@@ -70,6 +70,10 @@ in your package manager.
 
 Some rando's personal website that feels cozy. Love the style.
 
+### The Rust Recovery Foundation - [https://rustrecoveryfoundation.neocities.org *(November 28, 2024)*](https://rustrecoveryfoundation.neocities.org/)
+
+For all you recovering Rust developers out there.
+
 ### 512KB Club - [https://512kb.club *(November 16, 2024)*](https://512kb.club)
 
 A showcase of websites with an uncompressed size of <= 512 KB.
