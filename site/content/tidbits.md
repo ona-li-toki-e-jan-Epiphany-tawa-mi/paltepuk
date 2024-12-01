@@ -10,7 +10,7 @@ description         = 'haikus and poems and such'
 
 {{< br >}}
 
-*Written: November 15, 2024.*
+*Added: November 15, 2024. Written: September 12, 2024.*
 
 kon li lon
 
