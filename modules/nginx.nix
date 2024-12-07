@@ -35,6 +35,11 @@ in
     recommendedOptimisation  = true;
     recommendedProxySettings = true;
 
+    # Creates the ".onion available" button for Tor users.
+    appendHttpConfig = ''
+       add_header Onion-Location http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion$request_uri;
+    '';
+
     virtualHosts."paltepuk" = {
       locations = {
         "/".root = "${callPackage ../site {}}";
