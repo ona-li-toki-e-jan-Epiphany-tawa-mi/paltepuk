@@ -9,7 +9,8 @@
 #
 # paltepuk is distributed in the hope that it will be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-# A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+# A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+# details.
 #
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
@@ -18,16 +19,17 @@
 
 { lib
 , ports
-, config
+, pkgs
 , ...
 }:
 
 let inherit (lib) concatStringsSep escapeShellArg;
     inherit (builtins) genList toString;
 
-    inherit (config.nur) repos;
+    inherit (pkgs.nur.repos) ona-li-toki-e-jan-Epiphany-tawa-mi;
 
-    # The ports clients can connect on, concatenated into a string for netcatchat.
+    # The ports clients can connect on, concatenated into a string for
+    # netcatchat.
     clientPorts = with ports.netcatchatClient; concatStringsSep " " (genList
       (x: toString (x + from))
       (to - from + 1));
@@ -37,10 +39,14 @@ in
   systemd.services."netcatchat" = {
     description = "netcatchat server daemon";
     wantedBy    = [ "multi-user.target" ];
-    path        = with repos.ona-li-toki-e-jan-Epiphany-tawa-mi; [ netcatchat cowsaypl ];
+    path        = with ona-li-toki-e-jan-Epiphany-tawa-mi; [
+      netcatchat
+      cowsaypl
+    ];
 
     script = ''
-      netcatchat -s -p ${toString ports.netcatchatServer} -c ${escapeShellArg clientPorts} \
+      netcatchat -s -p ${toString ports.netcatchatServer} \
+                 -c ${escapeShellArg clientPorts}         \
                  -m "\n$(cowsaypl -- +p 'Welcome %d, to netcatchat@paltepuk')\n"
     '';
 
@@ -68,7 +74,11 @@ in
       ProcSubset              = "pid";
       ProtectHome             = true;
       PrivateUsers            = true;
-      SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
+      SystemCallFilter        = [
+        "@system-service"
+        "~@resources"
+        "~@privileged"
+      ];
       SystemCallErrorNumber   = "EPERM";
       RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
       ProtectKernelTunables   = true;

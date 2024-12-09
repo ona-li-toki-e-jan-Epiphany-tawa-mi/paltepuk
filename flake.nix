@@ -9,7 +9,8 @@
 #
 # paltepuk is distributed in the hope that it will be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-# A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+# A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+# details.
 #
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
@@ -18,7 +19,7 @@
   description = "NixOS configuration flake for badass reproducable websites";
 
   inputs = {
-    nixpkgs.url          = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url          = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url              = "github:nix-community/NUR";
   };
@@ -26,13 +27,14 @@
   outputs = { nixpkgs, nur, nixpkgs-unstable, ... } @ inputs:
     let # Extra nixpkgs channels to include.
         extraChannels = { pkgs, ... }: {
-          _module.args.pkgs-unstable = import nixpkgs-unstable { inherit (pkgs.stdenv.targetPlatform) system; };
+          _module.args.pkgs-unstable = import nixpkgs-unstable {
+            inherit (pkgs.stdenv.targetPlatform) system; };
         };
 
         # Modules to include in every configuration.
         extraModules = [
           extraChannels
-          nur.nixosModules.nur
+          nur.modules.nixos.default
           ./modules
         ];
 

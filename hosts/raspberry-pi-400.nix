@@ -9,7 +9,8 @@
 #
 # paltepuk is distributed in the hope that it will be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-# A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+# A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+# details.
 #
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
@@ -27,7 +28,7 @@
 
 
   # Bandwidth limits.
-  services.i2pd.bandwidth = 1000;                 # 1 MB/s
+  services.i2pd.bandwidth = 1000; # 1 MB/s
   services.tor.settings   = {
     BandwidthRate  = "3 MBytes";
     BandwidthBurst = "4 MBytes";
@@ -42,7 +43,7 @@
 
   swapDevices = [{
     device = "/swapfile";
-    size   = 8*1024;                              # 8 GB.
+    size   = 8*1024; # 8 GB.
   }];
 
 
@@ -54,8 +55,6 @@
     grub.enable = false;
     # Enables the generation of /boot/extlinux/extlinux.conf.
     generic-extlinux-compatible.enable = true;
-    # Steps up the CPU frequency.
-    raspberryPi.firmwareConfig = [ "force_turbo=1" ];
   };
 
   # Enables networking.
