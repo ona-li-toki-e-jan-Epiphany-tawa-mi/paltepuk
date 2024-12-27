@@ -16,8 +16,6 @@ documentation.
 I've written a couple applications in GNU APL; feel free to use them as
 reference:
 
-- AHD, hexdump utility - [/cgit/AHD.git/about](/cgit/AHD.git/about) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/AHD](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/AHD)
-
 - cowsAyPL, cowsay clone - [/cgit/cowsAyPL.git/about](/cgit/cowsAyPL.git/about) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/cowsAyPL](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/cowsAyPL)
 
 ## GNU APL Intro - [https://www.gnu.org/software/apl/apl-intro.html *(November 15, 2024)*](https://www.gnu.org/software/apl/apl-intro.html)
