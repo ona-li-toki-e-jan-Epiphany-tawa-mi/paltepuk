@@ -85,8 +85,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "A brainfuck/BASICfuck REPL for 6502 machines")
         (standard "AHD.git"
           "Hexdump utility")
-        (standard "ap.git"
-          "A simple NixOS configuration for making wireless access points")
         (standard "elephant_veins.git"
           "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
         (standard "fio.apl.git"
