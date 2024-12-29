@@ -33,10 +33,12 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
 
     # Names for the sections displayed in cgit.
     sections = {
-      none           = null;
-      # As-in no longer being worked on or supported. Eventually will be merged
-      # into the AkashicRecord.
-      defunct        = "Defunct";
+      none    = null;
+      luanti  = "Luanti mods and modpacks";
+      library = "Libraries and Templates";
+      game    = "Games";
+      cli     = "CLI applications";
+      tui     = "TUI applications";
       # My projects that mainly live on other sites.
       personalMirror = "Personal mirrors (may contain Clearnet resources)";
       # Mirrors of others' projects.
@@ -45,10 +47,10 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
 
     # Declarative repositories for git and cgit.
     repositories =
-      let standard = path: description: {
+      let standard = path: section: description: {
             path = "${path}.git";
             inherit description;
-            section    = sections.none;
+            inherit section;
             autoMirror = false;
           };
 
@@ -59,42 +61,47 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
             autoMirror = false;
           };
 
-          mirror = path: mirrorUrl: description: {
-            path = "${path}.git";
-            inherit description;
-            section    = sections.mirror;
-            autoMirror = true;
-            inherit mirrorUrl;
-          };
+          # mirror = path: mirrorUrl: description: {
+          #   path = "${path}.git";
+          #   inherit description;
+          #   section    = sections.mirror;
+          #   autoMirror = true;
+          #   inherit mirrorUrl;
+          # };
       in [
-        (standard "AkashicRecord"
+        (standard "AkashicRecord" sections.none
           "The history of my universe, I guess")
-        (standard "BitMasher"
-          "A fast-paced text adventure game inside a ransomware-infected computer")
-        (standard "COBOL-DVD-Thingy"
-          "Terminal screensaver similar to that of DVD players")
-        (standard "PyMSWPR"
-          "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
-        (standard "cowsAyPL"
-          "Cowsay in GNU APL")
-        (standard "netcatchat"
-          "A simple command-line chat server and client using netcat")
-        (standard "paltepuk"
+        (standard "paltepuk" sections.none
           "Personal website and server wombo-combo")
-        (standard "Brainblast-Toolkit"
+
+        (standard "COBOL-DVD-Thingy" sections.tui
+          "Terminal screensaver similar to that of DVD players")
+        (standard "netcatchat" sections.tui
+          "A simple command-line chat server and client using netcat")
+        (standard "Brainblast-Toolkit" sections.tui
           "A brainfuck/BASICfuck REPL for 6502 machines")
-        (standard "AHD"
-          "Hexdump utility")
-        (standard "elephant_veins"
-          "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
-        (standard "fio.apl"
-          "GNU APL ⎕FIO abstraction library")
-        (standard "love-you-mom"
+        (standard "love-you-mom" sections.tui
           "Tells your mom (or dad) that you love them")
-        (standard "aplwiz"
+
+        (standard "AHD" sections.cli
+          "Hexdump utility")
+        (standard "cowsAyPL" sections.cli
+          "Cowsay in GNU APL")
+
+        (standard "BitMasher" sections.game
+          "A fast-paced text adventure game inside a ransomware-infected computer")
+        (standard "PyMSWPR" sections.game
+          "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
+
+        (standard "fio.apl" sections.library
+          "GNU APL ⎕FIO abstraction library")
+        (standard "aplwiz" sections.library
           "GNU APL automated testing script templates")
-        (standard "gigatools"
+
+        (standard "gigatools" sections.luanti
           "Gigatools for gigachads with gigaworkloads")
+        (standard "elephant_veins" sections.luanti
+          "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
 
         (personalMirror "epitaphpkgs"
           "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
