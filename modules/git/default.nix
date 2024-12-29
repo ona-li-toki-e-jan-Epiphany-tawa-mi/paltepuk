@@ -93,6 +93,8 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "Tells your mom (or dad) that you love them")
         (standard "aplwiz.git"
           "GNU APL automated testing script templates")
+        (standard "gigatools.git"
+          "Gigatools for gigachads with gigaworkloads")
 
         (personalMirror "epitaphpkgs.git"
           "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
