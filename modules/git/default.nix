@@ -46,59 +46,59 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
     # Declarative repositories for git and cgit.
     repositories =
       let standard = path: description: {
-            inherit path;
+            path = "${path}.git";
             inherit description;
             section    = sections.none;
             autoMirror = false;
           };
 
           personalMirror = path: description: {
-            inherit path;
+            path = "${path}.git";
             inherit description;
             section    = sections.personalMirror;
             autoMirror = false;
           };
 
           mirror = path: mirrorUrl: description: {
-            inherit path;
+            path = "${path}.git";
             inherit description;
             section    = sections.mirror;
             autoMirror = true;
             inherit mirrorUrl;
           };
       in [
-        (standard "AkashicRecord.git"
+        (standard "AkashicRecord"
           "The history of my universe, I guess")
-        (standard "BitMasher.git"
+        (standard "BitMasher"
           "A fast-paced text adventure game inside a ransomware-infected computer")
-        (standard "COBOL-DVD-Thingy.git"
+        (standard "COBOL-DVD-Thingy"
           "Terminal screensaver similar to that of DVD players")
-        (standard "PyMSWPR.git"
+        (standard "PyMSWPR"
           "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
-        (standard "cowsAyPL.git"
+        (standard "cowsAyPL"
           "Cowsay in GNU APL")
-        (standard "netcatchat.git"
+        (standard "netcatchat"
           "A simple command-line chat server and client using netcat")
-        (standard "paltepuk.git"
+        (standard "paltepuk"
           "Personal website and server wombo-combo")
-        (standard "Brainblast-Toolkit.git"
+        (standard "Brainblast-Toolkit"
           "A brainfuck/BASICfuck REPL for 6502 machines")
-        (standard "AHD.git"
+        (standard "AHD"
           "Hexdump utility")
-        (standard "elephant_veins.git"
+        (standard "elephant_veins"
           "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
-        (standard "fio.apl.git"
+        (standard "fio.apl"
           "GNU APL ⎕FIO abstraction library")
-        (standard "love-you-mom.git"
+        (standard "love-you-mom"
           "Tells your mom (or dad) that you love them")
-        (standard "aplwiz.git"
+        (standard "aplwiz"
           "GNU APL automated testing script templates")
-        (standard "gigatools.git"
+        (standard "gigatools"
           "Gigatools for gigachads with gigaworkloads")
 
-        (personalMirror "epitaphpkgs.git"
+        (personalMirror "epitaphpkgs"
           "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
-        (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi.git"
+        (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
           "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
       ];
 in
