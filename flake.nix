@@ -21,10 +21,15 @@
   inputs = {
     nixpkgs.url          = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nur.url              = "github:nix-community/NUR";
+
+    epitaphpkgs = {
+      url =
+        "github:ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nur, nixpkgs-unstable, ... } @ inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, epitaphpkgs, ... } @ inputs:
     let # Extra nixpkgs channels to include.
         extraChannels = { pkgs, ... }: {
           _module.args.pkgs-unstable = import nixpkgs-unstable {
@@ -34,7 +39,7 @@
         # Modules to include in every configuration.
         extraModules = [
           extraChannels
-          nur.modules.nixos.default
+          epitaphpkgs.nixosModules.default
           ./modules
         ];
 

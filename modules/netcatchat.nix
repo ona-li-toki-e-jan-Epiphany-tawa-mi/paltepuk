@@ -26,8 +26,6 @@
 let inherit (lib) concatStringsSep escapeShellArg;
     inherit (builtins) genList toString;
 
-    inherit (pkgs.nur.repos) ona-li-toki-e-jan-Epiphany-tawa-mi;
-
     # The ports clients can connect on, concatenated into a string for
     # netcatchat.
     clientPorts = with ports.netcatchatClient; concatStringsSep " " (genList
@@ -39,10 +37,7 @@ in
   systemd.services."netcatchat" = {
     description = "netcatchat server daemon";
     wantedBy    = [ "multi-user.target" ];
-    path        = with ona-li-toki-e-jan-Epiphany-tawa-mi; [
-      netcatchat
-      cowsaypl
-    ];
+    path        = with pkgs.epitaphpkgs; [ netcatchat cowsaypl ];
 
     script = ''
       netcatchat -s -p ${toString ports.netcatchatServer} \
