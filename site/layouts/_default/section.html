@@ -30,7 +30,7 @@ Single params:
 <br>
 {{ range.Pages.ByDate.Reverse }}
 <p><a href="{{ .RelPermalink }}">{{ partial "partials/filename.html" . }}</a>:</p>
-<p>&ensp;&ensp;&ensp;&ensp;{{ .Summary | truncate 100 }}</p>
+<p>&ensp;&ensp;&ensp;&ensp;{{ .Plain | truncate 100 }}</p>
 <br>
 {{ else }}
 <p>head: cannot open '*' for reading: No such file or directory</p>
