@@ -73,6 +73,8 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "The history of my universe, I guess")
         (standard "paltepuk" sections.none
           "Personal website and server wombo-combo")
+        (standard "epitaphpkgs" sections.none
+          "My personal package repository")
 
         (standard "COBOL-DVD-Thingy" sections.tui
           "Terminal screensaver similar to that of DVD players")
@@ -103,8 +105,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
         (standard "elephant_veins" sections.luanti
           "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
 
-        (personalMirror "epitaphpkgs"
-          "My Nix User Repository | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs")
         (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
           "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
       ];
