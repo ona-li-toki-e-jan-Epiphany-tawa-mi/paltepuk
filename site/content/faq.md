@@ -31,6 +31,10 @@ Sorry, but this site isn't optimized for in-cells; paltepuk is
 
 TL: Tik-Tok hand portal hella cap fr fr no bussin' rizzlers use literal PCs ong.
 
+## Ping?
+
+Pong.
+
 ## When is the Second Coming?
 
 October 20th, 2083 anno Domini.
