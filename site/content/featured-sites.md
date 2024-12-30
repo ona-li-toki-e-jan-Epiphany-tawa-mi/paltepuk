@@ -98,7 +98,7 @@ started selling a new version on Steam, but the classic version is still online,
 and it's open source!
 [https://github.com/gorescript/gorescript *(November 16, 2024)*](https://github.com/gorescript/gorescript).
 
-### amogus.i2p - [http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p *(November 17)*](http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p/)
+### amogus.i2p - [http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p *(November 17, 2024)*](http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p/)
 
 I'm sure you can expect what kind of content this website has. Just ingore the
 Monero address. Or don't, I'm not your mom.
