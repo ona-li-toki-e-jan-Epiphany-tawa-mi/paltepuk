@@ -21,15 +21,9 @@
   inputs = {
     nixpkgs.url          = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    epitaphpkgs = {
-      url =
-        "github:ona-li-toki-e-jan-Epiphany-tawa-mi/epitaphpkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, epitaphpkgs, ... } @ inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
     let # Extra nixpkgs channels to include.
         extraChannels = { pkgs, ... }: {
           _module.args.pkgs-unstable = import nixpkgs-unstable {
@@ -39,7 +33,6 @@
         # Modules to include in every configuration.
         extraModules = [
           extraChannels
-          epitaphpkgs.nixosModules.default
           ./modules
         ];
 
@@ -49,14 +42,9 @@
 
           # Port numbers for networked services.
           ports = {
-            i2pdConsole      = 7070;
-            cgit             = 5000;
-            rsyncd           = 873;
-            netcatchatServer = 2000;
-            netcatchatClient = {
-              from = 2001;
-              to   = 2025;
-            };
+            i2pdConsole = 7070;
+            cgit        = 5000;
+            rsyncd      = 873;
           };
         } // (import ./config.nix);
     in {

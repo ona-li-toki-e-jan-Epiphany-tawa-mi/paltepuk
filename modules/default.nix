@@ -31,7 +31,6 @@ in
               ./ssh.nix
               ./git
               ./epiphany.nix
-              ./netcatchat.nix
               ./nginx.nix
               ./rsyncd.nix
               ./secrets

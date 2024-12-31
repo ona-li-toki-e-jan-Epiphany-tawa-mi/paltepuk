@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "epitaphpkgs": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1735532793,
-        "narHash": "sha256-yP8oo0uuU7P2/kw6VnoiRAYx8PkR9tjyH7/AT6Yh6nw=",
-        "owner": "ona-li-toki-e-jan-Epiphany-tawa-mi",
-        "repo": "epitaphpkgs",
-        "rev": "bbe0bf182666c07ce01ea00d0e6c008baa5fc4b5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ona-li-toki-e-jan-Epiphany-tawa-mi",
-        "repo": "epitaphpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1735264675,
@@ -54,7 +34,6 @@
     },
     "root": {
       "inputs": {
-        "epitaphpkgs": "epitaphpkgs",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }

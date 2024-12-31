@@ -19,18 +19,10 @@
 # NOTE: Make sure to set
 # services.tor.settings.{"BandwidthRate","BandwidthBurst"}.
 
-{ ports
-, pkgs-unstable
+{ pkgs-unstable
 , ...
 }:
 
-let inherit (builtins) genList;
-
-    # The netcatchat client ports for the onion service.
-    netcatchatClientPorts = with ports.netcatchatClient; (genList
-      (x: x + from)
-      (to - from + 1));
-in
 {
   services.tor = {
     package = pkgs-unstable.tor;
@@ -39,10 +31,6 @@ in
     # Enables hardware acceleration.
     settings.HardwareAccel = 1;
 
-    relay.onionServices = {
-      "paltepuk".map = [ 80
-                         ports.netcatchatServer
-                       ] ++ netcatchatClientPorts;
-    };
+    relay.onionServices."paltepuk".map = [ 80 ];
   };
 }
