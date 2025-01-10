@@ -60,6 +60,12 @@ God tier site. Nice car. Love the hate emails at the bottom of the page.
 Really cool personal website. Highly recommend checking the page on Internet
 Explorer.
 
+### [![](/web-buttons/luvstarkei.com.gif)](https://luvstarkei.com) LuvstarKei - [https://luvstarkei.com *(January 10, 2025)*](https://luvstarkei.com)
+
+*Wordpress, Eww*
+
+Super, super, super cute personal website.
+
 ### SupertTuxKart - [https://supertuxkart.net *(November 16, 2024)*](https://supertuxkart.net)
 
 The website for SuperTuxKart, a free as-in freedom racing game. It's one of my
