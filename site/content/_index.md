@@ -10,13 +10,14 @@ description = 'my software projects'
 
 {{< command-line  >}}whoami{{< /command-line >}}
 
-Name: ona li toki e jan Epiphany tawa mi{{< br >}}
-Short name: jan Epiphany{{< br >}}
-Web button: ![](/web-buttons/paltepuk.gif) (feel free to use){{< br >}}
+Moniker: ona li toki e jan Epiphany tawa mi{{< br >}}
+Short moniker: jan Epiphany{{< br >}}
+Shorter moniker: Epiphany
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
-My baller personal website
+Description: My baller personal website{{< br >}}
+Web button: ![](/web-buttons/paltepuk.gif) (feel free to use){{< br >}}
 
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
