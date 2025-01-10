@@ -26,7 +26,7 @@ Penger.
 
 {{< br >}}
 
-### [![](/web-buttons/landchad.net.gif)](https://landchad.net) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net)
+### ![](/web-buttons/landchad.net.gif) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net)
 
 A site that teaches people how to make their own website, and run their own
 services, on a server all of their own.
@@ -41,7 +41,7 @@ A badass website about DIY audio synthesizers.
 
 {{< br >}}
 
-### [![](/web-buttons/based.cooking.gif)](https://based.cooking) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
+### ![](/web-buttons/based.cooking.gif) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
 
 Cooking recipe site that isn't bloated with ads and pointless
 JavaScript.
@@ -52,7 +52,7 @@ decided to cut the cord again.
 
 {{< br >}}
 
-### [![](/web-buttons/wiby.me.gif)](https://wiby.me) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
+### ![](/web-buttons/wiby.me.gif) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
 
 Cool search engine for proper websites (simple and not overloaded with JavaScript.)
 
@@ -78,9 +78,9 @@ Explorer.
 
 {{< br >}}
 
-### [![](/web-buttons/luvstarkei.com.gif)](https://luvstarkei.com) LuvstarKei - [https://luvstarkei.com *(January 10, 2025)*](https://luvstarkei.com)
+### ![](/web-buttons/luvstarkei.com.gif) LuvstarKei - [https://luvstarkei.com *(January 10, 2025)*](https://luvstarkei.com)
 
-*Wordpress, Eww*
+*Wordpress, Eww.*
 
 Super, super, super cute personal website.
 
@@ -94,7 +94,7 @@ in your package manager.
 
 {{< br >}}
 
-### [![](/web-buttons/cozynet.org.gif)](https://cozynet.org/homepage/) CozyNet - [https://cozynet.org/homepage *(November 16, 2024)*](https://cozynet.org/homepage) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(November 16, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage/)
+### ![](/web-buttons/cozynet.org.gif) CozyNet - [https://cozynet.org/homepage *(November 16, 2024)*](https://cozynet.org/homepage) | [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(November 16, 2024)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage/)
 
 Some rando's personal website that feels cozy. Love the style.
 
@@ -127,7 +127,7 @@ A console window manager. Really cool.
 
 {{< br >}}
 
-### [![](/web-buttons/gorescript.github.io.gif)](https://gorescript.github.io/classic/play) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
+### ![](/web-buttons/gorescript.github.io.gif) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
 
 *Requires JavaScript and WebGL.*
 
@@ -145,6 +145,6 @@ Monero address. Or don't, I'm not your mom.
 
 {{< br >}}
 
-### [![](/web-buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
+### ![](/web-buttons/lain.angelic-trust.net.gif) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
 
 *Requires JavaScript.*
