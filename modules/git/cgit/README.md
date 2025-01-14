@@ -21,8 +21,8 @@ HTTP.
 
 ### Clearnet
 
-If you're on the Clearnet, you can clone as usual. Or, if you'd prefer, you can
-visit my GitHub account instead:
+You can use git clone as usual. Or, if you'd prefer, you can visit my GitHub
+account instead:
 
 ```
 https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
@@ -30,9 +30,9 @@ https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
 
 ### I2P
 
-If you're on I2P, you can use this command as a base for cloning each repo. This
-assumes the HTTP proxy of your router is available via localhost port 4444;
-modify for your setup.
+You can use this command as a base for cloning each repo. This assumes the HTTP
+proxy of your router is available via localhost port 4444; modify for your
+setup.
 
 ```
 git -c http.proxy=http://127.0.0.1:4444 clone http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p/cgit/<repository>
@@ -40,9 +40,9 @@ git -c http.proxy=http://127.0.0.1:4444 clone http://oytjumugnwsf4g72vemtamo72vf
 
 ### Tor
 
-If you're on Tor, you can use this command as a base for cloning each repo. This
-assumes the Tor client daemon's SOCKSv5 proxy is available via localhost port
-9050; modify for your setup.
+You can use this command as a base for cloning each repo. This assumes the Tor
+client daemon's SOCKSv5 proxy is available via localhost port 9050; modify for
+your setup.
 
 ```
 git -c http.proxy=socks5h://127.0.0.1:9050 clone http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit/<repository>
