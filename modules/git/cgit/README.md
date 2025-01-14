@@ -47,28 +47,3 @@ assumes the Tor client daemon's SOCKSv5 proxy is available via localhost port
 ```
 git -c http.proxy=socks5h://127.0.0.1:9050 clone http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit/<repository>
 ```
-
-## Mirroring (with rsync)
-
-Rsync is set up so you can mirror the repositories with rsync (you could use git
-as well, but I wanted something to easily mirror all repositories all at once.)
-
-To mirror a paticular repository, just append a repository name to the rsync
-URL.
-
-Rsync options used:
-
-- `-r` - recursive. Recurses through directories and syncs their contents.
-- `-u` - update. Skips files that don't need to be synced (if you've synced before.)
-- `-P` - partial and progress. Shows progress, and does partial file copies so it can resume if it failed.
-- `--del` - delete during. Deletes files present in the destination that are not present in the remote directory. Careful!
-
-### I2P
-
-If you're on I2P, you can use this command to mirror all repos. This assumes the
-HTTP proxy of your router is available via localhost on port 4444; modify for
-your setup.
-
-```
-RSYNC_PROXY=127.0.0.1:4444 rsync -ruP --del rsync://qr7jxluq5g3nn5tvf7jmiz5rhm7eimc7vlcmzcjhrtynusymjibq.b32.i2p/git/ <destination path>
-```

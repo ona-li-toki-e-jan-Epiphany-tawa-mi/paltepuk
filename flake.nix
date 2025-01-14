@@ -44,7 +44,6 @@
           ports = {
             i2pdConsole = 7070;
             cgit        = 5000;
-            rsyncd      = 873;
           };
         } // (import ./config.nix);
     in {

@@ -32,7 +32,6 @@ in
               ./git
               ./epiphany.nix
               ./nginx.nix
-              ./rsyncd.nix
               ./secrets
               ./cloudflared.nix
             ];

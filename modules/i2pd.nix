@@ -68,18 +68,10 @@ in
       pass   = password;
     };
 
-    inTunnels = {
-      "nginx" = {
-        enable      = true;
-        port        = 80;
-        destination = "";
-      };
-
-      "rsync" = {
-        enable      = true;
-        port        = ports.rsyncd;
-        destination = "";
-      };
+    inTunnels."nginx" = {
+      enable      = true;
+      port        = 80;
+      destination = "";
     };
   };
 }
