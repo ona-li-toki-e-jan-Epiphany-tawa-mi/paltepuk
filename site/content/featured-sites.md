@@ -20,6 +20,18 @@ scrollingTitleCount = 3
 
 {{< br >}}
 
+### Consumer Action Taskforce - [https://wiki.rossmanngroup.com *(January 20, 2025)*](https://wiki.rossmanngroup.com)
+
+A wiki/database started by the GOAT Louis Rossman to fight back against
+companies trying to fuck over their customers.
+
+This wiki seeks to document when companies do things like making subscriptions
+difficult to cancel, making electronic devices depend on the cloud,
+retroactively changing their Terms of Service, etc., to help protect our
+consumer rights.
+
+{{< br >}}
+
 ### Penger City - [https://penger.city *(November 16, 2024)*](https://penger.city)
 
 Penger.
