@@ -17,6 +17,8 @@ scrollingTitleCount = 3
 [![](/web-buttons/getimiskon.xyz.gif)](https://getimiskon.xyz "Updated July 26, 2024")
 [![](/web-buttons/voidlinux.org.gif)](https://voidlinux.org/ "Updated October 30, 2024")
 [![](/web-buttons/gimp.org.gif)](https://www.gimp.org/ "Updated November 16, 2024")
+[![](/web-buttons/luvstarkei.com.gif)](https://luvstarkei.com "Updated January 10, 2025")
+[![](/web-buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net "Updated November 16, 2024")
 
 {{< br >}}
 
@@ -90,14 +92,6 @@ Explorer.
 
 {{< br >}}
 
-### ![](/web-buttons/luvstarkei.com.gif) LuvstarKei - [https://luvstarkei.com *(January 10, 2025)*](https://luvstarkei.com)
-
-*Wordpress, Eww.*
-
-Super, super, super cute personal website.
-
-{{< br >}}
-
 ### SupertTuxKart - [https://supertuxkart.net *(November 16, 2024)*](https://supertuxkart.net)
 
 The website for SuperTuxKart, a free as-in freedom racing game. It's one of my
@@ -154,9 +148,3 @@ and it's open source!
 
 I'm sure you can expect what kind of content this website has. Just ingore the
 Monero address. Or don't, I'm not your mom.
-
-{{< br >}}
-
-### ![](/web-buttons/lain.angelic-trust.net.gif) [http://lain.angelic-trust.net *(November 16, 2024)*](https://lain.angelic-trust.net)
-
-*Requires JavaScript.*
