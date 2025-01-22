@@ -31,7 +31,7 @@ services, I needed a homepage!
 So, I raw-dogged some HTML together to set up a basic homepage, and it looked
 something like this:
 
-![Image of original homepage](/blog/this-site-and-its-future/first-iteration-homepage.jpeg)
+![Image of original homepage](/blog/this-site-and-its-future/first-iteration-homepage.webp)
 
 Transcendentally beautiful, how the internet should be.
 
@@ -48,7 +48,7 @@ I found a cool theme called Lugo, standing for Luke's Hugo Theme
 I modified it a bit and used it to whip up a new site, and even added some
 extra pages, fancy! It looked something like this:
 
-![Image of second iteration's homepage](/blog/this-site-and-its-future/second-iteration-homepage.jpeg)
+![Image of second iteration's homepage](/blog/this-site-and-its-future/second-iteration-homepage.webp)
 
 Muuuuuuch better, and look at those web buttons! Who doesn't like web buttons?
 Heathens, that's who.
@@ -135,7 +135,7 @@ terminal waiting for input. Here's the code if you're interested:
 
 With that, the new site, a-la-me, was born. It looks something like this:
 
-![Image of third iteration's homepage](/blog/this-site-and-its-future/third-iteration-homepage.jpeg)
+![Image of third iteration's homepage](/blog/this-site-and-its-future/third-iteration-homepage.webp)
 
 After that, I decided to use a Cloudflare tunnel to slap it on the Clearnet, so
 that normies could access it. That leaves us where we are today (as of writing

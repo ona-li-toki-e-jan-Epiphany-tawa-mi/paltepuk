@@ -27,7 +27,7 @@ and I'll take it off after reviewing that this is indeed the case.
 ## Why doesn't the site look good on my phone?
 
 Sorry, but this site isn't optimized for in-cells; paltepuk is
-![best viewed on a real computer.](/web-buttons/best-viewed-on-a-real-computer.gif)
+![best viewed on a real computer.](/web-buttons/best-viewed-on-a-real-computer.webp)
 
 TL: Tik-Tok hand portal hella cap fr fr no bussin' rizzlers use literal PCs ong.
 

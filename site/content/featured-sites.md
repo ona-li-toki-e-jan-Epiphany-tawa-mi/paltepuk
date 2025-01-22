@@ -3,22 +3,22 @@ title               = 'Featured Sites'
 scrollingTitleCount = 3
 +++
 
-[![](/web-buttons/gnu.org-emacs.gif)](https://www.gnu.org/software/emacs "Updated July 26, 2024")
 [![](/web-buttons/shmage.xyz.gif)](https://shmage.xyz "Updated July 26, 2024")
-[![](/web-buttons/geti2p.net.gif)](https://geti2p.net "Updated July 26, 2024")
-[![](/web-buttons/keepassxc.org.gif)](https://keepassxc.org "Updated July 26, 2024")
-[![](/web-buttons/librewolf.net.gif)](https://librewolf.net "Updated July 26, 2024")
-[![](/web-buttons/torproject.org.gif)](https://torproject.org "Updated July 26, 2024")
-[![](/web-buttons/gnu.org.gif)](https://gnu.org "Updated July 26, 2024")
 [![](/web-buttons/kde.org.gif)](https://kde.org "Updated July 26, 2024")
-[![](/web-buttons/ublockorigin.com.gif)](https://ublockorigin.com "Updated July 26, 2024")
-[![](/web-buttons/debian.org.gif)](https://debian.org "Updated July 26, 2024")
-[![](/web-buttons/nergen.net.gif)](https://nergen.net "Updated July 26, 2024")
-[![](/web-buttons/getimiskon.xyz.gif)](https://getimiskon.xyz "Updated July 26, 2024")
-[![](/web-buttons/voidlinux.org.gif)](https://voidlinux.org/ "Updated October 30, 2024")
-[![](/web-buttons/gimp.org.gif)](https://www.gimp.org/ "Updated November 16, 2024")
-[![](/web-buttons/luvstarkei.com.gif)](https://luvstarkei.com "Updated January 10, 2025")
-[![](/web-buttons/lain.angelic-trust.net.gif)](https://lain.angelic-trust.net "Updated November 16, 2024")
+[![](/web-buttons/gnu.org-emacs.webp)](https://www.gnu.org/software/emacs "Updated July 26, 2024")
+[![](/web-buttons/geti2p.net.webp)](https://geti2p.net "Updated July 26, 2024")
+[![](/web-buttons/keepassxc.org.webp)](https://keepassxc.org "Updated July 26, 2024")
+[![](/web-buttons/librewolf.net.webp)](https://librewolf.net "Updated July 26, 2024")
+[![](/web-buttons/torproject.org.webp)](https://torproject.org "Updated July 26, 2024")
+[![](/web-buttons/gnu.org.webp)](https://gnu.org "Updated July 26, 2024")
+[![](/web-buttons/ublockorigin.com.webp)](https://ublockorigin.com "Updated July 26, 2024")
+[![](/web-buttons/debian.org.webp)](https://debian.org "Updated July 26, 2024")
+[![](/web-buttons/nergen.net.webp)](https://nergen.net "Updated July 26, 2024")
+[![](/web-buttons/getimiskon.xyz.webp)](https://getimiskon.xyz "Updated July 26, 2024")
+[![](/web-buttons/voidlinux.org.webp)](https://voidlinux.org/ "Updated October 30, 2024")
+[![](/web-buttons/gimp.org.webp)](https://www.gimp.org/ "Updated November 16, 2024")
+[![](/web-buttons/luvstarkei.com.webp)](https://luvstarkei.com "Updated January 10, 2025")
+[![](/web-buttons/lain.angelic-trust.net.webp)](https://lain.angelic-trust.net "Updated November 16, 2024")
 
 {{< br >}}
 
@@ -55,7 +55,7 @@ A badass website about DIY audio synthesizers.
 
 {{< br >}}
 
-### ![](/web-buttons/based.cooking.gif) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
+### ![](/web-buttons/based.cooking.webp) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
 
 Cooking recipe site that isn't bloated with ads and pointless
 JavaScript.
@@ -66,7 +66,7 @@ decided to cut the cord again.
 
 {{< br >}}
 
-### ![](/web-buttons/wiby.me.gif) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
+### ![](/web-buttons/wiby.me.webp) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
 
 Cool search engine for proper websites (simple and not overloaded with JavaScript.)
 
@@ -133,7 +133,7 @@ A console window manager. Really cool.
 
 {{< br >}}
 
-### ![](/web-buttons/gorescript.github.io.gif) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
+### ![](/web-buttons/gorescript.github.io.webp) Gorescript classic - [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
 
 *Requires JavaScript and WebGL.*
 

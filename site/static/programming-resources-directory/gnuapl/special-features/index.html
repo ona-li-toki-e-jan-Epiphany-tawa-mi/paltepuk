@@ -1789,7 +1789,7 @@ Ymin ← ⌊/,11○B   ⍝ smallest imaginary part of B
 Ymax ← ⌈/,11○B   ⍝ largest imaginary part of B
 </pre><p>Example (plot a circle (actually: a regular 20-gon)):<pre class=verbatim>      ⎕PLOT +⌿1 0J1×[1]1 2 ∘.○ (0,⍳2×N) × ○÷N←10
 </pre><p>produces this plot window (only visible in the HTML version of this document;
-in text mode see file <b>doc/PLOT_circle.png</b>):</p><img src=PLOT_circle.png alt=PLOT_circle></div><div class=subsubsection id=Real-Plot-Data-B><h4 class=subsubsection>2.31.1.2 Real Plot Data B</h4><p>On the other hand, if a data item B[N] or B[row;N] is <b>real</b>, then it is
+in text mode see file <b>doc/PLOT_circle.png</b>):</p><img src=PLOT_circle.webp alt=PLOT_circle></div><div class=subsubsection id=Real-Plot-Data-B><h4 class=subsubsection>2.31.1.2 Real Plot Data B</h4><p>On the other hand, if a data item B[N] or B[row;N] is <b>real</b>, then it is
 placed at position (N, x) of the plot. The X-range is then
 [⎕IO ... ⎕IO + ¯1↑⍴B] and the Y-range [Y<sub>min</sub> ... Y<sub>max</sub>] of the
 plot is determined by the values of B. That is:<pre class=verbatim>Xmin ← ⎕IO             ⍝ smallest real part of B
@@ -1798,7 +1798,7 @@ Ymin ← ⌊/,B            ⍝ smallest value in B
 Ymax ← ⌈/,B            ⍝ largest value in B
 </pre><p>Example:<pre class=verbatim>      ⎕PLOT 0 1 ¯1 2 ¯2 3 ¯3
 </pre><p>produces this plot window (only visible in the HTML version of this document;
-in text mode see file <b>doc/PLOT_zigzag.png</b>):</p><img src=PLOT_zigzag.png alt=PLOT_zigzag><p>NOTE: In theory one can also mix real and complex values, even though doing so
+in text mode see file <b>doc/PLOT_zigzag.png</b>):</p><img src=PLOT_zigzag.webp alt=PLOT_zigzag><p>NOTE: In theory one can also mix real and complex values, even though doing so
 makes little sense. If at least one item of the plot data B is complex, then
 all real items in B are taken as complex with imaginary part 0.</div></div><div class=subsection id=The-Plot-Attributes-A><h4 class=subsection>2.31.2 The Plot Attributes A</h4><p>There are a number of attributes like colors, point sizes, line widths,
 etc. that control how the resulting plot will look.<p>Similar to ⎕CR and ⎕FIO, an empty argument B in ⎕PLOT B displays a list of
