@@ -40,7 +40,7 @@ Penger.
 
 {{< br >}}
 
-### ![](/web-buttons/landchad.net.gif) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net)
+### ![](/web-buttons/landchad.net.gif) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net) | [http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p *(January 22, 2025)*](http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p/)
 
 A site that teaches people how to make their own website, and run their own
 services, on a server all of their own.
