@@ -118,6 +118,10 @@ A showcase of websites with an uncompressed size of <= 512 KB.
 
 {{< br >}}
 
+### Real Programmers Don't Use Pascal - [https://www.pbm.com/~lindahl/real.programmers.html *(January 26, 2025)*](https://www.pbm.com/~lindahl/real.programmers.html)
+
+{{< br >}}
+
 ### dnscheck.tools - [https://www.dnscheck.tools *(November 16, 2024)*](https://www.dnscheck.tools/)
 
 *Requires JavaScript.*
