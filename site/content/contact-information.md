@@ -7,7 +7,7 @@ scrollingTitleCount = 3
 
 You can send me email over the Clearnet at the following address:
 
-[ona-li-toki-e-jan-Epiphany-tawa-mi@protonmail.com](mailto:ona-li-toki-e-jan-Epiphany-tawa-mi@protonmail.com)
+ona-li-toki-e-jan-Epiphany-tawa-mi(at)protonmail(dot)com
 
 Please use my PGP key to encrypt your mail (and make sure to send me yours!):
 
