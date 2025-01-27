@@ -1,6 +1,0 @@
-grep -rn TODO
-
-If moved to a VPS:
-- Add access from the regular Clearnet and Yggdrasil.
-- Add IPFS gateway and access?
-- Add Tor non-exit relay.
