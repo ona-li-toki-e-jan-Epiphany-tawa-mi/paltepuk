@@ -55,7 +55,7 @@ A badass website about DIY audio synthesizers.
 
 {{< br >}}
 
-### ![](/web-buttons/based.cooking.webp) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
+### ![](/web-buttons/based.cooking.webp) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17, 2024)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
 
 Cooking recipe site that isn't bloated with ads and pointless
 JavaScript.
