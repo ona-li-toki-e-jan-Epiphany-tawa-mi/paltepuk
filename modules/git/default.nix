@@ -42,7 +42,7 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
       # My projects that mainly live on other sites.
       personalMirror = "Personal mirrors (may contain Clearnet resources)";
       # Mirrors of others' projects.
-      mirror         = "Mirrors (may contain Clearnet resources)";
+      mirror = "Mirrors (may contain Clearnet resources)";
     };
 
     # Declarative repositories for git and cgit.
@@ -104,6 +104,8 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "Gigatools for gigachads with gigaworkloads")
         (standard "elephant_veins" sections.luanti
           "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
+        (standard "slapperfishy" sections.luanti
+          "High ordinance fish slapping. Hilarity ensues")
 
         (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
           "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
