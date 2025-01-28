@@ -1,8 +1,12 @@
 +++
 title               = 'НЕТ! DigitalOcean'
 scrollingTitleCount = 3
-date                = '2025-01-21'
+date                = '2025-01-28'
 +++
+
+Updated: January 27, 2025.
+
+- Added note that the support staff are probably real people.
 
 Written: January 21, 2025.
 
@@ -369,11 +373,14 @@ And, as one would expect:
 >
 > ref:[OMITTED]:ref
 
-It is with this message that I am certain I never spoke with an actual human.
+~~It is with this message that I am certain I never spoke with an actual human.~~
 
-1. Every single time DigitalOcean support sent me a message, the "Associate Customer Advocate" had a different name (which I omitted for privacy in case they are actually human.) If this was an actual person, they would likely have that person, and only that person, handle the ticket unless it needed to be elevated for some reason.
+1. ~~Every single time DigitalOcean support sent me a message, the "Associate Customer Advocate" had a different name (which I omitted for privacy in case they are actually human.) If this was an actual person, they would likely have that person, and only that person, handle the ticket unless it needed to be elevated for some reason.~~
 
-2. These responses are heavily similar and seemingly manufactered. If a human is behind these responses, they are more than likely copy-pasting some template response, which may as well be non-human.
+2. ~~These responses are heavily similar and seemingly manufactered. If a human is behind these responses, they are more than likely copy-pasting some template response, which may as well be non-human.~~
+
+*Update January 28, 2025:* After spamming their ticketing system a bit, I'm now
+*pretty* sure that they are actual people. DigitalOcean is still an asshole though.
 
 And it is with this that I have deciced to conclude any attempts at
 communication and write this blog post.
@@ -396,8 +403,8 @@ does this bullshit ahead of time and avoid them completely.
 
 ## Possible Amendments
 
-If DigitalOcean staff, and by that, I mean an actual human, is reading this blog
-post, the IDs for the tickets I made are #09202901 and #10077911.
+If DigitalOcean staff ~~, and by that, I mean an actual human,~~ is reading this
+blog post, the IDs for the first two tickets I made are #09202901 and #10077911.
 
 If my issues are rectified, then I will *amend* this blog post, but not delete
 it, stating that DigitalOcean did so.
