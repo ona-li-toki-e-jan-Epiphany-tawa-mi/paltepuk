@@ -6,6 +6,8 @@ date                = '2025-01-22'
 
 Written: January 22, 2025.
 
+---
+
 I've been feeling that I have grown out of my current profile picture/logo. Here
 it is for reference:
 

@@ -6,6 +6,8 @@ date                = '2025-01-21'
 
 Written: January 21, 2025.
 
+---
+
 ![Russian anti-alchohol poster with the DigitalOcean logo over the alchohol](/blog/nyet-digitalocean/propaganda.webp)
 
 For the moment, I'm using a CloudFlare tunnel

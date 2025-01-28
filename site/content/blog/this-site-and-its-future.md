@@ -6,6 +6,8 @@ date                = '2024-11-14'
 
 *Written: November 14, 2024.*
 
+---
+
 This blog post, being my very first blog post to this blog that I made so I
 could blog - which makes me a blogger - details the progression of my website
 from it's inception to the current day.

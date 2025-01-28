@@ -6,6 +6,8 @@ date                = '2024-11-17'
 
 *Written: November 17, 2024.*
 
+---
+
 Today, I decided to set up Ollama
 [https://ollama.com *(November 17, 2024)*](https://ollama.com/)
 to mess around with some local AI slop. The following is some of my interactions

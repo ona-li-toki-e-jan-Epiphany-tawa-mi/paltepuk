@@ -6,6 +6,8 @@ date                = '2024-11-19'
 
 *Written: November 19, 2024.*
 
+---
+
 ## APL Has Macros?
 
 APL is a programmming language, a very old one, that I quite like. Some like to
