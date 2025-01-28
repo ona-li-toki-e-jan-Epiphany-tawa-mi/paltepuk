@@ -4,7 +4,7 @@ scrollingTitleCount = 3
 date                = '2025-01-28'
 +++
 
-Updated: January 27, 2025.
+Updated: January 28, 2025.
 
 - Added note that the support staff are probably real people.
 
