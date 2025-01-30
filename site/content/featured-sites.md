@@ -55,8 +55,7 @@ disabled. Keep it up" if it's disabled, which is pretty baller.
 
 Extremely cute website. The use of web buttons is very epic.
 
-They are a graphic designer. Their website is covered with a wide variety of
-images, giving a very deco vibe.
+Their website is covered with a wide variety of images, giving a very deco vibe.
 
 There's a ton of art on it. They have their own universe-kinda thing called the
 Astraverse that a lot of their art relates to. It's pretty cool.
