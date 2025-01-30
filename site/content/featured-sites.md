@@ -34,12 +34,12 @@ A website that has a very cozy style. Lots of Pepe.
 They have a blog, IRC server, forum (no posts on it, though,) music, videos,
 guestbook, etc..
 
-### ![](/web-buttons/getimiskon.xyz.webp) getimiskon's space - [https://getimiskon.xyz *(Updated January 30, 2025)*](https://getimiskon.xyz) | [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(Updated January 30, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion) | [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(Updated January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
+### ![](/web-buttons/getimiskon.xyz.webp) getimiskon's space - [https://getimiskon.xyz *(January 30, 2025)*](https://getimiskon.xyz) | [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(January 30, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion) | [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
 
 It has a cute aesthetic. The use of web buttons is very epic.
 
-Their website has a bunch of mirrors, and they have access over gopher and
-gemini, which is pretty cool.
+Their website has a bunch of mirrors, and they have access over Gopher and
+Gemini, which is pretty cool.
 
 They have some software projects they wrote and host.
 
@@ -49,9 +49,12 @@ They have a blog, and host a number of services, i.e.: IRC, Mumble, file upload,
 Their website has a JavaScript detector and displays "Javascript is
 disabled. Keep it up" if it's disabled, which is pretty baller.
 
-![](/web-buttons/luvstarkei.com.webp) LuvstarKei - [https://luvstarkei.com *(Updated January 30, 2025)*](https://luvstarkei.com)
+### ![](/web-buttons/luvstarkei.com.webp) LuvstarKei - [https://luvstarkei.com *(January 30, 2025)*](https://luvstarkei.com)
 
 *Warning(s): WordPress site, extremly bloated.*
+
+You will need to enable JavaScript to view some of the content, but it will work
+without.
 
 Extremely cute website. The use of web buttons is very epic.
 
@@ -62,6 +65,58 @@ Astraverse that a lot of their art relates to. It's pretty cool.
 
 They have a couple blogs for different topics. There's one about their art, one
 about M*necraft, a sketchbook, etc..
+
+### `www.bentasker.co.uk` - [www.bentasker.co.uk *(January 30, 2025)*](www.bentasker.co.uk) | [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(January 30, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p) | [http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion *(January 30, 2025)*](http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion)
+
+They have a pretty cool blog. The posts are incredibly detailed and cover a wide
+variety of tech-related topics like home automation, systems administration,
+working on cars, Linux, networking, etc., and also some non-technical topics
+like their dogs.
+
+One of the goals of their website is to serve as documentation for
+troubleshooting and solving various issues, which many of the blog posts double
+as.
+
+They also host a number of videos they made, but it seems you need to enable
+JavaScript to view them.
+
+### kor.i2p - [http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p *(January 30, 2025)*](http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p)
+
+Their website's home page has an image of Tux towering over some office
+buildings, saying "Good evening Mr. Gates, I'll be your server today!," which is
+incredibly cute.
+
+The use of web buttons is very epic.
+
+They have a blog/wiki-sorta thing that covers a WIIIIDDDEE variety of topics
+like games and consoles (i.e.: Team Fortresss 2, Touhou, Xbox 360,) Linux,
+networking, VTubers, Vocaloid, imageboards, Sailor Moon, Gamergate?!?, etc..
+
+There's a couple programming books they host a digital copy of.
+
+They have host a number of videos, and a website archive with a couple websites,
+which relate to the topics they blog/wiki(?) about.
+
+There's an archive for a bunch of Flash games/other. It seems that you need to
+enable JavaScript to play them.
+
+I like their philosophy to their website's design, which they *mainly* specify
+as (there's more on the Web Design Philosophy page):
+
+- Simple.
+- Not too distracting.
+- Personal - I should express myself but not too much to the detriment of the visitor.
+- Easy to read.
+
+### ![](/web-buttons/deurachavich.moe.webp) Deurachavich's personal site - [https://deurachavich.moe *(January 30, 2025)*](https://deurachavich.moe) | [http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion *(January 30, 2025)*](http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion) | [http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p *(January 30, 2025)*](http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p)
+
+A blog with topics ranging from philosophical meanderings to deranged
+shitposts. A mildly amusing read.
+
+From the words of the web master: "Whenever you are reading one of my articles
+keep in mind that I live under a rock and might be completely delusional."
+
+They have Gemini access, which is pretty cool.
 
 ---
 
@@ -143,9 +198,16 @@ A showcase of websites with an uncompressed size of <= 512 KB.
 
 # Search Engines
 
-### ![](/web-buttons/wiby.me.webp) Wiby - [https://wiby.me *(November 16, 2024)*](https://wiby.me) | [https://wiby.org *(November 16, 2024)*](https://wiby.org)
+### ![](/web-buttons/wiby.me.webp) Wiby - [https://wiby.me *(January 30, 2025)*](https://wiby.me) | [https://wiby.org *(January 30, 2025)*](https://wiby.org)
 
 Cool search engine for simple and retro websites.
+
+### Ahmia - [https://ahmia.fi *(January 30, 2025)*](https://ahmia.fi) | [http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion *(January 30, 2025)*](http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion)
+
+Search engine for Tor onion services.
+
+The main page has some kind of subway terminal background which looks pretty
+cool.
 
 ---
 
