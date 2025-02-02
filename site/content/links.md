@@ -1,7 +1,7 @@
 +++
 title               = 'Links'
 scrollingTitleCount = 7
-description         = 'external links to my other profiles/websites/servers/etc.'
+description         = 'external links to my profiles/etc.'
 +++
 
 ## GitHub

@@ -1,7 +1,7 @@
 +++
 title               = 'Tidbits'
 scrollingTitleCount = 6
-description         = 'haikus and poems and such'
+description         = 'poetry and short stories'
 +++
 
 *Written: December 3, 2024.*
