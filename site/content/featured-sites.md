@@ -8,7 +8,9 @@ scrollingTitleCount = 3
 [![](/web-buttons/shmage.xyz.gif)](https://shmage.xyz "Updated July 26, 2024")
 [![](/web-buttons/nergen.net.webp)](https://nergen.net "Updated July 26, 2024")
 
-### Yusynth - [https://yusynth.net *(November 16, 2024)*](https://yusynth.net)
+### Yusynth - [https://yusynth.net *(February 1, 2025)*](https://yusynth.net)
+
+*Warning(s): PHP.*
 
 A badass website about DIY audio synthesizers.
 
@@ -51,7 +53,7 @@ disabled. Keep it up" if it's disabled, which is pretty baller.
 
 ### ![](/web-buttons/luvstarkei.com.webp) LuvstarKei - [https://luvstarkei.com *(January 30, 2025)*](https://luvstarkei.com)
 
-*Warning(s): WordPress site, extremly bloated.*
+*Warning(s): extremely bloated.*
 
 You will need to enable JavaScript to view some of the content, but it will work
 without.
@@ -118,6 +120,67 @@ keep in mind that I live under a rock and might be completely delusional."
 
 They have Gemini access, which is pretty cool.
 
+### strangedefinition.com - [https://strangedefinition.com *(February 1, 2025)*](https://strangedefinition.com)
+
+*Warning(s): PHP.*
+
+A weird personal website/blog. The posts are about art they made themselves, AI
+generated art, poetry, short stories, dreams, art tutorials, etc..
+
+They have made and published a couple drawing books
+[https://strangedefinition.com/index.php/books *(February 1, 2025)*](https://strangedefinition.com/index.php/books/),
+which is cool.
+
+### Gabe Rocks! - [https://gabe.rocks *(February 1, 2025)*](https://gabe.rocks) | [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 1, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion) | [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 1, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
+
+A personal website primarily consisting of three blogs:
+
+Technology - a blog about various technologies. It has a paticular focus on
+digital sovereignty - having control over our technology and digital lives. I
+highly recommend reading the article "Reclaiming Territory in Cyberspace."
+
+Thoughts - various thoughts and ramblings.
+
+Health - the meat and potatoes of their website, in my opinion, where they
+describe, in excruciating detail, their experiences with obesity, how they got
+there, and their long and ongoing journey to a healthy weight.
+
+The use of web buttons is very epic.
+
+### Float Overblow - [https://floatoverblow.com *(February 1, 2025)*](https://floatoverblow.com)
+
+The homepage is a little sus.
+
+They have a blog, but there's only three posts as of February 1, 2025. Two are
+about AI and the other is about their dog.
+
+They host quite a few songs they made. Some of them are pretty interesting, and
+some of them are really, really weird. There's also some AI generated stuff.
+
+I really liked the following songs:
+
+- 3xOsc Invasion.
+- bluster.
+- EVERYTHING IS ORANGE.
+- sec.
+- prunk.
+
+### ![](/web-buttons/blog.shr4pnel.com.gif) shrapnelnet - [https://blog.shr4pnel.com *(February 1, 2025)*](https://blog.shr4pnel.com)
+
+Their site has a cute frog wallpaper-esque background. The use of web buttons is
+very epic. Their website is a part of a bunch of web rings, which is cool.
+
+Their website consists mainly of a blog, covering topics like developing and
+maintaining their website, Linux, music and musicians, art and artists,
+etc.. The posts are detailed and very good read.
+
+Their website is FOSS
+[https://git.shr4pnel.com/observer/blog *(February 1, 2025)*](https://git.shr4pnel.com/observer/blog).
+Super cool.
+
+Their website has a JavaScript detector and displays "no javascript? awesome!"
+if it's disabled, which is pretty baller.
+
 ---
 
 # Fun
@@ -155,6 +218,12 @@ e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
 
 I'm sure you can expect what kind of content this website has. Just ingore the
 Monero address. Or don't, I'm not your mom.
+
+### CLOUDFLARE - [http://q5atw5f2o5eu3kiaih2fkpwbwdbe64ac4lwbpnmgfe4tqiiykzsa.b32.i2p *(February 1, 2025)*](http://q5atw5f2o5eu3kiaih2fkpwbwdbe64ac4lwbpnmgfe4tqiiykzsa.b32.i2p)
+
+### rms.sexy - [https://rms.sexy *(February 1, 2025)*](https://rms.sexy)
+
+### chmok.i2p - [http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p *(February 2, 2025)*](http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p)
 
 ---
 
@@ -194,9 +263,13 @@ For all you recovering Rust developers out there.
 
 A showcase of websites with an uncompressed size of <= 512 KB.
 
+### recipebook.bentasker.co.uk - [https://recipebook.bentasker.co.uk *(February 2, 2025)*](https://recipebook.bentasker.co.uk) | [http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion *(February 2, 2025)*](http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion) | [http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p *(February 2, 2025)*](http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p)
+
+Cooking recipe site by Ben Tasker (see Personal Websites section.)
+
 ---
 
-# Search Engines
+# Search Engines and Site Indexes
 
 ### ![](/web-buttons/wiby.me.webp) Wiby - [https://wiby.me *(January 30, 2025)*](https://wiby.me) | [https://wiby.org *(January 30, 2025)*](https://wiby.org)
 
@@ -208,6 +281,16 @@ Search engine for Tor onion services.
 
 The main page has some kind of subway terminal background which looks pretty
 cool.
+
+### notbob.i2p - [http://nytzrhrjjfsutowojvxi7hphesskpqqr65wpistz6wa7cpajhp7a.b32.i2p *(February 1, 2025)*](http://nytzrhrjjfsutowojvxi7hphesskpqqr65wpistz6wa7cpajhp7a.b32.i2p)
+
+An index site for the I2P network. I like this one more than the other indexes
+because it shows information about the site like: the kind of content it has,
+how responsive it is, what language it's in, etc..
+
+They also have a blog where they talk about and rate various eepsites. They even reviewed my site
+[http://nytzrhrjjfsutowojvxi7hphesskpqqr65wpistz6wa7cpajhp7a.b32.i2p/cgi-bin/blog.cgi?page=853 *(February 1, 2025)*](http://nytzrhrjjfsutowojvxi7hphesskpqqr65wpistz6wa7cpajhp7a.b32.i2p/cgi-bin/blog.cgi?page=853)!
+Thank you not_bob, very cool.
 
 ---
 
@@ -224,6 +307,8 @@ cool.
 [![](/web-buttons/debian.org.webp)](https://debian.org "Updated July 26, 2024")
 [![](/web-buttons/voidlinux.org.webp)](https://voidlinux.org/ "Updated October 30, 2024")
 [![](/web-buttons/gimp.org.webp)](https://www.gimp.org/ "Updated November 16, 2024")
+[![](/web-buttons/gohugo.io.webp)](https://gohugo.io "Updated February 1, 2025")
+[![](/web-buttons/kernel.org.webp)](https://kernel.org "Updated February 1, 2025")
 
 ### dnscheck.tools - [https://www.dnscheck.tools *(November 16, 2024)*](https://www.dnscheck.tools/)
 
