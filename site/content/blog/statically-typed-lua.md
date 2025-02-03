@@ -1,6 +1,6 @@
 +++
 title               = 'Statically Typed Lua'
-scrollingTitleCount = 3
+scrollingTitleCount = 2
 date                = '2024-12-30'
 +++
 

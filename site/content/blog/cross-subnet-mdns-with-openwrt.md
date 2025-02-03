@@ -1,6 +1,6 @@
 +++
 title               = 'Cross-Subnet mDNS with OpenWRT'
-scrollingTitleCount = 3
+scrollingTitleCount = 2
 date                = '2025-01-29'
 +++
 
