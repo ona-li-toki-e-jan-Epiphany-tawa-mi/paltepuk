@@ -1,6 +1,6 @@
 # This file is part of paltepuk.
 #
-# Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
+# Copyright (c) 2024-2025 ona-li-toki-e-jan-Epiphany-tawa-mi
 #
 # paltepuk is free software: you can redistribute it and/or modify it under the
 # terms of the GNU Affero General Public License as published by the Free
@@ -25,7 +25,7 @@
 }:
 
 let inherit (lib) concatStrings mkIf escapeShellArg;
-    inherit (builtins) filter listToAttrs;
+    inherit (builtins) listToAttrs;
     inherit (pkgs) callPackage;
 
     gitDirectory  = "/srv/git";
@@ -41,8 +41,6 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
       tui     = "TUI applications";
       # My projects that mainly live on other sites.
       personalMirror = "Personal mirrors (may contain Clearnet resources)";
-      # Mirrors of others' projects.
-      mirror = "Mirrors (may contain Clearnet resources)";
     };
 
     # Declarative repositories for git and cgit.
@@ -51,23 +49,13 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
             path = "${path}.git";
             inherit description;
             inherit section;
-            autoMirror = false;
           };
 
           personalMirror = path: description: {
             path = "${path}.git";
             inherit description;
-            section    = sections.personalMirror;
-            autoMirror = false;
+            section = sections.personalMirror;
           };
-
-          # mirror = path: mirrorUrl: description: {
-          #   path = "${path}.git";
-          #   inherit description;
-          #   section    = sections.mirror;
-          #   autoMirror = true;
-          #   inherit mirrorUrl;
-          # };
       in [
         (standard "AkashicRecord" sections.none
           "The history of my universe, I guess")
@@ -151,122 +139,56 @@ in
     chown git:git ${escapeShellArg gitDirectory}
   '';
 
-  systemd = {
-    services = {
-      # Creates any specified repositories if they don't already exist.
-      "create-repositories" = {
-        description = "git repository creation service";
-        wantedBy    = [ "multi-user.target" ];
-        path        = with pkgs; [ git ];
+  # Creates any specified repositories if they don't already exist.
+  systemd.services."create-repositories" = {
+    description = "git repository creation service";
+    wantedBy    = [ "multi-user.target" ];
+    path        = with pkgs; [ git ];
 
-        script = ''
-          # Shows executed commands.
-          set -x
-        '' + concatStrings (builtins.map ({ path, ... }: ''
-          if [ ! -d ${escapeShellArg path} ]; then
-            mkdir -p ${escapeShellArg path}
-            git -C ${escapeShellArg path} init --bare
-          fi
-        '') (filter ({ autoMirror, ... }: !autoMirror) repositories));
+    script = ''
+      # Shows executed commands.
+      set -x
+    '' + concatStrings (builtins.map ({ path, ... }: ''
+      if [ ! -d ${escapeShellArg path} ]; then
+        mkdir -p ${escapeShellArg path}
+        git -C ${escapeShellArg path} init --bare
+      fi
+    '') repositories);
 
-        serviceConfig = {
-          Type             = "oneshot";
-          User             = "git";
-          WorkingDirectory = gitDirectory;
+    serviceConfig = {
+      Type             = "oneshot";
+      User             = "git";
+      WorkingDirectory = gitDirectory;
 
-          # systemd-analyze security recommendations.
-          PrivateDevices          = true;
-          ProtectClock            = true;
-          ProtectKernelLogs       = true;
-          RemoveIPC               = true;
-          NoNewPrivileges         = true;
-          ProtectControlGroups    = true;
-          ProtectKernelModules    = true;
-          MemoryDenyWriteExecute  = true;
-          SystemCallArchitectures = [ "native" ];
-          ProtectHostname         = true;
-          ProtectSystem           = "strict";
-          ReadWritePaths          = [ gitDirectory ];
-          ProtectProc             = "invisible";
-          LockPersonality         = true;
-          RestrictRealtime        = true;
-          ProcSubset              = "pid";
-          ProtectHome             = true;
-          PrivateNetwork          = true;
-          PrivateUsers            = true;
-          PrivateTmp              = true;
-          SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
-          SystemCallErrorNumber   = "EPERM";
-          RestrictAddressFamilies = "none";
-          ProtectKernelTunables   = true;
-          RestrictNamespaces      = true;
-          RestrictSUIDSGID        = true;
-          IPAddressDeny           = "any";
-          CapabilityBoundingSet   = "";
-        };
-      };
-
-      # Automatically mirrors and updates mirror repositories.
-      "auto-mirror" = {
-        description = "git repository automirroring service";
-        wantedBy    = [];
-        path        = with pkgs; [ git ];
-
-        script = ''
-          # Shows executed commands.
-          set -x
-        '' + concatStrings (builtins.map ({ path, mirrorUrl, ... }: ''
-          if [ ! -d ${escapeShellArg path} ]; then
-            git clone --mirror ${escapeShellArg mirrorUrl} ${escapeShellArg path}
-          else
-            git -C ${escapeShellArg path} remote update
-          fi
-        '') (filter ({ autoMirror, ... }: autoMirror) repositories));
-
-        serviceConfig = {
-          Type             = "oneshot";
-          User             = "git";
-          WorkingDirectory = gitDirectory;
-
-          # systemd-analyze security recommendations.
-          PrivateDevices          = true;
-          ProtectClock            = true;
-          ProtectKernelLogs       = true;
-          RemoveIPC               = true;
-          NoNewPrivileges         = true;
-          ProtectControlGroups    = true;
-          ProtectKernelModules    = true;
-          MemoryDenyWriteExecute  = true;
-          SystemCallArchitectures = [ "native" ];
-          ProtectHostname         = true;
-          ProtectSystem           = "strict";
-          ReadWritePaths          = [ gitDirectory ];
-          ProtectProc             = "invisible";
-          LockPersonality         = true;
-          RestrictRealtime        = true;
-          ProcSubset              = "pid";
-          ProtectHome             = true;
-          PrivateUsers            = true;
-          PrivateTmp              = true;
-          SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
-          SystemCallErrorNumber   = "EPERM";
-          RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
-          ProtectKernelTunables   = true;
-          RestrictNamespaces      = true;
-          RestrictSUIDSGID        = true;
-          CapabilityBoundingSet   = "";
-        };
-      };
-    };
-
-    # Runs the auto-mirror service once a week.
-    timers."auto-mirror" = {
-      wantedBy = [ "timers.target" ];
-
-      timerConfig = {
-        OnCalendar = "weekly";
-        Persistent = true;
-      };
+      # systemd-analyze security recommendations.
+      PrivateDevices          = true;
+      ProtectClock            = true;
+      ProtectKernelLogs       = true;
+      RemoveIPC               = true;
+      NoNewPrivileges         = true;
+      ProtectControlGroups    = true;
+      ProtectKernelModules    = true;
+      MemoryDenyWriteExecute  = true;
+      SystemCallArchitectures = [ "native" ];
+      ProtectHostname         = true;
+      ProtectSystem           = "strict";
+      ReadWritePaths          = [ gitDirectory ];
+      ProtectProc             = "invisible";
+      LockPersonality         = true;
+      RestrictRealtime        = true;
+      ProcSubset              = "pid";
+      ProtectHome             = true;
+      PrivateNetwork          = true;
+      PrivateUsers            = true;
+      PrivateTmp              = true;
+      SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
+      SystemCallErrorNumber   = "EPERM";
+      RestrictAddressFamilies = "none";
+      ProtectKernelTunables   = true;
+      RestrictNamespaces      = true;
+      RestrictSUIDSGID        = true;
+      IPAddressDeny           = "any";
+      CapabilityBoundingSet   = "";
     };
   };
 
