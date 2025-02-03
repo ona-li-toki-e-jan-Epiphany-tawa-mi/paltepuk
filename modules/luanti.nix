@@ -132,15 +132,15 @@ in
           SystemCallArchitectures = [ "native" ];
           ProtectHostname         = true;
           ProtectSystem           = "strict";
-          ReadWritePaths          = [ minetestDirectory gitDirectory ];
+          ReadWritePaths          = [ minetestDirectory ];
+          ReadOnlyPaths           = [ gitDirectory ];
           ProtectProc             = "invisible";
           LockPersonality         = true;
           RestrictRealtime        = true;
           ProcSubset              = "pid";
           ProtectHome             = true;
           PrivateTmp              = true;
-          SystemCallFilter        =
-            [ "@system-service" "~@resources" ];
+          SystemCallFilter        = [ "@system-service" "~@resources" ];
           SystemCallErrorNumber   = "EPERM";
           RestrictAddressFamilies = [ "AF_INET" "AF_INET6" "AF_UNIX" ];
           ProtectKernelTunables   = true;
