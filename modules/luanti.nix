@@ -32,7 +32,6 @@ let inherit (lib) escapeShellArg concatStrings;
 
     # Mods to be fetched from /srv/git.
     mods = [
-      "elephant_veins"
       "gigatools"
       "slapperfishy"
     ];
