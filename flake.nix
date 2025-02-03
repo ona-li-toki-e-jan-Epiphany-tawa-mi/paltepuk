@@ -44,6 +44,7 @@
           ports = {
             i2pdConsole = 7070;
             cgit        = 5000;
+            luanti      = 30000;
           };
         } // (import ./config.nix);
     in {
