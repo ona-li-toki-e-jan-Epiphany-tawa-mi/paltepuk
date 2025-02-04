@@ -1,5 +1,5 @@
 +++
-title               = 'OpenWRT VLANS and the IPv6 Disaster'
+title               = 'OpenWRT VLANs and the IPv6 Disaster'
 scrollingTitleCount = 2
 date                = '2025-02-03'
 +++
