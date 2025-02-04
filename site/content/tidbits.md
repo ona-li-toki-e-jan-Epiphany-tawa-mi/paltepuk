@@ -1,8 +1,15 @@
 +++
 title               = 'Tidbits'
 scrollingTitleCount = 6
-description         = 'poetry and short stories'
+description         = 'poetry/short stories/etc.'
 +++
+
+*Added: February 4, 2025. Written: ???*
+
+We are the faceless, the raceless, the nationless, the faithless. All alike,
+bound not by blood, but spirit.
+
+{{< br >}}
 
 *Written: December 3, 2024.*
 
