@@ -29,4 +29,5 @@ FgoAKgWCZcPZ3wmQwbQhp/P+Kv0CmwwWIQTf8AA07Ej6cuqKAhLBtCGn8/4q
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-Yes, this is the one ProtonMail generated. I'll generate my own later when I feel like it.
+Yes, this is the one ProtonMail generated. I'll generate my own later *when I
+feel like it™.*
