@@ -183,6 +183,34 @@ Super cool.
 Their website has a JavaScript detector and displays "no javascript? awesome!"
 if it's disabled, which is pretty baller.
 
+### ![](/web-buttons/hotlinecafe.com.gif) ![](/web-buttons/hotlinecafe.com-2.gif) ![](/web-buttons/hotlinecafe.com-old2.gif) Fionn's Hotline Cafe - [https://hotlinecafe.com *(February 5, 2025)*](https://hotlinecafe.com)
+
+Their site has an intense vaporwave aesthetic. The use of web buttons is very
+epic.
+
+The random pointless Japanese is very cute; I love you too, random fake internet person.
+
+They made a game?!?! called Total Anarchy
+[https://fionnhodgson.itch.io/totalanarchy *(February 5, 2025)*](https://fionnhodgson.itch.io/totalanarchy).
+It's a top-down shooter open-world crime game. It's proprietary and for W*ndows
+only, though they do have a free demo. Looks pretty cool.
+
+They host some songs they made, and they're shared under CC BY-SA 3.0. Very
+epic! They're "casiocore-meets-vapourhouse" as described by the web
+master. There's also some MIDI stuff with some *fun facts.*
+
+They have a variety of browser games (which require Javascript and WebGL) and
+Game Maker games in the arcade section. They're really cool.
+
+They've got some kind of photo album. The site goes grayscale when you open this
+section. There's some cool SSTV-distorted (Slow Scan Television) images.
+
+They've got a bunch of artwork in a vareity of mediums, like drawings, 3D images
+and animations, some cool album cover art, etc..
+
+They made a cool "museum" of a bunch of old electronics they have/had. The
+typewriters are the coolest part in my opinion.
+
 ---
 
 # Fun
@@ -251,6 +279,8 @@ Monero address. Or don't, I'm not your mom.
 ### rms.sexy - [https://rms.sexy *(February 1, 2025)*](https://rms.sexy)
 
 ### chmok.i2p - [http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p *(February 2, 2025)*](http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p)
+
+)))))
 
 ---
 
