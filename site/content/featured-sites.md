@@ -172,7 +172,7 @@ very epic. Their website is a part of a bunch of web rings, which is cool.
 
 Their website consists mainly of a blog, covering topics like developing and
 maintaining their website, Linux, music and musicians, art and artists,
-etc.. The posts are detailed and very good read.
+etc.. The posts are detailed and a very good read.
 
 Their website is FOSS
 [https://git.shr4pnel.com/observer/blog *(February 1, 2025)*](https://git.shr4pnel.com/observer/blog).
