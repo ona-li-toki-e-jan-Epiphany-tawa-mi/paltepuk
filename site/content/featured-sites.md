@@ -149,6 +149,8 @@ The use of web buttons is very epic.
 
 ### Float Overblow - [https://floatoverblow.com *(February 1, 2025)*](https://floatoverblow.com)
 
+*Warning(s): contains AI-generated content.*
+
 The homepage is a little sus.
 
 They have a blog, but there's only three posts as of February 1, 2025. Two are
@@ -308,6 +310,8 @@ The main page has some kind of subway terminal background which looks pretty
 cool.
 
 ### notbob.i2p - [http://nytzrhrjjfsutowojvxi7hphesskpqqr65wpistz6wa7cpajhp7a.b32.i2p *(February 1, 2025)*](http://nytzrhrjjfsutowojvxi7hphesskpqqr65wpistz6wa7cpajhp7a.b32.i2p)
+
+*Warning(s): contains AI-generated content.*
 
 An index site for the I2P network. I like this one more than the other indexes
 because it shows information about the site like: the kind of content it has,
