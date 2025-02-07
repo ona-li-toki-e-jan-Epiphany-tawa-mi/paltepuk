@@ -122,7 +122,7 @@ They have Gemini access, which is pretty cool.
 
 ### strangedefinition.com - [https://strangedefinition.com *(February 1, 2025)*](https://strangedefinition.com)
 
-*Warning(s): PHP.*
+*Warning(s): PHP, contains AI-generated content.*
 
 A weird personal website/blog. The posts are about art they made themselves, AI
 generated art, poetry, short stories, dreams, art tutorials, etc..
@@ -392,3 +392,7 @@ A console window manager. Really cool.
 # ???
 
 [![](/web-buttons/lain.angelic-trust.net.webp)](https://lain.angelic-trust.net "Updated November 16, 2024")
+
+### ![](/web-buttons/madukamagica.neocities.org.webp) START GAME!!! - [https://madukamagica.neocities.org](https://madukamagica.neocities.org)
+
+*Warning(s): requires JavaScript, epilepsy risk, contains AI-generated content, extremely bloated.*
