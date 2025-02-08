@@ -34,7 +34,6 @@ in
               ./nginx.nix
               ./secrets
               ./cloudflared.nix
-              # TODO enable ./luanti.nix
             ];
 
 
