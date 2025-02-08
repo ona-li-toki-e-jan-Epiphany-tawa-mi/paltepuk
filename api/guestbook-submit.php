@@ -22,6 +22,7 @@
 // Guestbook submission API endpoint.
 
 // TODO add redirect to guestbook page.
+// TODO add rate limiting.
 
 ////////////////////////////////////////////////////////////////////////////////
 // Configuration                                                              //
@@ -37,9 +38,10 @@ $storage = '/var/lib/paltepuk-api/';
 
 /**
  * Gets a field from the POST request, limiting it to maximum_length.
+ * @param non-empty-string $field
  */
 function get_post(string $field, int $maximum_length): string {
-    $value = $_POST[$field] ?? "";
+    $value = $_POST[$field];
     if (!is_string($value)) $value = "";
     return mb_substr($value, 0, $maximum_length);
 }
@@ -73,6 +75,7 @@ if ('POST' === $_SERVER['REQUEST_METHOD']) {
     write_field($file, 'name', $name);
     if (0 !== strlen($websites)) write_field($file, 'websites', $websites);
     write_field($file, 'message', $message);
+    write_field($file, 'date', date("F j, Y"));
     fwrite($file, "---\n");
     fclose($file);
 
