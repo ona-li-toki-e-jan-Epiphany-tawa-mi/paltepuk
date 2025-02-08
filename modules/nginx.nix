@@ -1,6 +1,6 @@
 # This file is part of paltepuk.
 #
-# Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
+# Copyright (c) 2024-2025 ona-li-toki-e-jan-Epiphany-tawa-mi
 #
 # paltepuk is free software: you can redistribute it and/or modify it under the
 # terms of the GNU Affero General Public License as published by the Free
@@ -18,11 +18,19 @@
 
 { ports
 , pkgs
+, config
+, lib
 , ...
 }:
 
 let inherit (builtins) toString;
+    inherit (lib) makeBinPath;
     inherit (pkgs) callPackage;
+
+    inherit (config.services) nginx phpfpm;
+
+    site                = "paltepuk";
+    apiStorageDirectory = "/var/lib/paltepuk-api";
 in
 {
   # Lets connections to the reverse proxy through the firewall.
@@ -40,17 +48,60 @@ in
        add_header Onion-Location http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion$request_uri;
     '';
 
-    virtualHosts."paltepuk" = {
+    virtualHosts."${site}" = {
       locations = {
-        "/".root = "${callPackage ../site {}}";
+        "/".root = callPackage ../site {};
 
         # cgit instance path.
         "/cgit".return = "302 $scheme://$host/cgit/";
-        "/cgit/" = {
+        "/cgit/"       = {
           proxyPass       = "http://127.0.0.1:${toString ports.cgit}/cgit/";
           proxyWebsockets = true;
         };
+
+        # API path.
+        "/api".return = "302 $scheme://$host/api/";
+        "/api/"       = {
+          root        = callPackage ../api {};
+          extraConfig = ''
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_pass            unix:${phpfpm.pools."${site}".socket};
+            include                 ${pkgs.nginx}/conf/fastcgi.conf;
+          '';
+        };
       };
+    };
+  };
+
+
+  users.users."phpfpm" = {
+    isSystemUser = true;
+    createHome   = true;
+    home         = apiStorageDirectory;
+    group        = "phpfpm";
+  };
+  users.groups."phpfpm" = {};
+
+  # PHP (eww) CGI stuff for website API.
+  services.phpfpm.pools."${site}" = {
+    user  = "phpfpm";
+    group = "phpfpm";
+
+    phpEnv.PATH = with pkgs; makeBinPath [ php ];
+
+    settings = {
+      "php_admin_value[error_log]" = "stderr";
+      "php_admin_flag[log_errors]" = true;
+      "catch_workers_output"       = true;
+
+      "listen.owner" = nginx.user;
+
+      "pm"                   = "dynamic";
+      "pm.max_children"      = 32;
+      "pm.max_requests"      = 500;
+      "pm.start_servers"     = 2;
+      "pm.min_spare_servers" = 2;
+      "pm.max_spare_servers" = 5;
     };
   };
 }

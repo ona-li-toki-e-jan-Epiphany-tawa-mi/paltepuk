@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="5"
+    resolveFromConfigFile="true"
+    strictBinaryOperands="true"
+    findUnusedCode="true"
+    findUnusedPsalmSuppress="true"
+    ensureArrayStringOffsetsExist="true"
+    ensureArrayIntOffsetsExist="true"
+    findUnusedBaselineEntry="true"
+    findUnusedIssueHandlerSuppression="true">
+    <projectFiles>
+        <directory name="." />
+    </projectFiles>
+</psalm>

@@ -1,6 +1,6 @@
 # This file is part of paltepuk.
 #
-# Copyright (c) 2024-2025 ona-li-toki-e-jan-Epiphany-tawa-mi
+# Copyright (c) 2025 ona-li-toki-e-jan-Epiphany-tawa-mi
 #
 # paltepuk is free software: you can redistribute it and/or modify it under the
 # terms of the GNU Affero General Public License as published by the Free
@@ -14,25 +14,26 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# Derivation to build the static website content with Hugo.
+# Derivation to build the PHP (eww) website API.
 
 { stdenv
-, hugo
+, php84Packages
 }:
 
 stdenv.mkDerivation {
-  name = "paltepuk-site";
+  name = "paltepuk-api";
 
   src = ./.;
 
-  nativeBuildInputs = [ hugo ];
-
-  buildPhase = ''
-    hugo --minify --cleanDestinationDir
+  doCheck     = true;
+  checkInputs = with php84Packages; [ psalm ];
+  checkPhase  = ''
+    # Without --no-cache psalm fails making a directory.
+    psalm --no-cache
   '';
 
   installPhase = ''
-    mkdir -p $out/
-    cp -r public/* $out/
+    mkdir -p "$out/api"
+    cp *.php "$out/api"
   '';
 }
