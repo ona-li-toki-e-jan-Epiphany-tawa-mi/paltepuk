@@ -3,7 +3,7 @@ title               = 'Contact Information'
 scrollingTitleCount = 3
 +++
 
-# Email
+## Email
 
 You can send me email over the Clearnet at the following address:
 
@@ -31,3 +31,15 @@ FgoAKgWCZcPZ3wmQwbQhp/P+Kv0CmwwWIQTf8AA07Ej6cuqKAhLBtCGn8/4q
 
 Yes, this is the one ProtonMail generated. I'll generate my own later *when I
 feel like it™.*
+
+## Guestbook
+
+You can use my guestbook [/guestbook](/guestbook) to send me messages.
+
+The guestbook submissions are saved to a file for me to read and approve at a
+later time. If you don't want it posted to the guestbook, just put something
+like **"DO NOT POST TO GUESTBOOK"** in your message.
+
+If it's something sensitive, you might not want to send it over the Clearnet,
+since CloudFlare will be able to read it. Consider submitting it over Tor or I2P
+instead.
