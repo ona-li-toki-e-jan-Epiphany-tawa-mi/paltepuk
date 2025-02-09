@@ -1,8 +1,8 @@
 <form method="POST" action="/api/guestbook-submit.php">
-  <input style="width:100%" name="name" maxlength="256" placeholder="Name (defaults to rando)">
-  <input style="width:100%" name="websites" maxlength="1024" placeholder="Website(s) (comma-seperated list)">
+  <input style="width:100%" name="name" maxlength="256" placeholder="Name (optional, defaults to rando, 256 character limit)">
+  <input style="width:100%" name="websites" maxlength="1024" placeholder="Website(s) (optional, comma-seperated list, 1024 character limit)">
   <br>
-  <textarea style="width:100%;height:200px" name="message" maxlength="4096" placeholder="Message"></textarea>
+  <textarea style="width:100%;height:200px" name="message" maxlength="4096" required placeholder="Message (4096 character limit)"></textarea>
   <br>
   <input type="submit" value="Submit">
 </form>
