@@ -47,7 +47,7 @@ Contains a lot of useful information on how to do various things in NixOS.
 The almighty Arch Wiki is a indespensible resource for Linux, irregardless of
 which distribution you happen to be using.
 
-## nixos-hardware - [https://github.com/NixOS/nixos-hardware/tree/master *(November 15, 2024)*](https://github.com/NixOS/nixos-hardware/tree/master)
+## nixos-hardware - [https://github.com/NixOS/nixos-hardware *(November 15, 2024)*](https://github.com/NixOS/nixos-hardware)
 
 Repository of hardware-specific NixOS configurations to optimize/bug fix NixOS
 for specfic hardware configurations.

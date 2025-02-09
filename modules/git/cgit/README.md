@@ -19,15 +19,6 @@ command. This will perform a shallow clone that just grabs the state of the most
 recent commit, which will be more reliable due to having less to clone. Blame
 HTTP.
 
-### Clearnet
-
-You can use git clone as usual. Or, if you'd prefer, you can visit my GitHub
-account instead:
-
-```
-https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi
-```
-
 ### I2P
 
 You can use this command as a base for cloning each repo. This assumes the HTTP

@@ -14,12 +14,9 @@ APL is a programmming language, a very old one, that I quite like. Some like to
 practice the cognitive dissonance that it stands for Array Programming Language,
 but it's actually A Programming Language, lol.
 
-I've recently been working on a complete redo of my library fio.apl, which
-provides an abstraction layer to the GNU APL ⎕FIO system function.
-
-> Here: [/cgit/fio.apl.git/about](/cgit/fio.apl.git/about/)
->
-> GitHub: [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/fio.apl](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/fio.apl)
+I've recently been working on a complete redo of my library fio.apl
+[/cgit/fio.apl.git/about](/cgit/fio.apl.git/about/), which provides an
+abstraction layer to the GNU APL ⎕FIO system function.
 
 The library itself isn't the relavent part here, but rather the unit testing
 system I've been adding to verify it's behavior.

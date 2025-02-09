@@ -16,7 +16,7 @@ documentation.
 I've written a couple applications in GNU APL; feel free to use them as
 reference:
 
-- cowsAyPL, cowsay clone - [/cgit/cowsAyPL.git/about](/cgit/cowsAyPL.git/about) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/cowsAyPL](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/cowsAyPL)
+- cowsAyPL, cowsay clone - [/cgit/cowsAyPL.git/about](/cgit/cowsAyPL.git/about)
 
 ## GNU APL Intro - [https://www.gnu.org/software/apl/apl-intro.html *(November 15, 2024)*](https://www.gnu.org/software/apl/apl-intro.html)
 
@@ -41,14 +41,14 @@ This site hosts an *almost-verbatim* copy of this part of the GNU APL version
 
 Some tips about how to write libraries for GNU APL, and also APL in general.
 
-## fio.apl - [/cgit/fio.apl.git/about](/cgit/fio.apl.git/about/) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/fio.apl](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/fio.apl)
+## fio.apl - [/cgit/fio.apl.git/about](/cgit/fio.apl.git/about/)
 
 The ⎕FIO system function is used to interact with the operating system. However,
 in my opinion, it is far too low-level for a language like APL. I created the
 fio.apl library to provide a much better interface. If you find ⎕FIO is a pain
 in the ass, please take a look at this.
 
-## aplwiz - [/cgit/aplwiz.git/about](/cgit/aplwiz.git/about/) | [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/aplwiz](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/aplwiz)
+## aplwiz - [/cgit/aplwiz.git/about](/cgit/aplwiz.git/about/)
 
 A collection of automated testing script templates I've made to add unit testing
 and similar to your GNU APL projects.

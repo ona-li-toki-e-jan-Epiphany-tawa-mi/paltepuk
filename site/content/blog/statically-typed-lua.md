@@ -14,15 +14,11 @@ I was recently working on finishing up a Luanti
 [https://www.luanti.org *(December 30, 2024)*](https://www.luanti.org/)
 modpack that I was procrastinating on.
 
-It's called gigatools, and it adds and API for tools, and some actual tools,
-that can dig nodes in large areas defined by lines, planes, and cuboids. I
-wanted something like the big tools you can make from the tool forge in Tinker's
-Construct
+It's called gigatools [/cgit/gigatools.git/about](/cgit/gigatools.git/about/),
+and it adds and API for tools, and some actual tools, that can dig nodes in
+large areas defined by lines, planes, and cuboids. I wanted something like the
+big tools you can make from the tool forge in Tinker's Construct
 [https://github.com/SlimeKnights/TinkersConstruct *(December 30, 2024)*](https://github.com/SlimeKnights/TinkersConstruct).
-
-> Here: [/cgit/gigatools.git/about](/cgit/gigatools.git/about/)
->
-> GitHub: [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/gigatools](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/gigatools)
 
 ## Dynamic Types: The Original Sin
 

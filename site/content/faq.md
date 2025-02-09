@@ -19,10 +19,8 @@ peoples' websites are completely outside of my control, and thus the content
 pointed to may change at any time without my awareness.
 
 If you find that one of the links here points to abusive/illegal content, please
-either contact me directly [/contact-information/](/contact-information/), or
-make an issue on GitHub
-[https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk/issues](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk/issues),
-and I'll take it off after reviewing that this is indeed the case.
+contact me [/contact-information](/contact-information/) and I'll take it off
+after reviewing that this is indeed the case.
 
 ## Why doesn't the site look good on my phone?
 
