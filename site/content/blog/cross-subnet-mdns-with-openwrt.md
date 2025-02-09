@@ -35,7 +35,7 @@ device is in, and since each VLAN gets it's own subnet, devices in the main VLAN
 can't see the advertisements of the printer and other devices in the
 internetless VLAN.
 
-## Avahi: My Savior, My Lord
+## Avahi: My Master, My Lord
 
 I struggled for a while with this, but a couple days ago, I found a thread on
 the OpenWRT forms (which I can't find again, sorry) that showed how to do this.
@@ -138,4 +138,4 @@ config rule
     option target 'ACCEPT'
 ```
 
-Happly multicasting!
+Happy multicasting!
