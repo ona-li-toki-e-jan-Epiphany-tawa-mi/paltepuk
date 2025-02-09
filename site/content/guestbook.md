@@ -10,8 +10,10 @@ Rules:
 - Keep the spam to a minimum or face the Spam God and walk backwards into hell.
 - Your message will become a part of this site's source code [/site-source-code](/site-source-code), so make sure it's not something you'll regret later.
 
+{{< command-line  >}}guestbook --submit --interactive{{< /command-line >}}
+
 {{< guestbook-form >}}
 
----
+{{< br >}}{{< br >}}
 
-*nothing here yet...*
+{{< command-line  >}}cat 'guestbook/submissions'{{< /command-line >}}
