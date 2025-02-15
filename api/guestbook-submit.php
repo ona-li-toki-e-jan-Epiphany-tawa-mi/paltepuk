@@ -29,8 +29,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Where to store the guestbook submissions file.
-$storage = '/var/lib/paltepuk-api/';
-#$storage = '';
+// Set to current directory when debugging with 'php -S <url>'.
+$storage = 'cli-server' === php_sapi_name() ? '' : '/var/lib/paltepuk-api/';
 
 ////////////////////////////////////////////////////////////////////////////////
 // Handler                                                                    //
