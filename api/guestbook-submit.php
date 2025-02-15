@@ -96,7 +96,7 @@ write_field($file, 'date', date("F j, Y"));
 fwrite($file, "---\n");
 fclose($file);
 
-http_response_code(301); // Moved Permanently.
+http_response_code(201); // Created.
 $_response = 'Saved guestbook submission successfully';
 lfinish:
 
