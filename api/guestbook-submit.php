@@ -43,12 +43,13 @@ $redirect_to     = "/guestbook";
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
- * Gets a field from the POST request, limiting it to maximum_length.
+ * Gets a field from the POST request, limiting it to maximum_length, and
+ * trimming whitespaces.
  */
 function get_post(string $field, int $maximum_length): string {
     $value = $_POST[$field] ?? "";
     if (!is_string($value)) $value = "";
-    return mb_substr($value, 0, $maximum_length);
+    return trim(mb_substr($value, 0, $maximum_length));
 }
 
 /**
@@ -63,7 +64,7 @@ function write_field($file, string $field, string $data): void {
 // Handler                                                                    //
 ////////////////////////////////////////////////////////////////////////////////
 
-# Response to display to client.
+// Response to display to client.
 $_response = '';
 
 /** @psalm-suppress PossiblyUndefinedArrayOffset - false positive. */
@@ -100,7 +101,8 @@ http_response_code(201); // Created.
 $_response = 'Saved guestbook submission successfully';
 lfinish:
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="refresh" content=<?php echo("\"$redirect_time_s;url=$redirect_to\""); ?> />
