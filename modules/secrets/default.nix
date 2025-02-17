@@ -1,6 +1,6 @@
 # This file is part of paltepuk.
 #
-# Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
+# Copyright (c) 2024-2025 ona-li-toki-e-jan-Epiphany-tawa-mi
 #
 # paltepuk is free software: you can redistribute it and/or modify it under the
 # terms of the GNU Affero General Public License as published by the Free
@@ -28,9 +28,9 @@ in
 
     src = ./.;
 
-    nativeBuildInputs = with pkgs; [ shellcheck ];
-
-    buildPhase = ''
+    doCheck     = true;
+    checkInputs = with pkgs; [ shellcheck ];
+    checkPhase  = ''
       shellcheck install.sh
     '';
 
