@@ -52,8 +52,6 @@ in
     '';
   }) ];
 
-
-
   # We do all this stuff instead of using services.i2pd because it doesn't
   # support setting the type of tunnel, only server for in-tunnels and client
   # for out-tunnels.

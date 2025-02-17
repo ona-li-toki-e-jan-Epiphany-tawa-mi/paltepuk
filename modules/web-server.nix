@@ -15,6 +15,7 @@
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 # Sets up nginx to serve the main site and also route to other webservers.
+# Sets up PHPFPM for the site's API.
 
 { ports
 , pkgs
@@ -33,6 +34,10 @@ let inherit (builtins) toString;
     apiStorageDirectory = "/var/lib/paltepuk-api";
 in
 {
+  ##############################################################################
+  # nginx                                                                      #
+  ##############################################################################
+
   # Lets connections to the reverse proxy through the firewall.
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 
@@ -73,6 +78,9 @@ in
     };
   };
 
+  ##############################################################################
+  # PHPFPM                                                                     #
+  ##############################################################################
 
   users.users."phpfpm" = {
     isSystemUser = true;

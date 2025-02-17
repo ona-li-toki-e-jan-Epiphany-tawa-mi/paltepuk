@@ -100,6 +100,10 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
       ];
 in
 {
+  ##############################################################################
+  # git Server                                                                 #
+  ##############################################################################
+
   programs.git = {
     enable = true;
 
@@ -112,8 +116,6 @@ in
       ) repositories;
     };
   };
-
-
 
   # We login as the "git" user via ssh when using git.
   users = {
@@ -131,8 +133,6 @@ in
   };
 
   services.openssh.settings.AllowUsers = [ "git" ];
-
-
 
   system.activationScripts."create-git-directory" = ''
     mkdir -p ${escapeShellArg gitDirectory}
@@ -192,9 +192,24 @@ in
     };
   };
 
+  ##############################################################################
+  # cgit                                                                       #
+  ##############################################################################
 
+  services.nginx.virtualHosts."cgit" = {
+    # Changes port of cgit instance.
+    listen = [{
+      addr = "127.0.0.1";
+      port = ports.cgit;
+    }];
 
-  # cgit for viewing my git repos via the web.
+    # Custom resources.
+    locations = {
+      "= /cgit/cgit.jpg".alias        = "${cgitResources}/logo.jpg";
+      "= /cgit/cgit-custom.css".alias = "${cgitResources}/style.css";
+    };
+  };
+
   services.cgit."cgit" = {
     enable         = true;
     nginx.location = "/cgit";
@@ -242,20 +257,6 @@ in
       source-filter = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
       # No bots!
       robots = "none";
-    };
-  };
-
-  services.nginx.virtualHosts."cgit" = {
-    # Changes port of cgit instance.
-    listen = [{
-      addr = "127.0.0.1";
-      port = ports.cgit;
-    }];
-
-    # Custom resources.
-    locations = {
-      "= /cgit/cgit.jpg".alias        = "${cgitResources}/logo.jpg";
-      "= /cgit/cgit-custom.css".alias = "${cgitResources}/style.css";
     };
   };
 }

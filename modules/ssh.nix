@@ -19,6 +19,11 @@
 { ... }:
 
 {
+  services.fail2ban = {
+    enable                   = true;
+    bantime-increment.enable = true;
+  };
+
   # Enables OpenSSH and forces key-based authentication.
   services.openssh = {
     enable       = true;
@@ -44,12 +49,5 @@
       ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.
 
     '';
-  };
-
-  # Fail2ban to block out brute-force bots. Not super important with hidden
-  # services.
-  services.fail2ban = {
-    enable                   = true;
-    bantime-increment.enable = true;
   };
 }

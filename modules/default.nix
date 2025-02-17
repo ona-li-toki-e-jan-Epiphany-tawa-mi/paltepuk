@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-# The default nix module that includes all parts of my website and server.
+# The default Nix module that includes all parts of my website and server.
 
 { inputs
 , lib
@@ -26,21 +26,35 @@
 let inherit (lib) mkForce;
 in
 {
-  imports = [ ./i2pd.nix
-              ./tor.nix
-              ./ssh.nix
-              ./git
-              ./epiphany.nix
-              ./secrets
-              ./cloudflared.nix
-            ];
+  imports = [
+    ./i2pd.nix
+    ./tor.nix
+    ./ssh.nix
+    ./git
+    ./epiphany.nix
     ./web-server.nix
-
-
+    ./secrets
+    ./cloudflared.nix
+  ];
 
   security.sudo.execWheelOnly = true;
 
+  networking.hostName = "paltepuk";
 
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "23.11"; # Did you read the comment? Yes, yes I did.
+
+  ##############################################################################
+  # Nix                                                                        #
+  ##############################################################################
+
+  # Removes default packages.
+  environment.defaultPackages = mkForce [];
 
   nixpkgs.hostPlatform = system;
 
@@ -66,9 +80,9 @@ in
     };
   };
 
-
-
-  networking.hostName = "paltepuk";
+  ##############################################################################
+  # Locale                                                                     #
+  ##############################################################################
 
   time.timeZone = timeZone;
 
@@ -90,20 +104,4 @@ in
         LC_TIME           = locale;
       };
     };
-
-
-
-
-  # Removes default packages.
-  environment.defaultPackages = mkForce [];
-
-
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment? Yes, yes I did.
 }

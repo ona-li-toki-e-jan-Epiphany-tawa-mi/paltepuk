@@ -22,10 +22,13 @@
 }:
 
 {
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix")
-            ];
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
+  boot.initrd.availableKernelModules = [ "usbhid" ];
 
+  ##############################################################################
+  # Networking                                                                 #
+  ##############################################################################
 
   # Bandwidth limits.
   services.i2pd.bandwidth = 1000; # 1 MB/s
@@ -34,7 +37,15 @@
     BandwidthBurst = "4 MBytes";
   };
 
+  # Enables networking.
+  networking = {
+    useDHCP                 = false;
+    interfaces.end0.useDHCP = true;
+  };
 
+  ##############################################################################
+  # File System                                                                #
+  ##############################################################################
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/NIXOS_SD";
@@ -46,20 +57,10 @@
     size   = 8*1024; # 8 GB.
   }];
 
-
-
-  boot.initrd.availableKernelModules = [ "usbhid" ];
-
   boot.loader = {
     # NixOS wants to enable GRUB by default.
     grub.enable = false;
     # Enables the generation of /boot/extlinux/extlinux.conf.
     generic-extlinux-compatible.enable = true;
-  };
-
-  # Enables networking.
-  networking = {
-    useDHCP                 = false;
-    interfaces.end0.useDHCP = true;
   };
 }
