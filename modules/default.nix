@@ -93,8 +93,6 @@ in
 
 
 
-  # Baller CPU scheduler.
-  services.system76-scheduler.enable = true;
 
   # Removes default packages.
   environment.defaultPackages = mkForce [];
