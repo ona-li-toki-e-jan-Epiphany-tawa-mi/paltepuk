@@ -31,10 +31,10 @@ in
               ./ssh.nix
               ./git
               ./epiphany.nix
-              ./nginx.nix
               ./secrets
               ./cloudflared.nix
             ];
+    ./web-server.nix
 
 
 
