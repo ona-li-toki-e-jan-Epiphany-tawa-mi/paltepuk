@@ -12,7 +12,8 @@ description = 'my software projects'
 
 Moniker: ona li toki e jan Epiphany tawa mi{{< br >}}
 Short moniker: jan Epiphany{{< br >}}
-Shorter moniker: Epiphany
+Shorter moniker: Epiphany{{< br >}}
+Code 3.12: GCM/CS !d s-: a? C+++ UL++++ P! L+++>+++++ E+++ W+++ w--- M-- b+++ G-- e* h++
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
