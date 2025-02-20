@@ -14,6 +14,12 @@ Rules:
 
 {{< guestbook-form >}}
 
-{{< br >}}{{< br >}}
+{{< br >}}
 
 {{< command-line  >}}cat 'guestbook/submissions'{{< /command-line >}}
+
+{{< br >}}
+
+### #1 fan of you @ February 20, 2025
+
+HELLO! I am a big fan of your website, it's so cute! You seem like an awesome dude and I wish you the best!
