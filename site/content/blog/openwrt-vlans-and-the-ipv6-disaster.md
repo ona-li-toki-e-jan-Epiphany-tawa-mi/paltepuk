@@ -4,9 +4,9 @@ scrollingTitleCount = 2
 date                = '2025-02-03'
 +++
 
----
-
 Written: February 3, 2025.
+
+---
 
 This is sort-of a follow up to my previous article
 [/blog/cross-subnet-mdns-with-openwrt/](/blog/cross-subnet-mdns-with-openwrt/),

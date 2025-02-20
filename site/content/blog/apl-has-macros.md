@@ -4,7 +4,7 @@ scrollingTitleCount = 3
 date                = '2024-11-19'
 +++
 
-*Written: November 19, 2024.*
+Written: November 19, 2024.
 
 ---
 
