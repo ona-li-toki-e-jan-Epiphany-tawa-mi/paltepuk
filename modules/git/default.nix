@@ -33,12 +33,13 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
 
     # Names for the sections displayed in cgit.
     sections = {
-      none    = null;
-      luanti  = "Luanti mods and modpacks";
-      library = "Libraries and Templates";
-      game    = "Games";
-      cli     = "CLI applications";
-      tui     = "TUI applications";
+      none        = null;
+      luanti      = "Luanti mods and modpacks";
+      library     = "Libraries and Templates";
+      game        = "Games";
+      cli         = "CLI applications";
+      tui         = "TUI applications";
+      simulations = "Simulations";
       # My projects that mainly live on other sites.
       personalMirror = "Personal mirrors (may contain Clearnet resources)";
     };
@@ -94,6 +95,9 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
         (standard "slapperfishy" sections.luanti
           "High ordinance fish slapping. Hilarity ensues")
+
+        (standard "multiply-by-n" sections.simulations
+          "Cool animation made by drawing lines between moving points on a circle")
 
         (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
           "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
