@@ -19,9 +19,9 @@
  */
 
 /*
- * Guestbook submission API endpoint.
+ * Guestbook API endpoint.
  *
- * POST /api/guestbook-submit.php - submit guestbook entry.
+ * POST /api/guestbook.php - submit guestbook entry.
  */
 
 // TODO add rate limiting.
