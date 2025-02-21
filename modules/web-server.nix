@@ -74,6 +74,12 @@ in
             include                 ${pkgs.nginx}/conf/fastcgi.conf;
           '';
         };
+
+        # Browser games and simulations.
+        "/game-and-simulations/multiply-by-n".return =
+          "302 $scheme://$host/game-and-simulations/multiply-by-n/";
+        "/game-and-simulations/multiply-by-n/".alias =
+          "${callPackage ../packages/multiply-by-n.nix {}}/";
       };
     };
   };
