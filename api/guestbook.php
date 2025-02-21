@@ -30,9 +30,12 @@
 // Configuration                                                              //
 ////////////////////////////////////////////////////////////////////////////////
 
-// Where to store the guestbook submissions file.
+// API storage directory.
 // Set to current directory when debugging with 'php -S <url>'.
 $storage = 'cli-server' === php_sapi_name() ? '' : '/var/lib/paltepuk-api/';
+
+// Where to store guestbook submissions.
+$submissions_directory = "${storage}guestbook/";
 
 // Browser redirect settings.
 $redirect_time_s = 5;
@@ -53,11 +56,11 @@ function get_post(string $field, int $maximum_length): string {
 }
 
 /**
- * @param resource $file
+ * Generates a simple, machine-readable key-value pair for writing to a file.
  */
-function write_field($file, string $field, string $data): void {
-    fwrite($file, ":$field ".(string)strlen($data)."\n");
-    fwrite($file, "$data\n");
+function generate_kv_string(string $key, string $value): string {
+    $length = strlen($value);
+    return 0 < $length ? ":$key $length\n$value\n" : '';
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -74,6 +77,7 @@ if ('POST' !== $_SERVER['REQUEST_METHOD']) {
     goto lfinish;
 }
 
+// Form data.
 $name = get_post('name', 256);
 if (0 === strlen($name)) $name = 'rando';
 $websites = get_post('websites', 1024);
@@ -84,24 +88,33 @@ if (0 === strlen($message)) {
     goto lfinish;
 }
 
-$file = fopen($storage.'guestbook.txt', 'a');
-if (!$file) {
+if (!file_exists($submissions_directory) && !mkdir($submissions_directory)) {
     http_response_code(500); // Internal Server Error.
     $_response = 'ERROR: could not save guestbook submission';
     goto lfinish;
 }
-write_field($file, 'name', $name);
-if (0 !== strlen($websites)) write_field($file, 'websites', $websites);
-write_field($file, 'message', $message);
-write_field($file, 'date', date("F j, Y"));
-fwrite($file, "---\n");
-fclose($file);
+
+$submission       = generate_kv_string('name', $name);
+$submission      .= generate_kv_string('websites', $websites);
+$submission      .= generate_kv_string('message', $message);
+$submission      .= generate_kv_string('date', date("F j, Y"));
+$submission_path  = $submissions_directory.md5($submission);
+if (!file_exists($submission_path)) {
+    if (false === file_put_contents($submission_path, $submission)) {
+        http_response_code(500); // Internal Server Error.
+        $_response = 'ERROR: could not save guestbook submission';
+        goto lfinish;
+    }
+} else {
+    http_response_code(429); // Too Many Requests.
+    $_response = 'ERROR: guestbook submission already exists';
+    goto lfinish;
+}
 
 http_response_code(201); // Created.
 $_response = 'Saved guestbook submission successfully';
-lfinish:
 
-?>
+lfinish: ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
