@@ -82,7 +82,7 @@ as.
 They also host a number of videos they made, but it seems you need to enable
 JavaScript to view them.
 
-### kor.i2p - [http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p *(January 30, 2025)*](http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p)
+### ![](/web-buttons/kor.i2p.webp) kor.i2p - [http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p *(January 30, 2025)*](http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p)
 
 Their website's home page has an image of Tux towering over some office
 buildings, saying "Good evening Mr. Gates, I'll be your server today!," which is
@@ -385,6 +385,15 @@ probably available in your package manager.
 ### The XTerm Window Manager - [https://xtermwm.sourceforge.io *(November 16, 2024)*](https://xtermwm.sourceforge.io)
 
 A console window manager. Really cool.
+
+### ![](/web-buttons/neocities.org.webp) Neocities - [https://neocities.org *(February 22, 2025)*](https://neocities.org)
+
+Neocities is a cool and free web hosting platform for static websites. There's
+all sorts of fun sites people have made, some of which you'll find on this page.
+
+And, their platform is open source
+[https://github.com/neocities *(February 22, 2025)*](https://github.com/neocities)!
+Pretty baller.
 
 ---
 
