@@ -68,7 +68,7 @@ Astraverse that a lot of their art relates to. It's pretty cool.
 They have a couple blogs for different topics. There's one about their art, one
 about M*necraft, a sketchbook, etc..
 
-### `www.bentasker.co.uk` - [www.bentasker.co.uk *(January 30, 2025)*](www.bentasker.co.uk) | [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(January 30, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p) | [http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion *(January 30, 2025)*](http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion)
+### `www.bentasker.co.uk` - [https://www.bentasker.co.uk *(January 30, 2025)*](https://www.bentasker.co.uk) | [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(January 30, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p) | [http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion *(January 30, 2025)*](http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion)
 
 They have a pretty cool blog. The posts are incredibly detailed and cover a wide
 variety of tech-related topics like home automation, systems administration,
