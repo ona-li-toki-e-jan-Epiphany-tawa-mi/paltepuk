@@ -159,4 +159,4 @@ If you'd like a more detailed history, this website and the NixOS configuration
 of it's server are fully open-source, and versioned by git. Check out the
 following link for more details:
 
-[/site-source-code](/site-source-code/)
+[/cgit/paltepuk.git/about](/cgit/paltepuk.git/about/)

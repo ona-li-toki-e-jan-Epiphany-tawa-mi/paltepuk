@@ -22,9 +22,9 @@ Params:
   following parameters:
   - name: text to display as link.
   - path: relative path to link to.
-  - description: description to show beside link.
+  - description (optional): description to show beside link.
 Single params:
-- description: description to show in index. No description if unset.
+- description (optional): description to show in index.
 */}}
 
 {{ define "header" -}}
@@ -36,7 +36,7 @@ Single params:
   {{- end }}
   {{ if .Param "extraLinks" }}{{range .Params.extraLinks }}
   <li>
-    <a href="{{ .path }}">{{ .name }}</a> - {{ .description }}
+    <a href="{{ .path }}">{{ .name }}</a>{{ if .description }} - {{ .description }}{{ end }}
   </li>
   {{ end }}{{ end }}
 </ul>
