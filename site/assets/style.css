@@ -19,8 +19,6 @@
 
 /* Main site CSS */
 
-
-
 body {
     font-family: monospace;
     font-size:   12pt;
@@ -43,15 +41,15 @@ input, textarea {
     border:           none;
 }
 
-
-
-
-/* Sets up general content layout. */
+/******************************************************************************/
+/* Content Layout                                                             */
+/******************************************************************************/
 
 :root {
     --body-horizontal-margin: 2vw;
     --header-main-gap:        2vw;
-    --width-reduction:        calc(var(--body-horizontal-margin) + var(--header-main-gap));
+    --width-reduction:        calc( var(--body-horizontal-margin)
+                                  + var(--header-main-gap));
 
     --header-base-width: 25vw;
 }
@@ -99,7 +97,9 @@ main {
     width:    calc(75vw - var(--width-reduction));
 }
 
-
+/******************************************************************************/
+/* Cool Effects                                                               */
+/******************************************************************************/
 
 /* Makes element blink in and out instantly once every second. */
 .blink {
@@ -119,8 +119,6 @@ main {
         animation-timing-function: steps(1, end);
     }
 }
-
-
 
 /* Applies "Screen-Door" effect for scanlines and big pixels. */
 /* From https://aleclownes.com/2017/02/01/crt-display.html    */
@@ -144,29 +142,28 @@ body::before {
   pointer-events: none;
 }
 
+/******************************************************************************/
+/* Standardization                                                            */
+/******************************************************************************/
 
-
-/* Makes scrollbar appear in Chromium-based broswers as it does in */
-/* Firefox-based ones.                                             */
-
-/* Sets width and overall appearance of scrollbar. */
+/* Makes scrollbar appear in webkit-based broswers as it does in */
+/* Firefox-based ones.                                           */
 *::-webkit-scrollbar {
+    /* Sets width and overall appearance of scrollbar. */
     width: 3px;
-}
 
-/* Enlarges scrollbar on hover. */
+}
 *::-webkit-scrollbar:hover {
+    /* Enlarges scrollbar on hover. */
     width: 6px;
 }
-
 *::-webkit-scrollbar-thumb {
     /* Scrollbar color. */
     background-color: #888;
     /* Adds a fillet to the corners of the scrollbar. */
     border-radius: 10px;
 }
-
-/* Slight change in color on hover. */
 *::-webkit-scrollbar-thumb:hover {
+    /* Slight change in color on hover. */
     background-color: #555;
 }

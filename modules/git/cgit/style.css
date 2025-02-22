@@ -1,26 +1,22 @@
 /*
-This file is part of paltepuk.
-
-Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
-
-paltepuk is free software: you can redistribute it and/or modify it under the
-terms of the GNU Affero General Public License as published by the Free Software
-Foundation, either version 3 of the License, or (at your option) any later
-version.
-
-paltepuk is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License along
-with paltepuk. If not, see <https://www.gnu.org/licenses/>.
-*/
+ * This file is part of paltepuk.
+ *
+ * Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
+ *
+ * paltepuk is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU Affero General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * paltepuk is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with paltepuk. If not, see <https://www.gnu.org/licenses/>.
+ */
 
 /* Custom cgit CSS. */
-
-
-
-/* Modified from cgit's default CSS. */
 
 :root {
     --background-color: black;
@@ -28,6 +24,10 @@ with paltepuk. If not, see <https://www.gnu.org/licenses/>.
     --link-color:       blue;
     --link-hover-color: purple;
 }
+
+/******************************************************************************/
+/* cgit Customization                                                         */
+/******************************************************************************/
 
 a:link {
     color: var(--link-color);
@@ -652,9 +652,9 @@ div#cgit table.ssdiff td.space div {
     min-height: 3em;
 }
 
-
-
-/* md2html customization */
+/******************************************************************************/
+/* md2html Customization                                                       */
+/******************************************************************************/
 
 /* Headers. */
 div#cgit .markdown-body h1 a.toclink,
@@ -689,9 +689,9 @@ div#cgit .markdown-body .highlight pre, .markdown-body pre {
     border:           none;
 }
 
-
-
-/* syntax-highlighting.py customization. */
+/******************************************************************************/
+/* syntax-highlighting.py Customization                                       */
+/******************************************************************************/
 
 /* String colors. */
 .highlight .s,
@@ -720,7 +720,9 @@ div#cgit .markdown-body .highlight pre, .markdown-body pre {
     background-color: var(--background-color) !important;
 }
 
-
+/******************************************************************************/
+/* Cool Effects                                                               */
+/******************************************************************************/
 
 /* Applies "Screen-Door" effect for scanlines and big pixels. */
 /* From https://aleclownes.com/2017/02/01/crt-display.html    */
@@ -744,29 +746,28 @@ body::before {
   pointer-events: none;
 }
 
+/******************************************************************************/
+/* Standardization                                                            */
+/******************************************************************************/
 
-
-/* Makes scrollbar appear in Chromium-based broswers as it does in */
-/* Firefox-based ones.                                             */
-
-/* Sets width and overall appearance of scrollbar. */
+/* Makes scrollbar appear in webkit-based broswers as it does in */
+/* Firefox-based ones.                                           */
 *::-webkit-scrollbar {
+    /* Sets width and overall appearance of scrollbar. */
     width: 3px;
-}
 
-/* Enlarges scrollbar on hover. */
+}
 *::-webkit-scrollbar:hover {
+    /* Enlarges scrollbar on hover. */
     width: 6px;
 }
-
 *::-webkit-scrollbar-thumb {
     /* Scrollbar color. */
     background-color: #888;
     /* Adds a fillet to the corners of the scrollbar. */
     border-radius: 10px;
 }
-
-/* Slight change in color on hover. */
 *::-webkit-scrollbar-thumb:hover {
+    /* Slight change in color on hover. */
     background-color: #555;
 }
