@@ -59,7 +59,7 @@ let inherit (lib) concatStrings mkIf escapeShellArg;
           };
       in [
         (standard "AkashicRecord" sections.none
-          "The history of my universe, I guess")
+          "Software graveyard monorepo")
         (standard "paltepuk" sections.none
           "Personal website and server wombo-combo")
         (standard "epitaphpkgs" sections.none
