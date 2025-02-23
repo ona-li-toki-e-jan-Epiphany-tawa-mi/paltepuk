@@ -56,13 +56,13 @@ request: "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.1", host: "paltepuk.xyz"
 request: "GET /site/wp-includes/wlwmanifest.xml HTTP/1.1", host: "paltepuk.xyz"
 request: "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.1", host: "paltepuk.xyz"
 request: "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.1", host: "paltepuk.xyz"
-request: "GET /media/system/js/core.js HTTP/1.1", host: "paltepuk.xyz"
+...
 request: "GET /wp-includes/js/jquery/jquery.js HTTP/1.1", host: "paltepuk.xyz"
 ...
 ```
 
 There's also a bunch of other requests for PHP files. They're not explicitly
-WordPress, but I image they relate.
+WordPress, but I imagine they relate.
 
 ---
 
@@ -90,7 +90,7 @@ request: "GET /vue/.env HTTP/1.1", host: "paltepuk.xyz"
 
 ---
 
-There's quite a log of attempted credential stealing (in addition to the
+There's quite a lot of attempted credential stealing (in addition to the
 previous):
 
 ```javascript
@@ -160,7 +160,7 @@ request: "GET /dirty-shade.png HTTP/1.1", host: "4blcq4arxhbkc77tfrtmy4pptf55gjb
 
 ---
 
-Apparently binance.com is reffering to my website??? What's going on???:
+Apparently binance.com is referring to my website??? What's going on???:
 
 ```javascript
 request: "GET /wp-admin/css/ HTTP/1.1", host: "paltepuk.xyz", referrer: "binance.com"
@@ -198,7 +198,7 @@ request: "GET /files/ HTTP/1.1", host: "paltepuk.xyz", referrer: "binance.com"
 
 ---
 
-This person thinks too little of me:
+This "person" thinks too little of me:
 
 ```javascript
 request: "GET /home HTTP/1.1", host: "paltepuk.xyz"
