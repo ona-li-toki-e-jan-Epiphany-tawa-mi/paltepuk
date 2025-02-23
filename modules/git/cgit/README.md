@@ -2,8 +2,8 @@ Welcome to MY git server! Here you can peruse my various programming (and other)
 projects in style!
 
 Note that in the about sections for each repo, images and relative links are
-borked. This is because they are meant for GitHub (and don't work in cgit,)
-sorry in advance!
+borked. This is because they don't work in cgit (as far as I'm aware,) sorry in
+advance!
 
 ## Cloning (with git)
 
