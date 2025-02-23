@@ -24,12 +24,12 @@
 
 stdenv.mkDerivation rec {
   pname   = "multiply-by-n";
-  version = "0.1.1";
+  version = "0.1.2";
 
   src = fetchgit {
     url  = "https://paltepuk.xyz/cgit/multiply-by-n.git";
     rev  = version;
-    hash = "sha256-3Xqq+Z7TQeJPoFVm/Alo97IAgpC2wE6n2YVP87pLcqI=";
+    hash = "sha256-qLE/ZVlRE4Sa/aRvQCNornhoLPBHFbH0GEdMD8QPVo4=";
   };
 
   nativeBuildInputs = [ minify ];
