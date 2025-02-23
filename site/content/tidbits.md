@@ -4,6 +4,16 @@ scrollingTitleCount = 6
 description         = 'poetry/short stories/etc.'
 +++
 
+*Written: February 23, 2025.*
+
+To try can be cringe
+
+but what is truly cringe is
+
+to not try at all.
+
+{{< br >}}
+
 *Added: February 4, 2025. Written: ???.*
 
 We are the faceless, the raceless, the nationless, the faithless. All alike,
