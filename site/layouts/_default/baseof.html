@@ -38,12 +38,13 @@ Params:
   <body>
     <header>
       <h1>{{ .Title }}</h1>
-      View page on:
-      <a href="{{ urls.JoinPath .Site.Params.baseI2PURL .RelPermalink }}">I2P</a>,
-      <a href="{{ urls.JoinPath .Site.Params.baseTorURL .RelPermalink }}">Tor</a>,
-      <a href="{{ urls.JoinPath .Site.BaseURL .RelPermalink }}">Clearnet (Cloudflare!)</a>
+      <p>
+        View page on:
+        <a href="{{ urls.JoinPath .Site.Params.baseI2PURL .RelPermalink }}">I2P</a>,
+        <a href="{{ urls.JoinPath .Site.Params.baseTorURL .RelPermalink }}">Tor</a>,
+        <a href="{{ urls.JoinPath .Site.BaseURL .RelPermalink }}">Clearnet (Cloudflare!)</a>
+      </p>
       {{ if not .IsHome}}
-      <br>
       <p><a href="/">Return to home page</a></p>
       {{ if and (gt (len .Section) 0) (partial "partials/filename.html" . | ne .Section) }}
       <p><a href="../">Return to {{ .CurrentSection.Title }}</a></p>
