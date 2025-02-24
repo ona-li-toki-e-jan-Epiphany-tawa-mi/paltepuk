@@ -4,6 +4,18 @@ scrollingTitleCount = 6
 description         = 'poetry/short stories/etc.'
 +++
 
+{{< noscript >}}
+<p><em>Written: February 24, 2025.</em></p>
+
+<p>Pages are bloated</p>
+
+<p>because of that JavaScript</p>
+
+<p>hog used by soydevs.</p>
+
+<br>
+{{< /noscript >}}
+
 *Written: February 23, 2025.*
 
 To try can be cringe
