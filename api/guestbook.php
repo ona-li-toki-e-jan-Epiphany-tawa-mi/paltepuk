@@ -122,6 +122,6 @@ lfinish: ?>
   </head>
   <body>
     <p><?php echo($_response); ?></p>
-    <p><?php echo("Redirecting to $redirect_to in $redirect_time_s second(s)"); ?></p>
+    <p><?php echo("Redirecting to <a href=\"$redirect_to\">$redirect_to</a> in $redirect_time_s second(s)"); ?></p>
   </body>
 </html>
