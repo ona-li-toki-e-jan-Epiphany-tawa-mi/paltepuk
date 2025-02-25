@@ -41,7 +41,7 @@ guestbook, etc..
 It has a cute aesthetic. The use of web buttons is very epic.
 
 Their website has a bunch of mirrors, and they have access over Gopher and
-Gemini, which is pretty cool.
+Gemini.
 
 They have some software projects they wrote and host.
 
@@ -49,7 +49,7 @@ They have a blog, and host a number of services, i.e.: IRC, Mumble, file upload,
 ... and a web ring! Their website is also a part of a number of other web rings.
 
 Their website has a JavaScript detector and displays "Javascript is
-disabled. Keep it up" if it's disabled, which is pretty baller.
+disabled. Keep it up" if it's disabled.
 
 ### ![](/web-buttons/luvstarkei.com.webp) LuvstarKei - [https://luvstarkei.com *(January 30, 2025)*](https://luvstarkei.com)
 
@@ -63,7 +63,7 @@ Extremely cute website. The use of web buttons is very epic.
 Their website is covered with a wide variety of images, giving a very deco vibe.
 
 There's a ton of art on it. They have their own universe-kinda thing called the
-Astraverse that a lot of their art relates to. It's pretty cool.
+Astraverse that a lot of their art relates to.
 
 They have a couple blogs for different topics. There's one about their art, one
 about M*necraft, a sketchbook, etc..
@@ -85,8 +85,8 @@ JavaScript to view them.
 ### ![](/web-buttons/kor.i2p.webp) kor.i2p - [http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p *(January 30, 2025)*](http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p)
 
 Their website's home page has an image of Tux towering over some office
-buildings, saying "Good evening Mr. Gates, I'll be your server today!," which is
-incredibly cute.
+buildings, saying "Good evening Mr. Gates, I'll be your server today!,"
+Incredibly cute.
 
 The use of web buttons is very epic.
 
@@ -118,7 +118,7 @@ shitposts. A mildly amusing read.
 From the words of the web master: "Whenever you are reading one of my articles
 keep in mind that I live under a rock and might be completely delusional."
 
-They have Gemini access, which is pretty cool.
+They have Gemini access.
 
 ### strangedefinition.com - [https://strangedefinition.com *(February 1, 2025)*](https://strangedefinition.com)
 
@@ -128,8 +128,7 @@ A weird personal website/blog. The posts are about art they made themselves, AI
 generated art, poetry, short stories, dreams, art tutorials, etc..
 
 They have made and published a couple drawing books
-[https://strangedefinition.com/index.php/books *(February 1, 2025)*](https://strangedefinition.com/index.php/books/),
-which is cool.
+[https://strangedefinition.com/index.php/books *(February 1, 2025)*](https://strangedefinition.com/index.php/books/).
 
 ### Gabe Rocks! - [https://gabe.rocks *(February 1, 2025)*](https://gabe.rocks) | [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 1, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion) | [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 1, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
 
@@ -170,7 +169,7 @@ I really liked the following songs:
 ### ![](/web-buttons/blog.shr4pnel.com.gif) shrapnelnet - [https://blog.shr4pnel.com *(February 1, 2025)*](https://blog.shr4pnel.com)
 
 Their site has a cute frog wallpaper-esque background. The use of web buttons is
-very epic. Their website is a part of a bunch of web rings, which is cool.
+very epic. Their website is a part of a bunch of web rings.
 
 Their website consists mainly of a blog, covering topics like developing and
 maintaining their website, Linux, music and musicians, art and artists,
@@ -181,7 +180,7 @@ Their website is FOSS
 Super cool.
 
 Their website has a JavaScript detector and displays "no javascript? awesome!"
-if it's disabled, which is pretty baller.
+if it's disabled.
 
 ### ![](/web-buttons/hotlinecafe.com.gif) ![](/web-buttons/hotlinecafe.com-2.gif) ![](/web-buttons/hotlinecafe.com-old2.gif) Fionn's Hotline Cafe - [https://hotlinecafe.com *(February 5, 2025)*](https://hotlinecafe.com)
 
@@ -193,14 +192,14 @@ The random pointless Japanese is very cute; I love you too, random fake internet
 They made a game?!?! called Total Anarchy
 [https://fionnhodgson.itch.io/totalanarchy *(February 5, 2025)*](https://fionnhodgson.itch.io/totalanarchy).
 It's a top-down shooter open-world crime game. It's proprietary and for W*ndows
-only, though they do have a free demo. Looks pretty cool.
+only, though they do have a free demo.
 
 They host some songs they made, and they're shared under CC BY-SA 3.0. Very
 epic! They're "casiocore-meets-vapourhouse" as described by the web
 master. There's also some MIDI stuff with some *fun facts.*
 
 They have a variety of browser games (which require Javascript and WebGL) and
-Game Maker games in the arcade section. They're really cool.
+Game Maker games in the arcade section.
 
 They've got some kind of photo album. The site goes grayscale when you open this
 section. There's some cool SSTV-distorted (Slow Scan Television) images.
