@@ -3,10 +3,9 @@ title               = 'paltepuk'
 scrollingTitleCount = 5
 
 [[extraLinks]]
-name = 'Site Source Code'
-path = '/cgit/paltepuk.git/about/'
+path        = '/cgit/paltepuk.git/about/'
+description = 'site source code'
 [[extraLinks]]
-name        = 'cgit'
 path        = '/cgit/'
 description = 'my software projects'
 +++

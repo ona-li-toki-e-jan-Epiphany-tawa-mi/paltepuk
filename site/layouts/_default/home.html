@@ -20,7 +20,6 @@ with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 Params:
 - extraLinks: extra links to add below the page index. List of objects with the
   following parameters:
-  - name: text to display as link.
   - path: relative path to link to.
   - description (optional): description to show beside link.
 Single params:
@@ -31,12 +30,12 @@ Single params:
 <ul>
   {{ range.Pages }}
   <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .Param "description" }} - {{ .Params.description }}{{ end }}
+    <a href="{{ .RelPermalink }}">{{ .RelPermalink }}</a>{{ if .Param "description" }} - {{ .Params.description }}{{ end }}
   </li>
   {{- end }}
   {{ if .Param "extraLinks" }}{{range .Params.extraLinks }}
   <li>
-    <a href="{{ .path }}">{{ .name }}</a>{{ if .description }} - {{ .description }}{{ end }}
+    <a href="{{ .path }}">{{ .path }}</a>{{ if .description }} - {{ .description }}{{ end }}
   </li>
   {{ end }}{{ end }}
 </ul>
