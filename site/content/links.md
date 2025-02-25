@@ -1,11 +1,12 @@
 +++
 title               = 'Links'
 scrollingTitleCount = 7
-description         = 'external links to my profiles/etc.'
+description         = 'to webrings/my profiles/etc.'
 +++
 
+## Webrings
 
-[https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
+### [<------](https://baccyflap.com/noai/?prv&s=pal) [THE NO A.I. WEBRING](https://baccyflap.com/noai) [(random)](https://baccyflap.com/noai/?rnd) [------>](https://baccyflap.com/noai/?nxt&s=pal)
 
 ## Profiles
 
