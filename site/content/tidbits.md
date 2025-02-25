@@ -4,7 +4,7 @@ scrollingTitleCount = 6
 description         = 'poetry/short stories/etc.'
 +++
 
-{{< noscript >}}
+{{< noscript-html >}}
 <p><em>Written: February 24, 2025.</em></p>
 
 <p>Pages are bloated</p>
@@ -14,7 +14,7 @@ description         = 'poetry/short stories/etc.'
 <p>hog used by soydevs.</p>
 
 <br>
-{{< /noscript >}}
+{{< /noscript-html >}}
 
 *Written: February 23, 2025.*
 
