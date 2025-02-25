@@ -14,6 +14,9 @@ Add **+NOSCRIPT** in your message to make it invisible to people with JavaScript
 enabled.
 {{< /noscript-md >}}
 
+You can add emotes to your messages. See "What guestbook emotes are available"
+in the FAQ [/faq](/faq/) for available emotes.
+
 {{< command-line  >}}guestbook --submit --interactive{{< /command-line >}}
 
 {{< guestbook-form >}}
