@@ -18,6 +18,9 @@ Sorry, but this site isn't optimized for in-cells; paltepuk is
 
 TL: Tik-Tok hand portal hella cap fr fr no bussin' rizzlers use literal PCs ong.
 
+![](/web-buttons/best-viewed-with-a-computer.gif)
+![](/web-buttons/dont-be-a-phone-chump.webp)
+
 ## Ping?
 
 Pong.

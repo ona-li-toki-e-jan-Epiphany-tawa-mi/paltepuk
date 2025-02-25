@@ -3,9 +3,9 @@ title               = 'Contact Information'
 scrollingTitleCount = 3
 +++
 
-## Email
+## Email ![](/web-buttons/email.gif)
 
-You can send me email over the Clearnet at the following address:
+You can send me email at the following address:
 
 ona-li-toki-e-jan-Epiphany-tawa-mi(at)protonmail(dot)com
 

@@ -24,6 +24,8 @@ but what is truly cringe is
 
 to not try at all.
 
+![](/web-buttons/why-shouldnt-i-post-cringe.gif)
+
 {{< br >}}
 
 *Added: February 4, 2025. Written: ???.*
