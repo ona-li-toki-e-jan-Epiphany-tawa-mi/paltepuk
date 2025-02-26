@@ -422,6 +422,9 @@ paltepuk is a part of this webring [/links](/links/).
 For websites without AI generated content. Exceptions are made for sites
 demonstrating the horrors of AI.
 
+By rmf (see
+[#web-buttonsbaccyflapcomwebp-baccyflapcom](#web-buttonsbaccyflapcomwebp-baccyflapcom).)
+
 paltepuk is a part of this webring [/links](/links/).
 
 ---
@@ -457,6 +460,8 @@ ona li pana e lipu kepeken lipu PDF! epiku!
 ona li jo e lipu RSS [https://liputenpo.org/lipu/feed.xml *(February 25, 2025)*](https://liputenpo.org/lipu/feed.xml).
 
 lipu tenpo li lukin nasa kepeken ala ilo JavaScript, taso ona li awen pali.
+
+---
 
 # Informational
 
@@ -504,7 +509,7 @@ Learn to make your own website ***NOW!*** Stop being a social media serf!
 - [http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion *(February 2, 2025)*](http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion)
 - [http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p *(February 2, 2025)*](http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p)
 
-Cooking recipe site by Ben Tasker (see Personal Websites section.)
+Cooking recipe site by Ben Tasker (see [#wwwbentaskercouk](#wwwbentaskercouk).)
 
 ### ![](/web-buttons/based.cooking.webp) Based Cooking
 
