@@ -11,7 +11,7 @@ ona-li-toki-e-jan-Epiphany-tawa-mi(at)protonmail(dot)com
 
 Please use my PGP key to encrypt your mail (and make sure to send me yours!):
 
-[/pgp.asc](/pgp.asc)
+[/pgp.txt](/pgp.txt)
 
 Don't worry, this is ***NOT*** the one ProtonMail generated.
 

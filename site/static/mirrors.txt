@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+https://paltepuk.xyz
+http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p
+http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEVS2RMkZdG71tOz/PwMXpr73/FqIFAme+vKkACgkQwMXpr73/
+FqKb9BAAqenChjER7vw0mgJ2genTh2M2DmOX1OjLyfod2FroqpQlRMfCJI2cK/DZ
+H64/D44d5rOQt+IiegxJm49Yh32Zd1giNT/px0VgJ1NxskNFwNFzTond/ctlS2Z0
+j/ZHT0vcepvWdggU1mBW6sTHrcqsaP8Z40Y4mUUUOKJamU7tYeiazwWDDrDNd/Z5
+HA5Mc8qZcRh3ckjhBWH0XagbZld2oGziyGUmmAutunAs45efZDJ7e5jGN902eQXq
+tmlmJzmAnDdYW02L/MO+Nd1ZO9ctpcpWenMKQA1N++DVqdQx4W4zprFKjpACG9OP
+qBoZ2vdPwdEcBf7oQ/iWsrINKEpi3s3tlHw02HRrfP7L4V0CB0CWkF2hs6hz6dZs
+aRR8DgovSrqMik4la0lu1Av7GEH3R+1Il3hoWErxkWK6z3qTq3krrj+in95uwIZN
+jD7EgzH+zl4RYDiO+nq/ftxKJbWbwIHbPaxEsY0+Zh0PTuKvfgmcWu1MTQOzI7rl
+245aGeCnQgvyoFieJholh+eQGdMt1yrysO0dnAksHYJ/q2Y51n2bKJ2/RKqP1nes
+ePnkbFZl2z30NX74RJDiPGQF58neh3xWSvYxjM70IE6I0/7lCkXj6VUegi6t/Czw
+gwvSKh+a4+aSfubniLIQ+TsKY7winfAToNl9pZOcSRzC7+/9JJA=
+=x6Ke
+-----END PGP SIGNATURE-----
