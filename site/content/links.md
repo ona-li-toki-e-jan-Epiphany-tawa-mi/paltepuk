@@ -6,6 +6,9 @@ description         = 'to webrings/my profiles/etc.'
 
 ## Webrings
 
+If you ended up on this page from a webring, you'll have to [head to /](/) to
+see my main page.
+
 ### [<------](https://baccyflap.com/noai/?prv&s=pal) [NO A.I. WEBRING](https://baccyflap.com/noai) [(random)](https://baccyflap.com/noai/?rnd) [------>](https://baccyflap.com/noai/?nxt&s=pal)
 
 ### [<------](https://webring.dinhe.net/prev/https://paltepuk.xyz/links) [Retronaut Webring](https://webring.dinhe.net) [------>](https://webring.dinhe.net/next/https://paltepuk.xyz/links)
