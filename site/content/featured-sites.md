@@ -268,6 +268,8 @@ about M*necraft, a sketchbook, etc..
 
 ### ![](/web-buttons/getimiskon.xyz.webp) getimiskon's space
 
+*Warning(s): makes 3rd-party requests (fediverse instance only.)*
+
 - [https://getimiskon.xyz *(February 26, 2025)*](https://getimiskon.xyz)
 - [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(February 26, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
 - [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
@@ -454,6 +456,8 @@ paltepuk is a part of this webring [/links](/links/).
 
 ### LOW <-- TECH MAGAZINE
 
+*Warning(s): makes 3rd-party requests.*
+
 - [https://solar.lowtechmagazine.com *(February 26, 2025)*](https://solar.lowtechmagazine.com)
 
 An cool online magazine, mainly about renewable energy, reducing waste, and
@@ -606,6 +610,8 @@ Cool search engine for simple and retro websites.
 
 ### ![](/web-buttons/neocities.org-1.webp) ![](/web-buttons/neocities.org-2.webp) Neocities
 
+*Warning(s): makes 3rd-party requests.*
+
 - [https://neocities.org *(February 26, 2025)*](https://neocities.org)
 
 Neocities is a cool and free web hosting platform for static websites. There's
@@ -627,7 +633,7 @@ probably available in your package manager.
 
 ### dnscheck.tools
 
-*Warning(s): requires JavaScript.*
+*Warning(s): requires JavaScript, makes 3rd-party requests (required to work.)*
 
 - [https://www.dnscheck.tools *(February 26, 2025)*](https://www.dnscheck.tools/)
 
