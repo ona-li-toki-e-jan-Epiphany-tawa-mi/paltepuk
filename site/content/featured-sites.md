@@ -25,7 +25,7 @@ accessible thing being their IRC server.
 
 ### ![](/web-buttons/rgbteahouse.neocities.org.webp) ![](/wanwan/1.gif) ![](/wanwan/2.gif) PROJECT103'S RGB TEAHOUSE ![](/wanwan/2.gif) ![](/wanwan/3.gif) - [https://rgbteahouse.neocities.org *(February 25, 2025)*](https://rgbteahouse.neocities.org)
 
- *Warning(s): French.*
+ *Warning(s): French ;).*
 
 A website that harkens back to the web of yore. It's loaded with a bunch of cute
 and silly GIFs. The use of web buttons is very epic.
@@ -60,9 +60,7 @@ They've got a guestbook, and it's open source
 [https://baccyflap.com/res/gbdl *(February 25, 2025)*](https://baccyflap.com/res/gbdl/)!
 
 Their website is part of quite a few webrings, and they also host a webring
-[https://baccyflap.com/noai *(February 25, 2025)*](https://baccyflap.com/noai/)
-specifically for websites without AI (which I'm a part of btw
-[/links](/links/).)
+specifically for websites without AI (see [#webrings](#webrings).)
 
 ### ![](/web-buttons/hotlinecafe.com.gif) ![](/web-buttons/hotlinecafe.com-2.gif) ![](/web-buttons/hotlinecafe.com-old2.gif) Fionn's Hotline Cafe - [https://hotlinecafe.com *(February 5, 2025)*](https://hotlinecafe.com)
 
@@ -371,6 +369,25 @@ Cool 2.5D first person shooter. The creator abandoned this "classic" version and
 started selling a new version on Steam, but the classic version is still online,
 and it's open source!
 [https://github.com/gorescript/gorescript *(November 16, 2024)*](https://github.com/gorescript/gorescript).
+
+---
+
+# Webrings
+
+### Retronaut Webring - [https://webring.dinhe.net *(February 26, 2025)*](https://webring.dinhe.net)
+
+From the web master: "Some of us miss the messy old days of the Internet where
+we tried to get along and we'd link to each other's sites and it was all so much
+fun."
+
+paltepuk is a part of this webring [/links](/links/).
+
+### NO AI WEBRING - [https://baccyflap.com/noai *(February 26, 2025)*](https://baccyflap.com/noai)
+
+For websites without AI generated content. Exceptions are made for sites
+demonstrating the horrors of AI.
+
+paltepuk is a part of this webring [/links](/links/).
 
 ---
 
