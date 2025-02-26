@@ -4,6 +4,22 @@ scrollingTitleCount = 6
 description         = 'poetry/short stories/etc.'
 +++
 
+*Written: February 26, 2025.*
+
+Oh CloudFlare, the great Man in the Middle,
+
+with all our packets in sight,
+
+you bare all your might,
+
+leaving no stone unturned,
+
+and every kilowatt burned,
+
+and our privacy forever adjurned.
+
+{{< br >}}
+
 {{< noscript-html >}}
 <p><em>Written: February 24, 2025.</em></p>
 
