@@ -187,7 +187,7 @@ if it's disabled.
 Their site has an intense vaporwave aesthetic. The use of web buttons is very
 epic.
 
-The random pointless Japanese is very cute; I love you too, random fake internet person.
+The random pointless Japanese is very cute; 貴方も愛してるぞー。
 
 They made a game?!?! called Total Anarchy
 [https://fionnhodgson.itch.io/totalanarchy *(February 5, 2025)*](https://fionnhodgson.itch.io/totalanarchy).
@@ -209,6 +209,92 @@ and animations, some cool album cover art, etc..
 
 They made a cool "museum" of a bunch of old electronics they have/had. The
 typewriters are the coolest part in my opinion.
+
+### ![](/web-buttons/baccyflap.com.webp) baccyflap.com - [https://baccyflap.com *(February 25, 2025)*](https://baccyflap.com)
+
+*Warning(s): PHP, extremely classy.*
+
+A site named after the mighty baccyflap
+[https://baccyflap.com/mus/baccyflap *(February 25, 2025)*](https://baccyflap.com/mus/baccyflap/).
+
+The museum page is a blog-of-sorts that covers a wide variety of topics, all
+which I highly recommend reading.
+
+The personal page is another blog. It also covers a variety of topies, and I
+also highly recommend reading them.
+
+There's all sorts of random quirks and cool secrets hidden around. Make sure to
+explore!
+
+They've got a guestbook, and it's open source
+[https://baccyflap.com/res/gbdl *(February 25, 2025)*](https://baccyflap.com/res/gbdl/)!
+
+Their website is part of quite a few webrings, and they also host a webring
+[https://baccyflap.com/noai *(February 25, 2025)*](https://baccyflap.com/noai/)
+specifically for websites without AI (which I'm a part of btw
+[/links](/links/).)
+
+### ![](/web-buttons/rgbteahouse.neocities.org.webp) ![](/wanwan/1.gif) ![](/wanwan/2.gif) PROJECT103'S RGB TEAHOUSE ![](/wanwan/2.gif) ![](/wanwan/3.gif) - [https://rgbteahouse.neocities.org *(February 25, 2025)*](https://rgbteahouse.neocities.org)
+
+ *Warning(s): French.*
+
+A website that harkens back to the web of yore. It's loaded with a bunch of cute
+and silly GIFs. The use of web buttons is very epic.
+
+They have a marquee! on the main page that displays random and cute "news."
+
+The site is a mish-mash of a couple languages. Mainly English and French it
+seems.
+
+There's *a lot* of art under the gallery page.
+
+They also have a diary page covering completely random topics like trees, bugs,
+art, photography, etc..
+
+### ![](/web-buttons/vendell.online.gif) Vendell's Personal Page - [https://vendell.online *(February 25, 2025)*](https://vendell.online) | [http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion *(February 25, 2025)*](http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion)
+
+A rather simple, but nice looking website. The use of web buttons is very
+epic. Their site is part of a couple web rings.
+
+They have a blog, though it's a bit empty. The content is tech related.
+
+They do some photography, and have posted some nice pictures on the photography
+page.
+
+They have a neat "song of the day" thing on the sidebar.
+
+They have a page about their servers and some services they host, the main
+accessible thing being their IRC server.
+
+---
+
+# Magazines
+
+### LOW <-- TECH MAGAZINE - [https://solar.lowtechmagazine.com *(February 25, 2025)*](https://solar.lowtechmagazine.com)
+
+An amazing online magazine, mainly about renewable energy, reducing waste, and
+similar things, who's server is powered by solar power
+[https://solar.lowtechmagazine.com/power *(February 25, 2025)*](https://solar.lowtechmagazine.com/power/)!
+Keep in mind that it might not always be online because of bad weather.
+
+The website and articles are primarily english, but there are translations for a couple languages
+[https://solar.lowtechmagazine.com/about/translations *(February 25, 2025)*](https://solar.lowtechmagazine.com/about/translations/).
+
+Their articles are availible for download
+[https://solar.lowtechmagazine.com/offline-reading *(February 25, 2025)*](https://solar.lowtechmagazine.com/offline-reading),
+and they have RSS feeds
+[https://solar.lowtechmagazine.com/feeds *(February 25, 2025)*](https://solar.lowtechmagazine.com/feeds)!
+
+### lipu tenpo - [https://liputenpo.org *(February 25, 2025)*](https://liputenpo.org/)
+
+lipu tenpo li lipu pona li lon toki pona li toki e ijo mute pi ma ali. sina toki
+e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
+
+ona li pana e lipu kepeken lipu PDF! epiku!
+
+ona li jo e lipu RSS [https://liputenpo.org/lipu/feed.xml *(February 25, 2025)*](https://liputenpo.org/lipu/feed.xml).
+
+lipu tenpo li lukin nasa kepeken ala ilo JavaScript, taso ona li awen pali.
 
 ---
 
@@ -263,11 +349,6 @@ started selling a new version on Steam, but the classic version is still online,
 and it's open source!
 [https://github.com/gorescript/gorescript *(November 16, 2024)*](https://github.com/gorescript/gorescript).
 
-### lipu tenpo - [https://liputenpo.org *(November 17, 2024)*](https://liputenpo.org/)
-
-lipu tenpo li lipu pona li lon toki pona li toki e ijo mute pi ma ali. sina toki
-e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
-
 ### amogus.i2p - [http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p *(January 30, 2025)*](http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p/)
 
 I'm sure you can expect what kind of content this website has. Just ingore the
@@ -278,6 +359,12 @@ Monero address. Or don't, I'm not your mom.
 ### chmok.i2p - [http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p *(February 2, 2025)*](http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p)
 
 )))))
+
+### ![](/web-buttons/postbox.garden.webp) postbox.garden - [https://postbox.garden *(February 25, 2025)*](https://postbox.garden)
+
+A super cool imageboard where the posts are made by mailing them in!
+
+Also, they put the year and number of the post in Roman numerals.
 
 ---
 
@@ -385,7 +472,7 @@ probably available in your package manager.
 
 A console window manager. Really cool.
 
-### ![](/web-buttons/neocities.org.webp) Neocities - [https://neocities.org *(February 22, 2025)*](https://neocities.org)
+### ![](/web-buttons/neocities.org-1.webp) ![](/web-buttons/neocities.org-2.webp) Neocities - [https://neocities.org *(February 22, 2025)*](https://neocities.org)
 
 Neocities is a cool and free web hosting platform for static websites. There's
 all sorts of fun sites people have made, some of which you'll find on this page.
