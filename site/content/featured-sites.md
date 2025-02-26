@@ -424,9 +424,21 @@ and it's open source!
 
 # Webrings and Link Lists
 
+### ![](/web-buttons/netloop.netlify.app.webp) Niftosoft's NetLoop
+
+- [https://netloop.netlify.app *(February 26, 2025)*](https://netloop.netlify.app)
+
+### ![](/web-buttons/linklane.net.webp) LinkLane.net
+
+*Warning(s): PHP, makes 3rd-party requests.*
+
+- [https://linklane.net *(February 26, 2025)*](https://linklane.net)
+
 ### The Big List of Personal Websites
 
 - [http://biglist.terraaeon.com *(February 26, 2025)*](http://biglist.terraaeon.com)
+
+paltepuk is a part of this link list [/links](/links/).
 
 ### Retronaut Webring
 
