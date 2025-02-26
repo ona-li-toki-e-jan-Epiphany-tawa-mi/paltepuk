@@ -67,7 +67,8 @@ They've got a guestbook, and it's open source
 [https://baccyflap.com/res/gbdl *(February 25, 2025)*](https://baccyflap.com/res/gbdl/)!
 
 Their website is part of quite a few webrings, and they also host a webring
-specifically for websites without AI (see [#webrings](#webrings).)
+specifically for websites without AI (see
+[#webrings-and-link-lists](#webrings-and-link-lists).)
 
 ### ![](/web-buttons/hotlinecafe.com.gif) ![](/web-buttons/hotlinecafe.com-2.gif) ![](/web-buttons/hotlinecafe.com-old2.gif) Fionn's Hotline Cafe
 
@@ -403,7 +404,11 @@ and it's open source!
 
 ---
 
-# Webrings
+# Webrings and Link Lists
+
+### The Big List of Personal Websites
+
+- [http://biglist.terraaeon.com *(February 26, 2025)*](http://biglist.terraaeon.com)
 
 ### Retronaut Webring
 
