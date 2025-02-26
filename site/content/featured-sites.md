@@ -380,10 +380,6 @@ difficult to cancel, making electronic devices depend on the cloud,
 retroactively changing their Terms of Service, etc., to help protect our
 consumer rights.
 
-### recipebook.bentasker.co.uk - [https://recipebook.bentasker.co.uk *(February 2, 2025)*](https://recipebook.bentasker.co.uk) | [http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion *(February 2, 2025)*](http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion) | [http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p *(February 2, 2025)*](http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p)
-
-Cooking recipe site by Ben Tasker (see Personal Websites section.)
-
 ### The Rust Recovery Foundation - [https://rustrecoveryfoundation.neocities.org *(November 28, 2024)*](https://rustrecoveryfoundation.neocities.org/)
 
 For all you recovering Rust developers out there.
@@ -391,6 +387,21 @@ For all you recovering Rust developers out there.
 ### 512KB Club - [https://512kb.club *(November 16, 2024)*](https://512kb.club)
 
 A showcase of websites with an uncompressed size of <= 512 KB.
+
+### ![](/web-buttons/landchad.net.gif) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net) | [http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p *(January 22, 2025)*](http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p/)
+
+A site that teaches people how to make their own website, and run their own
+services, on a server all of their own.
+
+Learn to make your own website ***NOW!*** Stop being a social media serf!
+
+---
+
+# Cooking Recipes
+
+### recipebook.bentasker.co.uk - [https://recipebook.bentasker.co.uk *(February 2, 2025)*](https://recipebook.bentasker.co.uk) | [http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion *(February 2, 2025)*](http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion) | [http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p *(February 2, 2025)*](http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p)
+
+Cooking recipe site by Ben Tasker (see Personal Websites section.)
 
 ### ![](/web-buttons/based.cooking.webp) Based Cooking - [https://based.cooking *(November 16, 2024)*](https://based.cooking) | [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17, 2024)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
 
@@ -400,13 +411,6 @@ JavaScript.
 Unfortuantely, it seems that the PRs with new recipes aren't being merged, but
 there's still a pretty sizeable amount of recipes on there. Maybe the unaboomer
 decided to cut the cord again.
-
-### ![](/web-buttons/landchad.net.gif) LandChad.net - [https://landchad.net *(November 16, 2024)*](https://landchad.net) | [http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p *(January 22, 2025)*](http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p/)
-
-A site that teaches people how to make their own website, and run their own
-services, on a server all of their own.
-
-Learn to make your own website ***NOW!*** Stop being a social media serf!
 
 ---
 
