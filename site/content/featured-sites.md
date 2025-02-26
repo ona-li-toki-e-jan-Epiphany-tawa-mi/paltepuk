@@ -128,9 +128,12 @@ I really liked the following songs:
 - sec.
 - prunk.
 
-### Gabe Rocks! - [https://gabe.rocks *(February 1, 2025)*](https://gabe.rocks) | [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 1, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion) | [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 1, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
+### Gabe Rocks! - [https://gabe.rocks *(February 25, 2025)*](https://gabe.rocks) | [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 25, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion) | [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 25, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
 
-A personal website primarily consisting of three blogs:
+A rather simple looking website. The use of web buttons is very epic. Their site
+is part of a couple web rings.
+
+Their website primarily consists of three blogs:
 
 Technology - a blog about various technologies. It has a paticular focus on
 digital sovereignty - having control over our technology and digital lives. I
@@ -141,8 +144,6 @@ Thoughts - various thoughts and ramblings.
 Health - the meat and potatoes of their website, in my opinion, where they
 describe, in excruciating detail, their experiences with obesity, how they got
 there, and their long and ongoing journey to a healthy weight.
-
-The use of web buttons is very epic.
 
 ### strangedefinition.com - [https://strangedefinition.com *(February 1, 2025)*](https://strangedefinition.com)
 
