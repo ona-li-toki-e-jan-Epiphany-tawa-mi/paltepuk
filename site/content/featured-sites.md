@@ -10,8 +10,10 @@ scrollingTitleCount = 3
 
 ### ![](/web-buttons/vendell.online.gif) Vendell's Personal Page
 
-- [https://vendell.online *(February 25, 2025)*](https://vendell.online)
-- [http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion *(February 25, 2025)*](http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://vendell.online *(February 26, 2025)*](https://vendell.online)
+- [http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion *(February 26, 2025)*](http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion)
 
 A rather simple, but nice looking website. The use of web buttons is very
 epic. Their site is part of a couple web rings.
@@ -28,9 +30,9 @@ accessible thing being their IRC server.
 
 ### ![](/web-buttons/rgbteahouse.neocities.org.webp) ![](/wanwan/1.gif) ![](/wanwan/2.gif) PROJECT103'S RGB TEAHOUSE ![](/wanwan/2.gif) ![](/wanwan/3.gif)
 
-*Warning(s): French ;).*
+*Warning(s): French ;), makes 3rd-party requests.*
 
-- [https://rgbteahouse.neocities.org *(February 25, 2025)*](https://rgbteahouse.neocities.org)
+- [https://rgbteahouse.neocities.org *(February 26, 2025)*](https://rgbteahouse.neocities.org)
 
 A website that harkens back to the web of yore. It's loaded with a bunch of cute
 and silly GIFs. The use of web buttons is very epic.
@@ -49,10 +51,10 @@ art, photography, etc..
 
 *Warning(s): PHP, extremely classy.*
 
-- [https://baccyflap.com *(February 25, 2025)*](https://baccyflap.com)
+- [https://baccyflap.com *(February 26, 2025)*](https://baccyflap.com)
 
 A site named after the mighty baccyflap
-[https://baccyflap.com/mus/baccyflap *(February 25, 2025)*](https://baccyflap.com/mus/baccyflap/).
+[https://baccyflap.com/mus/baccyflap *(February 26, 2025)*](https://baccyflap.com/mus/baccyflap/).
 
 The museum page is a blog-of-sorts that covers a wide variety of topics, all
 which I highly recommend reading.
@@ -64,7 +66,7 @@ There's all sorts of random quirks and cool secrets hidden around. Make sure to
 explore!
 
 They've got a guestbook, and it's open source
-[https://baccyflap.com/res/gbdl *(February 25, 2025)*](https://baccyflap.com/res/gbdl/)!
+[https://baccyflap.com/res/gbdl *(February 26, 2025)*](https://baccyflap.com/res/gbdl/)!
 
 Their website is part of quite a few webrings, and they also host a webring
 specifically for websites without AI (see
@@ -72,7 +74,9 @@ specifically for websites without AI (see
 
 ### ![](/web-buttons/hotlinecafe.com.gif) ![](/web-buttons/hotlinecafe.com-2.gif) ![](/web-buttons/hotlinecafe.com-old2.gif) Fionn's Hotline Cafe
 
-- [https://hotlinecafe.com *(February 5, 2025)*](https://hotlinecafe.com)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://hotlinecafe.com *(February 26, 2025)*](https://hotlinecafe.com)
 
 Their site has an intense vaporwave aesthetic. The use of web buttons is very
 epic.
@@ -80,7 +84,7 @@ epic.
 The random pointless Japanese is very cute; 貴方も愛してるぞー。
 
 They made a game?!?! called Total Anarchy
-[https://fionnhodgson.itch.io/totalanarchy *(February 5, 2025)*](https://fionnhodgson.itch.io/totalanarchy).
+[https://fionnhodgson.itch.io/totalanarchy *(February 26, 2025)*](https://fionnhodgson.itch.io/totalanarchy).
 It's a top-down shooter open-world crime game. It's proprietary and for W*ndows
 only, though they do have a free demo.
 
@@ -102,7 +106,9 @@ typewriters are the coolest part in my opinion.
 
 ### ![](/web-buttons/blog.shr4pnel.com.gif) shrapnelnet
 
-- [https://blog.shr4pnel.com *(February 1, 2025)*](https://blog.shr4pnel.com)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://blog.shr4pnel.com *(February 26, 2025)*](https://blog.shr4pnel.com)
 
 Their site has a cute frog wallpaper-esque background. The use of web buttons is
 very epic. Their website is a part of a bunch of web rings.
@@ -112,7 +118,7 @@ maintaining their website, Linux, music and musicians, art and artists,
 etc.. The posts are detailed and a very good read.
 
 Their website is FOSS
-[https://git.shr4pnel.com/observer/blog *(February 1, 2025)*](https://git.shr4pnel.com/observer/blog).
+[https://git.shr4pnel.com/observer/blog *(February 26, 2025)*](https://git.shr4pnel.com/observer/blog).
 Super cool.
 
 Their website has a JavaScript detector and displays "no javascript? awesome!"
@@ -122,7 +128,7 @@ if it's disabled.
 
 *Warning(s): contains AI-generated content.*
 
-- [https://floatoverblow.com *(February 1, 2025)*](https://floatoverblow.com)
+- [https://floatoverblow.com *(February 26, 2025)*](https://floatoverblow.com)
 
 The homepage is a little sus.
 
@@ -142,8 +148,10 @@ I really liked the following songs:
 
 ### Gabe Rocks!
 
-- [https://gabe.rocks *(February 25, 2025)*](https://gabe.rocks)
-- [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 25, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://gabe.rocks *(February 26, 2025)*](https://gabe.rocks)
+- [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 26, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion)
 - [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 25, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
 
 A rather simple looking website. The use of web buttons is very epic. Their site
@@ -163,20 +171,20 @@ there, and their long and ongoing journey to a healthy weight.
 
 ### strangedefinition.com
 
-*Warning(s): PHP, contains AI-generated content.*
+*Warning(s): PHP, contains AI-generated content, makes 3rd-party requests.*
 
-- [https://strangedefinition.com *(February 1, 2025)*](https://strangedefinition.com)
+- [https://strangedefinition.com *(February 26, 2025)*](https://strangedefinition.com)
 
 A weird personal website/blog. The posts are about art they made themselves, AI
 generated art, poetry, short stories, dreams, art tutorials, etc..
 
 They have made and published a couple drawing books
-[https://strangedefinition.com/index.php/books *(February 1, 2025)*](https://strangedefinition.com/index.php/books/).
+[https://strangedefinition.com/index.php/books *(February 26, 2025)*](https://strangedefinition.com/index.php/books/).
 
 ### ![](/web-buttons/deurachavich.moe.webp) Deurachavich's personal site
 
-- [https://deurachavich.moe *(January 30, 2025)*](https://deurachavich.moe)
-- [http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion *(January 30, 2025)*](http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion)
+- [https://deurachavich.moe *(February 26, 2025)*](https://deurachavich.moe)
+- [http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion *(February 26, 2025)*](http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion)
 - [http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p *(January 30, 2025)*](http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p)
 
 A blog with topics ranging from philosophical meanderings to deranged
@@ -219,8 +227,8 @@ as (there's more on the Web Design Philosophy page):
 
 ### `www.bentasker.co.uk`
 
-- [https://www.bentasker.co.uk *(January 30, 2025)*](https://www.bentasker.co.uk)
-- [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(January 30, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p)
+- [https://www.bentasker.co.uk *(February 26, 2025)*](https://www.bentasker.co.uk)
+- [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(February 26, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p)
 - [http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion *(January 30, 2025)*](http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion)
 
 They have a pretty cool blog. The posts are incredibly detailed and cover a wide
@@ -237,9 +245,9 @@ JavaScript to view them.
 
 ### ![](/web-buttons/luvstarkei.com.webp) LuvstarKei
 
-*Warning(s): extremely bloated.*
+*Warning(s): extremely bloated, makes 3rd-party requests.*
 
-- [https://luvstarkei.com *(January 30, 2025)*](https://luvstarkei.com)
+- [https://luvstarkei.com *(February 26, 2025)*](https://luvstarkei.com)
 
 You will need to enable JavaScript to view some of the content, but it will work
 without.
@@ -256,8 +264,8 @@ about M*necraft, a sketchbook, etc..
 
 ### ![](/web-buttons/getimiskon.xyz.webp) getimiskon's space
 
-- [https://getimiskon.xyz *(January 30, 2025)*](https://getimiskon.xyz)
-- [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(January 30, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
+- [https://getimiskon.xyz *(February 26, 2025)*](https://getimiskon.xyz)
+- [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(February 26, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
 - [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
 
 It has a cute aesthetic. The use of web buttons is very epic.
@@ -275,8 +283,10 @@ disabled. Keep it up" if it's disabled.
 
 ### ![](/web-buttons/cozynet.org.gif) CozyNet
 
-- [https://cozynet.org/homepage *(January 30, 2025)*](https://cozynet.org/homepage)
-- [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(January 30, 2025)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://cozynet.org/homepage *(February 26, 2025)*](https://cozynet.org/homepage)
+- [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(February 26, 2025)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage)
 
 A website that has a very cozy style. Lots of Pepe.
 
@@ -285,7 +295,7 @@ guestbook, etc..
 
 ### Nathan's Toasty Technology page
 
-- [http://toastytech.com *(January 30, 2025)*](http://toastytech.com)
+- [http://toastytech.com *(February 26, 2025)*](http://toastytech.com)
 
 A website that looks straight out of the 2000s.
 
@@ -296,15 +306,15 @@ They host a number of DOOM WADs they made themselves.
 
 They really, really, really like Mozilla Firefox. There's even a DOOM WAD themed
 after it:
-[https://toastytech.com/good/ffdoom.html *(January 30, 2025)*](https://toastytech.com/good/ffdoom.html)
+[https://toastytech.com/good/ffdoom.html *(February 26, 2025)*](https://toastytech.com/good/ffdoom.html)
 
 Highly recommend checking the page on Internet Explorer.
 
 ### Yusynth
 
-*Warning(s): PHP.*
+*Warning(s): PHP, makes 3rd-party requests.*
 
-- [https://yusynth.net *(February 1, 2025)*](https://yusynth.net)
+- [https://yusynth.net *(February 26, 2025)*](https://yusynth.net)
 
 A badass website about DIY audio synthesizers.
 
@@ -315,14 +325,14 @@ A badass website about DIY audio synthesizers.
 ### Fishsticks! Yea!
 
 - [http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p *(February 25, 2025)*](http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p)
-- [http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion *(February 25, 2025)*](http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion)
+- [http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion *(February 26, 2025)*](http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion)
 
 A simple anonymous chat room. The "conversations" are as garbage as you'd
 expect.
 
 ### ![](/web-buttons/postbox.garden.webp) postbox.garden
 
-- [https://postbox.garden *(February 25, 2025)*](https://postbox.garden)
+- [https://postbox.garden *(February 26, 2025)*](https://postbox.garden)
 
 A super cool imageboard where the posts are made by mailing them in!
 
@@ -330,11 +340,11 @@ Also, they put the year and number of the post in Roman numerals.
 
 ### Real Programmers Don't Use Pascal
 
-- [https://www.pbm.com/~lindahl/real.programmers.html *(January 30, 2025)*](https://www.pbm.com/~lindahl/real.programmers.html)
+- [https://www.pbm.com/~lindahl/real.programmers.html *(February 26, 2025)*](https://www.pbm.com/~lindahl/real.programmers.html)
 
 ### rms.sexy
 
-- [https://rms.sexy *(February 1, 2025)*](https://rms.sexy)
+- [https://rms.sexy *(February 26, 2025)*](https://rms.sexy)
 
 ### chmok.i2p
 
@@ -351,7 +361,9 @@ Monero address. Or don't, I'm not your mom.
 
 ### jgeoff.com/homepage
 
-- [http://jgeoff.com/homepage *(January 30, 2025)*](http://jgeoff.com/homepage/)
+*Warning(s): makes 3rd-party requests.*
+
+- [http://jgeoff.com/homepage *(February 26, 2025)*](http://jgeoff.com/homepage/)
 
 God tier site. If we lived in a sane world, this is how the internet would be.
 
@@ -362,7 +374,7 @@ character.
 
 ### Penger City
 
-- [https://penger.city *(January 30, 2025)*](https://penger.city)
+- [https://penger.city *(February 26, 2025)*](https://penger.city)
 
 ```
 @@@@@@@@@@@@@@@@@@@@@@@@@@&@@@@@@@@@@@@@@@@@@@@@@@
@@ -395,12 +407,12 @@ character.
 
 *Warning(s): requires JavaScript and WebGL.*
 
-- [https://gorescript.github.io/classic/play *(November 16, 2024)*](https://gorescript.github.io/classic/play)
+- [https://gorescript.github.io/classic/play *(February 26, 2025)*](https://gorescript.github.io/classic/play)
 
 Cool 2.5D first person shooter. The creator abandoned this "classic" version and
 started selling a new version on Steam, but the classic version is still online,
 and it's open source!
-[https://github.com/gorescript/gorescript *(November 16, 2024)*](https://github.com/gorescript/gorescript).
+[https://github.com/gorescript/gorescript *(February 26, 2025)*](https://github.com/gorescript/gorescript).
 
 ---
 
@@ -438,31 +450,33 @@ paltepuk is a part of this webring [/links](/links/).
 
 ### LOW <-- TECH MAGAZINE
 
-- [https://solar.lowtechmagazine.com *(February 25, 2025)*](https://solar.lowtechmagazine.com)
+- [https://solar.lowtechmagazine.com *(February 26, 2025)*](https://solar.lowtechmagazine.com)
 
 An cool online magazine, mainly about renewable energy, reducing waste, and
 similar things, who's server is powered by solar power
-[https://solar.lowtechmagazine.com/power *(February 25, 2025)*](https://solar.lowtechmagazine.com/power/)!
+[https://solar.lowtechmagazine.com/power *(February 26, 2025)*](https://solar.lowtechmagazine.com/power/)!
 Keep in mind that it might not always be online because of bad weather.
 
 The website and articles are primarily english, but there are translations for a couple languages
-[https://solar.lowtechmagazine.com/about/translations *(February 25, 2025)*](https://solar.lowtechmagazine.com/about/translations/).
+[https://solar.lowtechmagazine.com/about/translations *(February 26, 2025)*](https://solar.lowtechmagazine.com/about/translations/).
 
 Their articles are availible for download
-[https://solar.lowtechmagazine.com/offline-reading *(February 25, 2025)*](https://solar.lowtechmagazine.com/offline-reading),
+[https://solar.lowtechmagazine.com/offline-reading *(February 26, 2025)*](https://solar.lowtechmagazine.com/offline-reading),
 and they have RSS feeds
-[https://solar.lowtechmagazine.com/feeds *(February 25, 2025)*](https://solar.lowtechmagazine.com/feeds)!
+[https://solar.lowtechmagazine.com/feeds *(February 26, 2025)*](https://solar.lowtechmagazine.com/feeds)!
 
 ### lipu tenpo
 
-- [https://liputenpo.org *(February 25, 2025)*](https://liputenpo.org/)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://liputenpo.org *(February 26, 2025)*](https://liputenpo.org/)
 
 lipu tenpo li lipu pona li lon toki pona li toki e ijo mute pi ma ali. sina toki
 e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
 
 ona li pana e lipu kepeken lipu PDF! epiku!
 
-ona li jo e lipu RSS [https://liputenpo.org/lipu/feed.xml *(February 25, 2025)*](https://liputenpo.org/lipu/feed.xml).
+ona li jo e lipu RSS [https://liputenpo.org/lipu/feed.xml *(February 26, 2025)*](https://liputenpo.org/lipu/feed.xml).
 
 lipu tenpo li lukin nasa kepeken ala ilo JavaScript, taso ona li awen pali.
 
@@ -472,7 +486,9 @@ lipu tenpo li lukin nasa kepeken ala ilo JavaScript, taso ona li awen pali.
 
 ### Consumer Action Taskforce
 
-- [https://wiki.rossmanngroup.com *(January 20, 2025)*](https://wiki.rossmanngroup.com)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://wiki.rossmanngroup.com *(February 26, 2025)*](https://wiki.rossmanngroup.com)
 
 A wiki/database started by the GOAT Louis Rossman to fight back against
 companies trying to fuck over their customers.
@@ -484,19 +500,21 @@ consumer rights.
 
 ### The Rust Recovery Foundation
 
-- [https://rustrecoveryfoundation.neocities.org *(November 28, 2024)*](https://rustrecoveryfoundation.neocities.org/)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://rustrecoveryfoundation.neocities.org *(February 26, 2025)*](https://rustrecoveryfoundation.neocities.org/)
 
 For all you recovering Rust developers out there.
 
 ### 512KB Club
 
-- [https://512kb.club *(November 16, 2024)*](https://512kb.club)
+- [https://512kb.club *(February 26, 2025)*](https://512kb.club)
 
 A showcase of websites with an uncompressed size of <= 512 KB.
 
 ### ![](/web-buttons/landchad.net.gif) LandChad.net
 
-- [https://landchad.net *(November 16, 2024)*](https://landchad.net)
+- [https://landchad.net *(February 26, 2025)*](https://landchad.net)
 - [http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p *(January 22, 2025)*](http://erjknueqdrlf2kvinqxjmgyx2t23uh2qlugzp4jlmr5xojfek6ea.b32.i2p/)
 
 A site that teaches people how to make their own website, and run their own
@@ -510,15 +528,15 @@ Learn to make your own website ***NOW!*** Stop being a social media serf!
 
 ### recipebook.bentasker.co.uk
 
-- [https://recipebook.bentasker.co.uk *(February 2, 2025)*](https://recipebook.bentasker.co.uk)
-- [http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion *(February 2, 2025)*](http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion)
+- [https://recipebook.bentasker.co.uk *(February 26, 2025)*](https://recipebook.bentasker.co.uk)
+- [http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion *(February 26, 2025)*](http://3gwn24bmkgepupahneplrh24iu7oiodl3gvxf2p6x3l2athij6vjsrad.onion)
 - [http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p *(February 2, 2025)*](http://ajagzagm5uyc2oac32ycx42znnatejliqorbk3y66xt25guxnh2q.b32.i2p)
 
 Cooking recipe site by Ben Tasker (see [#wwwbentaskercouk](#wwwbentaskercouk).)
 
 ### ![](/web-buttons/based.cooking.webp) Based Cooking
 
-- [https://based.cooking *(November 16, 2024)*](https://based.cooking)
+- [https://based.cooking *(February 26, 2025)*](https://based.cooking)
 - [http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p *(November 17, 2024)*](http://pjcpgo3vp76qsknvioaquffotobe6725u2u4ovxfdlud6ndi3y4q.b32.i2p/)
 
 Cooking recipe site that isn't bloated with ads and pointless
@@ -558,8 +576,8 @@ Thank you not_bob, very cool.
 
 ### ![](/web-buttons/wiby.me.webp) Wiby
 
-- [https://wiby.me *(January 30, 2025)*](https://wiby.me)
-- [https://wiby.org *(January 30, 2025)*](https://wiby.org)
+- [https://wiby.me *(February 26, 2025)*](https://wiby.me)
+- [https://wiby.org *(February 26, 2025)*](https://wiby.org)
 
 Cool search engine for simple and retro websites.
 
@@ -584,17 +602,19 @@ Cool search engine for simple and retro websites.
 
 ### ![](/web-buttons/neocities.org-1.webp) ![](/web-buttons/neocities.org-2.webp) Neocities
 
-- [https://neocities.org *(February 22, 2025)*](https://neocities.org)
+- [https://neocities.org *(February 26, 2025)*](https://neocities.org)
 
 Neocities is a cool and free web hosting platform for static websites. There's
 all sorts of fun sites people have made, some of which you'll find on this page.
 
 And, their platform is open source
-[https://github.com/neocities *(February 22, 2025)*](https://github.com/neocities)!
+[https://github.com/neocities *(February 26, 2025)*](https://github.com/neocities)!
 
 ### SuperTuxKart
 
-- [https://supertuxkart.net *(November 16, 2024)*](https://supertuxkart.net)
+*Warning(s): makes 3rd-party requests.*
+
+- [https://supertuxkart.net *(February 26, 2025)*](https://supertuxkart.net)
 
 The website for SuperTuxKart, a free as-in freedom racing game.
 
@@ -605,12 +625,14 @@ probably available in your package manager.
 
 *Warning(s): requires JavaScript.*
 
-- [https://www.dnscheck.tools *(November 16, 2024)*](https://www.dnscheck.tools/)
+- [https://www.dnscheck.tools *(February 26, 2025)*](https://www.dnscheck.tools/)
 
 A DNS tool that shows which DNS severs you're using and whether you're using
 DNSSEC. I've found it rather useful.
 
-### The XTerm Window Manager - [https://xtermwm.sourceforge.io *(November 16, 2024)*](https://xtermwm.sourceforge.io)
+### The XTerm Window Manager
+
+- [https://xtermwm.sourceforge.io *(February 26, 2025)*](https://xtermwm.sourceforge.io)
 
 A console window manager.
 
@@ -622,9 +644,10 @@ A console window manager.
 
 ### ![](/web-buttons/madukamagica.neocities.org.webp) START GAME!!!
 
-*Warning(s): requires JavaScript, epilepsy risk, contains AI-generated content, extremely bloated.*
+*Warning(s): requires JavaScript, epilepsy risk, contains AI-generated content,
+extremely bloated, makes 3rd-party requests.*
 
-- [https://madukamagica.neocities.org *(February 6, 2025)*](https://madukamagica.neocities.org)
+- [https://madukamagica.neocities.org *(February 26, 2025)*](https://madukamagica.neocities.org)
 
 ### CLOUDFLARE
 
