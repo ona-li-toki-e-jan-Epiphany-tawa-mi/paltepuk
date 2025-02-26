@@ -301,6 +301,11 @@ lipu tenpo li lukin nasa kepeken ala ilo JavaScript, taso ona li awen pali.
 
 # Fun
 
+### Fishsticks! Yea! - [http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p *(February 25, 2025)*](http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p) | [http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion *(February 25, 2025)*](http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion)
+
+A simple anonymous chat room. The "conversations" are as garbage as you'd
+probably think.
+
 ### ![](/web-buttons/postbox.garden.webp) postbox.garden - [https://postbox.garden *(February 25, 2025)*](https://postbox.garden)
 
 A super cool imageboard where the posts are made by mailing them in!
