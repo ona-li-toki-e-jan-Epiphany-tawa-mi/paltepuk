@@ -3,6 +3,10 @@ title               = 'Featured Sites'
 scrollingTitleCount = 3
 +++
 
+NOTE: I recommend using uMatrix
+[https://github.com/gorhill/uMatrix *(February 26, 2025)*](https://github.com/gorhill/uMatrix)
+to block the 3rd-party requests that many websites unfortunately make.
+
 # Personal Websites
 
 [![](/web-buttons/shmage.xyz.gif)](https://shmage.xyz "Updated July 26, 2024")
