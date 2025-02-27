@@ -4,6 +4,10 @@ scrollingTitleCount = 2
 date                = '2025-02-03'
 +++
 
+Updated: February 26, 2025.
+
+- Added clarification about my threat model.
+
 Written: February 3, 2025.
 
 ---
@@ -29,7 +33,8 @@ There's two meanings commonly attributed to DMZ:
 
 In this case, I am refering to #2. I'd like it such that, should the server be
 compromised, nothing else on my network can be reached without an act of god
-(a.k.a. nation state level threat actor, which isn't part of my threat model.)
+(a.k.a. nation state level threat actor, which isn't part of my threat model for
+paltepuk.)
 
 I created a seperate bridge, interface, and firewall zone for the DMZ, and
 assigned one of the ethernet ports of my router to it, set up the firewall
