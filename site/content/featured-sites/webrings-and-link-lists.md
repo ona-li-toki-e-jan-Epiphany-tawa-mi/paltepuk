@@ -13,13 +13,9 @@ scrollingTitleCount = 2
 
 - [https://linklane.net *(February 26, 2025)*](https://linklane.net)
 
-paltepuk is a part of this link list [/links](/links/).
-
 ### The Big List of Personal Websites
 
 - [http://biglist.terraaeon.com *(February 26, 2025)*](http://biglist.terraaeon.com)
-
-paltepuk is a part of this link list [/links](/links/).
 
 ### Retronaut Webring
 
@@ -28,8 +24,6 @@ paltepuk is a part of this link list [/links](/links/).
 From the web master: "Some of us miss the messy old days of the Internet where
 we tried to get along and we'd link to each other's sites and it was all so much
 fun."
-
-paltepuk is a part of this webring [/links](/links/).
 
 ### NO AI WEBRING
 
@@ -40,8 +34,6 @@ demonstrating the horrors of AI.
 
 By rmf (see
 [/featured-sites/personal/#web-buttonsbaccyflapcomwebp-baccyflapcom](/featured-sites/personal/#web-buttonsbaccyflapcomwebp-baccyflapcom).)
-
-paltepuk is a part of this webring [/links](/links/).
 
 ### 512KB Club
 
