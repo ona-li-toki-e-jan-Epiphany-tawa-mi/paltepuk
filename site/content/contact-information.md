@@ -3,17 +3,31 @@ title               = 'Contact Information'
 scrollingTitleCount = 3
 +++
 
+## PGP Key
+
+You can get my PGP key here:
+
+[/pgp.txt](/pgp.txt)
+
+Don't worry, this is ***NOT*** the one ProtonMail generated.
+
+If you wish to be careful, you can cross-reference my PGP key at the following
+site(s):
+
+- GitHub - [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk/blob/master/site/static/pgp.txt](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/paltepuk/blob/master/site/static/pgp.txt)
+
+... and the signature at the following site(s):
+
+- keys.openpgp.org - [https://keys.openpgp.org](https://keys.openpgp.org) | [http://zkaan2xfbuxia2wpf7ofnkbz6r5zdbbvxbunvp5g2iebopbfc4iqmbad.onion](http://zkaan2xfbuxia2wpf7ofnkbz6r5zdbbvxbunvp5g2iebopbfc4iqmbad.onion)
+
+
 ## Email ![](/web-buttons/email.gif)
 
 You can send me email at the following address:
 
 ona-li-toki-e-jan-Epiphany-tawa-mi(at)protonmail(dot)com
 
-Please use my PGP key to encrypt your mail (and make sure to send me yours!):
-
-[/pgp.txt](/pgp.txt)
-
-Don't worry, this is ***NOT*** the one ProtonMail generated.
+Please use my PGP key to encrypt your mail (and make sure to send me yours!)
 
 ## Guestbook
 
