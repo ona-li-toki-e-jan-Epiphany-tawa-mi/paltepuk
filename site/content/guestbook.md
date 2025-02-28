@@ -9,6 +9,11 @@ Rules:
 - Keep the spam to a minimum or face the Spam God and walk backwards into hell.
 - Your message will become a part of this site's source code [/cgit/paltepuk.git/about](/cgit/paltepuk.git/about/), so make sure it's not something you'll regret later.
 
+WARNING: If you're submitting over the Clearnet, CloudFlare will be able to read
+(and possibly modify) your message! If you are using the Clearnet, consider
+encrypting your message with my PGP key:
+[/contact-information](/contact-information/).
+
 {{< noscript-md >}}
 Add **+NOSCRIPT** in your message to make it invisible to people with JavaScript
 enabled.

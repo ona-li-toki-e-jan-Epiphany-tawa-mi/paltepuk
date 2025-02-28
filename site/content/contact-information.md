@@ -37,6 +37,6 @@ The guestbook submissions are saved to a file for me to read and approve at a
 later time. If you don't want it posted to the guestbook, just put something
 like **"DO NOT POST TO GUESTBOOK"** in your message.
 
-If it's something sensitive, you might not want to send it over the Clearnet,
-since CloudFlare will be able to read it. Consider submitting it over Tor or I2P
-instead.
+WARNING: If it's something sensitive, either don't send it over the Clearnet, or
+do so after encrypting it with my PGP key, since CloudFlare will be able to read
+(and possibly modify) it!
