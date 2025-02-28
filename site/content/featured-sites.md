@@ -434,6 +434,8 @@ and it's open source!
 
 - [https://linklane.net *(February 26, 2025)*](https://linklane.net)
 
+paltepuk is a part of this link list [/links](/links/).
+
 ### The Big List of Personal Websites
 
 - [http://biglist.terraaeon.com *(February 26, 2025)*](http://biglist.terraaeon.com)
