@@ -43,9 +43,10 @@ in
 
   # For monitoring the web console.
   users.users."epiphany".packages = [ (writeShellApplication {
-    name = "i2pd-status";
-
+    name          = "i2pd-status";
     runtimeInputs = with pkgs; [ lynx ];
+
+    derivationArgs.allowSubstitutes = false;
 
     text = ''
       lynx 127.0.0.1:${toString ports.i2pdConsole}

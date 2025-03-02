@@ -24,7 +24,8 @@ let inherit (pkgs.stdenv) mkDerivation;
 in
 {
   users.users."epiphany".packages = [(mkDerivation rec {
-    name = "install-secrets";
+    name             = "install-secrets";
+    allowSubstitutes = false;
 
     src = ./.;
 

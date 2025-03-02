@@ -23,8 +23,9 @@
 }:
 
 stdenv.mkDerivation rec {
-  pname   = "multiply-by-n";
-  version = "0.1.2";
+  pname            = "multiply-by-n";
+  version          = "0.1.2";
+  allowSubstitutes = false;
 
   src = fetchgit {
     url  = "https://paltepuk.xyz/cgit/multiply-by-n.git";

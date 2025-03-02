@@ -21,7 +21,8 @@
 }:
 
 stdenv.mkDerivation {
-  name = "paltepuk-site";
+  name             = "paltepuk-site";
+  allowSubstitutes = false;
 
   src = ./.;
 
