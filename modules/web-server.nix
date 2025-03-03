@@ -67,7 +67,9 @@ in
         # API path.
         "/api".return = "302 $scheme://$host/api/";
         "/api/"       = {
-          root        = callPackage ../api {};
+          root     = callPackage ../api {};
+          tryFiles = "$uri /api/index.php";
+
           extraConfig = ''
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
             fastcgi_pass            unix:${phpfpm.pools."${site}".socket};
