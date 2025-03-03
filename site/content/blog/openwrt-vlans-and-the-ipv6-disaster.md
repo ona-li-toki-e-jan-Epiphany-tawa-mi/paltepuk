@@ -4,6 +4,10 @@ scrollingTitleCount = 2
 date                = '2025-02-03'
 +++
 
+Updated: March 3, 2025.
+
+- Crossed out i2pd tunnel rates because it's irrelavent.
+
 Updated: February 26, 2025.
 
 - Added clarification about my threat model.
@@ -33,8 +37,8 @@ There's two meanings commonly attributed to DMZ:
 
 In this case, I am refering to #2. I'd like it such that, should the server be
 compromised, nothing else on my network can be reached without an act of god
-(a.k.a. nation state level threat actor, which isn't part of my threat model for
-paltepuk.)
+(a.k.a. nation state level threat actor, ~~which isn't part of my threat model~~
+which isn't part of my threat model for paltepuk.)
 
 I created a seperate bridge, interface, and firewall zone for the DMZ, and
 assigned one of the ethernet ports of my router to it, set up the firewall
@@ -108,6 +112,6 @@ And then i2pd started accepting IPv6 peers again! Fuck yeah!
 I've learned quite a bit more about IPv6 thanks to my fuck up. Long live fuck
 around and find out learning!
 
-And another plus, i2pd now shows 40-45% tunnel success rate, rather than
+~~And another plus, i2pd now shows 40-45% tunnel success rate, rather than
 20-30%?!? I did increase some of the limits stuff for i2pd, so that what might
-have caused the better rate.
+have caused the better rate.~~

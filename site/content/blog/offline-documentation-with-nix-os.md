@@ -81,7 +81,7 @@ Now, granted, this doesn't mean much in Lua's case, since there is an easy downl
 but what about Zig? I cringe every time I connect to the internet just to look
 at some documentation, so this is nice.
 
-Though, of course, the exact derivation with the documentation is will change if
+Though, of course, the exact derivation with the documentation will change if
 the package is updated, and thus the path. To solve this, in NixOS anyways,
 we'll be abusing **environment.etc**.
 
