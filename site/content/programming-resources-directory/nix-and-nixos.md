@@ -47,6 +47,11 @@ Contains a lot of useful information on how to do various things in NixOS.
 The almighty Arch Wiki is a indespensible resource for Linux, irregardless of
 which distribution you happen to be using.
 
+## Offline Programming Language Documentation - [/blog/offline-documentation-with-nix-os](/blog/offline-documentation-with-nix-os/)
+
+A blog post I made about how you can get offline documentation for programming
+languages through Nix(OS).
+
 ## nixos-hardware - [https://github.com/NixOS/nixos-hardware *(November 15, 2024)*](https://github.com/NixOS/nixos-hardware)
 
 Repository of hardware-specific NixOS configurations to optimize/bug fix NixOS
