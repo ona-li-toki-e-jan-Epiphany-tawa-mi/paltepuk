@@ -4,6 +4,11 @@ scrollingTitleCount = 1
 date                = '2025-03-03'
 +++
 
+Updated: March 3, 2025.
+
+- target -> source in NixOS module.
+- Added bit after NixOS module on where to access the documentation.
+
 Written: March 3, 2025.
 
 ---
@@ -97,7 +102,10 @@ the current documentation, where ever it happens to be in the Nix store:
 {
   environment.etc."documentation/Lua" = {
     # You may need to change this path depending on the package, as it can vary.
-    target = "${pkgs.lua.doc}/share/doc/${pkgs.lua.name}";
+    source = "${pkgs.lua.doc}/share/doc/${pkgs.lua.name}";
   };
 }
 ```
+
+*Update: March 3, 2025:* Then you can visit **/etc/documentation/Lua** to access
+the documentation.
