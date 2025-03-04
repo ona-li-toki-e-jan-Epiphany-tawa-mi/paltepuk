@@ -1,6 +1,6 @@
 # This file is part of paltepuk.
 #
-# Copyright (c) 2024 ona-li-toki-e-jan-Epiphany-tawa-mi
+# Copyright (c) 2024-2025 ona-li-toki-e-jan-Epiphany-tawa-mi
 #
 # paltepuk is free software: you can redistribute it and/or modify it under the
 # terms of the GNU Affero General Public License as published by the Free
@@ -33,7 +33,7 @@
 # - Rebuild.
 
 { lib
-, pkgs-unstable
+, pkgs
 , config
 , cloudflaredTunnelUUID
 , ...
@@ -52,11 +52,10 @@ in
           ${escapeShellArg cloudflaredDirectory}
   '';
 
-  users.users."epiphany".packages = [ pkgs-unstable.cloudflared ];
+  users.users."epiphany".packages = [ pkgs.cloudflared ];
 
   services.cloudflared = mkIf ("" != cloudflaredTunnelUUID) {
-    enable  = true;
-    package = pkgs-unstable.cloudflared;
+    enable = true;
 
     tunnels."${cloudflaredTunnelUUID}" = {
       credentialsFile = "${cloudflaredDirectory}/${cloudflaredTunnelUUID}.json";
