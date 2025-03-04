@@ -15,6 +15,8 @@ to block the 3rd-party requests that many websites unfortunately make.
 
 ## Webrings
 
+### [<------](https://webring.getimiskon.xyz/paltepuk/prev) [gettie's webring](https://webring.getimiskon.xyz) [------>](https://webring.getimiskon.xyz/paltepuk/next)
+
 ### [<------](https://baccyflap.com/noai/?prv&s=pal) [NO A.I. WEBRING](https://baccyflap.com/noai) [(random)](https://baccyflap.com/noai/?rnd) [------>](https://baccyflap.com/noai/?nxt&s=pal)
 
 ### [<------](https://webring.dinhe.net/prev/https://paltepuk.xyz/links) [Retronaut Webring](https://webring.dinhe.net) [(random)](https://webring.dinhe.net/random) [------>](https://webring.dinhe.net/next/https://paltepuk.xyz/links)
