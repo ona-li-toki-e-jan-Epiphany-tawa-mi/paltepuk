@@ -8,6 +8,7 @@ Updated: March 3, 2025.
 
 - target -> source in NixOS module.
 - Added bit after NixOS module on where to access the documentation.
+- Crossed out pointless statement.
 
 Written: March 3, 2025.
 
@@ -81,10 +82,11 @@ Jackpot! Lets open up **contents.html** in a web browser:
 
 Nice!
 
-Now, granted, this doesn't mean much in Lua's case, since there is an easy download:
-[https://www.lua.org/ftp/#manuals *(March 3, 2025)*](https://www.lua.org/ftp/#manuals),
-but what about Zig? I cringe every time I connect to the internet just to look
-at some documentation, so this is nice.
+~~Now, granted, this doesn't mean much in Lua's case, since there is an easy
+download: [https://www.lua.org/ftp/#manuals *(March 3,
+2025)*](https://www.lua.org/ftp/#manuals), but what about Zig? I cringe every
+time I connect to the internet just to look at some documentation, so this is
+nice.~~
 
 Though, of course, the exact derivation with the documentation will change if
 the package is updated, and thus the path. To solve this, in NixOS anyways,
