@@ -264,8 +264,8 @@ about M*necraft, a sketchbook, etc..
 
 *Warning(s): makes 3rd-party requests (fediverse instance only.)*
 
-- [https://getimiskon.xyz *(February 26, 2025)*](https://getimiskon.xyz)
-- [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(February 26, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
+- [https://getimiskon.xyz *(March 4, 2025)*](https://getimiskon.xyz)
+- [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(March 4, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
 - [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
 
 It has a cute aesthetic. The use of web buttons is very epic.
@@ -276,7 +276,9 @@ Gemini.
 They have some software projects they wrote and host.
 
 They have a blog, and host a number of services, i.e.: IRC, Mumble, file upload,
-... and a web ring! Their website is also a part of a number of other web rings.
+... and a web ring! (see
+[/featured-sites/webrings-and-link-lists/#getties-webring](/featured-sites/webrings-and-link-lists/#getties-webring).)
+Their website is also a part of a number of other web rings.
 
 Their website has a JavaScript detector and displays "Javascript is
 disabled. Keep it up" if it's disabled.

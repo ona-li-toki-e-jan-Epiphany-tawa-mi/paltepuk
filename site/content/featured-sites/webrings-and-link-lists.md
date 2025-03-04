@@ -3,6 +3,15 @@ title               = 'Webrings and Link Lists'
 scrollingTitleCount = 2
 +++
 
+### gettie's webring
+
+- [https://webring.getimiskon.xyz *(March 4, 2025)*](https://webring.getimiskon.xyz)
+
+For personal websites.
+
+By getimiskon (see
+[/featured-sites/personal/#web-buttonsgetimiskonxyzwebp-getimiskons-space](/featured-sites/personal/#web-buttonsgetimiskonxyzwebp-getimiskons-space).)
+
 ### ![](/web-buttons/netloop.netlify.app.webp) Niftosoft's NetLoop
 
 - [https://netloop.netlify.app *(February 26, 2025)*](https://netloop.netlify.app)
