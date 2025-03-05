@@ -39,6 +39,9 @@ in
 
   security.sudo.execWheelOnly = true;
 
+  # Store journald entries in memory.
+  services.journald.storage = "volatile";
+
   networking.hostName = "paltepuk";
 
   # This value determines the NixOS release from which the default
