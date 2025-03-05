@@ -5,15 +5,15 @@ scrollingTitleCount = 11
 
 ### Fishsticks! Yea!
 
-- [http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p *(February 25, 2025)*](http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p)
-- [http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion *(February 26, 2025)*](http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion)
+- I2P - [http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p *(February 25, 2025)*](http://btjbfuh2wav3c7bkjqylgatbkvqaireemvsvxwetkrifuvfa35da.b32.i2p)
+- Tor - [http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion *(February 26, 2025)*](http://jdktsa5pxexbd7h7q5u6unbuitb22qfl2cajimycep4hc3uwsugo6ead.onion)
 
 A simple anonymous chat room. The "conversations" are as garbage as you'd
 expect.
 
 ### ![](/web-buttons/postbox.garden.webp) postbox.garden
 
-- [https://postbox.garden *(February 26, 2025)*](https://postbox.garden)
+- Clearnet - [https://postbox.garden *(February 26, 2025)*](https://postbox.garden)
 
 A super cool imageboard where the posts are made by mailing them in!
 
@@ -21,21 +21,21 @@ Also, they put the year and number of the post in Roman numerals.
 
 ### Real Programmers Don't Use Pascal
 
-- [https://www.pbm.com/~lindahl/real.programmers.html *(February 26, 2025)*](https://www.pbm.com/~lindahl/real.programmers.html)
+- Clearnet - [https://www.pbm.com/~lindahl/real.programmers.html *(February 26, 2025)*](https://www.pbm.com/~lindahl/real.programmers.html)
 
 ### rms.sexy
 
-- [https://rms.sexy *(February 26, 2025)*](https://rms.sexy)
+- Clearnet - [https://rms.sexy *(February 26, 2025)*](https://rms.sexy)
 
 ### chmok.i2p
 
-- [http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p *(February 2, 2025)*](http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p)
+- I2P - [http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p *(February 2, 2025)*](http://w7eqh6nndwk4yr5vxtbnvizgsg776vamwingijetnnqojrzjxm3q.b32.i2p)
 
 )))))
 
 ### amogus.i2p
 
-- [http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p *(January 30, 2025)*](http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p/)
+- I2P - [http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p *(January 30, 2025)*](http://udcjqqoo7mc54ephxnhzaxdwtqxsgxjzvh4wr4boope6vyr4mrhq.b32.i2p/)
 
 I'm sure you can expect what kind of content this website has. Just ingore the
 Monero address. Or don't, I'm not your mom.
@@ -44,7 +44,7 @@ Monero address. Or don't, I'm not your mom.
 
 *Warning(s): makes 3rd-party requests.*
 
-- [http://jgeoff.com/homepage *(February 26, 2025)*](http://jgeoff.com/homepage/)
+- Clearnet - [http://jgeoff.com/homepage *(February 26, 2025)*](http://jgeoff.com/homepage/)
 
 God tier site. If we lived in a sane world, this is how the internet would be.
 
@@ -55,7 +55,7 @@ character.
 
 ### Penger City
 
-- [https://penger.city *(February 26, 2025)*](https://penger.city)
+- Clearnet - [https://penger.city *(February 26, 2025)*](https://penger.city)
 
 ```
 @@@@@@@@@@@@@@@@@@@@@@@@@@&@@@@@@@@@@@@@@@@@@@@@@@
@@ -88,7 +88,7 @@ character.
 
 *Warning(s): requires JavaScript and WebGL.*
 
-- [https://gorescript.github.io/classic/play *(February 26, 2025)*](https://gorescript.github.io/classic/play)
+- Clearnet - [https://gorescript.github.io/classic/play *(February 26, 2025)*](https://gorescript.github.io/classic/play)
 
 Cool 2.5D first person shooter. The creator abandoned this "classic" version and
 started selling a new version on Steam, but the classic version is still online,

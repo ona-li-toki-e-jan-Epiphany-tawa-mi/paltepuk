@@ -10,8 +10,8 @@ scrollingTitleCount = 11
 *Warning(s): requires JavaScript, epilepsy risk, contains AI-generated content,
 extremely bloated, makes 3rd-party requests.*
 
-- [https://madukamagica.neocities.org *(February 26, 2025)*](https://madukamagica.neocities.org)
+- Clearnet - [https://madukamagica.neocities.org *(February 26, 2025)*](https://madukamagica.neocities.org)
 
 ### CLOUDFLARE
 
-- [http://q5atw5f2o5eu3kiaih2fkpwbwdbe64ac4lwbpnmgfe4tqiiykzsa.b32.i2p *(February 1, 2025)*](http://q5atw5f2o5eu3kiaih2fkpwbwdbe64ac4lwbpnmgfe4tqiiykzsa.b32.i2p)
+- I2P - [http://q5atw5f2o5eu3kiaih2fkpwbwdbe64ac4lwbpnmgfe4tqiiykzsa.b32.i2p *(February 1, 2025)*](http://q5atw5f2o5eu3kiaih2fkpwbwdbe64ac4lwbpnmgfe4tqiiykzsa.b32.i2p)

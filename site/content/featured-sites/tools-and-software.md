@@ -22,7 +22,7 @@ scrollingTitleCount = 2
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://neocities.org *(February 26, 2025)*](https://neocities.org)
+- Clearnet - [https://neocities.org *(February 26, 2025)*](https://neocities.org)
 
 Neocities is a cool and free web hosting platform for static websites. There's
 all sorts of fun sites people have made, some of which you'll find on this page.
@@ -34,7 +34,7 @@ And, their platform is open source
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://supertuxkart.net *(February 26, 2025)*](https://supertuxkart.net)
+- Clearnet - [https://supertuxkart.net *(February 26, 2025)*](https://supertuxkart.net)
 
 The website for SuperTuxKart, a free as-in freedom racing game.
 
@@ -45,13 +45,13 @@ probably available in your package manager.
 
 *Warning(s): requires JavaScript, makes 3rd-party requests (required to work.)*
 
-- [https://www.dnscheck.tools *(February 26, 2025)*](https://www.dnscheck.tools/)
+- Clearnet - [https://www.dnscheck.tools *(February 26, 2025)*](https://www.dnscheck.tools/)
 
 A DNS tool that shows which DNS severs you're using and whether you're using
 DNSSEC. I've found it rather useful.
 
 ### The XTerm Window Manager
 
-- [https://xtermwm.sourceforge.io *(February 26, 2025)*](https://xtermwm.sourceforge.io)
+- Clearnet - [https://xtermwm.sourceforge.io *(February 26, 2025)*](https://xtermwm.sourceforge.io)
 
 A console window manager.

@@ -10,8 +10,8 @@ scrollingTitleCount = 3
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://vendell.online *(February 26, 2025)*](https://vendell.online)
-- [http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion *(February 26, 2025)*](http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion)
+- Clearnet - [https://vendell.online *(February 26, 2025)*](https://vendell.online)
+- Tor - [http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion *(February 26, 2025)*](http://xjqsg5udycakjniioe6hj7it276vqdhtpszrexdyqni4o2jegevfjaid.onion)
 
 A rather simple, but nice looking website. The use of web buttons is very
 epic. Their site is part of a couple web rings.
@@ -30,7 +30,7 @@ accessible thing being their IRC server.
 
 *Warning(s): French ;), makes 3rd-party requests.*
 
-- [https://rgbteahouse.neocities.org *(February 26, 2025)*](https://rgbteahouse.neocities.org)
+- Clearnet - [https://rgbteahouse.neocities.org *(February 26, 2025)*](https://rgbteahouse.neocities.org)
 
 A website that harkens back to the web of yore. It's loaded with a bunch of cute
 and silly GIFs. The use of web buttons is very epic.
@@ -49,7 +49,7 @@ art, photography, etc..
 
 *Warning(s): PHP, extremely classy.*
 
-- [https://baccyflap.com *(February 26, 2025)*](https://baccyflap.com)
+- Clearnet - [https://baccyflap.com *(February 26, 2025)*](https://baccyflap.com)
 
 A site named after the mighty baccyflap
 [https://baccyflap.com/mus/baccyflap *(February 26, 2025)*](https://baccyflap.com/mus/baccyflap/).
@@ -74,7 +74,7 @@ specifically for websites without AI (see
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://hotlinecafe.com *(February 26, 2025)*](https://hotlinecafe.com)
+- Clearnet - [https://hotlinecafe.com *(February 26, 2025)*](https://hotlinecafe.com)
 
 Their site has an intense vaporwave aesthetic. The use of web buttons is very
 epic.
@@ -106,7 +106,7 @@ typewriters are the coolest part in my opinion.
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://blog.shr4pnel.com *(February 26, 2025)*](https://blog.shr4pnel.com)
+- Clearnet - [https://blog.shr4pnel.com *(February 26, 2025)*](https://blog.shr4pnel.com)
 
 Their site has a cute frog wallpaper-esque background. The use of web buttons is
 very epic. Their website is a part of a bunch of web rings.
@@ -126,7 +126,7 @@ if it's disabled.
 
 *Warning(s): contains AI-generated content.*
 
-- [https://floatoverblow.com *(February 26, 2025)*](https://floatoverblow.com)
+- Clearnet - [https://floatoverblow.com *(February 26, 2025)*](https://floatoverblow.com)
 
 The homepage is a little sus.
 
@@ -148,9 +148,9 @@ I really liked the following songs:
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://gabe.rocks *(February 26, 2025)*](https://gabe.rocks)
-- [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 26, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion)
-- [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 25, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
+- Clearnet - [https://gabe.rocks *(February 26, 2025)*](https://gabe.rocks)
+- Tor - [http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion *(February 26, 2025)*](http://3ah6l32ons2mzb65rchl3uz7nrgkecfof4eey7dwmamt5fcvok4h2yad.onion)
+- I2P - [http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p *(February 25, 2025)*](http://bilixn7urne4gb65o554565rl7tv4vzo6ss4w5x3pwc7pnlsnkza.b32.i2p)
 
 A rather simple looking website. The use of web buttons is very epic. Their site
 is part of a couple web rings.
@@ -171,7 +171,7 @@ there, and their long and ongoing journey to a healthy weight.
 
 *Warning(s): PHP, contains AI-generated content, makes 3rd-party requests.*
 
-- [https://strangedefinition.com *(February 26, 2025)*](https://strangedefinition.com)
+- Clearnet - [https://strangedefinition.com *(February 26, 2025)*](https://strangedefinition.com)
 
 A weird personal website/blog. The posts are about art they made themselves, AI
 generated art, poetry, short stories, dreams, art tutorials, etc..
@@ -181,9 +181,9 @@ They have made and published a couple drawing books
 
 ### ![](/web-buttons/deurachavich.moe.webp) Deurachavich's personal site
 
-- [https://deurachavich.moe *(February 26, 2025)*](https://deurachavich.moe)
-- [http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion *(February 26, 2025)*](http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion)
-- [http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p *(January 30, 2025)*](http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p)
+- Clearnet - [https://deurachavich.moe *(February 26, 2025)*](https://deurachavich.moe)
+- Tor - [http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion *(February 26, 2025)*](http://muzbw3zyg2mxnrqtals2jp43z6l6hzlxsjyaflkzjlhpumjrvcjjpiid.onion)
+- I2P - [http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p *(January 30, 2025)*](http://vid5decwryxwpieu3t7zmp5moafksxtloep4ww7mlycvmec2b22q.b32.i2p)
 
 A blog with topics ranging from philosophical meanderings to deranged
 shitposts. A mildly amusing read.
@@ -195,7 +195,7 @@ They have Gemini access.
 
 ### ![](/web-buttons/kor.i2p.webp) kor.i2p
 
-- [http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p *(January 30, 2025)*](http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p)
+- I2P - [http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p *(January 30, 2025)*](http://korafble2jftgvagce4v5zuxegsqprl3xqvpi373bhnjdzj62joa.b32.i2p)
 
 Their website's home page has an image of Tux towering over some office
 buildings, saying "Good evening Mr. Gates, I'll be your server today!,"
@@ -225,9 +225,9 @@ as (there's more on the Web Design Philosophy page):
 
 ### `www.bentasker.co.uk`
 
-- [https://www.bentasker.co.uk *(February 26, 2025)*](https://www.bentasker.co.uk)
-- [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(February 26, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p)
-- [http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion *(January 30, 2025)*](http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion)
+- Clearnet - [https://www.bentasker.co.uk *(February 26, 2025)*](https://www.bentasker.co.uk)
+- I2P - [http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p *(February 26, 2025)*](http://gdncgijky3xvocpkq6xqk5uda4vsnvzuk7ke7jrvxnvyjwkq35iq.b32.i2p)
+- Tor - [http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion *(January 30, 2025)*](http://e26whn2524322mkxb3cbyk27ev2ihhq2biz35hty7gzgsyrwrygq27yd.onion)
 
 They have a pretty cool blog. The posts are incredibly detailed and cover a wide
 variety of tech-related topics like home automation, systems administration,
@@ -245,7 +245,7 @@ JavaScript to view them.
 
 *Warning(s): extremely bloated, makes 3rd-party requests.*
 
-- [https://luvstarkei.com *(February 26, 2025)*](https://luvstarkei.com)
+- Clearnet - [https://luvstarkei.com *(February 26, 2025)*](https://luvstarkei.com)
 
 You will need to enable JavaScript to view some of the content, but it will work
 without.
@@ -264,9 +264,9 @@ about M*necraft, a sketchbook, etc..
 
 *Warning(s): makes 3rd-party requests (fediverse instance only.)*
 
-- [https://getimiskon.xyz *(March 4, 2025)*](https://getimiskon.xyz)
-- [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(March 4, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
-- [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
+- Clearnet - [https://getimiskon.xyz *(March 4, 2025)*](https://getimiskon.xyz)
+- Tor - [http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion *(March 4, 2025)*](http://r53zi7kxyqd72fuvhztzi25fo2bze7fqjefze7k6t6kiq74pzaq5suyd.onion)
+- I2P - [http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p *(January 30, 2025)*](http://s5jiovqhpzbjqqibtd5ophlpnmcgenlmbvevzfq2hj5iepwix3aq.b32.i2p)
 
 It has a cute aesthetic. The use of web buttons is very epic.
 
@@ -287,8 +287,8 @@ disabled. Keep it up" if it's disabled.
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://cozynet.org/homepage *(February 26, 2025)*](https://cozynet.org/homepage)
-- [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(February 26, 2025)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage)
+- Clearnet - [https://cozynet.org/homepage *(February 26, 2025)*](https://cozynet.org/homepage)
+- Tor - [http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage *(February 26, 2025)*](http://kfgw55ndxkdnxu42cntbm3fd7tthrxgruq4bewaxhc7iytysetmreuyd.onion/homepage)
 
 A website that has a very cozy style. Lots of Pepe.
 
@@ -297,7 +297,7 @@ guestbook, etc..
 
 ### Nathan's Toasty Technology page
 
-- [http://toastytech.com *(February 26, 2025)*](http://toastytech.com)
+- Clearnet - [http://toastytech.com *(February 26, 2025)*](http://toastytech.com)
 
 A website that looks straight out of the 2000s.
 
@@ -316,6 +316,6 @@ Highly recommend checking the page on Internet Explorer.
 
 *Warning(s): PHP, makes 3rd-party requests.*
 
-- [https://yusynth.net *(February 26, 2025)*](https://yusynth.net)
+- Clearnet - [https://yusynth.net *(February 26, 2025)*](https://yusynth.net)
 
 A badass website about DIY audio synthesizers.

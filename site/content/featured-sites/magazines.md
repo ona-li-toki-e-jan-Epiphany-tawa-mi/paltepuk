@@ -7,7 +7,7 @@ scrollingTitleCount = 4
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://solar.lowtechmagazine.com *(February 26, 2025)*](https://solar.lowtechmagazine.com)
+- Clearnet - [https://solar.lowtechmagazine.com *(February 26, 2025)*](https://solar.lowtechmagazine.com)
 
 An cool online magazine, mainly about renewable energy, reducing waste, and
 similar things, who's server is powered by solar power!  Keep in mind that it
@@ -22,7 +22,7 @@ Their articles are availible for download, and they have RSS feeds!
 
 *Warning(s): makes 3rd-party requests.*
 
-- [https://liputenpo.org *(February 26, 2025)*](https://liputenpo.org/)
+- Clearnet - [https://liputenpo.org *(February 26, 2025)*](https://liputenpo.org/)
 
 lipu tenpo li lipu pona li lon toki pona li toki e ijo mute pi ma ali. sina toki
 e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
