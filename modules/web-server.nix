@@ -96,6 +96,10 @@ in
           "302 $scheme://$host/programming-resources-directory/lua/documentation/";
         "/programming-resources-directory/lua/documentation/".alias =
           "${pkgs.lua.doc}/share/doc/${pkgs.lua.name}/";
+        "/programming-resources-directory/python/documentation".return =
+          "302 $scheme://$host/programming-resources-directory/python/documentation/";
+        "/programming-resources-directory/python/documentation/".alias =
+          "${pkgs.python3.doc}/share/doc/python3.12-3.12.8/html/";
       };
     };
   };
