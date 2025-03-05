@@ -20,7 +20,6 @@ I've written application(s) in GnuCOBOL; feel free to use them as reference:
 
 - Clearnet - [https://gnucobol.sourceforge.io/doc/gnucobol.pdf *(March 4, 2025)*](https://gnucobol.sourceforge.io/doc/gnucobol.pdf)
 - Here - [/programming-resources-directory/gnucobol/documentation/gnucobol.pdf](/programming-resources-directory/gnucobol/documentation/gnucobol.pdf)
-- License - GNU Free Documentation License.
 
 All you need to know packaged in one handy PDF.
 

@@ -11,7 +11,6 @@ scrollingTitleCount = 3
 
 - Clearnet - [https://www.lua.org/manual *(March 4, 2025)*](https://www.lua.org/manual/)
 - Here - [/programming-resources-directory/lua/documentation/contents.html](/programming-resources-directory/lua/documentation/contents.html)
-- License - Lua License.
 
 ## Statically Typed Lua
 

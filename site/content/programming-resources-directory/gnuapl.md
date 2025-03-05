@@ -26,7 +26,6 @@ I've written application(s) in GNU APL; feel free to use them as reference:
 
 - Clearnet - [https://www.gnu.org/software/apl/apl-intro.html *(March 4, 2025)*](https://www.gnu.org/software/apl/apl-intro.html)
 - Here (GNU APL 1.9) - [/programming-resources-directory/gnuapl/intro](/programming-resources-directory/gnuapl/intro/)
-- License - GNU Free Documentation License.
 
 This intro page is less about GNU APL and more about APL in general. It will
 walk you through how APL works step-by-step, so it should be enough for you to
@@ -36,7 +35,6 @@ get the hang of things.
 
 - Clearnet - [https://www.gnu.org/software/apl/apl.html *(March 4, 2025)*](https://www.gnu.org/software/apl/apl.html)
 - Here (GNU APL 1.9) - [/programming-resources-directory/gnuapl/special-features](/programming-resources-directory/gnuapl/special-features/)
-- License - GNU Free Documentation License.
 
 This page gets into the GNU APL-specfic features, so don't expect anything from
 here to work with other APL implemenetations.
