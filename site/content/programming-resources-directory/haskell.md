@@ -5,9 +5,9 @@ scrollingTitleCount = 3
 
 ## Haskell
 
-- Homepage (Clearnet) [https://www.haskell.org *(March 4, 2025)*](https://www.haskell.org/)
-
 *Warning(s): makes 3rd-party requests.*
+
+- Homepage (Clearnet) [https://www.haskell.org *(March 4, 2025)*](https://www.haskell.org/)
 
 ## Hoogle
 

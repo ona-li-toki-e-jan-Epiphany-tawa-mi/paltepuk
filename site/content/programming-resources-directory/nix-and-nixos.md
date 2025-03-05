@@ -1,5 +1,5 @@
 +++
-title               = 'Nix and NixOS Resource'
+title               = 'Nix and NixOS Resources'
 scrollingTitleCount = 2
 +++
 

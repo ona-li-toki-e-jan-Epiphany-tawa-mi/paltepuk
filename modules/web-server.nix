@@ -86,6 +86,12 @@ in
           "302 $scheme://$host/game-and-simulations/multiply-by-n/";
         "/game-and-simulations/multiply-by-n/".alias =
           "${callPackage ../packages/multiply-by-n.nix {}}/";
+
+        # Programming resources.
+        "/programming-resources-directory/gnucobol/documentation".return =
+          "302 $scheme://$host/programming-resources-directory/gnucobol/documentation/";
+        "/programming-resources-directory/gnucobol/documentation/".alias =
+          "${pkgs.gnucobol.out}/share/doc/gnucobol/";
       };
     };
   };
