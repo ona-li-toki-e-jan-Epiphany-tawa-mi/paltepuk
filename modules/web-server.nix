@@ -54,6 +54,11 @@ in
     '';
 
     virtualHosts."${site}" = {
+      # ;).
+      extraConfig = ''
+        error_page 404 /404.html;
+      '';
+
       locations = {
         "/".root = callPackage ../site {};
 
@@ -68,7 +73,6 @@ in
         "/api".return = "302 $scheme://$host/api/";
         "/api/"       = {
           root     = callPackage ../api {};
-          tryFiles = "$uri /api/index.php";
 
           extraConfig = ''
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
