@@ -32,25 +32,21 @@
 #   cloudflared command to be safe.
 # - Rebuild.
 
-{ lib
-, pkgs
-, config
-, cloudflaredTunnelUUID
-, ...
-}:
+{ lib, pkgs, config, cloudflaredTunnelUUID, ... }:
 
-let inherit (lib) escapeShellArg mkIf;
+let
+  inherit (lib) escapeShellArg mkIf;
 
-    inherit (config.services) cloudflared;
+  inherit (config.services) cloudflared;
 
-    cloudflaredDirectory = "/var/lib/cloudflared";
-in
-{
-  system.activationScripts."create-cloudflared-directory" = ''
-    mkdir -m 700 -p ${escapeShellArg cloudflaredDirectory}
-    chown ${escapeShellArg cloudflared.user}:${escapeShellArg cloudflared.user} \
-          ${escapeShellArg cloudflaredDirectory}
-  '';
+  cloudflaredDirectory = "/var/lib/cloudflared";
+in {
+  system.activationScripts."create-cloudflared-directory" =
+    let user = escapeShellArg cloudflared.user;
+    in ''
+      mkdir -m 700 -p ${escapeShellArg cloudflaredDirectory}
+      chown ${user}:${user} ${escapeShellArg cloudflaredDirectory}
+    '';
 
   users.users."epiphany".packages = [ pkgs.cloudflared ];
 
@@ -59,10 +55,10 @@ in
 
     tunnels."${cloudflaredTunnelUUID}" = {
       credentialsFile = "${cloudflaredDirectory}/${cloudflaredTunnelUUID}.json";
-      default         = "http_status:404";
+      default = "http_status:404";
 
       ingress = {
-        "paltepuk.xyz"     = "http://127.0.0.1:80";
+        "paltepuk.xyz" = "http://127.0.0.1:80";
         "www.paltepuk.xyz" = "http://127.0.0.1:80";
       };
     };

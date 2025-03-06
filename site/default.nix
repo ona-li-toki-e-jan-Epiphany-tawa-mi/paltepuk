@@ -16,12 +16,10 @@
 
 # Derivation to build the static website content with Hugo.
 
-{ stdenv
-, hugo
-}:
+{ stdenv, hugo }:
 
 stdenv.mkDerivation {
-  name             = "paltepuk-site";
+  name = "paltepuk-site";
   allowSubstitutes = false;
 
   src = ./.;

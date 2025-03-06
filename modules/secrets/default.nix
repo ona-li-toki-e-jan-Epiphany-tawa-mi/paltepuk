@@ -16,28 +16,27 @@
 
 # Adds the secrets install script to epiphany's profile.
 
-{ pkgs
-, ...
-}:
+{ pkgs, ... }:
 
 let inherit (pkgs.stdenv) mkDerivation;
-in
-{
-  users.users."epiphany".packages = [(mkDerivation rec {
-    name             = "install-secrets";
-    allowSubstitutes = false;
+in {
+  users.users."epiphany".packages = [
+    (mkDerivation rec {
+      name = "install-secrets";
+      allowSubstitutes = false;
 
-    src = ./.;
+      src = ./.;
 
-    doCheck     = true;
-    checkInputs = with pkgs; [ shellcheck ];
-    checkPhase  = ''
-      shellcheck install.sh
-    '';
+      doCheck = true;
+      checkInputs = with pkgs; [ shellcheck ];
+      checkPhase = ''
+        shellcheck install.sh
+      '';
 
-    installPhase = ''
-      mkdir -p $out/bin
-      cp install.sh $out/bin/${name}
-    '';
-  })];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp install.sh $out/bin/${name}
+      '';
+    })
+  ];
 }

@@ -16,12 +16,10 @@
 
 # Derivation to build the resource files for cgit.
 
-{ stdenv
-, minify
-}:
+{ stdenv, minify }:
 
 stdenv.mkDerivation {
-  name             = "cgit-resources";
+  name = "cgit-resources";
   allowSubstitutes = false;
 
   src = ./.;

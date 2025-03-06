@@ -16,19 +16,17 @@
 
 # Derivation to build the PHP (eww) website API.
 
-{ stdenv
-, php84Packages
-}:
+{ stdenv, php84Packages }:
 
 stdenv.mkDerivation {
-  name             = "paltepuk-api";
+  name = "paltepuk-api";
   allowSubstitutes = false;
 
   src = ./.;
 
-  doCheck     = true;
+  doCheck = true;
   checkInputs = with php84Packages; [ psalm ];
-  checkPhase  = ''
+  checkPhase = ''
     # Without --no-cache psalm fails making a directory.
     psalm --no-cache
   '';

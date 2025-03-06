@@ -17,9 +17,7 @@
 
 # Hardware config for a Raspberry Pi 400.
 
-{ modulesPath
-, ...
-}:
+{ modulesPath, ... }:
 
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
@@ -32,14 +30,14 @@
 
   # Bandwidth limits.
   services.i2pd.bandwidth = 1000; # 1 MB/s
-  services.tor.settings   = {
-    BandwidthRate  = "3 MBytes";
+  services.tor.settings = {
+    BandwidthRate = "3 MBytes";
     BandwidthBurst = "4 MBytes";
   };
 
   # Enables networking.
   networking = {
-    useDHCP                 = false;
+    useDHCP = false;
     interfaces.end0.useDHCP = true;
   };
 
@@ -54,7 +52,7 @@
 
   swapDevices = [{
     device = "/swapfile";
-    size   = 8*1024; # 8 GB.
+    size = 8 * 1024; # 8 GB.
   }];
 
   boot.loader = {

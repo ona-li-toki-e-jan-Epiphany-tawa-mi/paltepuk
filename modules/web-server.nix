@@ -17,23 +17,18 @@
 # Sets up nginx to serve the main site and also route to other webservers.
 # Sets up PHPFPM for the site's API.
 
-{ ports
-, pkgs
-, config
-, lib
-, ...
-}:
+{ ports, pkgs, config, lib, ... }:
 
-let inherit (builtins) toString;
-    inherit (lib) makeBinPath;
-    inherit (pkgs) callPackage;
+let
+  inherit (builtins) toString;
+  inherit (lib) makeBinPath;
+  inherit (pkgs) callPackage;
 
-    inherit (config.services) nginx phpfpm;
+  inherit (config.services) nginx phpfpm;
 
-    site                = "paltepuk";
-    apiStorageDirectory = "/var/lib/paltepuk-api";
-in
-{
+  site = "paltepuk";
+  apiStorageDirectory = "/var/lib/paltepuk-api";
+in {
   ##############################################################################
   # nginx                                                                      #
   ##############################################################################
@@ -44,13 +39,13 @@ in
   services.nginx = {
     enable = true;
 
-    recommendedGzipSettings  = true;
-    recommendedOptimisation  = true;
+    recommendedGzipSettings = true;
+    recommendedOptimisation = true;
     recommendedProxySettings = true;
 
     # Creates the ".onion available" button for Tor users.
     appendHttpConfig = ''
-       add_header Onion-Location http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion$request_uri;
+      add_header Onion-Location http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion$request_uri;
     '';
 
     virtualHosts."${site}" = {
@@ -60,19 +55,19 @@ in
       '';
 
       locations = {
-        "/".root = callPackage ../site {};
+        "/".root = callPackage ../site { };
 
         # cgit instance path.
         "/cgit".return = "302 $scheme://$host/cgit/";
-        "/cgit/"       = {
-          proxyPass       = "http://127.0.0.1:${toString ports.cgit}/cgit/";
+        "/cgit/" = {
+          proxyPass = "http://127.0.0.1:${toString ports.cgit}/cgit/";
           proxyWebsockets = true;
         };
 
         # API path.
         "/api".return = "302 $scheme://$host/api/";
-        "/api/"       = {
-          root     = callPackage ../api {};
+        "/api/" = {
+          root = callPackage ../api { };
 
           extraConfig = ''
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -85,7 +80,7 @@ in
         "/game-and-simulations/multiply-by-n".return =
           "302 $scheme://$host/game-and-simulations/multiply-by-n/";
         "/game-and-simulations/multiply-by-n/".alias =
-          "${callPackage ../packages/multiply-by-n.nix {}}/";
+          "${callPackage ../packages/multiply-by-n.nix { }}/";
 
         # Programming resources.
         "/programming-resources-directory/gnucobol/documentation".return =
@@ -110,15 +105,15 @@ in
 
   users.users."phpfpm" = {
     isSystemUser = true;
-    createHome   = true;
-    home         = apiStorageDirectory;
-    group        = "phpfpm";
+    createHome = true;
+    home = apiStorageDirectory;
+    group = "phpfpm";
   };
-  users.groups."phpfpm" = {};
+  users.groups."phpfpm" = { };
 
   # PHP (eww) CGI stuff for website API.
   services.phpfpm.pools."${site}" = {
-    user  = "phpfpm";
+    user = "phpfpm";
     group = "phpfpm";
 
     phpEnv.PATH = with pkgs; makeBinPath [ php ];
@@ -126,14 +121,14 @@ in
     settings = {
       "php_admin_value[error_log]" = "stderr";
       "php_admin_flag[log_errors]" = true;
-      "catch_workers_output"       = true;
+      "catch_workers_output" = true;
 
       "listen.owner" = nginx.user;
 
-      "pm"                   = "dynamic";
-      "pm.max_children"      = 32;
-      "pm.max_requests"      = 500;
-      "pm.start_servers"     = 2;
+      "pm" = "dynamic";
+      "pm.max_children" = 32;
+      "pm.max_requests" = 500;
+      "pm.start_servers" = 2;
       "pm.min_spare_servers" = 2;
       "pm.max_spare_servers" = 5;
     };

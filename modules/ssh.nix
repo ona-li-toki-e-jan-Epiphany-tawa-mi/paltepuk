@@ -20,19 +20,19 @@
 
 {
   services.fail2ban = {
-    enable                   = true;
+    enable = true;
     bantime-increment.enable = true;
   };
 
   # Enables OpenSSH and forces key-based authentication.
   services.openssh = {
-    enable       = true;
+    enable = true;
     openFirewall = true;
 
     settings = {
-      PermitRootLogin        = "no";
+      PermitRootLogin = "no";
       PasswordAuthentication = false;
-      X11Forwarding          = false;
+      X11Forwarding = false;
     };
 
     extraConfig = ''

@@ -16,18 +16,14 @@
 
 # Creates my user account for administration.
 
-{ epiphanyInitialHashedPassword
-, epiphanySSHKeys
-, pkgs
-, ...
-}:
+{ epiphanyInitialHashedPassword, epiphanySSHKeys, pkgs, ... }:
 
 {
   users.users."epiphany" = {
-    isNormalUser          = true;
-    description           = "jan Epiphany";
+    isNormalUser = true;
+    description = "jan Epiphany";
     initialHashedPassword = epiphanyInitialHashedPassword;
-    extraGroups           = [ "wheel" ];
+    extraGroups = [ "wheel" ];
 
     packages = with pkgs; [ htop ];
 

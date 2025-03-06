@@ -19,14 +19,12 @@
 # NOTE: Make sure to set
 # services.tor.settings.{"BandwidthRate","BandwidthBurst"}.
 
-{ pkgs-unstable
-, ...
-}:
+{ pkgs-unstable, ... }:
 
 {
   services.tor = {
     package = pkgs-unstable.tor;
-    enable  = true;
+    enable = true;
 
     # Enables hardware acceleration.
     settings.HardwareAccel = 1;

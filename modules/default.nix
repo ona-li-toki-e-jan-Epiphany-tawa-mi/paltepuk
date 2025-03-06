@@ -16,16 +16,10 @@
 
 # The default Nix module that includes all parts of my website and server.
 
-{ inputs
-, lib
-, system
-, timeZone
-, ...
-}:
+{ inputs, lib, system, timeZone, ... }:
 
 let inherit (lib) mkForce;
-in
-{
+in {
   imports = [
     ./i2pd.nix
     ./tor.nix
@@ -57,7 +51,7 @@ in
   ##############################################################################
 
   # Removes default packages.
-  environment.defaultPackages = mkForce [];
+  environment.defaultPackages = mkForce [ ];
 
   nixpkgs.hostPlatform = system;
 
@@ -72,13 +66,13 @@ in
   nix = {
     optimise = {
       automatic = true;
-      dates     = [ "weekly" ];
+      dates = [ "weekly" ];
     };
 
     gc = {
-      automatic  = true;
-      dates      = "weekly";
-      options    = "--delete-older-than 15d";
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 15d";
       persistent = true;
     };
   };
@@ -90,21 +84,20 @@ in
   time.timeZone = timeZone;
 
   # Selects internationalisation properties.
-  i18n =
-    let locale = "en_US.UTF-8";
-    in {
-      defaultLocale = locale;
+  i18n = let locale = "en_US.UTF-8";
+  in {
+    defaultLocale = locale;
 
-      extraLocaleSettings = {
-        LC_ADDRESS        = locale;
-        LC_IDENTIFICATION = locale;
-        LC_MEASUREMENT    = locale;
-        LC_MONETARY       = locale;
-        LC_NAME           = locale;
-        LC_NUMERIC        = locale;
-        LC_PAPER          = locale;
-        LC_TELEPHONE      = locale;
-        LC_TIME           = locale;
-      };
+    extraLocaleSettings = {
+      LC_ADDRESS = locale;
+      LC_IDENTIFICATION = locale;
+      LC_MEASUREMENT = locale;
+      LC_MONETARY = locale;
+      LC_NAME = locale;
+      LC_NUMERIC = locale;
+      LC_PAPER = locale;
+      LC_TELEPHONE = locale;
+      LC_TIME = locale;
     };
+  };
 }

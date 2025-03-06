@@ -17,93 +17,83 @@
 # Installs and configures a basic git server and a public web interface to view
 # the repos.
 
-{ pkgs
-, lib
-, ports
-, gitSSHKeys
-, ...
-}:
+{ pkgs, lib, ports, gitSSHKeys, ... }:
 
-let inherit (lib) concatStrings mkIf escapeShellArg;
-    inherit (builtins) listToAttrs;
-    inherit (pkgs) callPackage;
+let
+  inherit (lib) concatStrings mkIf escapeShellArg;
+  inherit (builtins) listToAttrs;
+  inherit (pkgs) callPackage;
 
-    gitDirectory  = "/srv/git";
-    cgitResources = callPackage ./cgit {};
+  gitDirectory = "/srv/git";
+  cgitResources = callPackage ./cgit { };
 
-    # Names for the sections displayed in cgit.
-    sections = {
-      none        = null;
-      luanti      = "Luanti mods and modpacks";
-      library     = "Libraries and Templates";
-      game        = "Games";
-      cli         = "CLI applications";
-      tui         = "TUI applications";
-      simulations = "Simulations";
-      # My projects that mainly live on other sites.
-      personalMirror = "Personal mirrors (may contain Clearnet resources)";
+  # Names for the sections displayed in cgit.
+  sections = {
+    none = null;
+    luanti = "Luanti mods and modpacks";
+    library = "Libraries and Templates";
+    game = "Games";
+    cli = "CLI applications";
+    tui = "TUI applications";
+    simulations = "Simulations";
+    # My projects that mainly live on other sites.
+    personalMirror = "Personal mirrors (may contain Clearnet resources)";
+  };
+
+  # Declarative repositories for git and cgit.
+  repositories = let
+    standard = path: section: description: {
+      path = "${path}.git";
+      inherit description;
+      inherit section;
     };
 
-    # Declarative repositories for git and cgit.
-    repositories =
-      let standard = path: section: description: {
-            path = "${path}.git";
-            inherit description;
-            inherit section;
-          };
+    personalMirror = path: description: {
+      path = "${path}.git";
+      inherit description;
+      section = sections.personalMirror;
+    };
+  in [
+    (standard "AkashicRecord" sections.none "Software graveyard monorepo")
+    (standard "paltepuk" sections.none
+      "Personal website and server wombo-combo")
+    (standard "epitaphpkgs" sections.none "My personal package repository")
 
-          personalMirror = path: description: {
-            path = "${path}.git";
-            inherit description;
-            section = sections.personalMirror;
-          };
-      in [
-        (standard "AkashicRecord" sections.none
-          "Software graveyard monorepo")
-        (standard "paltepuk" sections.none
-          "Personal website and server wombo-combo")
-        (standard "epitaphpkgs" sections.none
-          "My personal package repository")
+    (standard "COBOL-DVD-Thingy" sections.tui
+      "Terminal screensaver similar to that of DVD players")
+    (standard "netcatchat" sections.tui
+      "A simple command-line chat server and client using netcat")
+    (standard "Brainblast-Toolkit" sections.tui
+      "A brainfuck/BASICfuck REPL for 6502 machines")
+    (standard "love-you-mom" sections.tui
+      "Tells your mom (or dad) that you love them")
 
-        (standard "COBOL-DVD-Thingy" sections.tui
-          "Terminal screensaver similar to that of DVD players")
-        (standard "netcatchat" sections.tui
-          "A simple command-line chat server and client using netcat")
-        (standard "Brainblast-Toolkit" sections.tui
-          "A brainfuck/BASICfuck REPL for 6502 machines")
-        (standard "love-you-mom" sections.tui
-          "Tells your mom (or dad) that you love them")
+    (standard "AHD" sections.cli "Hexdump utility")
+    (standard "cowsAyPL" sections.cli "Cowsay in GNU APL")
 
-        (standard "AHD" sections.cli
-          "Hexdump utility")
-        (standard "cowsAyPL" sections.cli
-          "Cowsay in GNU APL")
+    (standard "BitMasher" sections.game
+      "A fast-paced text adventure game inside a ransomware-infected computer")
+    (standard "PyMSWPR" sections.game
+      "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
 
-        (standard "BitMasher" sections.game
-          "A fast-paced text adventure game inside a ransomware-infected computer")
-        (standard "PyMSWPR" sections.game
-          "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
+    (standard "fio.apl" sections.library "GNU APL ⎕FIO abstraction library")
+    (standard "aplwiz" sections.library
+      "GNU APL automated testing script templates")
 
-        (standard "fio.apl" sections.library
-          "GNU APL ⎕FIO abstraction library")
-        (standard "aplwiz" sections.library
-          "GNU APL automated testing script templates")
+    (standard "gigatools" sections.luanti
+      "Gigatools for gigachads with gigaworkloads")
+    (standard "elephant_veins" sections.luanti
+      "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
+    (standard "slapperfishy" sections.luanti
+      "High ordinance fish slapping. Hilarity ensues")
 
-        (standard "gigatools" sections.luanti
-          "Gigatools for gigachads with gigaworkloads")
-        (standard "elephant_veins" sections.luanti
-          "Luanti mod that replaces small sporadic ore pockets with sparse, gigantic ore veins")
-        (standard "slapperfishy" sections.luanti
-          "High ordinance fish slapping. Hilarity ensues")
+    (standard "multiply-by-n" sections.simulations
+      "Cool animation made by drawing lines between moving points on a circle")
 
-        (standard "multiply-by-n" sections.simulations
-          "Cool animation made by drawing lines between moving points on a circle")
-
-        (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
-          "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
-      ];
-in
-{
+    (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
+      "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")
+  ];
+in {
   ##############################################################################
   # git Server                                                                 #
   ##############################################################################
@@ -115,9 +105,8 @@ in
       init.defaultBranch = "master";
 
       # Globally removes "dubious ownership" check from the git repositories.
-      safe.directory = [ "." ] ++ builtins.map ({ path, ... }:
-        gitDirectory + "/" + path
-      ) repositories;
+      safe.directory = [ "." ]
+        ++ builtins.map ({ path, ... }: gitDirectory + "/" + path) repositories;
     };
   };
 
@@ -125,15 +114,15 @@ in
   users = {
     users."git" = {
       isSystemUser = true;
-      description  = "git user";
-      home         = gitDirectory;
-      shell        = "${pkgs.git}/bin/git-shell";
-      group        = "git";
+      description = "git user";
+      home = gitDirectory;
+      shell = "${pkgs.git}/bin/git-shell";
+      group = "git";
 
       openssh.authorizedKeys.keys = gitSSHKeys;
     };
 
-    groups."git" = {};
+    groups."git" = { };
   };
 
   services.openssh.settings.AllowUsers = [ "git" ];
@@ -146,8 +135,8 @@ in
   # Creates any specified repositories if they don't already exist.
   systemd.services."create-repositories" = {
     description = "git repository creation service";
-    wantedBy    = [ "multi-user.target" ];
-    path        = with pkgs; [ git ];
+    wantedBy = [ "multi-user.target" ];
+    path = with pkgs; [ git ];
 
     script = ''
       # Shows executed commands.
@@ -160,39 +149,39 @@ in
     '') repositories);
 
     serviceConfig = {
-      Type             = "oneshot";
-      User             = "git";
+      Type = "oneshot";
+      User = "git";
       WorkingDirectory = gitDirectory;
 
       # systemd-analyze security recommendations.
-      PrivateDevices          = true;
-      ProtectClock            = true;
-      ProtectKernelLogs       = true;
-      RemoveIPC               = true;
-      NoNewPrivileges         = true;
-      ProtectControlGroups    = true;
-      ProtectKernelModules    = true;
-      MemoryDenyWriteExecute  = true;
+      PrivateDevices = true;
+      ProtectClock = true;
+      ProtectKernelLogs = true;
+      RemoveIPC = true;
+      NoNewPrivileges = true;
+      ProtectControlGroups = true;
+      ProtectKernelModules = true;
+      MemoryDenyWriteExecute = true;
       SystemCallArchitectures = [ "native" ];
-      ProtectHostname         = true;
-      ProtectSystem           = "strict";
-      ReadWritePaths          = [ gitDirectory ];
-      ProtectProc             = "invisible";
-      LockPersonality         = true;
-      RestrictRealtime        = true;
-      ProcSubset              = "pid";
-      ProtectHome             = true;
-      PrivateNetwork          = true;
-      PrivateUsers            = true;
-      PrivateTmp              = true;
-      SystemCallFilter        = [ "@system-service" "~@resources" "~@privileged" ];
-      SystemCallErrorNumber   = "EPERM";
+      ProtectHostname = true;
+      ProtectSystem = "strict";
+      ReadWritePaths = [ gitDirectory ];
+      ProtectProc = "invisible";
+      LockPersonality = true;
+      RestrictRealtime = true;
+      ProcSubset = "pid";
+      ProtectHome = true;
+      PrivateNetwork = true;
+      PrivateUsers = true;
+      PrivateTmp = true;
+      SystemCallFilter = [ "@system-service" "~@resources" "~@privileged" ];
+      SystemCallErrorNumber = "EPERM";
       RestrictAddressFamilies = "none";
-      ProtectKernelTunables   = true;
-      RestrictNamespaces      = true;
-      RestrictSUIDSGID        = true;
-      IPAddressDeny           = "any";
-      CapabilityBoundingSet   = "";
+      ProtectKernelTunables = true;
+      RestrictNamespaces = true;
+      RestrictSUIDSGID = true;
+      IPAddressDeny = "any";
+      CapabilityBoundingSet = "";
     };
   };
 
@@ -209,24 +198,24 @@ in
 
     # Custom resources.
     locations = {
-      "= /cgit/cgit.jpg".alias        = "${cgitResources}/logo.jpg";
+      "= /cgit/cgit.jpg".alias = "${cgitResources}/logo.jpg";
       "= /cgit/cgit-custom.css".alias = "${cgitResources}/style.css";
     };
   };
 
   services.cgit."cgit" = {
-    enable         = true;
+    enable = true;
     nginx.location = "/cgit";
 
     # See https://discourse.nixos.org/t/security-advisory-local-privilege-escalation-in-the-fcgiwrap-nixos-module-also-affecting-the-cgit-smokeping-and-zoneminder-modules/51419
-    user  = "cgit";
+    user = "cgit";
     group = "cgit";
 
     repos = listToAttrs (builtins.map ({ path, description, section, ... }: {
-      name  = path;
+      name = path;
       value = {
-        path    = "${gitDirectory}/${path}";
-        desc    = description;
+        path = "${gitDirectory}/${path}";
+        desc = description;
         section = mkIf (null != section) section;
       };
     }) repositories);
@@ -235,7 +224,7 @@ in
       # Converts the README files to HTML for display.
       about-filter = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
       # Fixes fetching of files under virtual root.
-      css  = "/cgit/cgit-custom.css";
+      css = "/cgit/cgit-custom.css";
       logo = "/cgit/cgit.jpg";
       # Makes logo point to site homepage.
       logo-link = "/";
@@ -252,9 +241,9 @@ in
       # Sets the README of the repos to the README.md of the default branch.
       readme = ":README.md";
       # Stuff that appears in the index page.
-      root-desc   = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
+      root-desc = "Do you have YOUR OWN git server? Didn't think so"; # lmao.
       root-readme = "${cgitResources}/README.md";
-      root-title  = "cgit | paltepuk";
+      root-title = "cgit | paltepuk";
       # I like side-by-side diffs.
       side-by-side-diffs = 1;
       # Nice syntax highlighting.

@@ -15,34 +15,29 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
-{ stdenv
-, fetchgit
-, lib
-, typescript
-, minify
-}:
+{ stdenv, fetchgit, lib, typescript, minify }:
 
 stdenv.mkDerivation rec {
-  pname            = "multiply-by-n";
-  version          = "0.1.2";
+  pname = "multiply-by-n";
+  version = "0.1.2";
   allowSubstitutes = false;
 
   src = fetchgit {
-    url  = "https://paltepuk.xyz/cgit/multiply-by-n.git";
-    rev  = version;
+    url = "https://paltepuk.xyz/cgit/multiply-by-n.git";
+    rev = version;
     hash = "sha256-qLE/ZVlRE4Sa/aRvQCNornhoLPBHFbH0GEdMD8QPVo4=";
   };
 
   nativeBuildInputs = [ minify ];
-  buildPhase        = ''
+  buildPhase = ''
     for file in src/*.css src/*.html src/*.js; do
       minify "$file" > "$file.min"
     done
   '';
 
-  doCheck     = true;
+  doCheck = true;
   checkInputs = [ typescript ];
-  checkPhase  = ''
+  checkPhase = ''
     tsc
   '';
 
@@ -59,6 +54,6 @@ stdenv.mkDerivation rec {
     description =
       "Cool animation made by drawing lines between moving points on a circle";
     homepage = "https://paltepuk.xyz/cgit/multiply-by-n.git/about";
-    license  = licenses.agpl3Plus;
+    license = licenses.agpl3Plus;
   };
 }

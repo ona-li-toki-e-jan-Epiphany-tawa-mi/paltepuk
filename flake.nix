@@ -19,33 +19,32 @@
   description = "NixOS configuration flake for badass reproducable websites";
 
   inputs = {
-    nixpkgs.url          = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, ... } @ inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
     let # Extra nixpkgs channels to include.
-        extraChannels = { pkgs, ... }: {
-          _module.args.pkgs-unstable = import nixpkgs-unstable {
-            inherit (pkgs.stdenv.targetPlatform) system; };
+      extraChannels = { pkgs, ... }: {
+        _module.args.pkgs-unstable = import nixpkgs-unstable {
+          inherit (pkgs.stdenv.targetPlatform) system;
         };
+      };
 
-        # Modules to include in every configuration.
-        extraModules = [
-          extraChannels
-          ./modules
-        ];
+      # Modules to include in every configuration.
+      extraModules = [ extraChannels ./modules ];
 
-        # Arguments to include in every configuration.
-        extraSpecialArguments = {
-          inherit inputs;
+      # Arguments to include in every configuration.
+      extraSpecialArguments = {
+        inherit inputs;
 
-          # Port numbers for networked services.
-          ports = {
-            i2pdConsole = 7070;
-            cgit        = 5000;
-          };
-        } // (import ./config.nix);
+        # Port numbers for networked services.
+        ports = {
+          i2pdConsole = 7070;
+          cgit = 5000;
+        };
+      } // (import ./config.nix);
+
       inherit (nixpkgs.lib) genAttrs systems nixosSystem;
 
       forAllSystems = f:
@@ -55,10 +54,10 @@
       formatter = forAllSystems ({ pkgs }: pkgs.nixfmt-classic);
 
       nixosConfigurations = {
-        raspberryPi400 = nixpkgs.lib.nixosSystem rec {
+        raspberryPi400 = nixosSystem rec {
           specialArgs = extraSpecialArguments // { inherit system; };
 
-          system  = "aarch64-linux";
+          system = "aarch64-linux";
           modules = [ ./hosts/raspberry-pi-400.nix ] ++ extraModules;
         };
       };
