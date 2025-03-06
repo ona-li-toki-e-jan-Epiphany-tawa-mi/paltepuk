@@ -46,7 +46,14 @@
             cgit        = 5000;
           };
         } // (import ./config.nix);
+      inherit (nixpkgs.lib) genAttrs systems nixosSystem;
+
+      forAllSystems = f:
+        genAttrs systems.flakeExposed
+        (system: f { pkgs = import nixpkgs { inherit system; }; });
     in {
+      formatter = forAllSystems ({ pkgs }: pkgs.nixfmt-classic);
+
       nixosConfigurations = {
         raspberryPi400 = nixpkgs.lib.nixosSystem rec {
           specialArgs = extraSpecialArguments // { inherit system; };
