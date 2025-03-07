@@ -20,5 +20,9 @@
 set -u
 
 set -x
-nix fmt                                           || exit 1
+
+# We need to remove the result symlink or nixfmt will try to traverse it.
+rm result 2> /dev/null
+nix fmt || exit 1
+
 nixos-rebuild --flake path:.#raspberryPi400 build || exit 1
