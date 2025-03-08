@@ -77,8 +77,7 @@ let
       "A version of Minesweeper for the CASIO fx-9750GIII (и похожие)")
 
     (standard "fio.apl" sections.library "GNU APL ⎕FIO abstraction library")
-    (standard "aplwiz" sections.library
-      "GNU APL automated testing script templates")
+    (standard "units" sections.library "Unit testing script templates")
 
     (standard "gigatools" sections.luanti
       "Gigatools for gigachads with gigaworkloads")

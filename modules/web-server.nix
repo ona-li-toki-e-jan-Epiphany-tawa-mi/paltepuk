@@ -95,6 +95,9 @@ in {
           "302 $scheme://$host/programming-resources-directory/python/documentation/";
         "/programming-resources-directory/python/documentation/".alias =
           "${pkgs.python3.doc}/share/doc/python3.12-3.12.8/html/";
+
+        # Redirects for stuff that got moved.
+        "/cgit/aplwiz.git".return = "302 $scheme://$host/cgit/units.git/about/";
       };
     };
   };
