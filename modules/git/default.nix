@@ -78,6 +78,7 @@ let
 
     (standard "fio.apl" sections.library "GNU APL ⎕FIO abstraction library")
     (standard "units" sections.library "Unit testing script templates")
+    (standard "anal" sections.library "S(a)fety-Ta(n)t(a)mount C (L)ibrary")
 
     (standard "gigatools" sections.luanti
       "Gigatools for gigachads with gigaworkloads")
