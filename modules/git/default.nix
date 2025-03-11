@@ -70,6 +70,7 @@ let
 
     (standard "AHD" sections.cli "Hexdump utility")
     (standard "cowsAyPL" sections.cli "Cowsay in GNU APL")
+    (standard "play-music" sections.cli "Simple command-line music player")
 
     (standard "BitMasher" sections.game
       "A fast-paced text adventure game inside a ransomware-infected computer")
