@@ -35,7 +35,8 @@ let
     game = "Games";
     cli = "CLI applications";
     tui = "TUI applications";
-    simulations = "Simulations";
+    simulation = "Simulations";
+    programmingLanguage = "Programming Languages";
     # My projects that mainly live on other sites.
     personalMirror = "Personal mirrors (may contain Clearnet resources)";
   };
@@ -63,8 +64,7 @@ let
       "Terminal screensaver similar to that of DVD players")
     (standard "netcatchat" sections.tui
       "A simple command-line chat server and client using netcat")
-    (standard "Brainblast-Toolkit" sections.tui
-      "A brainfuck/BASICfuck REPL for 6502 machines")
+
     (standard "love-you-mom" sections.tui
       "Tells your mom (or dad) that you love them")
 
@@ -88,8 +88,11 @@ let
     (standard "slapperfishy" sections.luanti
       "High ordinance fish slapping. Hilarity ensues")
 
-    (standard "multiply-by-n" sections.simulations
+    (standard "multiply-by-n" sections.simulation
       "Cool animation made by drawing lines between moving points on a circle")
+
+    (standard "BASICfuck" sections.programmingLanguage
+      "Brainfuck derivative for 6502 machines")
 
     (personalMirror "ona-li-toki-e-jan-Epiphany-tawa-mi"
       "poki pi nimi sona pi lipu KiApu mi | Mirror of https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi/ona-li-toki-e-jan-Epiphany-tawa-mi")

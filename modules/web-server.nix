@@ -97,7 +97,8 @@ in {
           "${pkgs.python3.doc}/share/doc/python3.12-3.12.8/html/";
 
         # Redirects for stuff that got moved.
-        "/cgit/aplwiz.git".return = "302 $scheme://$host/cgit/units.git/about/";
+        "/cgit/Brainblast-Toolkit.git".return =
+          "302 $scheme://$host/cgit/BASICfuck.git/about/";
       };
     };
   };
