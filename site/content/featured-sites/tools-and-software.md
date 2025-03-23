@@ -25,7 +25,8 @@ scrollingTitleCount = 2
 - Clearnet - [https://neocities.org *(February 26, 2025)*](https://neocities.org)
 
 Neocities is a cool and free web hosting platform for static websites. There's
-all sorts of fun sites people have made, some of which you'll find on this page.
+all sorts of fun sites people have made, some of which you'll find in this web
+directory.
 
 And, their platform is open source
 [https://github.com/neocities *(February 26, 2025)*](https://github.com/neocities)!
