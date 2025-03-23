@@ -10,8 +10,8 @@ Rules:
 - Your message will become a part of this site's source code [/cgit/paltepuk.git/about](/cgit/paltepuk.git/about/), so make sure it's not something you'll regret later.
 
 WARNING: If you're submitting over the Clearnet, CloudFlare will be able to read
-(and possibly modify) your message! If you are using the Clearnet, consider
-encrypting your message with my PGP key:
+(and possibly modify) your message! Consider encrypting your message with my PGP
+key:
 [/contact-information](/contact-information/).
 
 {{< noscript-md >}}
@@ -31,6 +31,10 @@ in the FAQ [/faq](/faq/) for available emotes.
 {{< command-line  >}}cat 'guestbook/submissions'{{< /command-line >}}
 
 {{< br >}}
+
+### rando @ March 22, 2025
+
+I like this website. Nice job.
 
 ### #1 fan of you @ February 20, 2025
 
