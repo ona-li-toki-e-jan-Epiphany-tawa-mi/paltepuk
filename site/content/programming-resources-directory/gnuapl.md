@@ -54,12 +54,12 @@ in my opinion, it is far too low-level for a language like APL. I created the
 fio.apl library to provide a much better interface. If you find ⎕FIO is a pain
 in the ass, please take a look at this.
 
-## aplwiz
+## units
 
-- Here - [/cgit/aplwiz.git/about](/cgit/aplwiz.git/about/)
+- Here - [/cgit/units.git/about](/cgit/units.git/about/)
 
-A collection of automated testing script templates I've made to add unit testing
-and similar to your GNU APL projects.
+A collection of unit testing script templates I've made, which includes one for
+GNU APL projects.
 
 ## gnu-apl-mode
 
