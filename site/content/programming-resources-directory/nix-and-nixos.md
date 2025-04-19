@@ -29,10 +29,58 @@ NixOS machines install the NixOS manual locally, just run **"nixos-help"**!
 
 ## Offline Documentation with Nix(OS)
 
-- Here - [/blog/offline-documentation-with-nix-os](/blog/offline-documentation-with-nix-os/)
+Nix often installs documentation along with it's packages. You can easily copy
+the files out of the package for offline viewing, or symlink them to a
+predictable location if you're on NixOS.
 
-A blog post I made about how you can get offline documentation for programming
-languages and other things through Nix(OS).
+First, you'll want to make sure to install the package with the language of
+choice. For this example, I'll be using **pkgs.lua** for Lua.
+
+Once it's installed and available in your profile use **nix path-info -r
+/run/current-system | grep \<name\>** to locate packages related to the
+language:
+
+```sh
+$ nix path-info -r /run/current-system | grep lua
+/nix/store/hhim69blnh8ws0pglw8r17w3g4f6xm2c-lua-5.2.4
+/nix/store/kcvj18010ssgb3n0m3lf35dqfn43y0aq-lua-5.4.7
+/nix/store/hm52g3a64jlyzd64320cl06x9bl9ipyb-lua-5.2.4-doc
+/nix/store/h1683by56j6r6ragif398av8f44m76q7-luajit-2.1.1713773202
+/nix/store/vvn3qnq88lnavldgn7bkhkvlnincs4a4-lua5.2-luasocket-3.1.0-1
+/nix/store/dciknj5zii9fk0rdkmy2kwcmwlqlqfnh-lua-5.2.4-env
+/nix/store/d8w9glrqd619y04sdzd4ar8g431cgfbp-emacs-lua-mode-20231023.947
+/nix/store/gchhmwrl379fjagqah6xwia0bznank8a-lua-language-server-3.13.0
+/nix/store/lgfq2lxzv3c7kxnmkskvsp2kdcxgzrra-lua-5.2.4
+/nix/store/ikfjm5yqq7a81ry6skidbksqwyv0zdqs-luarocks_bootstrap-3.11.1
+/nix/store/qjnawi8a9wvv5l7f3yvviajgfzl4xa9a-wrap-lua-hook
+/nix/store/rbaywyq25pl013mdrq7db1vg1a28kvx2-lua5.2-luafilesystem-1.8.0-1
+/nix/store/vdykmgyjw1pc9dimg4yzlr7mdzmjm3dc-lua5.2-argparse-0.7.1-1
+/nix/store/qb721wbh9c50al9h3nhhflcwz1nbzh0z-luacheck-luarocks-config.lua
+/nix/store/vmf437xva82dfn7hv4ydc5mc4wsg5dcs-lua5.2-luacheck-1.2.0-1
+```
+
+You want to look for the derivation with the schema **\<name\>-\<version\>-doc**
+(i.e: **/nix/store/hm52g3a64jlyzd64320cl06x9bl9ipyb-lua-5.2.4-doc**.) If it's
+not there, try looking in the main derivation for the language under
+**\<derivation\>/share/** for a directory named **doc**. Keep in mind that it
+might not exist for that package.
+
+Though, of course, the exact derivation with the documentation will change if
+the package is updated, and thus the path. You can just copy out the files to
+somewhere outside of the Nix store to keep them. Alternatively, in NixOS, you
+can abuse **environment.etc**'s symlink functionality to give a consistent path
+to the current documentation, where ever it happens to be in the Nix store:
+
+```nix
+{ pkgs, ... }:
+
+{
+  environment.etc."documentation/Lua" = {
+    # You may need to change this path depending on the package, as it can vary.
+    source = "${pkgs.lua.doc}/share/doc/${pkgs.lua.name}";
+  };
+}
+```
 
 ## Nix Manual
 

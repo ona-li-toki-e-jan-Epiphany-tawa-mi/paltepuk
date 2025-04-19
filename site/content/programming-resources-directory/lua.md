@@ -14,8 +14,18 @@ scrollingTitleCount = 3
 
 ## Statically Typed Lua
 
-- Here - [/blog/statically-typed-lua](/blog/statically-typed-lua/)
+There a number of ways to get static types with Lua. I found that using
+lua-language-server works good.
 
-A blog post I made about how you can get static typing in Lua without extra
-build steps and without an LSP client using lua-language-server with the
-**--check** flag.
+It has a **--check** flag you can pass via CLI to have it syntax and typecheck a
+given file or project without needing an LSP client, and it will just output a
+report in JSON to the path you specify with **--logpath**.
+
+For my Lua projects, I wrote a little script that runs lua-language-server with
+**--check**, parses the report (with the help of the single-file JSON library
+json.lua
+[https://github.com/rxi/json.lua *(December 30, 2024)*](https://github.com/rxi/json.lua),)
+and then outputs the issues, and a non-0 exit code, if there were any.
+
+You can find an example in the **.tools/** directory in gigatools
+[/cgit/gigatools.git/about](/cgit/gigatools.git/about/).
