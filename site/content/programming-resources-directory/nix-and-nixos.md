@@ -96,15 +96,6 @@ builtin.\* functions.
 A reference for a number of things in nixpkgs, like the functions in lib.\*, and
 pkgs.\* stuff like builders, fetchers, etc..
 
-## NixOS Manual
-
-- Clearnet - [https://nlewo.github.io/nixos-manual-sphinx/index.html *(March 4, 2025)*](https://nlewo.github.io/nixos-manual-sphinx/index.html)
-
-A reference for various things in NixOS. Most of it is a copy of the
-locally-installed NixOS manual, but the "Development" page is of paticular use,
-as it has information on a lot of juicy stuff like defining custom options,
-option types, etc..
-
 ## NixOS Wiki
 
 - Clearnet - [https://nixos.wiki *(March 4, 2025)*](https://nixos.wiki/)
