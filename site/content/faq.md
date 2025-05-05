@@ -28,22 +28,3 @@ Pong.
 ## When is the Second Coming?
 
 October 20th, 2083 anno Domini.
-
-## What guestbook [/guestbook](/guestbook/) emotes are available?
-
-Enter the text on the left to get the image on the right.
-
-- :wan1: - ![](/wanwan/1.gif)
-- :wan2: - ![](/wanwan/2.gif)
-- :wan3: - ![](/wanwan/3.gif)
-- :wancool: - ![](/wanwan/cool.webp)
-- :wanfast: - ![](/wanwan/fast.gif)
-- :wansleep: - ![](/wanwan/sleep.gif)
-- :wanvieux: - ![](/wanwan/vieux.webp)
-- :wanwan: - ![](/wanwan/wan.webp)
-
-## ![](/wanwan/1.gif) ![](/wanwan/2.gif) Whats up with the wanwans? ![](/wanwan/2.gif) ![](/wanwan/3.gif)
-
-Please check out
-[https://rgbteahouse.neocities.org/gallery/pixel *(February 25, 2025)*](https://rgbteahouse.neocities.org/gallery/pixel)
-![](/wanwan/cool.webp).
