@@ -29,6 +29,10 @@ enabled.
 
 {{< br >}}
 
+### Alex @ May 4, 2025
+
+Amazing website! seeing personal blogs like this really make me want to start one myself
+
 ### TommyGoM @ April 30, 2025
 
 hi
