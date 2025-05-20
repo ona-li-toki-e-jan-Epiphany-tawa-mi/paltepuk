@@ -30,15 +30,14 @@ let
   # Names for the sections displayed in cgit.
   sections = {
     none = null;
-    luanti = "Luanti mods and modpacks";
+    luanti = "Luanti Mods and Modpacks";
     library = "Libraries and Templates";
     game = "Games";
-    cli = "CLI applications";
-    tui = "TUI applications";
+    terminal = "Terminal Applications";
     simulation = "Simulations";
     programmingLanguage = "Programming Languages";
     # My projects that mainly live on other sites.
-    personalMirror = "Personal mirrors (may contain Clearnet resources)";
+    personalMirror = "Personal Mirrors (may contain Clearnet resources)";
   };
 
   # Declarative repositories for git and cgit.
@@ -60,17 +59,15 @@ let
       "Personal website and server wombo-combo")
     (standard "epitaphpkgs" sections.none "My personal package repository")
 
-    (standard "COBOL-DVD-Thingy" sections.tui
+    (standard "COBOL-DVD-Thingy" sections.terminal
       "Terminal screensaver similar to that of DVD players")
-    (standard "netcatchat" sections.tui
+    (standard "netcatchat" sections.terminal
       "A simple command-line chat server and client using netcat")
-
-    (standard "love-you-mom" sections.tui
+    (standard "love-you-mom" sections.terminal
       "Tells your mom (or dad) that you love them")
-
-    (standard "AHD" sections.cli "Hexdump utility")
-    (standard "cowsAyPL" sections.cli "Cowsay in GNU APL")
-    (standard "play-music" sections.cli "Simple command-line music player")
+    (standard "AHD" sections.terminal "Hexdump utility")
+    (standard "cowsAyPL" sections.terminal "Cowsay in GNU APL")
+    (standard "play-music" sections.terminal "Simple command-line music player")
 
     (standard "BitMasher" sections.game
       "A fast-paced text adventure game inside a ransomware-infected computer")
