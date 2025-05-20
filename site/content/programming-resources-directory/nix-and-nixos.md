@@ -33,8 +33,8 @@ Nix often installs documentation along with it's packages. You can easily copy
 the files out of the package for offline viewing, or symlink them to a
 predictable location if you're on NixOS.
 
-First, you'll want to make sure to install the package with the language of
-choice. For this example, I'll be using **pkgs.lua** for Lua.
+First, you'll want to make sure to install the chosen package. For this example,
+I'll be using **pkgs.lua** for Lua.
 
 Once it's installed and available in your profile use **nix path-info -r
 /run/current-system | grep \<name\>** to locate packages related to the
@@ -61,7 +61,7 @@ $ nix path-info -r /run/current-system | grep lua
 
 You want to look for the derivation with the schema **\<name\>-\<version\>-doc**
 (i.e: **/nix/store/hm52g3a64jlyzd64320cl06x9bl9ipyb-lua-5.2.4-doc**.) If it's
-not there, try looking in the main derivation for the language under
+not there, try looking in the main derivation for the package under
 **\<derivation\>/share/** for a directory named **doc**. Keep in mind that it
 might not exist for that package.
 
