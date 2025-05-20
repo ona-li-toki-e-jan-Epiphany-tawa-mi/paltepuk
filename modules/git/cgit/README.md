@@ -26,7 +26,7 @@ proxy of your router is available via localhost port 4444; modify for your
 setup.
 
 ```
-git -c http.proxy=http://127.0.0.1:4444 clone http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p/cgit/<repository>
+git -c http.proxy=http://127.0.0.1:4444 clone <url>
 ```
 
 ### Tor
@@ -36,5 +36,5 @@ client daemon's SOCKSv5 proxy is available via localhost port 9050; modify for
 your setup.
 
 ```
-git -c http.proxy=socks5h://127.0.0.1:9050 clone http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion/cgit/<repository>
+git -c http.proxy=socks5h://127.0.0.1:9050 clone <url>
 ```
