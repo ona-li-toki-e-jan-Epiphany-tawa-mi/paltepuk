@@ -46,7 +46,7 @@ Params:
       </p>
       {{ if not .IsHome}}
       <p><a href="/">Return to /</a></p>
-      {{ if and (gt (len .Section) 0) (partial "partials/filename.html" . | ne .Section) }}
+      {{ if and (gt (len .Section) 0) (partial "filename.html" . | ne .Section) }}
       <p><a href="../">Return to {{ .CurrentSection.RelPermalink }}</a></p>
       {{ end }}
       {{ end }}

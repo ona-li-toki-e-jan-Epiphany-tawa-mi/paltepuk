@@ -19,7 +19,7 @@ I've written application(s) in GnuCOBOL; feel free to use them as reference:
 ## GnuCOBOL Manual
 
 - Clearnet - [https://gnucobol.sourceforge.io/doc/gnucobol.pdf *(March 4, 2025)*](https://gnucobol.sourceforge.io/doc/gnucobol.pdf)
-- Here - [/programming-resources-directory/gnucobol/documentation/gnucobol.pdf](/programming-resources-directory/gnucobol/documentation/gnucobol.pdf)
+- Here (GnuCOBOL 3.2) - [/programming-resources-directory/gnucobol/gnucobol.pdf](/programming-resources-directory/gnucobol/gnucobol.pdf)
 
 All you need to know packaged in one handy PDF.
 

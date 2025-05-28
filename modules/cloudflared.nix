@@ -32,23 +32,31 @@
 #   cloudflared command to be safe.
 # - Rebuild.
 
-{ lib, pkgs, config, cloudflaredTunnelUUID, ... }:
+{ lib, pkgs, cloudflaredTunnelUUID, ... }:
 
 let
   inherit (lib) escapeShellArg mkIf;
 
-  inherit (config.services) cloudflared;
-
   cloudflaredDirectory = "/var/lib/cloudflared";
 in {
-  system.activationScripts."create-cloudflared-directory" =
-    let user = escapeShellArg cloudflared.user;
-    in ''
-      mkdir -m 700 -p ${escapeShellArg cloudflaredDirectory}
-      chown ${user}:${user} ${escapeShellArg cloudflaredDirectory}
-    '';
+  system.activationScripts."create-cloudflared-directory" = ''
+    mkdir -m 700 -p ${escapeShellArg cloudflaredDirectory}
+    chown cloudflared:cloudflared ${escapeShellArg cloudflaredDirectory}
+  '';
 
-  users.users."epiphany".packages = [ pkgs.cloudflared ];
+  users = {
+    users = {
+      "epiphany".packages = [ pkgs.cloudflared ];
+
+      "cloudflared" = {
+        isSystemUser = true;
+        description = "cloudflared user";
+        group = "cloudflared";
+      };
+    };
+
+    groups."cloudflared" = { };
+  };
 
   services.cloudflared = mkIf ("" != cloudflaredTunnelUUID) {
     enable = true;

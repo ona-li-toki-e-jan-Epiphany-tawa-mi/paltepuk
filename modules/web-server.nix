@@ -83,10 +83,6 @@ in {
           "${callPackage ../packages/multiply-by-n.nix { }}/";
 
         # Programming resources.
-        "/programming-resources-directory/gnucobol/documentation".return =
-          "302 $scheme://$host/programming-resources-directory/gnucobol/documentation/";
-        "/programming-resources-directory/gnucobol/documentation/".alias =
-          "${pkgs.gnucobol.out}/share/doc/gnucobol/";
         "/programming-resources-directory/lua/documentation".return =
           "302 $scheme://$host/programming-resources-directory/lua/documentation/";
         "/programming-resources-directory/lua/documentation/".alias =
@@ -94,7 +90,7 @@ in {
         "/programming-resources-directory/python/documentation".return =
           "302 $scheme://$host/programming-resources-directory/python/documentation/";
         "/programming-resources-directory/python/documentation/".alias =
-          "${pkgs.python3.doc}/share/doc/python3.12-3.12.8/html/";
+          "${pkgs.python3.doc}/share/doc/python3.12-3.12.10/html/";
 
         # Redirects for stuff that got moved.
         "/cgit/Brainblast-Toolkit.git".return =
