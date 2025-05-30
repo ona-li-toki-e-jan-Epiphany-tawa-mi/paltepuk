@@ -41,6 +41,11 @@ input, textarea {
     border:           none;
 }
 
+th, td {
+    border-right:  1px solid greenyellow;
+    border-bottom: 1px solid greenyellow;
+}
+
 /******************************************************************************/
 /* Content Layout                                                             */
 /******************************************************************************/
