@@ -1,8 +1,8 @@
 <form method="POST" action="/api/guestbook.php">
-  <input style="width:100%" name="name" maxlength="256" placeholder="Name (optional, defaults to rando, 256 character limit)">
-  <input style="width:100%" name="websites" maxlength="1024" placeholder="Website(s) (optional, comma-seperated list, 1024 character limit)">
+  <input style="width:100%" name="name" maxlength="256" placeholder="{{ T "guestbookName" }}">
+  <input style="width:100%" name="websites" maxlength="1024" placeholder="{{ T "guestbookWebsites" }}">
   <br>
-  <textarea style="width:100%;height:200px" name="message" maxlength="4096" required placeholder="Message (4096 character limit)"></textarea>
+  <textarea style="width:100%;height:200px" name="message" maxlength="4096" required="" placeholder="{{ T "guestbookMessage" }}"></textarea>
   <br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="{{ T "guestbookSubmit" }}">
 </form>

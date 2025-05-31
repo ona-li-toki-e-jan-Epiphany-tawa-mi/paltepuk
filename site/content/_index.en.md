@@ -15,12 +15,12 @@ description = 'my software projects'
 Moniker: ona li toki e jan Epiphany tawa mi{{< br >}}
 Short moniker: jan Epiphany{{< br >}}
 Shorter moniker: Epiphany{{< br >}}
-Code 3.12: GCS/CM/CC !d s-: a? C+++ UL++++ P! L+++>+++++ E+++ W+++ w--- M-- PGP++ b++++ G-- e* h++
+Geek Code 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
 Description: My baller personal website{{< br >}}
-Web button: ![](/web-buttons/paltepuk.gif) (feel free to use){{< br >}}
+Web button: ![](/web-buttons/paltepuk.gif)
 
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
@@ -37,13 +37,13 @@ paltepuk - my house, home.
 /¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
 | Welcome, esteemed guests |
 \__________________________/
-                        \
-                         \
-                           ^__^
-                           (@@)\_______
-                           (__)\       )\/\
-                               ||----w |
-                               ||     ||
+        \
+         \
+           ^__^
+           (@@)\_______
+           (__)\       )\/\
+               ||----w |
+               ||     ||
 ```
 
 {{< command-line />}}

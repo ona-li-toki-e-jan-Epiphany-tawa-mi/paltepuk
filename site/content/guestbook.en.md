@@ -29,23 +29,4 @@ enabled.
 
 {{< br >}}
 
-### Alex @ May 4, 2025
-
-Amazing website! seeing personal blogs like this really make me want to start one myself
-
-### TommyGoM @ April 30, 2025
-
-hi
-
-### A passer by @ March 28, 2025
-
-A technological wonder of css. Recently i've found another wonder but, of html
-and determination ***[REDACTED - SUS LINK]***
-
-### rando @ March 22, 2025
-
-I like this website. Nice job.
-
-### #1 fan of you @ February 20, 2025
-
-HELLO! I am a big fan of your website, it's so cute! You seem like an awesome dude and I wish you the best!
+{{< guestbook-submissions >}}

@@ -25,6 +25,7 @@
  */
 
 // TODO add rate limiting.
+// TODO make redirect back to correct language.
 
 ////////////////////////////////////////////////////////////////////////////////
 // Configuration                                                              //

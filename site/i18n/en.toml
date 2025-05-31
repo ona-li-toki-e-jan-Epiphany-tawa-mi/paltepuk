@@ -1,0 +1,13 @@
+viewPageOnNetwork  = 'View page on'
+viewPageInLanguage = 'View page in'
+returnToPage       = 'Return to'
+
+javaScriptDisabled = 'JavaScript is disabled. Good job, keep it up!'
+
+guestbookName     = 'Name (optional, defaults to rando, 256 character limit)'
+guestbookWebsites = 'Website(s) (optional, comma-seperated list, 1024 character limit)'
+guestbookMessage  = 'Message (4096 character limit)'
+guestbookSubmit   = 'Submit'
+
+tidbitsWritten = 'Written'
+tidbitsAdded   = 'Added'

@@ -1,13 +1,17 @@
-languageCode = 'en-us'
-title        = 'paltepuk'
-baseURL      = 'https://paltepuk.xyz'
-
 # Disables RSS by default.
 disableKinds = [ 'rss' ]
 
+baseURL = 'https://paltepuk.xyz'
 [params]
 baseI2PURL = 'http://oytjumugnwsf4g72vemtamo72vfvgmp4lfsf6wmggcvba3qmcsta.b32.i2p'
 baseTorURL = 'http://4blcq4arxhbkc77tfrtmy4pptf55gjbhlj32rbfyskl672v2plsmjcyd.onion'
+
+[languages.en]
+title = "paltepuk"
+languageName = "English"
+[languages.tok]
+title = "paltepuk"
+languageName = "toki pona"
 
 # Extra RSS feeds output types for Tor and I2P, since the URLs need to be
 # different.

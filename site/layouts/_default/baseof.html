@@ -39,15 +39,22 @@ Params:
     <header>
       <h1>{{ .Title }}</h1>
       <p>
-        View page on:
+        {{ T "viewPageOnNetwork" }}:
         <a href="{{ urls.JoinPath .Site.Params.baseI2PURL .RelPermalink }}">I2P</a>,
         <a href="{{ urls.JoinPath .Site.Params.baseTorURL .RelPermalink }}">Tor</a>,
         <a href="{{ urls.JoinPath .Site.BaseURL .RelPermalink }}">Clearnet (Cloudflare!)</a>
       </p>
+      {{ if .IsTranslated }}
+      <p>
+        {{ T "viewPageInLanguage" }}:{{ range .Translations }}
+        <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
+      </p>
+      {{ end }}
       {{ if not .IsHome}}
-      <p><a href="/">Return to /</a></p>
+      <p><a href="{{ relLangURL "/" }}">{{ T "returnToPage"}} /</a></p>
       {{ if and (gt (len .Section) 0) (partial "filename.html" . | ne .Section) }}
-      <p><a href="../">Return to {{ .CurrentSection.RelPermalink }}</a></p>
+      <p><a href="../">{{ T "returnToPage"}} {{ .CurrentSection.RelPermalink }}</a></p>
       {{ end }}
       {{ end }}
       {{ block "header" . }}{{ end }}

@@ -1,0 +1,13 @@
+viewPageOnNetwork  = 'lukin e ni lon linluwi'
+viewPageInLanguage = 'lukin e ni lon toki'
+
+javaScriptDisabled = 'ilo JavaScript li pali ala. pona! o awen!'
+returnToPage       = 'tawa lipu'
+
+guestbookName     = 'nimi (li wile ala. sina pana e ala la ona li kama "rando". sina ken pana e nimi lili pi nanpa sama anu lili tawa 256)'
+guestbookWebsites = 'tawa tawa lipu linluwi (li wile ala. mute la o kipisi e ona kepeken ",". sina ken pana e nimi lili pi nanpa sama anu lili tawa 1024)'
+guestbookMessage  = 'toki (li wile. sina ken pana e nimi lili pi nanpa sama anu lili tawa 4096)'
+guestbookSubmit   = 'o pana'
+
+tidbitsWritten = 'sitelen lon tenpo'
+tidbitsAdded   = 'pana lon tenpo'
