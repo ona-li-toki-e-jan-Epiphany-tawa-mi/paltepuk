@@ -28,4 +28,4 @@ Pong.
 
 ## When is the Second Coming?
 
-{{< second-coming >}} anno Domini.
+October 10, 2083 anno Domini.

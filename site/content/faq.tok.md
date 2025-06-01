@@ -22,4 +22,4 @@ ona lon ilo nanpa.
 
 ## kama pi nanpa tu pi jan Isa li lon tenpo seme?
 
-{{< second-coming >}} anno Domini.
+t.p.s.s. 2083, t.m. 10, t.s. 10 lon tenpo pi jan sewi mi.
