@@ -1,7 +1,8 @@
 +++
 title               = 'Links'
-scrollingTitleCount = 7
 description         = 'to webrings/link lists/my profiles/etc.'
+scrollingTitleCount = 7
+weight              = 80
 +++
 
 If you ended up on this page from a webring, you'll have to [head to /](/) to

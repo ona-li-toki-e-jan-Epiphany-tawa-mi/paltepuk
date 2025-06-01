@@ -1,6 +1,7 @@
 +++
 title               = 'Guestbook'
 scrollingTitleCount = 4
+weight              = 40
 +++
 
 Rules:

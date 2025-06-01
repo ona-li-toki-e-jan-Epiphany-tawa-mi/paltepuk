@@ -2,6 +2,7 @@
 title               = 'tawa tawa lipu linluwi ante'
 description         = 'tawa tawa lipu linluwi ante'
 scrollingTitleCount = 2
+weight              = 80
 +++
 
 sina kama tan sike pi lipu linluwi la sina wile [tawa /](/) tawa ni: lukin e

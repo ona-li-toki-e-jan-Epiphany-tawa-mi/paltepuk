@@ -1,6 +1,7 @@
 +++
 title               = 'Featured Sites'
 scrollingTitleCount = 3
+weight              = 70
 +++
 
 A web directory for websites I've visited that I think are cool and/or have

@@ -1,6 +1,7 @@
 +++
 title               = 'Programming Resources Directory'
 scrollingTitleCount = 2
+weight              = 60
 +++
 
 I've compiled a list of programming resources here that I've found and think

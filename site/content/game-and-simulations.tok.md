@@ -2,6 +2,7 @@
 title               = 'musi tawa ilo lukin pi lipu linluwi'
 description         = 'musi tawa ilo lukin pi lipu linluwi'
 scrollingTitleCount = 1
+weight              = 10
 +++
 
 ## multiply-by-n - [/game-and-simulations/multiply-by-n](/game-and-simulations/multiply-by-n/)

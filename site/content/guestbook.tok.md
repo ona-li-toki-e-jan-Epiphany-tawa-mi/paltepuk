@@ -2,6 +2,7 @@
 title               = 'toki pi jan ante'
 description         = 'toki pi jan ante'
 scrollingTitleCount = 3
+weight              = 40
 +++
 
 o kute e ni:

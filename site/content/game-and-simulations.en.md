@@ -2,6 +2,7 @@
 title               = 'Games & Simulations'
 description         = 'for the browser'
 scrollingTitleCount = 2
+weight              = 10
 +++
 
 ## multiply-by-n - [/game-and-simulations/multiply-by-n](/game-and-simulations/multiply-by-n/)

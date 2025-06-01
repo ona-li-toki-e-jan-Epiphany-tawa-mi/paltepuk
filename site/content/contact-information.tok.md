@@ -2,6 +2,7 @@
 title               = 'nasin pi toki tawa mi'
 description         = 'nasin pi toki tawa mi'
 scrollingTitleCount = 2
+weight              = 90
 +++
 
 ## nimi PGP

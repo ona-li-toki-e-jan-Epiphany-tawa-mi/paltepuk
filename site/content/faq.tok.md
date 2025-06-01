@@ -2,6 +2,7 @@
 title               = 'nimi pi wile sona en sona pona'
 description         = 'nimi pi wile sona en sona pona'
 scrollingTitleCount = 2
+weight              = 50
 +++
 
 ## tawa tawa lipu linluwi ante li jo e tenpo tan seme?

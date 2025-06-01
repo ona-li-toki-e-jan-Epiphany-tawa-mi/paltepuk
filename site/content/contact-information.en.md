@@ -1,6 +1,7 @@
 +++
 title               = 'Contact Information'
 scrollingTitleCount = 3
+weight              = 90
 +++
 
 ## PGP Key
