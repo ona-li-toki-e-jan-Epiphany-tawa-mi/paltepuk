@@ -8,7 +8,7 @@ sina kama tan sike pi lipu linluwi la sina wile [tawa /](/) tawa ni: lukin e
 lipu suli open pi lipu linluwi mi.
 
 o sona e ni: mi pilin e ni: sina wile kepeken e ilo uMatrix
-[https://github.com/gorhill/uMatrix *(February 26, 2025)*](https://github.com/gorhill/uMatrix)
+[https://github.com/gorhill/uMatrix *(t.p.s.s. 2025, t.m. 2, t.s. 26)*](https://github.com/gorhill/uMatrix)
 tan ni: lipu linluwi mute li wile toki tawa lipu linluwi ante. ilo uMatrix li
 ken weka e ike ni.
 

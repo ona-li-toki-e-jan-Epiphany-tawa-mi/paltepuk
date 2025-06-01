@@ -12,10 +12,15 @@ description = 'lipu lawa mi pi ilo nanpa'
 
 **o sona e ni: ante toki lon toki pona li pini ala a!**
 
-{{< command-line  >}}nimi --pi-pu-ala{{< /command-line >}}
+{{< command-line  >}}nimi --pi-pu-ala --nanpa-tenpo{{< /command-line >}}
 
 linluwi: kulupu pi ilo nanpa{{< br >}}
 epiku: pona mute
+
+t.p.s.s.: tenpo pi sike suno{{< br >}}
+t.m.: tenpo mun{{< br >}}
+t.s.: tenpo suno{{< br >}}
+"t.p.s.s. 2020, t.m. 1, t.s. 1" li sama "tenpo 2020 pi sike suno, tenpo mun 1, tenpo suno 1"
 
 {{< command-line  >}}whoami{{< /command-line >}}
 
