@@ -3,9 +3,9 @@ title               = 'GnuCOBOL Resources'
 scrollingTitleCount = 3
 +++
 
-## GnuCOBOL
+## GnuCOBOL Homepage
 
-- Homepage (Clearnet) - [https://gnucobol.sourceforge.io *(March 4, 2025)*](https://gnucobol.sourceforge.io)
+- Clearnet - [https://gnucobol.sourceforge.io *(March 4, 2025)*](https://gnucobol.sourceforge.io)
 
 Honestly, COBOL isn't *that* bad. Give it a shot. *C'mon, all the cool kids are
 doing it.*

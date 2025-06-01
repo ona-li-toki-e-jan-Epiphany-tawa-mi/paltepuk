@@ -3,9 +3,9 @@ title               = 'Zig Resources'
 scrollingTitleCount = 3
 +++
 
-## Zig
+## Zig Homepage
 
-- Homepage (Clearnet) - [https://ziglang.org/ *(May 19, 2025)*](https://ziglang.org/)
+- Clearnet - [https://ziglang.org/ *(May 19, 2025)*](https://ziglang.org/)
 
 ## zig-exre
 

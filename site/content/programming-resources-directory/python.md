@@ -3,11 +3,11 @@ title               = 'Python Resources'
 scrollingTitleCount = 3
 +++
 
-## Python
+## Python Homepage
 
 *Warning(s): makes 3rd-party requests.*
 
-- Homepage (Clearnet) - [https://www.python.org *(March 4, 2025)*](https://www.python.org)
+- Clearnet - [https://www.python.org *(March 4, 2025)*](https://www.python.org)
 
 ## Python Documentation
 

@@ -3,9 +3,9 @@ title               = 'GNU APL Resources'
 scrollingTitleCount = 3
 +++
 
-## GNU APL
+## GNU APL Homepage
 
-- Homepage (Clearnet) - [https://www.gnu.org/software/apl *(March 4, 2025)*](https://www.gnu.org/software/apl)
+- Clearnet - [https://www.gnu.org/software/apl *(March 4, 2025)*](https://www.gnu.org/software/apl)
 
 APL is a pretty old language, so there's a number of different implementations
 from different vendors with different extensions available. I recommend not

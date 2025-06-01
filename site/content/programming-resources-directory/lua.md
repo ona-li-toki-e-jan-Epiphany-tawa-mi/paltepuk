@@ -3,9 +3,9 @@ title               = 'Lua Resources'
 scrollingTitleCount = 3
 +++
 
-## Lua
+## Lua Homepage
 
-- Homepage (Clearnet) - [https://www.lua.org *(March 4, 2025)*](https://www.lua.org)
+- Clearnet - [https://www.lua.org *(March 4, 2025)*](https://www.lua.org)
 
 ## Lua Reference Manual
 

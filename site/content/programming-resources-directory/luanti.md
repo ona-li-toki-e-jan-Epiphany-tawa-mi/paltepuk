@@ -3,9 +3,9 @@ title               = 'Luanti Resources'
 scrollingTitleCount = 3
 +++
 
-## Luanti
+## Luanti Homepage
 
-- Homepage (Clearnet) - [https://www.luanti.org *(March 4, 2025)*](https://www.luanti.org)
+- Clearnet - [https://www.luanti.org *(March 4, 2025)*](https://www.luanti.org)
 
 ## Luanti API Reference
 

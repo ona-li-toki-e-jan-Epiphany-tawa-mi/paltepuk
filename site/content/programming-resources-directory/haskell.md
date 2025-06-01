@@ -3,11 +3,11 @@ title               = 'Haskell Resources'
 scrollingTitleCount = 3
 +++
 
-## Haskell
+## Haskell Homepage
 
 *Warning(s): makes 3rd-party requests.*
 
-- Homepage (Clearnet) [https://www.haskell.org *(March 4, 2025)*](https://www.haskell.org/)
+- Clearnet - [https://www.haskell.org *(March 4, 2025)*](https://www.haskell.org/)
 
 ## Hoogle
 

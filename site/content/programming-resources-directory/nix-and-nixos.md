@@ -3,9 +3,9 @@ title               = 'Nix and NixOS Resources'
 scrollingTitleCount = 2
 +++
 
-## Nix/NixOS
+## Nix/NixOS Homepage
 
-- Homepage (Clearnet) - [https://nixos.org *(March 4, 2025)*](https://nixos.org)
+- Clearnet - [https://nixos.org *(March 4, 2025)*](https://nixos.org)
 
 ## man configuration.nix
 
