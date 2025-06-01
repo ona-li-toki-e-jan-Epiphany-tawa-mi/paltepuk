@@ -33,8 +33,8 @@ sina ken pana e nimi tawa mi kepeken lipu pi toki pi jan ante
 [/guestbook](/guestbook).
 
 toki pi jan ante li awen lon poki tawa ni: mi ken lukin e ona lon tenpo ante.  o
-pana e nimi sama **"O PANA ALA LON LIPU PI JAN ANTE"** lon toki sina tawa ni:
-ona li kama ala lon lipu linluwi.
+pana e nimi sama **"O PANA ALA LON LIPU PI TOKI PI JAN ANTE"** lon toki sina
+tawa ni: ona li kama ala lon lipu.
 
 o sona e ni: ken la toki sina li suli mute en jan ante li ken ala lukin e
 ona. ni la sina lon linluwi Clearnet la esun CloudFlare li ken lukin e toki sina
