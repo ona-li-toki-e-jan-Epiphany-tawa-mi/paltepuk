@@ -1,5 +1,5 @@
-viewPageOnNetwork  = 'lukin e ni lon linluwi'
-viewPageInLanguage = 'lukin e ni lon toki'
+viewPageOnNetwork  = 'lukin lon linluwi'
+viewPageInLanguage = 'lukin lon toki'
 
 javaScriptDisabled = 'ilo JavaScript li pali ala. pona! o awen!'
 returnToPage       = 'tawa lipu'

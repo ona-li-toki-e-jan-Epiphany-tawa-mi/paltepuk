@@ -1,5 +1,5 @@
-viewPageOnNetwork  = 'View page on'
-viewPageInLanguage = 'View page in'
+viewPageOnNetwork  = 'View on'
+viewPageInLanguage = 'View in'
 returnToPage       = 'Return to'
 
 javaScriptDisabled = 'JavaScript is disabled. Good job, keep it up!'
