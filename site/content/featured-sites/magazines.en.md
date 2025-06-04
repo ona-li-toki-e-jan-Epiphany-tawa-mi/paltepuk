@@ -1,6 +1,7 @@
 +++
 title               = 'Magazines'
 scrollingTitleCount = 4
+translationKey      = 'featured-sites-magazines'
 +++
 
 ### LOW <-- TECH MAGAZINE
@@ -17,18 +18,3 @@ The website and articles are primarily english, but there are translations for a
 couple languages.
 
 Their articles are availible for download, and they have RSS feeds!
-
-### lipu tenpo
-
-*Warning(s): makes 3rd-party requests.*
-
-- Clearnet - [https://liputenpo.org *(February 26, 2025)*](https://liputenpo.org/)
-
-lipu tenpo li lipu pona li lon toki pona li toki e ijo mute pi ma ali. sina toki
-e toki pona la mi pilin e ni: sina kama olin e lipu tenpo.
-
-ona li pana e lipu kepeken lipu PDF! epiku!
-
-ona li jo e lipu RSS!
-
-lipu tenpo li lukin nasa kepeken ala ilo JavaScript, taso ona li awen pali.
