@@ -24,9 +24,9 @@ t.s.: tenpo suno{{< br >}}
 
 {{< command-line  >}}whoami{{< /command-line >}}
 
-nimi: ona li toki e jan Epiphany tawa mi{{< br >}}
-nimi lili: jan Epiphany{{< br >}}
-nimi lili lili: Epiphany{{< br >}}
+nimi: ona li toki e jan Epipani tawa mi / ona li toki e jan Epiphany tawa mi{{< br >}}
+nimi lili: jan Epipani / jan Epiphany{{< br >}}
+nimi lili lili: Epipani / Epiphany{{< br >}}
 nimi Geek Code pi nanpa 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
