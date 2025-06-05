@@ -46,6 +46,13 @@ th, td {
     border-bottom: 1px solid greenyellow;
 }
 
+/* Allows setting text to use sitelen Sa as a font. */
+/* See https://github.com/jackhumbert/sitelen-sa    */
+@font-face {
+    font-family: sitelen-sa;
+    src: url(/sitelen-sa.otf);
+}
+
 /******************************************************************************/
 /* Content Layout                                                             */
 /******************************************************************************/

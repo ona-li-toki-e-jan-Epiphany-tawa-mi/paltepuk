@@ -1,6 +1,6 @@
 +++
-title               = 'nimi pi wile sona en sona pona'
-description         = 'nimi pi wile sona en sona pona'
+title               = 'sona pona en wile sona'
+description         = ': sona pona en wile sona en'
 scrollingTitleCount = 2
 weight              = 50
 +++
@@ -11,7 +11,7 @@ mi ken ala lawa e lipu linluwi ante. ona li ken ante lon tenpo ale. ni la mi
 pana e tenpo lon tawa tawa ona tawa ni: sina ken kama sona e ni: tenpo seme la
 mi pana e tawa li lukin e lipu linluwi lon ona.
 
-## lipu linluwi Paltepuk li lukin pona ala lon ilo nanpa luka mi tan seme?
+## lipu Paltepuk li lukin pona ala lon ilo nanpa luka mi tan seme?
 
 ike. mi pali e ona tawa ilo nanpa tawa ala ilo nanpa luka. sina wile lukin e
 ona lon ilo nanpa.
@@ -22,4 +22,4 @@ ona lon ilo nanpa.
 
 ## kama pi nanpa tu pi jan Isa li lon tenpo seme?
 
-t.p.s.s. 2083, t.m. 10, t.s. 10 lon tenpo pi jan sewi mi.
+tenpo pi sike suno 2083, tenpo mun 10, tenpo suno 10 lon tenpo pi jan sewi mi.

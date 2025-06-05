@@ -26,15 +26,15 @@ Single params:
 {{ end }}
 
 {{ define "main" }}
-<p>[epiphany@paltepuk:~{{ .Path }}]$ first='true'; for file in *; do [ 'true' != "$first" ] && echo; echo "$file:"; head -c 100 "$file" | awk '{print "&ensp;&ensp;&ensp;&ensp;"$0}'; first='false'; done</p>
+<p class="sitelen-sa-ala">[epiphany@paltepuk:~{{ .Path }}]$ first='true'; for file in *; do [ 'true' != "$first" ] && echo; echo "$file:"; head -c 100 "$file" | awk '{print "&ensp;&ensp;&ensp;&ensp;"$0}'; first='false'; done</p>
 <br>
 {{ range.Pages.ByDate.Reverse }}
 <p><a href="{{ .RelPermalink }}">{{ partial "filename.html" . }}</a>:</p>
 <p>&ensp;&ensp;&ensp;&ensp;{{ .Plain | truncate 100 }}</p>
 <br>
 {{ else }}
-<p>head: cannot open '*' for reading: No such file or directory</p>
+<p class="sitelen-sa-ala">head: cannot open '*' for reading: No such file or directory</p>
 <br>
 {{ end }}
-<p>[epiphany@paltepuk:~{{ .Path }}]$ <span class="blink">■</span></p>
+<p class="sitelen-sa-ala">[epiphany@paltepuk:~{{ .Path }}]$ <span class="blink">■</span></p>
 {{ end }}

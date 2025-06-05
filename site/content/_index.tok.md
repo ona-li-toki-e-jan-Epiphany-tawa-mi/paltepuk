@@ -4,30 +4,26 @@ scrollingTitleCount = 5
 
 [[extraLinks]]
 path        = '/cgit/paltepuk.git/about/'
-description = 'lipu lawa pi lipu linluwi Paltepuk'
+description = ': lipu lawa pi lipu linluwi Paltepuk'
 [[extraLinks]]
 path        = '/cgit/'
-description = 'lipu lawa mi pi ilo nanpa'
+description = ': lipu lawa mi pi ilo nanpa'
 +++
 
 **o sona e ni: ante toki lon toki pona li pini ala a!**
 
-{{< command-line  >}}nimi --pi-pu-ala --nanpa-tenpo{{< /command-line >}}
+{{< command-line  >}}nimi --pi-pu-ala{{< /command-line >}}
 
 linluwi: kulupu pi ilo nanpa{{< br >}}
 epiku: pona mute
 
-t.p.s.s.: tenpo pi sike suno{{< br >}}
-t.m.: tenpo mun{{< br >}}
-t.s.: tenpo suno{{< br >}}
-"t.p.s.s. 2020, t.m. 1, t.s. 1" li sama "tenpo 2020 pi sike suno, tenpo mun 1, tenpo suno 1"
-
 {{< command-line  >}}whoami{{< /command-line >}}
 
-nimi: ona li toki e jan Epipani tawa mi / ona li toki e jan Epiphany tawa mi{{< br >}}
-nimi lili: jan Epipani / jan Epiphany{{< br >}}
-nimi lili lili: Epipani / Epiphany{{< br >}}
-nimi Geek Code pi nanpa 3.12: {{< geekcode >}}
+nimi: ona li toki e jan [en pana ilo pali awen nasa ijo] tawa mi{{< br >}}
+nimi lili: [en pana ilo pali awen nasa ijo]{{< br >}}
+nimi lili lili: [en pana ilo pali awen nasa ijo]{{< br >}}
+sin la nimi [en pana ilo pali awen nasa ijo] li ken Epipani anu [{{< sitelen-sa-ala >}}EPIPHANY{{< /sitelen-sa-ala >}}]{{< br >}}
+nimi [{{< sitelen-sa-ala >}}GEEK{{< /sitelen-sa-ala >}}] [{{< sitelen-sa-ala >}}CODE{{< /sitelen-sa-ala >}}] pi nanpa 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
@@ -36,9 +32,9 @@ sitelen: ![](/web-buttons/paltepuk.gif)
 
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
-pal - tomo, tep - jan, uk - mi.{{< br >}}
-paltep - tomo jan.{{< br >}}
-paltepuk - tomo mi.
+pal: tomo, tep: jan, uk: mi.{{< br >}}
+paltep: tomo jan.{{< br >}}
+paltepuk:  tomo mi.
 
 {{< command-line  >}}cowsaypl -- +p jan suli kama o kama pona{{< /command-line >}}
 

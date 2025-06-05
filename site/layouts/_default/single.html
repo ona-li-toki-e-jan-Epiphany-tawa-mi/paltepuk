@@ -18,9 +18,9 @@ with paltepuk. If not, see <https://www.gnu.org/licenses/>.
 
 {{ define "main" }}
 {{ $section := .CurrentSection.Path }}{{ if eq "/" $section }}{{ $section = "" }}{{ end }}
-<p>[epiphany@paltepuk:~{{ $section }}]$ cat '{{ partial "filename.html" . }}'</p>
+<p class="sitelen-sa-ala">[epiphany@paltepuk:~{{ $section }}]$ cat '{{ partial "filename.html" . }}'</p>
 <br>
 {{ .Content }}
 <br>
-<p>[epiphany@paltepuk:~{{ $section }}]$ <span class="blink">■</span></p>
+<p class="sitelen-sa-ala">[epiphany@paltepuk:~{{ $section }}]$ <span class="blink">■</span></p>
 {{ end }}

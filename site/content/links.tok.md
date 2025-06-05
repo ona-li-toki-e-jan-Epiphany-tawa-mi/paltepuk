@@ -1,17 +1,20 @@
 +++
 title               = 'tawa tawa lipu linluwi ante'
-description         = 'tawa tawa lipu linluwi ante'
+description         = ': tawa tawa lipu linluwi ante'
 scrollingTitleCount = 2
 weight              = 80
 +++
 
-sina kama tan sike pi lipu linluwi la sina wile [tawa /](/) tawa ni: lukin e
-lipu suli open pi lipu linluwi mi.
+sina kama tan sike pi lipu linluwi la sina wile
+[{{< sitelen-sa >}}tawa lipu{{</sitelen-sa >}} /](/) tawa ni: lukin e lipu suli
+open pi lipu linluwi mi.
 
-o sona e ni: mi pilin e ni: sina wile kepeken e ilo uMatrix
-[https://github.com/gorhill/uMatrix *(t.p.s.s. 2025, t.m. 2, t.s. 26)*](https://github.com/gorhill/uMatrix)
-tan ni: lipu linluwi mute li wile toki tawa lipu linluwi ante. ilo uMatrix li
-ken weka e ike ni.
+o sona e ni: mi pilin e ni: sina wile kepeken e ilo
+[{{< sitelen-sa-ala >}}uMatrix{{< /sitelen-sa-ala >}}]
+[https://github.com/gorhill/uMatrix](https://github.com/gorhill/uMatrix)***(tenpo
+pi 2025 sike suno, tenpo mun 2, tenpo suno 26)***
+tan ni: lipu linluwi mute li wile toki tawa lipu linluwi ante. ilo
+[{{< sitelen-sa-ala >}}uMatrix{{< /sitelen-sa-ala >}}] li ken weka e ike ni.
 
 ---
 
@@ -27,14 +30,14 @@ ken weka e ike ni.
 
 ## lipu pi tawa mute tawa lipu linluwi
 
-### Listed @ [![LinkLane.net](/web-buttons/linklane.net.webp)](https://linklane.net)
+### {{< sitelen-sa-ala >}}Listed @{{< /sitelen-sa-ala >}} [![LinkLane.net](/web-buttons/linklane.net.webp)](https://linklane.net)
 
-### The Big List of Personal Websites - [http://biglist.terraaeon.com](http://biglist.terraaeon.com)
+### {{< sitelen-sa-ala >}}The Big List of Personal Websites -{{< /sitelen-sa-ala >}} [http://biglist.terraaeon.com](http://biglist.terraaeon.com)
 
 ---
 
 ## lipu mi lon lipu linluwi ante
 
-### GitHub - [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
+### {{< sitelen-sa-ala >}}GitHub -{{< /sitelen-sa-ala >}} [https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi](https://github.com/ona-li-toki-e-jan-Epiphany-tawa-mi)
 
-### Luanti ContentDB - [https://content.luanti.org/users/ona-li-toki-e-jan-Epiphany-tawa-mi](https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi)
+### {{< sitelen-sa-ala >}}Luanti ContentDB -{{< /sitelen-sa-ala >}} [https://content.luanti.org/users/ona-li-toki-e-jan-Epiphany-tawa-mi](https://content.minetest.net/users/ona-li-toki-e-jan-Epiphany-tawa-mi)
