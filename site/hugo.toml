@@ -12,9 +12,6 @@ languageName = "English"
 [languages.tok]
 title = "paltepuk"
 languageName = "toki pona"
-[languages.xra]
-title = "παλτεπγκ"
-languageName = "!χραα"
 
 # Extra RSS feeds output types for Tor and I2P, since the URLs need to be
 # different.
