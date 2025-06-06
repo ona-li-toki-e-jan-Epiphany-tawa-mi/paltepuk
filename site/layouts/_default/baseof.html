@@ -29,22 +29,15 @@ Params:
 <html lang="{{ .Site.Language }}">
   <head>
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-    {{ $style := resources.Get "style.css" | resources.Minify   }}
+    {{ $style := resources.Get "style.css" | resources.Minify }}
     <link rel='stylesheet' type='text/css' href='{{ $style.RelPermalink }}'>
+    {{ if eq "tok" .Language.Lang }}
+    {{ $style := resources.Get "toki-pona.css" | resources.Minify }}
+    <link rel='stylesheet' type='text/css' href='{{ $style.RelPermalink }}'>
+    {{ end }}
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    {{ if eq "tok" .Language.Lang }}
-    <style>
-      body, .sitelen-sa {
-          font-family: sitelen-sa;
-          font-size:   140%;
-      }
-      a, pre, .sitelen-sa-ala {
-          font-family: monospace;
-      }
-    </style>
-    {{ end }}
   </head>
   <body>
     <header>
@@ -58,10 +51,7 @@ Params:
       {{ if .IsTranslated }}
       <p>
         {{ T "viewPageInLanguage" }}:{{ range .Translations }}
-        <a
-          {{ if eq "tok" .Language.Lang }}style="font-family:sitelen-sa;font-size:140%"{{ end }}
-          href="{{ .RelPermalink }}"
-        >{{ .Language.LanguageName }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
         {{ end }}
       </p>
       {{ end }}
