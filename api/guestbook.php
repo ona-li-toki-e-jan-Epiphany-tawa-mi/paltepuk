@@ -25,22 +25,47 @@
  */
 
 // TODO add rate limiting.
-// TODO make redirect back to correct language.
 
 ////////////////////////////////////////////////////////////////////////////////
 // Configuration                                                              //
 ////////////////////////////////////////////////////////////////////////////////
 
-// API storage directory.
-// Set to current directory when debugging with 'php -S <url>'.
+// API storage directory. Set to current directory when debugging with:
+//   php -S <url>
 $storage = 'cli-server' === php_sapi_name() ? '' : '/var/lib/paltepuk-api/';
-
 // Where to store guestbook submissions.
-$submissions_directory = "${storage}guestbook/";
+$submissions_directory = "{$storage}guestbook/";
 
-// Browser redirect settings.
 $redirect_time_s = 5;
-$redirect_to     = "/guestbook";
+
+$toki_pona_css = "/toki-pona.min.css";
+
+////////////////////////////////////////////////////////////////////////////////
+// i18n                                                                       //
+////////////////////////////////////////////////////////////////////////////////
+
+$en_i18n_map = [
+    'error.already_submitted' => 'ERROR: guestbook submission already submitted',
+    'error.no_message'        => 'ERROR: no message supplied in guestbook submission',
+    'error.save_fail'         => 'ERROR: could not save guestbook submission',
+    'redirect.message'        => 'Redirecting to <a href="%s">%s</a> in %d second(s)',
+    'redirect.to'             => '/guestbook',
+    'save_success'            => 'Saved guestbook submission successfully',
+];
+
+$tok_i18n_map = [
+    'error.already_submitted' => 'ike li kama: li kama jo e toki sina sama lon tenpo pini',
+    'error.no_message'        => 'ike li kama: toki sina li ala anu lon ala',
+    'error.save_fail'         => 'ike li kama: li ken ala poki e toki sina',
+    'redirect.message'        => 'ilo lukin pi lipu linluwi li tawa <a href="%s">%s</a> lon tenpo Sekon %d',
+    'redirect.to'             => '/tok/guestbook',
+    'save_success'            => 'li poki pona e toki sina',
+];
+
+$language_i18n_map = [
+    'en'  => $en_i18n_map,
+    'tok' => $tok_i18n_map,
+];
 
 ////////////////////////////////////////////////////////////////////////////////
 // Utilities                                                                  //
@@ -78,20 +103,29 @@ if ('POST' !== $_SERVER['REQUEST_METHOD']) {
     goto lfinish;
 }
 
+// Language selection.
+$language = get_post('language', 3);
+if (!isset($language_i18n_map[$language])) {
+    http_response_code(400); // Bad Request.
+    $_response = "ERROR: unknown language code '$language'";
+    goto lfinish;
+}
+$i18n = $language_i18n_map[$language];
+
 // Form data.
-$name = get_post('name', 256);
+$name     = get_post('name', 256);
 if (0 === strlen($name)) $name = 'rando';
 $websites = get_post('websites', 1024);
 $message  = get_post('message',  4096);
 if (0 === strlen($message)) {
     http_response_code(400); // Bad Request.
-    $_response = 'ERROR: no message supplied in guestbook submission';
+    $_response = $i18n['error.no_message'];
     goto lfinish;
 }
 
 if (!file_exists($submissions_directory) && !mkdir($submissions_directory)) {
     http_response_code(500); // Internal Server Error.
-    $_response = 'ERROR: could not save guestbook submission';
+    $_response = $i18n['error.save_fail'];
     goto lfinish;
 }
 
@@ -103,26 +137,41 @@ $submission_path  = $submissions_directory.md5($submission);
 if (!file_exists($submission_path)) {
     if (false === file_put_contents($submission_path, $submission)) {
         http_response_code(500); // Internal Server Error.
-        $_response = 'ERROR: could not save guestbook submission';
+        $_response = $i18n['error.save_fail'];
         goto lfinish;
     }
 } else {
     http_response_code(429); // Too Many Requests.
-    $_response = 'ERROR: guestbook submission already exists';
+    $_response = $i18n['error.already_submitted'];
     goto lfinish;
 }
 
 http_response_code(201); // Created.
-$_response = 'Saved guestbook submission successfully';
+$_response = $i18n['save_success'];
 
-lfinish: ?>
+lfinish:
+$redirect_to = $i18n['redirect.to'];
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang=<?php echo ("\"$language\"");?>>
   <head>
     <meta http-equiv="refresh" content=<?php echo("\"$redirect_time_s;url=$redirect_to\""); ?> />
+    <?php if ("tok" === $language) {
+        echo("<link rel=\"stylesheet\" type=\"text/css\" href=\"$toki_pona_css\">\n");
+    } ?>
   </head>
   <body>
     <p><?php echo($_response); ?></p>
-    <p><?php echo("Redirecting to <a href=\"$redirect_to\">$redirect_to</a> in $redirect_time_s second(s)"); ?></p>
+    <p><?php
+        /**
+         * @psalm-suppress PossiblyFalseArgument - false positive.
+         * @psalm-suppress PossiblyNullArgument  - false positive.
+         */
+        echo(
+            mb_ereg_replace('%d', "$redirect_time_s",
+            mb_ereg_replace('%s', $redirect_to,
+            $i18n['redirect.message']
+        )));
+    ?></p>
   </body>
 </html>
