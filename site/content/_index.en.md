@@ -4,10 +4,10 @@ scrollingTitleCount = 5
 
 [[extraLinks]]
 path        = '/cgit/paltepuk.git/about/'
-description = 'site source code'
+description = ' - site source code'
 [[extraLinks]]
 path        = '/cgit/'
-description = 'my software projects'
+description = ' - my software projects'
 +++
 
 {{< command-line  >}}whoami{{< /command-line >}}

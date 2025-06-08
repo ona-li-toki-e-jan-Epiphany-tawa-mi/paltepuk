@@ -1,7 +1,7 @@
 +++
 title               = 'FAQ'
 scrollingTitleCount = 11
-description         = 'why do the links have dates???'
+description         = ' - why do the links have dates???'
 weight              = 50
 +++
 

@@ -30,12 +30,12 @@ Single params:
 <ul>
   {{ if .Param "extraLinks" }}{{range .Params.extraLinks }}
   <li>
-    <a href="{{ .path }}">{{ .path }}</a>{{ if .description }} - {{ .description }}{{ end }}
+    <a href="{{ .path }}">{{ .path }}</a>{{ if .description }}{{ .description }}{{ end }}
   </li>
   {{ end }}{{ end }}
   {{ range.Pages.ByWeight }}
   <li>
-    <a href="{{ .RelPermalink }}">{{ .RelPermalink }}</a>{{ if .Param "description" }} - {{ .Params.description }}{{ end }}
+    <a href="{{ .RelPermalink }}">{{ .RelPermalink }}</a>{{ if .Param "description" }}{{ .Params.description }}{{ end }}
   </li>
   {{- end }}
 </ul>

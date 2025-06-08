@@ -1,6 +1,6 @@
 +++
 title               = 'Games & Simulations'
-description         = 'for the browser'
+description         = ' - for the browser'
 scrollingTitleCount = 2
 weight              = 10
 +++

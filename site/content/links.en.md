@@ -1,6 +1,6 @@
 +++
 title               = 'Links'
-description         = 'to webrings/link lists/my profiles/etc.'
+description         = ' - to webrings/link lists/my profiles/etc.'
 scrollingTitleCount = 7
 weight              = 80
 +++
