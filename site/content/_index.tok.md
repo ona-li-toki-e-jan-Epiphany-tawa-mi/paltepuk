@@ -10,8 +10,6 @@ path        = '/cgit/'
 description = ': lipu lawa mi pi ilo nanpa'
 +++
 
-**o sona e ni: ante toki lon toki pona li pini ala a!**
-
 {{< command-line  >}}nimi --pi-pu-ala{{< /command-line >}}
 
 linluwi: kulupu pi ilo nanpa{{< br >}}
