@@ -1,0 +1,7 @@
+{{ $date := . }}
+
+{{ if eq "tok" site.Language.Lang }}
+{{ time.Format "tenpo 2006 pi sike suno, tenpo mun 1, tenpo suno 2" $date }}
+{{ else }}
+{{ time.Format ":date_long" $date }}
+{{ end }}

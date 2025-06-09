@@ -9,5 +9,5 @@ guestbookWebsites = 'tawa tawa lipu linluwi (li wile ala. mute la o kipisi e ona
 guestbookMessage  = 'toki (li wile. sina ken pana e nimi lili pi nanpa sama anu lili tawa 4096)'
 guestbookSubmit   = 'o pana'
 
-tidbitsWritten = 'sitelen lon tenpo'
-tidbitsAdded   = 'pana lon tenpo'
+tidbitsWritten = 'sitelen lon'
+tidbitsAdded   = 'pana lon'
