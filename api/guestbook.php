@@ -67,6 +67,10 @@ $language_i18n_map = [
     'tok' => $tok_i18n_map,
 ];
 
+// Default to english.
+$language = 'en';
+$i18n     = $en_i18n_map;
+
 ////////////////////////////////////////////////////////////////////////////////
 // Utilities                                                                  //
 ////////////////////////////////////////////////////////////////////////////////
@@ -94,12 +98,12 @@ function generate_kv_string(string $key, string $value): string {
 ////////////////////////////////////////////////////////////////////////////////
 
 // Response to display to client.
-$_response = '';
+$response = '';
 
 /** @psalm-suppress PossiblyUndefinedArrayOffset - false positive. */
 if ('POST' !== $_SERVER['REQUEST_METHOD']) {
     http_response_code(405);
-    $_response = 'ERROR: 405 Method Not Allowed';
+    $response = 'ERROR: 405 Method Not Allowed';
     goto lfinish;
 }
 
@@ -107,7 +111,7 @@ if ('POST' !== $_SERVER['REQUEST_METHOD']) {
 $language = get_post('language', 3);
 if (!isset($language_i18n_map[$language])) {
     http_response_code(400); // Bad Request.
-    $_response = "ERROR: unknown language code '$language'";
+    $response = "ERROR: unknown language code '$language'";
     goto lfinish;
 }
 $i18n = $language_i18n_map[$language];
@@ -119,13 +123,13 @@ $websites = get_post('websites', 1024);
 $message  = get_post('message',  4096);
 if (0 === strlen($message)) {
     http_response_code(400); // Bad Request.
-    $_response = $i18n['error.no_message'];
+    $response = $i18n['error.no_message'];
     goto lfinish;
 }
 
 if (!file_exists($submissions_directory) && !mkdir($submissions_directory)) {
     http_response_code(500); // Internal Server Error.
-    $_response = $i18n['error.save_fail'];
+    $response = $i18n['error.save_fail'];
     goto lfinish;
 }
 
@@ -137,17 +141,17 @@ $submission_path  = $submissions_directory.md5($submission);
 if (!file_exists($submission_path)) {
     if (false === file_put_contents($submission_path, $submission)) {
         http_response_code(500); // Internal Server Error.
-        $_response = $i18n['error.save_fail'];
+        $response = $i18n['error.save_fail'];
         goto lfinish;
     }
 } else {
     http_response_code(429); // Too Many Requests.
-    $_response = $i18n['error.already_submitted'];
+    $response = $i18n['error.already_submitted'];
     goto lfinish;
 }
 
 http_response_code(201); // Created.
-$_response = $i18n['save_success'];
+$response = $i18n['save_success'];
 
 lfinish:
 $redirect_to = $i18n['redirect.to'];
@@ -161,7 +165,7 @@ $redirect_to = $i18n['redirect.to'];
     } ?>
   </head>
   <body>
-    <p><?php echo($_response); ?></p>
+    <p><?php echo($response); ?></p>
     <p><?php
         /**
          * @psalm-suppress PossiblyFalseArgument - false positive.

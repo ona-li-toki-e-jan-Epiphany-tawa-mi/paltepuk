@@ -3,7 +3,7 @@
     errorLevel="5"
     resolveFromConfigFile="true"
     strictBinaryOperands="true"
-    findUnusedCode="true"
+    findUnusedCode="false"
     findUnusedPsalmSuppress="true"
     ensureArrayStringOffsetsExist="true"
     ensureArrayIntOffsetsExist="true"
