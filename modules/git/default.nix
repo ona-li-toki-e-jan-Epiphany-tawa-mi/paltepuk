@@ -87,6 +87,8 @@ let
 
     (standard "multiply-by-n" sections.simulation
       "Cool animation made by drawing lines between moving points on a circle")
+    (standard "hennaen" sections.simulation
+      "Simple animation from random randomly colored circles")
 
     (standard "BASICfuck" sections.programmingLanguage
       "Brainfuck derivative for 6502 machines")
