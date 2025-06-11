@@ -81,6 +81,10 @@ in {
           "302 $scheme://$host/game-and-simulations/multiply-by-n/";
         "/game-and-simulations/multiply-by-n/".alias =
           "${callPackage ../packages/multiply-by-n.nix { }}/";
+        "/game-and-simulations/hennaen".return =
+          "302 $scheme://$host/game-and-simulations/hennaen/";
+        "/game-and-simulations/hennaen/".alias =
+          "${callPackage ../packages/hennaen.nix { }}/";
 
         # Programming resources.
         "/programming-resources-directory/lua/documentation".return =
