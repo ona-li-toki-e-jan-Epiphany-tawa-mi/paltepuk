@@ -38,3 +38,45 @@ your setup.
 ```
 git -c http.proxy=socks5h://127.0.0.1:9050 clone <url>
 ```
+
+---
+
+---
+
+---
+
+o kama pona lon lipu mi a pi ilo Git. sina ken lukin e lipu lawa mi (en ijo ante
+sama) lon ni!
+
+o kama sona e ni: lon lipu About pi kama sona lon poki pi lipu lawa la sitelen
+li lon ala tan ni: ona li pali ala lon ilo Cgit (mi pilin). ike!
+
+## kama jo (kepeken ilo Git)
+
+sina ken kama jo e poki pi lipu lawa li ken kepeken e ona kepeken nasin pi lipu
+LICENSE pi nasin kepeken pona.
+
+taso, sina lon linluwi Tor anu linluwi I2P la sina lon ala linluwi Clearnet la
+sina ken ala kepeken e nimi lawa `git clone <URL>`.
+
+kama jo li ike li pini ala pali la o pana e `--depth 1` lon pini pi nimi
+lawa. ni la ona li kama jo ala e poki ale li kama jo e poki wile taso. ni la ken
+la ona li pali pona. ike tan ilo HTTP.
+
+### linluwi I2P
+
+linluwi I2P li kepeken e ilo HTTP lon lon 127.0.0.1:4444 la o kepeken e nimi
+lawa ni tawa kama jo. ni ala la sina wile ante e nimi lawa.
+
+```
+git -c http.proxy=http://127.0.0.1:4444 clone <tawa URL tawa poki pi lipu lawa>
+```
+
+### linluwi Tor
+
+linluwi I2P li kepeken e ilo SOCKSv5 lon lon 127.0.0.1:9050 la o kepeken e nimi
+lawa ni tawa kama jo. ni ala la sina wile ante e nimi lawa.
+
+```
+git -c http.proxy=socks5h://127.0.0.1:9050 clone <tawa URL tawa poki pi lipu lawa>
+```
