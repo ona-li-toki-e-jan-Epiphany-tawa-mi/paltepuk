@@ -50,8 +50,8 @@ Params:
       </p>
       {{ if .IsTranslated }}
       <p>
-        {{ T "viewPageInLanguage" }}:{{ range .Translations }}
-        <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+        {{ T "viewPageInLanguage" }}:{{ range $i, $translation := .Translations }}
+        <a href="{{ .RelPermalink }}">{{ $translation.Language.LanguageName }}</a>{{ if ne (add $i 1) (len $.Translations) }},{{ end }}
         {{ end }}
       </p>
       {{ end }}
