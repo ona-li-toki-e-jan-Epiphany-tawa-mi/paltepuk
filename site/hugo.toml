@@ -11,7 +11,10 @@ title = "paltepuk"
 languageName = "English"
 [languages.tok]
 title = "paltepuk"
-languageName = "toki pona"
+languageName = "toki pona (Lasin)"
+[languages.tok-Stsa]
+title = "paltepuk"
+languageName = "toki pona (Sa)"
 
 # Extra RSS feeds output types for Tor and I2P, since the URLs need to be
 # different.

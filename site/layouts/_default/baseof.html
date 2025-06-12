@@ -31,8 +31,8 @@ Params:
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
     {{ $style := resources.Get "style.css" | resources.Minify }}
     <link rel='stylesheet' type='text/css' href='{{ $style.RelPermalink }}'>
-    {{ if eq "tok" .Language.Lang }}
-    {{ $style := resources.Get "toki-pona.css" | resources.Minify }}
+    {{ if eq "tok-stsa" .Language.Lang }}
+    {{ $style := resources.Get "sitelen-sa.css" | resources.Minify }}
     <link rel='stylesheet' type='text/css' href='{{ $style.RelPermalink }}'>
     {{ end }}
     <link rel="icon" href="/favicon.ico">

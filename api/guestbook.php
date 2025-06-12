@@ -38,7 +38,7 @@ $submissions_directory = "{$storage}guestbook/";
 
 $redirect_time_s = 5;
 
-$toki_pona_css = "/toki-pona.min.css";
+$sitelen_sa_css = "/sitelen-sa.min.css";
 
 ////////////////////////////////////////////////////////////////////////////////
 // i18n                                                                       //
@@ -62,9 +62,19 @@ $tok_i18n_map = [
     'save_success'            => 'li poki pona e toki sina',
 ];
 
+$tok_Stsa_i18n_map = [
+    'error.already_submitted' => 'ike li kama: li kama jo e toki sina sama lon tenpo pini',
+    'error.no_message'        => 'ike li kama: toki sina li ala anu lon ala',
+    'error.save_fail'         => 'ike li kama: li ken ala poki e toki sina',
+    'redirect.message'        => 'ilo lukin pi lipu linluwi li tawa <a href="%s">%s</a> lon tenpo Sekon %d',
+    'redirect.to'             => '/tok-stsa/guestbook',
+    'save_success'            => 'li poki pona e toki sina',
+];
+
 $language_i18n_map = [
-    'en'  => $en_i18n_map,
-    'tok' => $tok_i18n_map,
+    'en'       => $en_i18n_map,
+    'tok'      => $tok_i18n_map,
+    'tok-stsa' => $tok_Stsa_i18n_map,
 ];
 
 // Default to english.
@@ -108,7 +118,7 @@ if ('POST' !== $_SERVER['REQUEST_METHOD']) {
 }
 
 // Language selection.
-$language = get_post('language', 3);
+$language = get_post('language', 10);
 if (!isset($language_i18n_map[$language])) {
     http_response_code(400); // Bad Request.
     $response = "ERROR: unknown language code '$language'";
@@ -160,8 +170,8 @@ $redirect_to = $i18n['redirect.to'];
 <html lang=<?php echo ("\"$language\"");?>>
   <head>
     <meta http-equiv="refresh" content=<?php echo("\"$redirect_time_s;url=$redirect_to\""); ?> />
-    <?php if ("tok" === $language) {
-        echo("<link rel=\"stylesheet\" type=\"text/css\" href=\"$toki_pona_css\">\n");
+    <?php if ("tok-stsa" === $language) {
+        echo("<link rel=\"stylesheet\" type=\"text/css\" href=\"$sitelen_sa_css\">\n");
     } ?>
   </head>
   <body>

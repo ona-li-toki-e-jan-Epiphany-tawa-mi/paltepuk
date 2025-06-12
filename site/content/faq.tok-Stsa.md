@@ -1,6 +1,6 @@
 +++
 title               = 'sona pona en wile sona'
-description         = ' - sona pona en wile sona'
+description         = ': sona pona en wile sona'
 scrollingTitleCount = 2
 weight              = 50
 +++

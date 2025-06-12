@@ -1,6 +1,8 @@
 {{ $date := . }}
 
 {{ if eq "tok" site.Language.Lang }}
+{{ time.Format "t.p.s.s. 2006, t.m. 1, t.s. 2" $date }}
+{{ else if eq "tok-stsa" site.Language.Lang }}
 {{ time.Format "tenpo 2006 pi sike suno, tenpo mun 1, tenpo suno 2" $date }}
 {{ else }}
 {{ time.Format ":date_long" $date }}
