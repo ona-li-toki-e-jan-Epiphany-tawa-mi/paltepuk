@@ -22,10 +22,10 @@ t.s.: tenpo suno{{< br >}}
 
 {{< command-line  >}}whoami{{< /command-line >}}
 
-nimi: ona li toki e jan Epiphany tawa mi{{< br >}}
-nimi lili: jan Epiphany{{< br >}}
-nimi lili lili: Epiphany{{< br >}}
-sin la nimi Epiphany li ken Epepani. sitelen pona la ona li "en pana e pali awen nasa ijo".{{< br >}}
+nimi: ona li toki e jan Epepani tawa mi{{< br >}}
+nimi lili: jan Epepani{{< br >}}
+nimi lili lili: Epepani{{< br >}}
+sin la nimi Epepani li ken Epiphany. sitelen pona la ona li "en pana e pali awen nasa ijo".{{< br >}}
 nimi Geek Code pi nanpa 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
