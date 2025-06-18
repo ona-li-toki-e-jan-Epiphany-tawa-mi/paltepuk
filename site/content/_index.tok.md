@@ -25,7 +25,7 @@ t.s.: tenpo suno{{< br >}}
 nimi: ona li toki e jan Epiphany tawa mi{{< br >}}
 nimi lili: jan Epiphany{{< br >}}
 nimi lili lili: Epiphany{{< br >}}
-sin la nimi Epiphany li ken Epipani. sitelen pona la ona li "en pana ilo awen nasa ijo".{{< br >}}
+sin la nimi Epiphany li ken Epipani. sitelen pona la ona li "en pana ilo pali awen nasa ijo".{{< br >}}
 nimi Geek Code pi nanpa 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
