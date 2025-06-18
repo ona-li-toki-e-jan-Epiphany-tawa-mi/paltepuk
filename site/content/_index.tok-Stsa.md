@@ -17,10 +17,10 @@ epiku: pona mute
 
 {{< command-line  >}}whoami{{< /command-line >}}
 
-nimi: ona li toki e jan [en pana ilo pali awen nasa ijo] tawa mi{{< br >}}
-nimi lili: [en pana ilo pali awen nasa ijo]{{< br >}}
-nimi lili lili: [en pana ilo pali awen nasa ijo]{{< br >}}
-sin la nimi [en pana ilo pali awen nasa ijo] li ken Epipani anu [{{< sitelen-sa-ala >}}EPIPHANY{{< /sitelen-sa-ala >}}]{{< br >}}
+nimi: ona li toki e jan [en pana e pali awen nasa ijo] tawa mi{{< br >}}
+nimi lili: [en pana e pali awen nasa ijo]{{< br >}}
+nimi lili lili: [en pana e pali awen nasa ijo]{{< br >}}
+sin la nimi [en pana e pali awen nasa ijo] li ken Epepani anu [{{< sitelen-sa-ala >}}EPIPHANY{{< /sitelen-sa-ala >}}]{{< br >}}
 nimi [{{< sitelen-sa-ala >}}GEEK{{< /sitelen-sa-ala >}}] [{{< sitelen-sa-ala >}}CODE{{< /sitelen-sa-ala >}}] pi nanpa 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
