@@ -30,9 +30,9 @@ sitelen: ![](/web-buttons/paltepuk.gif)
 
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
-pal: tomo, tep: jan, uk: mi.{{< br >}}
-paltep: tomo jan.{{< br >}}
-paltepuk: tomo mi.
+pal: tomo, tep: jan, uk: mi{{< br >}}
+paltep: tomo jan{{< br >}}
+paltepuk: tomo mi
 
 {{< command-line  >}}cowsaypl -- +p jan suli kama o kama pona{{< /command-line >}}
 

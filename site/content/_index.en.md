@@ -24,9 +24,9 @@ Web button: ![](/web-buttons/paltepuk.gif)
 
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
 
-pal - building, tep - person, uk - my.{{< br >}}
-paltep - person building, house.{{< br >}}
-paltepuk - my house, home.
+pal - building, tep - person, uk - my{{< br >}}
+paltep - person building, house{{< br >}}
+paltepuk - my house, home
 
 {{< command-line  >}}cowsaypl -- +p Welcome, esteemed guests{{< /command-line >}}
 
