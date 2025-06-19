@@ -30,7 +30,7 @@ nimi Geek Code pi nanpa 3.12: {{< geekcode >}}
 
 {{< command-line  >}}whatisthis{{< /command-line >}}
 
-nimi sona: ni li lipu linluwi mi epiku{{< br >}}
+nimi sona: lipu linluwi mi epiku{{< br >}}
 sitelen: ![](/web-buttons/paltepuk.gif)
 
 {{< command-line  >}}etymology -v paltepuk{{< /command-line >}}
